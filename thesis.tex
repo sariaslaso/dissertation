@@ -1,0 +1,130 @@
+\documentclass[final]{york-thesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage[bottom]{footmisc}
+\usepackage{scalerel}
+% \usepackage{afterpage}
+
+\usepackage[width=.9\textwidth]{caption}
+\setlength{\textfloatsep}{26pt plus 2.0pt minus 4.0pt}
+
+% Copied from http://www.khirevich.com/latex/microtype/
+%\usepackage[activate={true,nocompatibility},
+%            final,tracking=true,kerning=true,
+%            spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+% activate={true,nocompatibility} - activate protrusion and expansion
+% final - enable microtype; use "draft" to disable
+% tracking=true, kerning=true, spacing=true - activate these techniques
+% factor=1100 - add 10% to the protrusion amount (default is 1000)
+% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+%\microtypecontext{spacing=nonfrench}
+
+%\usepackage{algpseudocode}
+%\algrenewcommand{\algorithmicforall}{\textbf{for each}}
+%\def\ForEach{\ForAll}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\usepackage[hyphens]{url}
+\usepackage{relsize}
+\renewcommand*{\UrlFont}{\ttfamily\relscale{0.93}}
+
+\usepackage{tikz}
+\usetikzlibrary{
+  matrix,
+  positioning,
+  decorations.pathreplacing,
+  decorations.markings,
+  arrows.meta
+}
+
+\usepackage{fancyhdr}
+\lhead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[ocgcolorlinks,backref=page]{hyperref}
+\hypersetup{
+  linktocpage,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=blue,
+  urlcolor=blue
+}
+% Bibliography with page numbers
+% http://tex.stackexchange.com/a/15977
+%\renewcommand*{\backref}[1]{}
+%\renewcommand*{\backrefalt}[4]{%
+%    \ifcase #1 (Not cited.)%
+%    \or        (Cited on page~#2.)%
+%    \else      (Cited on pages~#2.)%
+%    \fi}
+% http://tex.stackexchange.com/q/110679
+%\backrefsetup{disable}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hypernat}
+
+\title{Strong Field Interactions with Atoms and Molecules}
+\author{Susana Arias Laso}
+\date{\today}
+\hypersetup{
+  pdftitle={Strong Field Interactions with Atoms and Molecules},
+  pdfauthor={Susana Arias Laso}
+}
+
+\setboolean{masters}{false}
+\degreename{Doctor}
+\masterof{Arts}
+\department{Physics and Astronomy}
+
+\setboolean{hasfigures}{true}
+\setboolean{hastables}{true}
+
+\abstractfile{abstract.tex}
+%\acknowledgementsfile{acknowledgements.tex}
+\abbreviationsfile{abbreviations.tex}
+
+\begin{document}
+
+%\microtypesetup{protrusion=false}
+\spacing{1.48}  % Make the Table of Contents fit in two pages.
+\makefrontmatter
+\spacing{1.5}
+%\microtypesetup{protrusion=true}
+
+\backrefsetup{enable}
+\include{chapter-1}
+\include{chapter-2}
+\include{chapter-3}
+\include{chapter-4}
+\include{chapter-5}
+\include{chapter-6}
+\backrefsetup{disable}
+
+\spacing{1}  % Single-spaced bibliography.
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+%\appendix
+%\include{appendix-a}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
