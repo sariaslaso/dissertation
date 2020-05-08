@@ -68,153 +68,73 @@ the numerical evaluation of an improved Keldysh
 approximation~\cite{Kopold_1997sfa} that accounts for rescattering and
 reveals the complex structure of the ionization spectrum.
 
-The transition amplitude from the ground state of an atom with binding
-potential $V(\mathbf{r})$, before the arrival of the laser pulse, into
-the scattering state $|\psi_{\mathbf{p}}(t)\rangle$ after the pulse
-has passed is given by
+The probability amplitude for an electron to transfer from the ground
+state of an atom with binding potential $V(\mathbf{r})$ into a
+scattering state with momentum $|\psi_{\mathbf{p}}(t)\rangle$ due to
+an external laser field is given by~\cite{Kopold_1997sfa}
 \begin{eqnarray}
 \label{eq:matrix_element}
 \begin{split}
 M_{\mathbf{p}} & = & \lim_{t\to\infty,t'\to -\infty}
-{\langle \psi_{\mathbf{p}}(t) | U(t,t') | \psi_{0}(t') \rangle}.
+{\langle \psi_{\mathbf{p}}(t) | U(t,t') | \psi_{0}(t') \rangle},
 \end{split}
 \end{eqnarray}
-Here it is assumed that in the limit of early times, $t'\to -\infty$,
+where it is assumed that in the limit of early times, $t'\to -\infty$,
 the exact wave function reduces to the unperturbed wave function
-$\psi_{0}(t)$ of the initial ground state. The time-evolution operator
-$U(t, t')$ is the solution to the initial-value problem
-\begin{eqnarray}
-\label{eq:time_evolution}
-\begin{split}
-\left[ i\partial_{t} - H(t)
-\right] U(t,t') = 0,& & U(t',t') = 1,
-\end{split}
-\end{eqnarray}
-and propagates the wave function $|\psi(t)\rangle$ from $t'$ to $t$
-under the full Hamiltonian
+$\psi_{0}(t)$ of the initial ground state. Here the evolution operator
+formalism is implemented by means of the time-evolution operator,
+$U(t, t')$, in order to obtain a formal expression for the transition
+amplitude in which the total wave function is represented in terms of
+the unperturbed wave function. In the problem that concerns us, the
+time-evolution operator propagates the wave function $|\psi(t)\rangle$
+from $t'$ to $t$ under the full Hamiltonian
 \begin{eqnarray}
 \label{eq:H_ati}
 \begin{split}
 H(t) & = & -\frac{1}{2} \nabla^{2} + H_{I}(t) + V(\mathbf{r})
 \end{split}
 \end{eqnarray}
-which includes the binding potential, $V(\mathbf{r})$, and the
-interaction with the external laser field,
+that includes the binding potential, $V(\mathbf{r})$, of the parent
+ion and the interaction with the laser field,
 $H_{I}(t)=-\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
 approximation in the length gauge~\cite{Kopold_1997sfa}.
 
-% dyson equations for the evolution operator
-% leads to eq.3 (pra 55) or eq.14 (cjp)
-% follow steps from pra 55 to obtain eq.7 (pra 55)
-
 The time-evolution operator satisfies an integral equation, namely the
 Dyson equation~\cite{Kopold_1997sfa,cjp2010_keldysh}, which
-conveniently allows to expand the total wave function in terms of the
-interaction with the external field $H_{I}(t)$,
-\begin{eqnarray}
-\label{eq:dyson}
-\begin{split}
-U(t,t') & = & U_{0}(t,t') -
-i\int\limits_{t'}\limits^{t} dt''\ U_{0}(t,t'') H_{I}(t'') U(t'',t') \\
-& = & U_{0}(t,t') -
-i\int\limits_{t'}\limits^{t} dt''\ U(t,t'') H_{I}(t'') U_{0}(t'',t').
-\end{split}
-\end{eqnarray}
-Here $U_{0}(t,t')$ represents the free time-evolution operator that
-propagates the field-free atomic ground state wave function
-$\psi_{0}(t')$ forward to the time $t$.
+conveniently allows to construct an expansion in which the interaction
+with the external field is treated as a perturbation. This
+representation of the time-evolution operator, together with the
+orthogonality of the initial ground state $|\psi_{0}$ and scattering
+state $|\psi_{\rm{p}}\rangle$, allows to express the ionization
+amplitude~(\ref{eq:matrix_element}), still in exact form, while
+illustrating the possibility of major excursions of the scattering
+electron away from the its parent ion once it was propagated from the
+initial state by $U(t,t')$.
 
-Inserting the Dyson equation~(\ref{eq:dyson}) for the evolution
-operator, and recalling the orthogonality of the initial ground state
-$|\psi_{0}\rangle$ and scattering state $|\psi_{\mathbf{p}}\rangle$ in
-the absense of the laser field, the ionization
-amplitude~(\ref{eq:matrix_element}) can be written in the form
-\begin{eqnarray}
-\label{eq:mp_exact}
-\begin{split}
-M_{\mathbf{p}} & = & -i \lim\limits_{t\to\infty}
-\int\limits_{-\infty}\limits^{t} dt' \langle \psi_{\mathbf{p}}(t)
-| U(t,t') H_{I}(t') | \psi_{0}(t') \rangle.
-\end{split}
-\end{eqnarray}
-
-Expression~(\ref{eq:mp_exact}) is still considered an exact form of
-the transition amplitude as no approximations have been implemented.
-The time-evolution operator in~(\ref{eq:mp_exact}) propagates the
-electron from the initial to the final state which includes the
-possibility of major excursions of its orbit away from the parent ion.
-The first approximation that leads to Keldysh result consists of
-replacing the complete time-evolution operator in~(\ref{eq:mp_exact})
-by the Volkov time-evolution operator $U^{(V)}$, which propagates the
-wave function of a free electron coupled through the interaction
-$H_{I}(t)$ to the external field. In other words, the interaction with
-the binding potential is considered a perturbation everywhere except
-in the initial and final states and the electron no longer feels the
-binding potential during the propagation. Equation~(\ref{eq:mp_exact})
-now reads
-\begin{eqnarray}
-\label{eq:mp_volkov}
-\begin{split}
-M_{\mathbf{p}} & = & -i \lim\limits_{t\to\infty}
-\int\limits_{-\infty}\limits^{t} dt' \langle \psi_{\mathbf{p}}(t) |
-U^{(V)}(t,t') H_{I}(t') | \psi_{0}(t')\rangle.
-\end{split}
-\end{eqnarray}
-Equation~(\ref{eq:mp_volkov}) embodies the binding potential only in
-the initial state $|\psi_{0}\rangle$ and represents the direct
-ionization process in which the electron detached from the atom
-escapes without further interaction with the atomic core. A more
-practical form of the transition amplitude~(\ref{eq:mp_volkov}) can be
-obtained by replacing
-$H_{I}(t') = \left[ H_{I}(t') + \mathbf{p}^{2}/2m \right] - \left[
-  \mathbf{p}^{2}/2m + V\right] + V,$
-where $V$ denotes the atomic binding potential, and making use of the
-Schr\"{o}dinger equation satisfied by the Volkov time-evolution
-operator
-\begin{eqnarray}
-\label{eq:volkov_schrodinger}
-\begin{split}
--i \frac{\partial}{\partial t} U^{(V)}(t, t') & = &
-U^{(V)}(t, t') \left( \frac{\mathbf{p}^2}{2m} + H_{I}(t') \right).
-\end{split}
-\end{eqnarray}
-Integrating Eq.~(\ref{eq:volkov_schrodinger}) by parts with respect to
-$t'$ and making use of the orthogonality of the initial state and the
-final scattering state, Eq.~(\ref{eq:mp_volkov}) can be rewritten as
-\begin{eqnarray}
-\label{eq:mp_byparts}
-\begin{split}
-M_{\mathbf{p}} & = & -i \lim\limits_{t\to\infty}
-\int\limits_{-\infty}\limits^{t}
-dt' \langle \psi_{\mathbf{p}}(t) |
-U^{(V)}(t,t') V | \psi_{0}(t')\rangle.
-\end{split}
-\end{eqnarray}
-In order to solve the limit of $t\to\infty$ within Keldysh framework
-an additional approximation is introduced in which the scattering
-state $\psi_{\mathbf{p}}$ is replaced by the Volkov wave function
-\begin{eqnarray}
-\label{eq:volkov}
-\begin{split}
-\psi_{\mathbf{p}}^{(V)}(\mathbf{r},t) & = & (2\pi)^{-3/2}
-\exp\left( -\frac{i}{2m} \int\limits^{t} d\tau
-(\mathbf{p} - e\mathbf{A}(\tau))^{2}\right),
-\end{split}
-\end{eqnarray}
-which represents the state of a free electron in a laser field with
-time-averaged momentum $\mathbf{p}$. This transformation leads to
-obtain an equivalent form of the Keldysh
-amplitude~\cite{Kopold_1997sfa,Becker_1997}
+Keldysh result for the transition amplitude~\cite{Kopold_1997sfa} is
+derived by implementing two fundamental approximations. The first
+approximation consists of replacing the complete time-evolution
+operator in~(\ref{eq:matrix_element}) by the Volkov time-evolution
+operator $U^{V}(t,t')$, which propagates the wave function of a free
+electron coupled through the interaction $H_{I}(t)$ to the external
+laser field. In other words, the interaction with the binding
+potential is considered a perturbation everywhere except in the
+initial and final states. In the second approximation the scattering
+state, $\psi_{\mathbf{p}}$, is replaced by the Volkov wave function,
+$\psi_{\mathbf{p}}^{(V)}$, which represents the state of a free
+electron in a laser field with time-averaged momentum
+$\mathbf{p}$. Further details about the derivation are to be found
+in~\cite{Kopold_1997sfa}. These transformations, along with additional
+algebraic operations, lead to obtain an equivalent form of the
+standard Keldysh amplitude~\cite{Kopold_1997sfa,Becker_1997}
 \begin{eqnarray}
 \label{eq:keldysh_amp}
 \begin{split}
 M_{\mathbf{p}}^{(0)} & = &
 -i \int\limits_{-\infty}\limits^{\infty}
-dt\ \langle \psi_{\mathbf{p}}^{(V)}(t) | V | \psi_{0}(t) \rangle,
+dt\ \langle \psi_{\mathbf{p}}^{(V)}(t) | V | \psi_{0}(t) \rangle.
 \end{split}
 \end{eqnarray}
-and is particularly useful when the binding potential $V$ is treated
-as a short-range potential.
 
 Generally, the approximation of replacing the time-evolution
 propagator $U(t,t')$ by the Volkov propagator $U^{(V)}(t,t')$ gains in
