@@ -8,20 +8,23 @@
 % -QM generalization including rescattering
 % -study of the ATI spectrum following the one introduced by kopold
 
-The phenomenon of above threshold ionization~\cite{ATI1979} has been
-tackled through diverse approaches, attempts to find numerical
-solutions to the time-dependent Schr\"{o}dinger equation
-(TDSE)~\cite{muller_tdse1999,scrinzi_tdse1999,Joachain2000} lie among
-the earliest ones. A variety of efforts that deal with the complexity
-of solving this challenging numerical problem have been successful in
-the past. In the same way, complementary approaches to the solution of
-the TDSE, such as the so-called Volkov-based
+The phenomenon of above threshold ionization (ATI)~\cite{ATI1979} has
+been tackled through diverse approaches, with analytical
+approximations dating back to Keldysh theory of strong-field
+approximation~\cite{KeldyshSFA}. Alternatively, attempts to find a
+numerical solution to the time-dependent Schr\"{o}dinger equation
+(TDSE)~\cite{muller_tdse1999,scrinzi_tdse1999,Joachain2000} have been
+instrumental for the understanding of ATI, and a variety of efforts
+that deal with the complexity of solving this challenging numerical
+problem have been successful in the past~\cite{Becker_ati2002}. In the
+same way, complementary approaches to the solution of the TDSE, such
+as the so-called Volkov-based
 methods~\cite{Faisal_1973,Reiss_1980,Kaminski_1997}, have revealed
 their strengths within strong-laser field problems in which a
 numerical solution would involve a computationally taxing problem. The
-strong-field approximation~\cite{KeldyshSFA}, which lies among these
-approaches and considers the binding potential as a perturbation, is
-the foundation to the formalism discussed in this chapter.
+strong-field approximation~\cite{KeldyshSFA}, which considers the
+binding potential as a perturbation, is the foundation to the
+formalism discussed in this chapter.
 
 Sec.~\ref{sec:keldysh} presents an overview of the pioneering work by
 Keldysh which introduces the strong-field approximation to describe
@@ -55,23 +58,41 @@ of~\cite{Kopold_1997sfa}.
 % eventually obtain keldysh amplitude, after using the two main
 % approximations that lead to eq.7 in pra55 kopold
 
+In the Keldysh theory of strong field approximation~\cite{KeldyshSFA}
+the common nature of both competing effects multiphoton ionization and
+tunneling ionization is illustrated. These limiting cases of strong
+field ionization are accounted for provided the laser lies in the
+low-frequency region, $\omega \ll \omega_{t}$, where $\omega_{t}$
+indicates the tunneling frequency, in which the tunnel effect
+prevails, or the high-frequency region, $\omega \gg \omega_{t}$, in
+which multiphoton absorption takes place. Commonly, the Keldysh
+parameter defined as the ratio of the frequency of the laser field to
+the tunneling rate, $\gamma = \sqrt{I_{p} / (2U_{p})}$, where $I_{p}$
+is the atomic ionization potential and $U_{p} = I / 4\omega^{2}$ is
+the ponderomotive energy of a free electron in the laser field of
+frequency $\omega$ and intensity $I$, indicates the dominant mechanism
+by taking values larger or smaller than $1$. In contrast with the
+tunneling regime, in which the tunnel effect is determined solely by
+the field intensity, at higher frequencies the tunneling probability
+is no longer constant and the transition of the electron into a free
+state is accompanied by a competing mechanism in which several photons
+are absorved simultaneously.
 
-Theoretical models that describe the interaction between intense laser
-fields and atoms go back to Keldysh theory of strong field
-approximation. The theoretical framework for the strong-field
-approximation introduced by Keldysh properly accounts for multiphoton
-ionization and tunneling ionization, which establish two limiting
-cases of strong-field ionization, and produced good agreement with
-experimental data of electron spectra of ATI for relatively low
-energies~\cite{Walker_1994exp}. In this chapter we are concerned with
-the numerical evaluation of an improved Keldysh
+Even though the Keldysh formalism for
+strong field ionization provided very good agreement with experimental
+data of electron ATI spectra for helium ionization at relatively low
+energies~\cite{Walker_1994exp}, rescattering effects were not included
+in the theory and it fails to reproduce the rescattering induced
+plateau that is visible in measurements along a broader energy
+spectrum~\cite{Walker_1996}. In this chapter we are concerned with the
+numerical evaluation of an improved Keldysh
 approximation~\cite{Kopold_1997sfa} that accounts for rescattering and
 reveals the complex structure of the ionization spectrum.
 
 The probability amplitude for an electron to transfer from the ground
 state of an atom with binding potential $V(\mathbf{r})$ into a
-scattering state with momentum $|\psi_{\mathbf{p}}(t)\rangle$ due to
-an external laser field is given by~\cite{Kopold_1997sfa}
+scattering state $|\psi_{\mathbf{p}}(t)\rangle$ due to an external
+laser field is given by~\cite{Kopold_1997sfa}
 \begin{eqnarray}
 \label{eq:matrix_element}
 \begin{split}
@@ -103,13 +124,12 @@ The time-evolution operator satisfies an integral equation, namely the
 Dyson equation~\cite{Kopold_1997sfa,cjp2010_keldysh}, which
 conveniently allows to construct an expansion in which the interaction
 with the external field is treated as a perturbation. This
-representation of the time-evolution operator, together with the
-orthogonality of the initial ground state $|\psi_{0}$ and scattering
-state $|\psi_{\rm{p}}\rangle$, allows to express the ionization
-amplitude~(\ref{eq:matrix_element}), still in exact form, while
-illustrating the possibility of major excursions of the scattering
-electron away from the its parent ion once it was propagated from the
-initial state by $U(t,t')$.
+representation, together with the orthogonality of the initial ground
+state $|\psi_{0}\rangle$ and scattering state
+$|\psi_{\mathbf{p}}\rangle$, illustrates in the ionization
+amplitude~(\ref{eq:matrix_element}) the possibility of major
+excursions of the scattering electron away from its parent ion once it
+was propagated from the initial state by $U(t,t')$.
 
 Keldysh result for the transition amplitude~\cite{Kopold_1997sfa} is
 derived by implementing two fundamental approximations. The first
@@ -188,35 +208,31 @@ Bessel functions.
 % rescattering from then on
 In order to include electron rescattering in our study, it is
 necessary to allow the electron to interact with the parent ion once
-it has been freed from the binding potential. Going back to the exact
-expression for the ionization amplitude~(\ref{eq:mp_exact}) and
-inserting the Dyson integral equation for the time-evolution operator
-\begin{eqnarray}
-\label{eq:dysonV}
-\begin{split}
-U(t,t') & = & U^{(V)}(t,t') -
-i\int\limits_{t'}\limits^{t} dt''\ U^{(V)}(t,t'') V U(t'',t'),
-\end{split}
-\end{eqnarray}
-where the binding potential is considered a perturbation, and the
-exact time-evolution operator has been replaced by the Volkov
-time-evolution operator, one obtains the expression
+it has been freed from the binding potential. This represents a step
+further in relation to Keldysh theory of direct
+ionization~\cite{KeldyshSFA} and it can be implemented by resorting to
+the Dyson expansion of the time-evolution operator in which the
+binding potential is considered a perturbation and the Volkov
+time-evolution operator plays an essential role. Inserting the
+expansion for the time-evolution operator into the ionization
+amplitude~(\ref{eq:matrix_element}) one obtains the generalized
+expression~\cite{Kopold_1997sfa}
 \begin{eqnarray}
 \label{eq:mp_2terms}
 \begin{split}
 M_{\mathbf{p}} & = & -i \lim\limits_{t\to\infty} \int\limits_{-\infty}\limits^{t}
 dt' \langle \psi_{\mathbf{p}}(t) | U^{(V)}(t, t') \{ H_{I}(t') | \psi_{0}(t') \rangle \\
 & &
--i \int\limits_{-\infty}^{t'} dt'' V U(t', t'') H_{I}(t'') | \psi_{0}(t'') \rangle \}.
+-i \int\limits_{-\infty}^{t'} dt'' V U(t', t'') H_{I}(t'') | \psi_{0}(t'') \rangle \},
 \end{split}
 \end{eqnarray}
-The first term is the direct amplitude that yields the Keldysh matrix
-element discussed in Sec.~\ref{sec:keldysh}. The second term allows
-for additional interactions with the atomic potential, and therefore
-describes rescattering of the electron. Following the steps
-implemented in Sec.~\ref{sec:keldysh} to derive
-Eq.~(\ref{eq:keldysh_amp}), the second term of~(\ref{eq:mp_2terms})
-results in the compact expression~\cite{Kopold_1997sfa}
+which is still an exact representation of the transition
+amplitude. The first term is the direct amplitude that yields the
+Keldysh matrix element discussed in Sec.~\ref{sec:keldysh}. The second
+term allows for additional interactions with the atomic potential, and
+therefore describes rescattering of the electron. Further algebraic
+transformations on the second term result in the compact expression
+for the ionization amplitude~\cite{Kopold_1997sfa}
 \begin{eqnarray}
 \label{eq:mp_compact}
 \begin{split}
