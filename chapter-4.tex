@@ -9,16 +9,16 @@
 % -study of the ATI spectrum following the one introduced by kopold
 
 The phenomenon of above threshold ionization (ATI)~\cite{ATI1979} has
-been tackled through diverse approaches, with analytical
-approximations dating back to Keldysh theory of strong-field
-approximation~\cite{KeldyshSFA}. Alternatively, attempts to find a
-numerical solution to the time-dependent Schr\"{o}dinger equation
-(TDSE)~\cite{muller_tdse1999,scrinzi_tdse1999,Joachain2000} have been
-instrumental for the understanding of ATI, and a variety of efforts
-that deal with the complexity of solving this challenging numerical
-problem have been successful in the past~\cite{Becker_ati2002}. In the
-same way, complementary approaches to the solution of the TDSE, such
-as the so-called Volkov-based
+been tackled by means of diverse approaches, with analytical
+approximations dating back to the Keldysh theory which represents a
+strong-field approximation~\cite{KeldyshSFA}. Alternatively, attempts
+to find a numerical solution to the time-dependent Schr\"{o}dinger
+equation (TDSE)~\cite{muller_tdse1999,scrinzi_tdse1999,Joachain2000}
+have been instrumental for the understanding of ATI, and a variety of
+efforts that deal with the complexity of solving this challenging
+numerical problem have been successful in the
+past~\cite{Becker_ati2002}. In the same way, complementary approaches
+to the solution of the TDSE, such as the so-called Volkov-based
 methods~\cite{Faisal_1973,Reiss_1980,Kaminski_1997}, have revealed
 their strengths within strong-laser field problems in which a
 numerical solution would involve a computationally taxing problem. The
@@ -27,20 +27,19 @@ binding potential as a perturbation, is the foundation to the
 formalism discussed in this chapter.
 
 Sec.~\ref{sec:keldysh} presents an overview of the pioneering work by
-Keldysh which introduces the strong-field approximation to describe
-the laser ionization of atoms. Next, a generalized approach that
-introduces rescattering of the electron back to the vicinity of the
-binding potential is included in Sec.~\ref{kopold_sfa}. The ionization
-regime of a model He atom under a strong laser field is explored in
-Sec.~\ref{sec:kopold_qm} for both scenarios: considering only direct
-electrons where the ionization spectrum is reproduced by the Keldysh
-amplitude, and using a compact expression for the transition amplitude
-that encloses the limiting case of direct trajectories while allowing
-electrons to rescatter to the parent ion as well. Additionally, this
-study is extended to explore the laser ionization of the $1b_{1}$ and
-$1b_{2}$ molecular orbitals of H$_{2}$O in Sec.~\ref{sec:mo_sfa}. The
-analysis presented in this chapter closely follows that
-of~\cite{Kopold_1997sfa}.
+Keldysh to describe the laser ionization of atoms. Next, a generalized
+approach that introduces rescattering of the electron back to the
+vicinity of the binding potential is included in
+Sec.~\ref{kopold_sfa}. The ionization regime of a model He atom under
+a strong-laser field is explored in Sec.~\ref{sec:kopold_qm} for both
+scenarios: considering only direct electrons where the ionization
+spectrum is reproduced by the Keldysh amplitude, and using a compact
+expression for the transition amplitude that encloses the limiting
+case of direct trajectories while allowing electrons to rescatter to
+the parent ion as well. Additionally, this study is extended to
+explore the laser ionization of the $1b_{1}$ and $1b_{2}$ molecular
+orbitals of H$_{2}$O in Sec.~\ref{sec:mo_sfa}. The analysis presented
+in this chapter closely follows that of~\cite{Kopold_1997sfa}.
 
 
 
@@ -58,36 +57,37 @@ of~\cite{Kopold_1997sfa}.
 % eventually obtain keldysh amplitude, after using the two main
 % approximations that lead to eq.7 in pra55 kopold
 
-In the Keldysh theory of strong field approximation~\cite{KeldyshSFA}
+In the Keldysh theory of strong-field approximation~\cite{KeldyshSFA}
 the common nature of both competing effects multiphoton ionization and
-tunneling ionization is illustrated. These limiting cases of strong
-field ionization are accounted for provided the laser lies in the
-low-frequency region, $\omega \ll \omega_{t}$, where $\omega_{t}$
+tunneling ionization is illustrated. These limiting cases of
+strong-field ionization are accounted for provided the laser lies in
+the low-frequency region, $\omega \ll \omega_{t}$, where $\omega_{t}$
 indicates the tunneling frequency, in which the tunnel effect
 prevails, or the high-frequency region, $\omega \gg \omega_{t}$, in
 which multiphoton absorption takes place. Commonly, the Keldysh
-parameter defined as the ratio of the frequency of the laser field to
-the tunneling rate, $\gamma = \sqrt{I_{p} / (2U_{p})}$, where $I_{p}$
-is the atomic ionization potential and $U_{p} = I / 4\omega^{2}$ is
-the ponderomotive energy of a free electron in the laser field of
-frequency $\omega$ and intensity $I$, indicates the dominant mechanism
-by taking values larger or smaller than $1$. In contrast with the
-tunneling regime, in which the tunnel effect is determined solely by
-the field intensity, at higher frequencies the tunneling probability
-is no longer constant and the transition of the electron into a free
-state is accompanied by a competing mechanism in which several photons
-are absorved simultaneously.
+parameter is defined as the ratio of the frequency of the laser field
+to the tunneling rate, $\gamma = \sqrt{I_{p} / (2U_{p})}$, where
+$I_{p}$ is the atomic ionization potential and $U_{p} = I /
+4\omega^{2}$ is the ponderomotive energy of a free electron in the
+laser field of frequency $\omega$ and intensity $I$, and it indicates
+the dominant mechanism by taking values larger or smaller than $1$.
 
-Even though the Keldysh formalism for
-strong field ionization provided very good agreement with experimental
-data of electron ATI spectra for helium ionization at relatively low
-energies~\cite{Walker_1994exp}, rescattering effects were not included
-in the theory and it fails to reproduce the rescattering induced
-plateau that is visible in measurements along a broader energy
-spectrum~\cite{Walker_1996}. In this chapter we are concerned with the
-numerical evaluation of an improved Keldysh
-approximation~\cite{Kopold_1997sfa} that accounts for rescattering and
-reveals the complex structure of the ionization spectrum.
+In contrast with the tunneling regime, in which the tunnel effect is
+determined solely by the field intensity, at higher frequencies the
+tunneling probability is no longer constant and the transition of the
+electron into a free state is accompanied by a competing mechanism in
+which several photons are absorved simultaneously.
+
+Even though the Keldysh formalism for strong-field ionization provided
+very good agreement with experimental data of electron ATI spectra for
+helium ionization at relatively low energies~\cite{Walker_1994exp},
+rescattering effects were not included in the theory and it failed to
+reproduce the rescattering induced plateau that is visible in
+measurements along a broader energy spectrum~\cite{Walker_1996}. In
+this chapter we are concerned with the numerical evaluation of an
+improved Keldysh approximation~\cite{Kopold_1997sfa} that accounts for
+rescattering and reveals the complex structure of the ionization
+spectrum.
 
 The probability amplitude for an electron to transfer from the ground
 state of an atom with binding potential $V(\mathbf{r})$ into a
@@ -102,20 +102,18 @@ M_{\mathbf{p}} & = & \lim_{t\to\infty,t'\to -\infty}
 \end{eqnarray}
 where it is assumed that in the limit of early times, $t'\to -\infty$,
 the exact wave function reduces to the unperturbed wave function
-$\psi_{0}(t)$ of the initial ground state. Here the evolution operator
-formalism is implemented by means of the time-evolution operator,
-$U(t, t')$, in order to obtain a formal expression for the transition
-amplitude in which the total wave function is represented in terms of
-the unperturbed wave function. In the problem that concerns us, the
-time-evolution operator propagates the wave function $|\psi(t)\rangle$
-from $t'$ to $t$ under the full Hamiltonian
+$\psi_{0}(t)$ of the initial ground state. In order to express the
+total wave function in terms of the unperturbed wave function, the
+evolution operator formalism~[ref to [2] from CJP] is implemented. The
+time-evolution operator, $U(t,t')$, propagates the wave function
+$|\psi(t)\rangle$ from $t'$ to $t$ under the full Hamiltonian
 \begin{eqnarray}
 \label{eq:H_ati}
 \begin{split}
 H(t) & = & -\frac{1}{2} \nabla^{2} + H_{I}(t) + V(\mathbf{r})
 \end{split}
 \end{eqnarray}
-that includes the binding potential, $V(\mathbf{r})$, of the parent
+which includes the binding potential, $V(\mathbf{r})$, of the parent
 ion and the interaction with the laser field,
 $H_{I}(t)=-\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
 approximation in the length gauge~\cite{Kopold_1997sfa}.
@@ -126,21 +124,20 @@ conveniently allows to construct an expansion in which the interaction
 with the external field is treated as a perturbation. This
 representation, together with the orthogonality of the initial ground
 state $|\psi_{0}\rangle$ and scattering state
-$|\psi_{\mathbf{p}}\rangle$, illustrates in the ionization
-amplitude~(\ref{eq:matrix_element}) the possibility of major
+$|\psi_{\mathbf{p}}\rangle$, illustrates the possibility of major
 excursions of the scattering electron away from its parent ion once it
 was propagated from the initial state by $U(t,t')$.
 
-Keldysh result for the transition amplitude~\cite{Kopold_1997sfa} is
-derived by implementing two fundamental approximations. The first
-approximation consists of replacing the complete time-evolution
-operator in~(\ref{eq:matrix_element}) by the Volkov time-evolution
-operator $U^{V}(t,t')$, which propagates the wave function of a free
-electron coupled through the interaction $H_{I}(t)$ to the external
-laser field. In other words, the interaction with the binding
-potential is considered a perturbation everywhere except in the
-initial and final states. In the second approximation the scattering
-state, $\psi_{\mathbf{p}}$, is replaced by the Volkov wave function,
+Two approximations are crucial to derive the Keldysh result for the
+transition amplitude~\cite{Kopold_1997sfa}. The first approximation
+consists of replacing the complete time-evolution operator
+in~(\ref{eq:matrix_element}) by the Volkov time-evolution operator
+$U^{V}(t,t')$, which propagates the wave function of a free electron
+coupled through the interaction $H_{I}(t)$ to the external laser
+field. In other words, the interaction with the binding potential is
+considered a perturbation everywhere except in the initial and final
+states. In the second approximation the scattering state,
+$\psi_{\mathbf{p}}$, is replaced by the Volkov wave function,
 $\psi_{\mathbf{p}}^{(V)}$, which represents the state of a free
 electron in a laser field with time-averaged momentum
 $\mathbf{p}$. Further details about the derivation are to be found
@@ -156,17 +153,18 @@ dt\ \langle \psi_{\mathbf{p}}^{(V)}(t) | V | \psi_{0}(t) \rangle.
 \end{split}
 \end{eqnarray}
 
-Generally, the approximation of replacing the time-evolution
-propagator $U(t,t')$ by the Volkov propagator $U^{(V)}(t,t')$ gains in
-precision the shorter the range of the binding potential and the
-higher the intensity of the laser field. In what follows we will
-consider the limiting case of zero-range interactions of the form
+Generally, replacing the time-evolution propagator $U(t,t')$ by the
+Volkov propagator $U^{(V)}(t,t')$ is more justified the shorter the
+range of the binding potential and the higher the intensity of the
+laser field. In what follows we will consider the limiting case of
+zero-range interactions of the form
 %
 \begin{eqnarray}
 \label{eq:zero-range}
 \begin{split}
-V(\mathbf{r}) & = & \frac{2\pi}{m\mathbf{\kappa}}
-\delta(\mathbf{r}) \frac{\partial}{\partial r} r,
+V(\mathbf{r}) & = & -\lambda\ \delta(\mathbf{r})
+%V(\mathbf{r}) & = & \frac{2\pi}{m\mathbf{\kappa}}
+%\delta(\mathbf{r}) \frac{\partial}{\partial r} r,
 \end{split}
 \end{eqnarray}
 %
@@ -192,11 +190,11 @@ M_{\mathbf{p}}^{(0)} \sim &
 \end{eqnarray}
 %
 that generates the ionization spectrum of direct electrons
-only~~\cite{Kopold_1997sfa}. Here $U_{p}$ represents the ponderomotive
-potential of an electron moving in the laser field with momentum
-$\mathbf{p}$ parallel to the laser field, $p_{x} = |\mathbf{p}|$,
-$|E_{0}|$ stands for the binding energy, and the $J_{n}$ represent
-Bessel functions.
+only~~\cite{Kopold_1997sfa}, i.e., without rescattering. Here $U_{p}$
+represents the ponderomotive potential of an electron moving in the
+laser field with momentum $\mathbf{p}$ parallel to the laser field,
+$p_{x} = |\mathbf{p}|$, $|E_{0}|$ stands for the binding energy, and
+the $J_{n}$ represent Bessel functions.
 
 
 \section{\label{kopold_sfa} Generalized ionization amplitude including rescattering}
@@ -325,8 +323,9 @@ Keldysh amplitude as well as that from rescattering electrons which
 interact one more time with the binding potential are considered when
 studying the convergence of the ATI matrix element that generates the
 ionization spectrum. Our calculation considers a laser field with
-$\hbar\omega = 1.58\ \rm{eV}$ at $10^{15}\ \rm{W}/\rm{cm}^{2}$ acting
-upon a He atom with $E_{0} = -0.9\ \rm{a.u.}$ as the binding energy.
+$\hbar\omega = 1.58\ \rm{eV}$ at an intensity of
+$10^{15}\ \rm{W}/\rm{cm}^{2}$ acting upon a He atom with $E_{0} =
+-0.9\ \rm{a.u.}$ as the binding energy.
 
 The numerical evaluation of the remaining quadrature in
 Eq.~(\ref{eq:Mp_quad}) in terms of the travel time is not
@@ -355,11 +354,11 @@ J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{\frac{U_{p}}{m}} \right)\ F(l).
 \end{eqnarray}
 %
 
-In the process of studying the convergence of $F(l)$, we partitioned
-the integration interval into subintervals of $2\pi/\omega$ and
-explored the progression of the results as a function of how many
-intervals are included in the calculation as well as the working
-precision requested. A final interval following the $k-$th interval,
+To study the convergence of the sum, we partitioned the integration
+interval into subintervals of $2\pi/\omega$ and explored the
+progression of the results as a function of how many intervals are
+included in the calculation as well as the working precision
+requested. A final interval following the $k-$th interval,
 $[2\pi/\omega (k-1), 2\pi/\omega k)$, that extends to $+\infty$ is
   included in the calculation. Additionally, in order to bypass the
   singularity at $\tau = 0$ due to the $1/\tau$ factor in $F(l)$, a
@@ -378,7 +377,7 @@ $[2\pi/\omega (k-1), 2\pi/\omega k)$, that extends to $+\infty$ is
 % working precision for n = 512 intervals (number of sub-intervals
 % chosen to generate the spectrum)
 % working precision: digits of precision maintained in the calculations
-Figure~\ref{fig:WP_convergence} illustrates the evolution of punctual
+Figure~\ref{fig:WP_convergence} illustrates the evolution of discrete
 values of $F(l)$ for a set of $l$ values, $|l| = [10, 40, 80]$, as the
 working precision is increased. For $l=10$, a working precision of
 about $15$ decimal points seems to not affect the evaluation of the
@@ -463,9 +462,9 @@ numerical solution to the quadrature.
 \caption{Numerical evaluation of the time integral $F(l)$ contained in
   the transition amplitude~(\ref{eq:Mp_rew}) (red dots) in contrast
   with its analogous Bessel term in the Keldysh amplitude for direct
-  transmission (blue dots) for an atom of He as a function of the
-  Bessel function order $l$ for increasing values of $l_{\rm{max}}$,
-  $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$.}
+  transmission (blue dots) for zero-range He atom model as a function
+  of the Bessel function order $l$ for increasing values of
+  $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$.}
   \label{fig:integral_keldysh}
 \end{figure}
 
@@ -475,13 +474,14 @@ numerical solution to the quadrature.
 % include convergence of ATI spectrum including rescattering with
 % remark that it contains the spectrum of direct electrons for low p_x
 
-The ionization spectrum of He for emission parallel to the electric
-field of the laser that contains the contribution of direct electrons,
-given by the Keldysh amplitude~(\ref{eq:keldysh_amp_explicit}), is
-shown in Figure~\ref{fig:keldysh_convergence}. For a given electron
-energy, the sum over the Bessel order was extended up to increasing
-values of $l_{\rm{max}}$, ranging from $20$ to $50$, in order to
-display the convergence of the spectrum in the limit $l\to\infty$. For
+The ionization spectrum for the He model for emission parallel to the
+electric field of the laser that contains the contribution of direct
+electrons, given by the Keldysh
+amplitude~(\ref{eq:keldysh_amp_explicit}), is shown in
+Figure~\ref{fig:keldysh_convergence}. For a given electron energy, the
+sum over the Bessel order was extended up to increasing values of
+$l_{\rm{max}}$, ranging from $20$ to $50$, in order to display the
+convergence of the spectrum in the limit $l\to\infty$. For
 $l_{\rm{max}}$ values as low as $20$ and $30$ the final structure of
 the spectrum for very small energies, $<1 \rm{U_{p}}$, begins to be
 visible. However, more terms need to be considered in the sum over
@@ -495,9 +495,11 @@ about $2.5\rm{U_{p}}$.
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/He/l20304050Keldysh.pdf}
-\caption{ATI spectrum of helium by a linearly polarized field
-  describing direct electrons. Each curve corresponds to a finite
-  value of $l_{\rm{max}}$ in the standard Keldysh amplitude.}
+\caption{ATI spectrum of zero-range model for helium by a linearly
+  polarized field with a laser intensity of $10^{15}\ \rm{W/cm^{2}}$
+  with $\hbar\omega = 1.58\ \rm{eV}$ describing direct electrons. Each
+  curve corresponds to a finite value of $l_{\rm{max}}$ in the
+  standard Keldysh amplitude.}
 \label{fig:keldysh_convergence}
 \end{figure}
 
@@ -570,7 +572,7 @@ Chapter~\ref{cha:dc_h2o} is extended in this section with the aim of
 exploring the ATI spectrum of the $1b_{1}$ and $1b_{2}$ molecular
 orbitals previously characterized as spherical orbitals. The
 zero-range model calculation carried out in the previous section
-combined with the strong field approximation is applied to these
+combined with the strong-field approximation is applied to these
 valence orbitals in order to explore their response to an intense
 laser field.
 
@@ -596,17 +598,17 @@ number of Bessel functions included in their respective sums.
 
 % describe the plots comparing direct and rescattering electrons
 % describe convergence of the spectrum
-Similarly to the case of strong field ionization of a He atom, the
-quadrature $F(l)$ in~(\ref{eq:Mp_rew}) remains to be solved in order
-to obtain the ionization spectrum for rescattered electrons. The
-general expression~(\ref{eq:Mp_quad}), which encloses the limiting
-case of ionization of direct electrons, generates an electron yield
-which follows that of direct electrons for low energies, i.e.,
-electrons energies for which the direct spectrum is not vanished and
-the rescattering effects are not taken into account. This section is
-aimed to validate the previous statement and explore the convergence
-of the ATI spectrum of these two simplified representations of
-H$_{2}$O orbitals.
+Similarly to the case of strong field ionization of a zero-range He
+model, the quadrature $F(l)$ in~(\ref{eq:Mp_rew}) remains to be solved
+in order to obtain the ionization spectrum for rescattered
+electrons. The general expression~(\ref{eq:Mp_quad}), which encloses
+the limiting case of ionization of direct electrons, generates an
+electron yield which follows that of direct electrons for low
+energies, i.e., electrons energies for which the direct spectrum is
+not vanished and the rescattering effects are not taken into
+account. This section is aimed to validate the previous statement and
+explore the convergence of the ATI spectrum of these two simplified
+representations of H$_{2}$O orbitals.
 
 Figures~\ref{fig:1b1_vs_keldysh} and~\ref{fig:1b2_vs_keldysh} show the
 values taken by the function $F(l)$ for a set of values of
