@@ -1,15 +1,22 @@
 \chapter{Above threshold ionization in laser-atom and laser-molecule interactions}
 \label{cha:ati}
 
-% mention:
-%
 % -ATI models, keldysh approach pionnering work with the strong field
 % approximation
 % -QM generalization including rescattering
 % -study of the ATI spectrum following the one introduced by kopold
 
-The phenomenon of above threshold ionization (ATI)~\cite{ATI1979} has
-been tackled by means of diverse approaches, with analytical
+Generally, the interaction of an atom with intense laser fields is
+associated with photoionization of the atom by the absorption of a
+photon. In fact, in very intense laser fields an atom may absorb many
+more photons than the minimum required to get ionized, ejecting an
+electron of very high energy. The photoelectron energy spectrum
+associated to this effect exhibits a series of peaks separated by the
+energy of a laser photon. This phenomenon is known as above threshold
+ionization (ATI) and was first observed by Agostini~\emph{et
+  al}~\cite{ATI1979}.
+
+ATI has been tackled by means of diverse approaches, with analytical
 approximations dating back to the Keldysh theory which represents a
 strong-field approximation~\cite{KeldyshSFA}. Alternatively, attempts
 to find a numerical solution to the time-dependent Schr\"{o}dinger
@@ -283,12 +290,14 @@ where the real quantities $y(\tau)$ and $\delta(\tau)$ are defined via
 \begin{split}
 y(\tau) e^{-i \delta(\tau)} & = & \frac{1}{2} - i \left(
 \sin\omega\tau - \frac{4 \sin^{2}\omega\tau/2}{\omega\tau} \right)
-e^{-i\omega\tau}.
+e^{-i\omega\tau} & = & Z,
 \end{split}
 \end{eqnarray}
+%
+and are determined as the absolute value and phase of the complex
+quantity $Z$, respectively.
 
-%Equations~(\ref{eq:keldysh_amp_explicit}) and~(\ref{eq:Mp_quad}) are
-%the formal results that will be studied numerically in this chapter.
+
 
 
 \section{\label{sec:results_qm} Results}
@@ -308,8 +317,7 @@ laser field is assumed to be turned off in the distant past and
 future, $t\to\pm\infty$. With this in mind, we carry out the numerical
 evaluation of the transition
 amplitudes~(\ref{eq:keldysh_amp_explicit}) and~(\ref{eq:Mp_quad}) in
-which we concentrate on the case of a linearly polarized field of the
-form
+which we concentrate on the case of a monochromatic field of the form
 %
 \begin{eqnarray}
 \label{eq:lp_field}
