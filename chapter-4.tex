@@ -1,4 +1,4 @@
-\chapter{Above threshold ionization in laser-atom and laser-molecule interactions}
+3\chapter{Above threshold ionization in laser-atom and laser-molecule interactions}
 \label{cha:ati}
 
 % -ATI models, keldysh approach pionnering work with the strong field
@@ -7,14 +7,14 @@
 % -study of the ATI spectrum following the one introduced by kopold
 
 Generally, the interaction of an atom with intense laser fields is
-associated with photoionization of the atom by the absorption of a
-photon. In fact, in very intense laser fields an atom may absorb many
-more photons than the minimum required to get ionized, ejecting an
-electron of very high energy. The photoelectron energy spectrum
-associated to this effect exhibits a series of peaks separated by the
-energy of a laser photon. This phenomenon is known as above threshold
-ionization (ATI) and was first observed by Agostini~\emph{et
-  al}~\cite{ATI1979}.
+associated with photoionization of the atom by the absorption of one
+or more photons. In fact, in very intense laser fields an atom may
+absorb many more photons than the minimum required to get ionized,
+ejecting an electron of very high energy. The photoelectron energy
+spectrum associated with this effect exhibits a series of peaks
+separated by the energy of a laser photon. This phenomenon is known as
+above threshold ionization (ATI) and was first observed by
+Agostini et al~\cite{ATI1979}.
 
 ATI has been tackled by means of diverse approaches, with analytical
 approximations dating back to the Keldysh theory which represents a
@@ -25,13 +25,15 @@ have been instrumental for the understanding of ATI, and a variety of
 efforts that deal with the complexity of solving this challenging
 numerical problem have been successful in the
 past~\cite{Becker_ati2002}. In the same way, complementary approaches
-to the solution of the TDSE, such as the so-called Volkov-based
+to the solution of the TDSE, such as the so-called Volkov-state
 methods~\cite{Faisal_1973, Reiss_1980, Kaminski_1997}, have revealed
 their strengths within strong-laser field problems in which a
 numerical solution would involve a computationally taxing problem. The
-strong-field approximation~\cite{KeldyshSFA}, which considers the
-binding potential as a perturbation, is the foundation to the
-formalism discussed in this chapter.
+strong-field approximation~\cite{KeldyshSFA}, which treats the binding
+potential of the atom as a perturbation once the electron has been
+promoted into the continuum where the external laser field governs the
+electron dynamics, is the foundation to the formalism discussed in
+this chapter.
 
 Sec.~\ref{sec:keldysh} presents an overview of the pioneering work by
 Keldysh to describe the laser ionization of atoms. Next, a generalized
@@ -55,33 +57,60 @@ in this chapter closely follows that of~\cite{Kopold_1997sfa}.
 %$1b_{2}$ molecular orbitals of H$_{2}$O is discussed in
 %Sec.~\ref{sec:mo_sfa}.
 
+\section{\label{sec:mpi&tunneling} Multiphoton versus tunneling ionization}
 
-\section{\label{sec:keldysh} Keldysh formalism}
-% cjp on keldysh formalism (sec 2 and 3)
+As a result of the interaction with strong laser pulses that compete
+with the Coulomb forces, the electron dynamics in atoms and molecules
+is characterized by multiphoton processes that determine their
+response to the laser field. The Keldysh theory of strong-field
+approximation illustrates how the dynamics of the underlying phenomena
+that contribute to the formation of ionization spectrum evolves as the
+laser field intensity increases~\cite{KeldyshSFA}.
 
-% pra56 becker, lewenstein
+% explain MPI from review papers
+% reference fig:mpi_tunneling
+At moderate intensities, $I < 10^{14}\ \mathrm{W/cm^{2}}$, atomic
+states undergo a transition from bound states into the continuum due
+to the multiphoton excitation linked to the interaction with the laser
+field, this phenomenon is known as multiphoton ionization (MPI). The
+interaction with intense laser fields induces an ac Stark shift of the
+atomic bound states that is responsible for the peak suppression in
+the ionization spectrum as the field intensity
+increases~\cite{MullerStark_1988}. While states near the nucleus have
+a negligible shift in energy due their strong bond and are, in fact,
+harder to influence by the field, the upward shift of the higher
+states and continuum can become appreciable in the form of an increase
+in the ionization potential of the atom, see
+Figure~\ref{fig:mpi_tunneling}(a). This shift is given by the electron
+ponderomotive energy, $U_{p} = e^{2}E^{2} / 4m\omega^{2}$, which is
+the cycle-averaged kinetic energy of a free electron in the electric
+field of strength $E$ and frequency $\omega$. Although this increase
+in the ionization potential could, possibly, make some transitions
+energetically forbiden, in a smoothly varying pulse ionization
+channels may not be closed for the entire pulse, in such a way that
+the corresponding peak in the ionization spectrum will not vanish
+completely~\cite{Protopapas_mpi_tunneling,Joachain_mpi_tunneling}.
+%For strong laser fields, $U_{p}$ may become quite large, of the order
+%of several $\mathrm{eV}$, causing many states to shift through
+%resonance as their energies change, during a laser pulse, by an
+%amount larger than the incident photon energy.
 
-% eventually obtain keldysh amplitude, after using the two main
-% approximations that lead to eq.7 in pra55 kopold
-
-
-Keldysh theory of strong-field approximation illustrates how the
-dynamics of the underlying phenomena that contribute to the formation
-of ionization spectrum evolves as the laser field intensity
-increases~\cite{KeldyshSFA}. Tunneling ionization and multiphoton
-ionization, the limiting cases of strong-field ionization, are
-accounted for in Keldysh formalism. Multiphoton ionization takes place
-in weak laser fields, in which the transition of an electron into the
-continuum is accompanied by simultaneous absorption of several photons
-enough to increase their energy above the ionization
-potential. However, as the laser field intensity increases, electrons
-are able to escape the atomic binding potential by tunneling through
-the barrier created by the electric field of the external laser.
-
-% define Keldysh parameter as a ratio
-
-Commonly, the Keldysh parameter is defined as the ratio of the
-frequency of the laser field to the tunneling rate,
+At sufficiently high intensity, $I > 10^{14}\ \mathrm{W/cm^2}$, and
+low frequency, the ionization process is ruled by a tunneling
+mechanism. In this regime, ionization can be described by means of a
+quasi-static approach in which, in the low-frequency limit, as the
+laser field intensity approaches the Coulomb binding potential of the
+ion core, the bound electrons experience an effective potential that
+results from the interaction between the laser electric field and the
+Coulomb attraction from the ion core~\cite{KeldyshSFA}. This effective
+potential acts as an oscillating barrier through which electrons can
+escape via tunneling, as Figure~\ref{fig:mpi_tunneling}(b)
+illustrates. In the tunneling regime, since the laser field varies
+slowly compared to the response time of the electron, the ionization
+rate becomes the cycle average of the instantaneous dc tunneling
+rate. A fundamental quantity in Keldysh theory, known as Keldysh
+parameter, is the ratio of the incident laser frequency to the
+tunneling rate, and can be written as~\cite{KeldyshSFA}
 %
 \begin{eqnarray}
 \begin{split}
@@ -89,27 +118,64 @@ frequency of the laser field to the tunneling rate,
 \end{split}
 \end{eqnarray}
 %
-where $I_{p}$ is the atomic ionization potential and $U_{p} = I /
-4\omega^{2}$ is the ponderomotive energy of a free electron in the
-laser field of frequency $\omega$ and intensity $I$, which represents
-the average kinetic energy of an electron over one cycle of the laser
-field. At intense laser fields, when the tunneling mechanism is
-dominant and the ionization rate is determined by the tunneling rate,
-this ratio becomes smaller than $1$. Whereas it takes values larger
-than $1$ in weaker fields where multiphoton ionization prevails. In
-this chapter, we will refer to the tunneling regime as it is one of
-the fundamental processes in ATI.
+where $I_{p}$ is the field-free atomic ionization potential. The
+Keldysh parameter illustrates the limits of applicability of the
+competing mechanisms that characterize the ionization process. For
+$\gamma < 1$, tunneling dynamics will dominate, whereas for $\gamma >
+1$ multiphoton dynamics will prevail. In this chapter, we will refer
+to the tunneling regime as it is one of the fundamental processes in
+ATI.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/multiphoton}
+  \end{subfigure}
+  \centering
+  \begin{subfigure}[b]{0.46\linewidth}
+    \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/tunneling}
+  \end{subfigure}  
+  \caption{Schematic representation of (a) multiphoton ionization and
+    (b) tunneling ionization as the laser intensity, $I$,
+    increases. The dashed line corresponds to the contribution to the
+    potential energy due to the instantaneous laser electric
+    field. The solid line represents the full effective
+    potential. From Ref.~\cite{Protopapas_mpi_tunneling}.}
+  \label{fig:mpi_tunneling}
+\end{figure}
+
+
+\section{\label{sec:keldysh} Keldysh formalism}
+% explain a little bit more the plateau, origin etc,
+% use illustration from literature (PRL72_Paulus)
 
 Even though the Keldysh formalism for strong-field ionization provided
 very good agreement with experimental data of electron ATI spectra for
 helium ionization~\cite{Walker_1994exp}, rescattering effects were not
 included in the theory and it failed to reproduce the rescattering
 induced plateau that is visible in measurements along a broad energy
-spectrum~\cite{Paulus_1994plateau, Walker_1996} and represents a
-prevalent phenomenon in the ATI distribution. In this chapter we are
+spectrum~\cite{Paulus_1994plateau, Walker_1996}, and emerged as a
+prevalent feature in the ATI energy
+spectrum. Figure~\ref{fig:plateau_ATI} shows the presence of such
+plateau as a marked change of slope in the ionization spectrum of rare
+gases. A recollision picture in which the strong-field ionization is
+characterized by several steps, involving tunneling of the electron
+followed by a free interaction with the laser field in which the
+electron returns to the core, was introduced later
+on~\cite{Corkum_1993, LewensteinSPA_1994}. In this chapter we are
 concerned with the numerical evaluation of an improved Keldysh
-approximation~\cite{Kopold_1997sfa} that accounts for rescattering and
-reveals the complex structure of the ionization spectrum.
+approximation~\cite{Kopold_1997sfa} that accounts for rescattering
+effects and reveals the complex structure of the ionization spectrum.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/plateauPRL72}
+  \caption{ATI spectra for various noble gases, at a wavelength of
+    $\lambda = 630\ \rm{nm}$ and an intensity of $I \simeq 2\times
+    10^{14}\ \rm{W/cm^{2}}$ ($3\times 10^{14}\ \rm{W/cm^{2}}$ for
+    He). From Ref.~\cite{Paulus_1994plateau}}
+  \label{fig:plateau_ATI}
+\end{figure}
 
 The probability amplitude for an electron to transfer from the ground
 state of an atom with binding potential $V(\mathbf{r})$ into a
