@@ -388,16 +388,18 @@ contours with $\mathrm{Im}\ i \Phi(t) = \mathrm{Im}\ i
 \Phi(t_{s_{2},s_{4}})$ are indicated by a red curve. The purple scale
 represents the real values of the exponent $i\Phi(t)$, in which dark
 regions indicate small values of $\mathrm{Re}\ i\Phi(t)$, while bright
-regions indicate large values of $\mathrm{Re}\ i\Phi(t)$. This implies
-one possible integration path, from $t = 0$ to $+i\infty$, $C_{a}$,
-then along $C_{1}$ across the saddle point $t_{01}$ up to $\omega t =
-\pi + i\infty$ where the integrand vanishes, from there along $C_{2}$
-across the second saddle point, $t_{02}$, to $\omega t = 2\pi +
-i\infty$, and finally along $C_{b}$ to $\omega t = 2\pi$. The
-integrands along $C_{a}$ and $C_{b}$ are identical and the integrals
-add up to zero due to the reversed integration orders. Along contours
-$C_{1}$ and $C_{2}$ the integrand is approximated by a Gaussian, which
-results in
+regions indicate large values of $\mathrm{Re}\ i\Phi(t)$. This
+indicates that, for every single electron energy $E_{p}$, only one
+possible integration path is relevant in order to evaluate the
+transmission amplitude $M_{\mathbf{p}}$. The one starting at $t = 0$
+to $+i\infty$, $C_{a}$, then along $C_{1}$ across the saddle point
+$t_{01}$ up to $\omega t = \pi + i\infty$ where the integrand
+vanishes, from there along $C_{2}$ across the second saddle point,
+$t_{02}$, to $\omega t = 2\pi + i\infty$, and finally along $C_{b}$ to
+$\omega t = 2\pi$. The integrands along $C_{a}$ and $C_{b}$ are
+identical and the integrals add up to zero due to the reversed
+integration orders. Along contours $C_{1}$ and $C_{2}$ the integrand
+is approximated by a Gaussian, which results in~\cite{phd_Kopold}
 % explain how to generate the spectrum having obtained the phase
 \begin{eqnarray}
   \label{eq:Mp_spa_direct}
@@ -418,21 +420,33 @@ the field with no further interaction with the binding potential.
 \begin{figure}
   \centering
   \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/phase_contour12}
-  \caption{caption}
+  \caption{Phase contours of constant $\mathrm{Im}\ i\Phi(t)$ for the
+    saddle points $t_{01}(t_{03})$ (blue lines) and $t_{02}(t_{04})$
+    (red lines) corresponding to an electron energy of $2.27 U_{p}$
+    projected on the complex plane. The regions in a purple scale
+    represent contours of constant $\mathrm{Re}\ i\Phi(t)$.}
   \label{fig:sp_contours}
 \end{figure}
 
-The saddle-point results for the probability amplitude of direct
-electrons are shown in Figure~\ref{fig:sp_direct} (dash-dot line)
-along with the \textsc{ati} spectrum obtained from the standard
-Keldysh amplitude~(\ref{eq:keldysh_amp_explicit}) (black dots). In
-order to evaluate the probability amplitude~(\ref{eq:Mp_spa_direct})
-for a given electron energy $E_{p}$, only the pair of saddle points
-with positive imaginary parts (indicated as blue dots in
-Fig.~\ref{fig:sp_direct}) were included in the integration path. As it
-is illustrated, the saddle-point approximation mirrors the fully
-quantum calculation as an expansion in Bessel functions.
-
+The ionization spectrum of direct electrons for a model helium atom is
+calculated by means of the saddle-point approximation, as
+Figure~\ref{fig:sp_direct} displays in dash-dotted
+lines. Additionally, the \textsc{ati} spectrum corresponding to the
+standard Keldysh amplitude is indicated with black dots. For a given
+electron energy, $E_{p}$, the probability
+amplitude~(\ref{eq:Mp_spa_direct}) was evaluated along the integration
+trajectory that contains the saddle-points with positive imaginary
+parts, $t_{01}$ and $t_{02}$ indicated in Figure~\ref{fig:sp_direct},
+in order to obtain a converging result when evaluating the exponential
+term in $M_{\mathbf{p}}$. The complex path of these saddle points is
+indicated as blue dots in Fig.~\ref{fig:sp_direct} as the electron
+energy increases from $0$ to $4 U_{p}$. The saddle-point approximation
+mirrors the fully quantum calculation in terms of an expansion in
+Bessel functions. Similarly to what the Keldysh \textsc{sfa} results
+point out, the saddle-point approximation generates an \textsc{ati}
+spectrum that vanishes at approximately $2.5 U_{p}$ as the electron
+escapes the effects of the binding potential without further
+interaction with the parent ion.
 
 \begin{figure}
   \centering
@@ -449,9 +463,94 @@ quantum calculation as an expansion in Bessel functions.
 
 \subsection{\label{sec:spa_resc} Trajectories with rescattering}
 
+% fundamental features of rescattering, how is this approached
+The introduction of rescattering effects into the study of
+\textsc{ati} expands the possible physical interpretations to the
+ionization spectrum, in particular, it provides a comprehensible
+description to the origin of the \textsc{ati}
+plateau~\cite{Paulus_1994plateau,BeckerRescattering_2018}. It is the
+purpose of this section to revisit a saddle-point approximation of
+this rescattering picture in which the quantum orbits of the ionized
+electron play an esential role in the formation of the \textsc{ati}
+spectrum~\cite{KopoldOptComm2000}.
+
+% equations to determine the physical magnitudes (t, t', k) that
+% define the complex trajectories, i.e., saddle points
+The relevant quantum trajectories are given by the saddle-point
+equations~(\ref{eq:saddle_eqs}) which have their origin in the
+condition that the action of the system remains stationary along those
+points. For the linearly-polarized laser field~(\ref{eq:lp_field}),
+one can solve for the ionization time, $t'_{S}$, and return time,
+$t_{S}$ as the numerical solutions of 
+%
+\begin{eqnarray}
+  \label{eq:return_t}
+  \begin{split}
+    [\omega t_{S} \mp \arccos(2\cos\omega t_{S} + \delta \mp i\gamma)]
+    (2\cos\omega t_{S} + \delta) \\
+    \pm \sqrt{1 - (2\cos\omega t_{S} + \delta \mp i\gamma)^{2}} 
+    - \sin\omega t_{S} = 0
+  \end{split}
+\end{eqnarray}
+%
+and
+%
+\begin{eqnarray}
+  \label{eq:release_t}
+  \begin{split}
+    \omega t'_{S} = \mp \arccos(2\cos\omega t_{S} + \delta \mp i\gamma)
+  \end{split}
+\end{eqnarray}  
+%
+
+
+% equations
+
 % plot of saddle points
+\begin{figure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/start12.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/return12.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/momentum12.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/start34.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/return34.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/momentum34.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/start56.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/return56.pdf}
+\end{subfigure}
+\begin{subfigure}[b]{0.33\linewidth}
+  \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/momentum56.pdf}
+\end{subfigure}
+\caption{caption}
+  \label{fig:complex_paths}
+\end{figure}
+
 
 % plot of action in phase-space
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/rescattering/phase_ComplexReIm.pdf}
+  \caption{caption}
+  \label{fig:phase_ReIm}
+\end{figure}
+
+% mention errorbars in the plot of the action in the complex plane for
+% paths 1 and 2
+
 
 % plot of formation of the spectrum as the number of trajectories
 % increases
