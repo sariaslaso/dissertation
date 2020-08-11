@@ -469,19 +469,30 @@ The introduction of rescattering effects into the study of
 ionization spectrum, in particular, it provides a comprehensible
 description to the origin of the \textsc{ati}
 plateau~\cite{Paulus_1994plateau,BeckerRescattering_2018}. It is the
-purpose of this section to revisit a saddle-point approximation of
-this rescattering picture in which the quantum orbits of the ionized
+purpose of this section to revisit a saddle-point approximation of the
+rescattering picture in which the quantum orbits of the ionized
 electron play an esential role in the formation of the \textsc{ati}
 spectrum~\cite{KopoldOptComm2000}.
 
 % equations to determine the physical magnitudes (t, t', k) that
 % define the complex trajectories, i.e., saddle points
-The relevant quantum trajectories are given by the saddle-point
+In the recollision picture, an electron transitions from the ground
+state into the continuum at time $t'_{S}$, ionization time, from that
+time on the effects of the laser field in the electron dynamics are
+dominant and the Coulomb potential of the parent ion is neglected as
+the electron propagates in the continuum with momentum $\mathbf{k}$,
+however, the model allows further interaction with the binding
+potential and the electron is considered to return to within the
+vicinity of the ion at time $t_{S}$, rescattering time, at which the
+electron acquires its final asymptotic momentum $\mathbf{p}$. The
+relevant quantum trajectories, defined by $(t'_{S}, t_{S},
+\mathbf{k})$, are given by the saddle-point
 equations~(\ref{eq:saddle_eqs}) which have their origin in the
 condition that the action of the system remains stationary along those
-points. For the linearly-polarized laser field~(\ref{eq:lp_field}),
-one can solve for the ionization time, $t'_{S}$, and return time,
-$t_{S}$ as the numerical solutions of 
+points. For the linearly-polarized field~(\ref{eq:lp_field}), after
+some algebraic work on the saddle-point equations, one can solve for
+the rescattering time and ionization time as the numerical solutions
+of~\cite{KopoldOptComm2000}
 %
 \begin{eqnarray}
   \label{eq:return_t}
@@ -498,10 +509,33 @@ and
 \begin{eqnarray}
   \label{eq:release_t}
   \begin{split}
-    \omega t'_{S} = \mp \arccos(2\cos\omega t_{S} + \delta \mp i\gamma)
+    \omega t'_{S} = \mp \arccos(2\cos\omega t_{S} + \delta \mp i\gamma),
   \end{split}
 \end{eqnarray}  
 %
+respectively, where the quantity $\delta$ is defined as $\delta =
+\sqrt{p^{2} / (4mU_{p})}$. Therefore, the complex paths are generated
+for every possible set of $(t'_{i}, t_{i}, \mathbf{k}_{i})$. As
+Eq.~(\ref{eq:return_t}) for the rescattering time indicates, there are
+two possible solutions in each optical cycle $T = 2\pi$ due to the
+combination of signs and infinite solutions due to the multivaluedness
+of the $\arccos$ function. Considering the periodicity of the laser
+field, we can focus our attention to the interval $0 <
+\mathrm{Re}\ t_{S} < 2T$ for the rescattering times. Subsequently,
+Eq.~(\ref{eq:release_t}) produces two solutions for the ionization
+time within the interval $-T/2 < \mathrm{Re}\ t'_{S} < 0$, two from
+the interval $-T < \mathrm{Re}\ t'_{S} < -T/2$, and so
+forth. Typically, the travel time $\mathrm{Re}(t_{S} - t'_{S})$
+associated to a quantum trajectory indicates the relevance of its
+contribution to the \textsc{ati} spectrum, the ones with shorter
+travel time being qualitatively more important.
+
+The computation of the \textsc{ati} spectrum can now be carried out
+once the solutions of the saddle-point equations are determined. To
+this end, the appropriate subset of electron trajectories is inserted
+into the matrix element~(\ref{eq:Mp_final}).
+
+
 
 
 % equations
