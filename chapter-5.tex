@@ -486,7 +486,7 @@ potential and the electron is considered to return to within the
 vicinity of the ion at time $t_{S}$, rescattering time, at which the
 electron acquires its final asymptotic momentum $\mathbf{p}$. The
 relevant quantum trajectories, defined by $(t'_{S}, t_{S},
-\mathbf{k})$, are given by the saddle-point
+\mathbf{k}_{S})$, are given by the saddle-point
 equations~(\ref{eq:saddle_eqs}) which have their origin in the
 condition that the action of the system remains stationary along those
 points. For the linearly-polarized field~(\ref{eq:lp_field}), after
@@ -516,12 +516,12 @@ and
 respectively, where the quantity $\delta$ is defined as $\delta =
 \sqrt{p^{2} / (4mU_{p})}$. Therefore, the complex paths are generated
 for every possible set of $(t'_{i}, t_{i}, \mathbf{k}_{i})$. As
-Eq.~(\ref{eq:return_t}) for the rescattering time indicates, there are
+Eq.~(\ref{eq:return_t}) indicates for the rescattering time, there are
 two possible solutions in each optical cycle $T = 2\pi$ due to the
 combination of signs and infinite solutions due to the multivaluedness
 of the $\arccos$ function. Considering the periodicity of the laser
 field, we can focus our attention to the interval $0 <
-\mathrm{Re}\ t_{S} < 2T$ for the rescattering times. Subsequently,
+\mathrm{Re}\ t_{S} < T$ for the rescattering times. Subsequently,
 Eq.~(\ref{eq:release_t}) produces two solutions for the ionization
 time within the interval $-T/2 < \mathrm{Re}\ t'_{S} < 0$, two from
 the interval $-T < \mathrm{Re}\ t'_{S} < -T/2$, and so
@@ -529,6 +529,41 @@ forth. Typically, the travel time $\mathrm{Re}(t_{S} - t'_{S})$
 associated to a quantum trajectory indicates the relevance of its
 contribution to the \textsc{ati} spectrum, the ones with shorter
 travel time being qualitatively more important.
+
+% the different values of the phase used to obtain the trajectories
+% in ascendent order of the travel time
+% mention behaviour before and after cutoff
+% ionization time begin < rescattering time (the real parts)
+% mention that the orbits approach each other near the cutoff
+% and then one has to be dropped out of the sum in Mp, p.63 ATI chapter
+
+The complex orbits for the ionization time,
+rescattering time and complex momentum, given by the saddle-point
+solutions of Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are
+shown in Figure~\ref{fig:complex_paths} for trajectories $i =
+(1,\dots,6)$ as a function of the electron kinetic energy $E_{p}$. A
+subset of the energy values is indicated in multiples of $U_{p}$ along
+the paths. In the process of obtaining the saddle points corresponding
+to trajectories with increasing travel times, the substitution $\omega
+t \to \omega t + 2\pi k$, with $k = 0,1,\dots$, was implemented in
+Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}). The behaviour of
+these complex trajectories is markedly different depending on the
+location of the classical cutoff that indicates the end of their
+contribution to the \textsc{ati} spectrum. This cutoff marks a turning
+point of the complex paths. As it can be noticed, both the
+rescattering times and quantum momentum have very small imaginary
+parts before the cutoff, while their imaginary components become
+noticeable as the electron energies increase beyond the cutoff. In
+contrast, the imaginary parts of the ionization times are significant,
+indicating the origin of the electrons through tunneling ionization.
+
+
+
+
+
+
+
+
 
 The computation of the \textsc{ati} spectrum can now be carried out
 once the solutions of the saddle-point equations are determined. To
@@ -569,7 +604,7 @@ into the matrix element~(\ref{eq:Mp_final}).
 \begin{subfigure}[b]{0.33\linewidth}
   \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/momentum56.pdf}
 \end{subfigure}
-\caption{caption}
+\caption{Saddle points for the orbits $(s = 1,\dots,6)$}
   \label{fig:complex_paths}
 \end{figure}
 
