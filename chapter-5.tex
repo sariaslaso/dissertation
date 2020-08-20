@@ -537,31 +537,33 @@ travel time being qualitatively more important.
 % mention that the orbits approach each other near the cutoff
 % and then one has to be dropped out of the sum in Mp, p.63 ATI chapter
 
-The complex orbits for the ionization time,
-rescattering time and complex momentum, given by the saddle-point
-solutions of Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are
-shown in Figure~\ref{fig:complex_paths} for trajectories $i =
-(1,\dots,6)$ as a function of the electron kinetic energy $E_{p}$. A
-subset of the energy values is indicated in multiples of $U_{p}$ along
-the paths. In the process of obtaining the saddle points corresponding
-to trajectories with increasing travel times, the substitution $\omega
-t \to \omega t + 2\pi k$, with $k = 0,1,\dots$, was implemented in
+The complex orbits for the ionization time, rescattering time and
+complex momentum, given by the saddle-point solutions of
+Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are shown in
+Figure~\ref{fig:complex_paths} for trajectories $i = (1,\dots,6)$ as a
+function of the electron kinetic energy $E_{p}$. A subset of the
+energy values is indicated in multiples of $U_{p}$ along the paths. In
+the process of obtaining the saddle points corresponding to
+trajectories with increasing travel times, the substitution $\omega t
+\to \omega t + 2\pi k$, with $k = 0,1,\dots$, was implemented in
 Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}). The behaviour of
 these complex trajectories is markedly different depending on the
-location of the classical cutoff that indicates the end of their
-contribution to the \textsc{ati} spectrum. This cutoff marks a turning
-point of the complex paths. As it can be noticed, both the
-rescattering times and quantum momentum have very small imaginary
-parts before the cutoff, while their imaginary components become
-noticeable as the electron energies increase beyond the cutoff. In
-contrast, the imaginary parts of the ionization times are significant,
-indicating the origin of the electrons through tunneling ionization.
-
-
-
-
-
-
+location of the classical cutoff. Every pair of trajectories shows
+that the quantum orbits approach each other closely near the
+cutoff. For energies above the cutoff, the orbits in every pair
+diverge away from one another and the ones with negative imaginary
+parts stop contributing to the \textsc{ati} spectrum and are dropped
+from the sum~(\ref{eq:Mp_final}), as they lead to a diverging solution
+for probability amplitude. This cutoff marks a turning point of the
+complex paths. As it can be noticed, both the rescattering times and
+quantum momentum have very small imaginary parts before the cutoff,
+while their imaginary components become noticeable as the electron
+energies increase beyond the cutoff. In contrast, the imaginary parts
+of the ionization times are significant, indicating the origin of the
+electrons through tunneling ionization. For energies above the cutoff,
+the real components of the complex paths remain approximately constant
+with increasing energy. As a result, a marked drop appears after the
+cutoff in the spectrum associated with a given pair of trajectories.
 
 
 
@@ -604,7 +606,16 @@ into the matrix element~(\ref{eq:Mp_final}).
 \begin{subfigure}[b]{0.33\linewidth}
   \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/momentum56.pdf}
 \end{subfigure}
-\caption{Saddle points for the orbits $(s = 1,\dots,6)$}
+\caption{Saddle points for the orbits $(s = 1,\dots,6)$ in the complex
+  plane as a function of the electron energy $E_{p}$ specified along
+  the lines in multiples of $U_{p}$. A laser field of
+  $10^{15}\ \mathrm{W/cm^{2}}$ and $\hbar\omega = 1.58\ \mathrm{eV}$
+  and a binding energy of $E_{0} = -0.9\ \mathrm{a.u.}$ were used in
+  the calculations. In this figure, $\omega t'$ represents the
+  ionization time, $\omega t$ stands for rescattering time, and
+  $k_{x}$ is the $x-$component of the canonical momentum
+  $\mathbf{k}$. The underlying Keldysh parameter was set to $\gamma =
+  0.464$.}
   \label{fig:complex_paths}
 \end{figure}
 
