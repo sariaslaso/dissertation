@@ -530,13 +530,6 @@ associated to a quantum trajectory indicates the relevance of its
 contribution to the \textsc{ati} spectrum, the ones with shorter
 travel time being qualitatively more important.
 
-% the different values of the phase used to obtain the trajectories
-% in ascendent order of the travel time
-% mention behaviour before and after cutoff
-% ionization time begin < rescattering time (the real parts)
-% mention that the orbits approach each other near the cutoff
-% and then one has to be dropped out of the sum in Mp, p.63 ATI chapter
-
 The complex orbits for the ionization time, rescattering time and
 complex momentum, given by the saddle-point solutions of
 Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are shown in
@@ -564,18 +557,6 @@ electrons through tunneling ionization. For energies above the cutoff,
 the real components of the complex paths remain approximately constant
 with increasing energy. As a result, a marked drop appears after the
 cutoff in the spectrum associated with a given pair of trajectories.
-
-
-
-The computation of the \textsc{ati} spectrum can now be carried out
-once the solutions of the saddle-point equations are determined. To
-this end, the appropriate subset of electron trajectories is inserted
-into the matrix element~(\ref{eq:Mp_final}).
-
-
-
-
-% equations
 
 % plot of saddle points
 \begin{figure}
@@ -619,17 +600,47 @@ into the matrix element~(\ref{eq:Mp_final}).
   \label{fig:complex_paths}
 \end{figure}
 
+% write expression of the action that is plotted in the complex plane
+The actions $S(t_{i},t'_{i},\mathbf{k}_{i})/\eta$, with $\eta = 35.8$,
+corresponding to the electron trajectories with the shortests travel
+times $(i = 1, 2)$ are shown in Figure~\ref{fig:phase_ReIm} for
+increasing electron energy $E_{p}$. A subset of energy values is
+specified along the curves up to the cutoff energy, whereupon a
+crossing takes place between the paths. In addition, the complex
+coordinates of the action extracted from~\cite{phd_Kopold} are
+included for the electron energies specified, $\times$, along with
+errobars that reflect a comparison with the analytical expression for
+the action~[make ref to equation here]. As
+Figure~\ref{fig:complex_paths} reflects, the real part of the action
+is more sensitive to changes in the electron energy below the cutoff,
+while the imaginary parts vary rapidly for energies higher than $10.24
+U_{p}$, where the contributions
+
+
+there is little change in the
+imaginary components of the complex paths for energies below the cutoff, whereas 
+
 
 % plot of action in phase-space
 \begin{figure}
-  \centering
-  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/rescattering/phase_ComplexReIm.pdf}
-  \caption{caption}
+  \centering \includegraphics[width =
+    0.75\textwidth]{figures/ch_ATI_SPA/rescattering/phase_ComplexReIm.pdf}
+  \caption{Representation of the action in the complex plane for the
+    two shortest trajectories $(1, 2)$ shown in blue and red
+    respectively. In addition, the complex coordinates for the action
+    extracted from~\cite{phd_Kopold} are shown as $\times$ for the
+    specified energy values.}
   \label{fig:phase_ReIm}
 \end{figure}
 
 % mention errorbars in the plot of the action in the complex plane for
 % paths 1 and 2
+
+The computation of the \textsc{ati} spectrum can now be carried out
+once the solutions of the saddle-point equations are determined. To
+this end, the appropriate subset of electron trajectories is inserted
+into the matrix element~(\ref{eq:Mp_final}).
+
 
 
 % plot of formation of the spectrum as the number of trajectories
