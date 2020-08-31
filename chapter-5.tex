@@ -530,6 +530,55 @@ associated to a quantum trajectory indicates the relevance of its
 contribution to the \textsc{ati} spectrum, the ones with shorter
 travel time being qualitatively more important.
 
+% add algebra on the action for trajectories with rescattering and
+% break down into real and imaginary components (based on the electron
+% paths being complex to account for tunneling ionization), which is
+% later shown in Fig. 5.5
+In the rescattering picture, it is illustrating to take into account
+the complex nature of the electron dynamics in order to visualize how
+the action of the system, $S(t_{i},t'_{i},\mathbf{k})$, evolves as the
+electron energy increases. To this end, one can write the explicit
+analytic expression for the action in the event that the canonical
+momentum $\mathbf{k}$ and the final momentum $\mathbf{p}$ are parallel
+to the linearly polarized laser field~(\ref{eq:lp_field}), which reads
+%
+\begin{eqnarray}
+  \label{eq:action_analytic}
+S_{\bf{p}}(t, t', \bf{k}) & = &
+-\frac{1}{2} \int_{t}^{\infty} d\tau\left[ p^{2}
+- 2eA_{0}p\cos(\omega\tau) + (eA_{0})^{2}\cos(\omega\tau)^{2} \right]\nonumber\\
+&& -\frac{1}{2} \int_{t'}^{t} d\tau\left[k^{2}
+- 2eA_{0}k\cos(\omega\tau) + (eA_{0})^{2}\cos(\omega\tau)^{2} \right]\nonumber\\
+&& + \int_{-\infty}^{t'} d\tau|E_{0}|.
+\end{eqnarray}
+%
+In the vicinity of the saddle points $(t_{i},t'_{i},\mathbf{k})$,
+where the action is stationary, the integration limits that cause the
+integrand to diverge to $\pm\infty$ can be neglected. Some algebraic
+simplifications on the analytic expression for the action allow us to
+express the phase, $\Phi = (1/\eta)S$, in the probability
+amplitude~(\ref{eq:Mp_final}) as
+%
+\begin{eqnarray}
+  \label{eq:phase_final}
+\Phi(t, t', \bf{k}) & = &
+\left(\frac{E_{P}}{U_{P}} - \frac{k^{2}}{2U_{P}}\right) \omega t
++ \frac{2e}{\sqrt{U_{P}}} \left( k - \sqrt{2E_{P}}\right) \sin(\omega t) \nonumber\\
+&&
++ \left( \frac{k^{2}}{2U_{P}} + e^{2}+2\gamma^{2} \right)\omega t'
+- \frac{2e}{\sqrt{U_{P}}} k\sin(\omega t') \nonumber\\
+&&
++ \frac{e^2}{2}\sin(2\omega t'),
+\end{eqnarray}
+%
+where $E_{P}$ indicates the electron energy.
+
+%The phase is defined as Φ = (1/η)S = (ω/UP )S, where UP is the
+%ponderomotive energy of the electron. Multiplying the action (12) by
+%the 1/η factor and making use of the definitions of the ponderomotive
+%energy and the Keldysh parameter one arrives at the expression
+
+
 The complex orbits for the ionization time, rescattering time and
 complex momentum, given by the saddle-point solutions of
 Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are shown in
@@ -610,27 +659,22 @@ crossing takes place between the paths. In addition, the complex
 coordinates of the action extracted from~\cite{phd_Kopold} are
 included for the electron energies specified, $\times$, along with
 errorbars that reflect a comparison with the analytical expression for
-the action~[make ref to equation here]. As Figure~\ref{fig:phase_ReIm}
-displays, for energies below the cutoff the most noticeable changes
-occur in the real components, while the imaginary parts of the
-individual trajectories change little as they approach each other
-along the plateau. In contrast to the saddle points behaviour
-(Figure~\ref{fig:complex_paths}), where in a given pair of
-trajectories $(i, j)$ they diverge rapidly from one another towards
-the cutoff, the complex contributions of the action become more
-similar as the electron energy increases and eventually are
+the action~(\ref{eq:action_analytic}). For energies below the cutoff
+the most noticeable changes occur in the real components, while the
+imaginary parts of the individual trajectories change little as they
+approach each other along the plateau. In contrast to the saddle
+points behaviour (Figure~\ref{fig:complex_paths}), where in a given
+pair of trajectories $(i, j)$ they diverge rapidly from one another
+towards the cutoff, the complex contributions of the action become
+more similar as the electron energy increases and eventually are
 interchanged at the cutoff, at which point one of the trajectories
 ceases to contribute to the \textsc{ati} spectrum.
-
-% The weights of the individual trajectories are mainly determined by
-% the imaginary part of the effect. In the plateau, the contribution of
-% trajectory 1 is somewhat stronger than that of trajectory 2. Towards
-% the cutoff, however, the trajectories and their contributions become
-% more and more similar. Because of this, the last constructive
-% interference at the cutoff is always most pronounced. Finally, the
-% weights are interchanged and only one of the two trajectories may
-% continue to be taken into account
-
+% MENTION THIS IN THE DESCRIPTION OF THE ATI SPECTRUM FIGURE
+% Towards the cutoff, however, the trajectories and their
+% contributions become more and more similar. Because of this, the
+% last constructive interference at the cutoff is always most
+% pronounced. Finally, the weights are interchanged and only one of
+% the two trajectories may continue to be taken into account
 
 % plot of action in phase-space
 \begin{figure}
