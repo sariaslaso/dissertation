@@ -67,16 +67,16 @@ pictures the processes taking place in laser-atom interactions, such
 as \textsc{ati} and high-harmonic generation (\textsc{hhg}), in terms
 of electron trajectories in phase space. These quantum trajectories
 follow classical Newtonian dynamics, however, must take place in the
-complex plane to account for tunneling. Consequently, they present
-non-zero imaginary components which determine the probability of the
-process. Their physical content is reflected in the electron dynamics
-once it has been ionized at time $t'$, the electron may return to its
-parent ion at a later time $t$ and rescatter after propagating with
-momentum $\mathbf{k}$ in the continuum under the action of the
-external field.
+complex plane to account for tunneling ionization. Consequently, they
+present non-zero imaginary components which determine the probability
+of the process. Their physical content is reflected in the electron
+dynamics once it has been ionized at time $t'$, the electron may
+return to its parent ion at a later time $t$ and rescatter after
+propagating with momentum $\mathbf{k}$ in the continuum under the
+action of the external field.
 
 In the length gauge, the compact form of the Volkov state can be
-expressed as
+expressed as~\cite{Becker_ati2002}
 \begin{eqnarray}
 \label{eq:volkov_Lgauge}
 \begin{split}
@@ -85,12 +85,10 @@ expressed as
 \end{split}
 \end{eqnarray}
 where $|\mathbf{p} - e\mathbf{A}(t)\rangle$ represents a plane-wave
-state and
-$S_{\mathbf{p}}(t) = 1/2m \int\limits^{t} d\tau [\mathbf{p} -
-e\mathbf{A}(\tau)]^{2}$
-denotes the action of the system. Consequently, the Volkov
-time-evolution operator can be written down in the form of an
-expansion in terms of its Volkov states
+state and $S_{\mathbf{p}}(t) = 1/2m \int\limits^{t} d\tau [\mathbf{p}
+  - e\mathbf{A}(\tau)]^{2}$ denotes the action of the
+system. Consequently, the Volkov time-evolution operator can be
+expressed as an expansion in terms of its Volkov states
 \begin{eqnarray}
 \label{eq:te_volkov}
 \begin{split}
@@ -102,9 +100,9 @@ U^{(V)}(t,t') & = & \int d^{3}\mathbf{k}
 
 Inserting the expansion~(\ref{eq:te_volkov}) into the matrix
 element~(\ref{eq:mp_compact}) and given the time dependence of the
-ground state wave function,
-$|\psi_{0}(t) \rangle = \exp{(iE_{0}t)} | \psi_{0} \rangle$,
-one may write~\cite{KopoldOptComm2000}
+ground state wave function, $|\psi_{0}(t) \rangle = \exp{(iE_{0}t)} |
+\psi_{0} \rangle$, one may write the probability amplitude
+as~\cite{KopoldOptComm2000}
 \begin{eqnarray}
 \label{eq:me_action}
 \begin{split}
@@ -130,15 +128,15 @@ m_{\mathbf{p}}(t, t', \mathbf{k}).
 As one may notice, the action in the exponent, $S_{\mathbf{p}}(t, t',
 \mathbf{k})$, contains three terms which correspond to the action of
 the entire system after rescattering, between ionization and
-rescattering and before ionization, respectively.
+rescattering, and before ionization, respectively.
 
 % point out the contrast with feynman's path integral
 % p-57 chapter
 It is revealing to point out the contrast of the ionization
 amplitude~(\ref{eq:me_action}) obtained with the strong field
 approximation with its analogous representation in terms of Feynman's
-theory of path integral. The time evolution operator of the entire
-system has the path integral representation
+theory of path integral~\cite{RevModPhysFeynman}. The time evolution
+operator of the entire system has the path integral representation
 \begin{eqnarray}
 \label{eq:te_path}
 \begin{split}
@@ -160,11 +158,12 @@ the strong-field approximation, to a sum over a few quantum orbits. By
 implementing the strong-field approximation we have approximated the
 exact action of the system at the various stages of the process:
 before ionization, in between ionization and rescattering, and after
-rescattering, as~(\ref{eq:me_action}) indicates, where the ionization
-amplitude is computed through a sum over the exponential of the action
-over a five-parameter set of paths, parametrized by the ionization
-time $t'$, the rescattering time $t$ and the canonical momentum of the
-orbit in between $\mathbf{k}$~\cite{KopoldOptComm2000}.
+rescattering, as Eq.~(\ref{eq:me_action}) indicates, where the
+ionization amplitude is computed by means of a sum over the
+exponential of the action over a five-parameter set of paths,
+parametrized by the ionization time $t'$, the rescattering time $t$
+and the canonical momentum of the orbit in between
+$\mathbf{k}$~\cite{KopoldOptComm2000}.
 
 The five-dimensional set of paths over which the transition
 amplitude~(\ref{eq:me_action}) is evaluated can be reduced further by
@@ -696,6 +695,12 @@ once the solutions of the saddle-point equations are determined. To
 this end, the appropriate subset of electron trajectories is inserted
 into the matrix element~(\ref{eq:Mp_final}).
 
+\begin{figure}
+  \centering \includegraphics[width =
+    0.75\textwidth]{figures/ch_ATI_SPA/rescattering/14pathsvsqm.pdf}
+  \caption{CAPTION}
+  \label{fig:ati_spectrum}
+\end{figure}
 
 
 % plot of formation of the spectrum as the number of trajectories
