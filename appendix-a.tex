@@ -1,0 +1,107 @@
+\chapter{Length gauge}
+\label{app:L_gauge}
+
+This appendix introduces the length gauge, a commonly used gauge
+choice to describe laser-atom interactions. %put this in perspective
+
+The Hamiltonian for an electron in the presence of an external
+electromagnetic field described by the potentials $(\mathbf{A},\phi)$
+can be expressed as
+%
+\begin{eqnarray}
+  \label{eq:H_lgauge}
+  \begin{split}
+    H(t) & = & \frac{1}{2m}(\mathbf{p} - e\mathbf{A})^{2}
+    + V(\mathbf{r}) + e\phi,
+  \end{split}
+\end{eqnarray}
+%
+where $\mathbf{p} = -i\nabla$, $\nabla$ is the gradient operator, and
+$V(\mathbf{r})$ is the binding potential of the atom. In the presence
+of an electromagnetic field, the Hamiltonian is frequently decomposed
+as
+%
+\begin{eqnarray}
+  \label{eq:H_decomposed}
+  \begin{split}
+    H(t) & = & H_{0} + H_{I}(t),
+  \end{split}
+\end{eqnarray}
+%
+where the operator $H_{0} = \mathbf{p}^{2}/2m + V(\mathbf{r})$ is
+known as the field-free Hamiltonian, while $H_{I}(t)$ describes the
+interaction of an otherwise free electron with the external field, and
+its form depends on the gauge employed. Within the long-wavelength
+approximation (\textsc{lwa}), or dipole approximation, which neglects
+the space dependence of the electric field and the vector potential,
+so that $\mathbf{E}(\mathbf{r}, t) \to \mathbf{E}(t)$ and
+$\mathbf{A}(\mathbf{r}, t) \to \mathbf{A}(t)$, one finds that the
+divergence of the vector potential vanishes $\nabla\cdot\mathbf{A} =
+0$, and the interaction operator takes the form
+%
+\begin{eqnarray}
+  \label{eq:H_dipole}
+  \begin{split}
+    H_{I}(t) & = & e\phi -
+    \frac{e}{m}\mathbf{A}\cdot\mathbf{p} + \frac{e^{2}}{2m}\mathbf{A}^{2}
+  \end{split}
+\end{eqnarray}
+%
+
+A gauge transformation is defined as a change of the electromagnetic
+field potentials $(\mathbf{A}, \phi)$ by the gauge function $\Lambda =
+\Lambda(\mathbf{r},t)$ such that
+%
+\begin{eqnarray}
+  \label{eq:gauge}
+  \begin{split}
+    \mathbf{A} & \to & \mathbf{A}' = \mathbf{A} + \nabla\Lambda \\
+    \phi & \to & \phi' = \phi - \frac{\partial}{\partial t}\Lambda.
+  \end{split}
+\end{eqnarray}
+%
+This transformation leaves the physical fields $\mathbf{E}$ and
+$\mathbf{B}$ unaffected as well as the time dependent Schr\"{o}dinger
+equation $i\frac{\partial}{\partial t}\Psi = H(t)\Psi$. The length
+gauge results from the transformation
+%
+\begin{eqnarray}
+  \label{eq:length_gauge}
+  \begin{split}
+    \Lambda & = & -\mathbf{A}(t) \cdot \mathbf{r},
+  \end{split}
+\end{eqnarray}
+%
+which leads to
+%$\mathbf{A}' = 0$ and $\phi' = \frac{\partial}{\partial t}
+%\mathbf{A}(t) \cdot \mathbf{r} = -\mathbf{E}(t) \cdot \mathbf{r}$
+%
+\begin{eqnarray}
+  \label{eq:A_length}
+  \begin{split}
+    \mathbf{A}' = & 0 \\
+    \phi' = & \frac{\partial}{\partial t}
+    \mathbf{A}(t) \cdot \mathbf{r} = -\mathbf{r} \cdot \mathbf{E}(t) 
+  \end{split}
+\end{eqnarray}
+for the vector and scalar potentials of the external laser field,
+respectively. In terms of the transformed potentials, the interaction
+operator takes the form $H_{I} = -e \mathbf{r} \cdot \mathbf{E}(t)$.
+Therefore, in the length gauge the \textsc{tdse} becomes
+%
+\begin{eqnarray}
+  \label{eq:tdse_length}
+  \begin{split}
+    i \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) & = & \left[H_{0} -
+      e\mathbf{r}\cdot\mathbf{E}(t) \right] \Psi(\mathbf{r}, t).
+  \end{split}
+\end{eqnarray}
+%
+The solution of the \textsc{tdse}~(\ref{eq:tdse_length}) is the Volkov
+wave function $\Psi^{V}(\mathbf{r}, t)$, which represents a plane wave
+and describes an electron in a strong laser field.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "thesis"
+%%% End:
