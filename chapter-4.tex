@@ -13,27 +13,28 @@ absorb many more photons than the minimum required to get ionized,
 ejecting an electron of very high energy. The photoelectron energy
 spectrum associated with this effect exhibits a series of peaks
 separated by the energy of a laser photon. This phenomenon is known as
-above threshold ionization (ATI) and was first observed by
+above threshold ionization (\textsc{ati}) and was first observed by
 Agostini et al~\cite{ATI1979}.
 
-ATI has been tackled by means of diverse approaches, with analytical
-approximations dating back to the Keldysh theory which represents a
-strong-field approximation~\cite{KeldyshSFA}. Alternatively, attempts
-to find a numerical solution to the time-dependent Schr\"{o}dinger
-equation (TDSE)~\cite{muller_tdse1999, scrinzi_tdse1999, Joachain2000}
-have been instrumental for the understanding of ATI, and a variety of
-efforts that deal with the complexity of solving this challenging
-numerical problem have been successful in the
+\textsc{ati} has been tackled by means of diverse approaches, with
+analytical approximations dating back to the Keldysh theory which
+represents a strong-field
+approximation~\cite{KeldyshSFA}. Alternatively, attempts to find a
+numerical solution to the time-dependent Schr\"{o}dinger equation
+(\textsc{tdse})~\cite{muller_tdse1999, scrinzi_tdse1999, Joachain2000}
+have been instrumental for the understanding of \textsc{ati}, and a
+variety of efforts that deal with the complexity of solving this
+challenging numerical problem have been successful in the
 past~\cite{Becker_ati2002}. In the same way, complementary approaches
-to the solution of the TDSE, such as the so-called Volkov-state
-methods~\cite{Faisal_1973, Reiss_1980, Kaminski_1997}, have revealed
-their strengths within strong-laser field problems in which a
-numerical solution would involve a computationally taxing problem. The
-strong-field approximation~\cite{KeldyshSFA}, which treats the binding
-potential of the atom as a perturbation once the electron has been
-promoted into the continuum where the external laser field governs the
-electron dynamics, is the foundation to the formalism discussed in
-this chapter.
+to the solution of the \textsc{tdse}, such as the so-called
+Volkov-state methods~\cite{Faisal_1973, Reiss_1980, Kaminski_1997},
+have revealed their strengths within strong-laser field problems in
+which a numerical solution would involve a computationally taxing
+problem. The strong-field approximation~\cite{KeldyshSFA}, which
+treats the binding potential of the atom as a perturbation once the
+electron has been promoted into the continuum where the external laser
+field governs the electron dynamics, is the foundation to the
+formalism discussed in this chapter.
 
 Sec.~\ref{sec:keldysh} presents an overview of the pioneering work by
 Keldysh to describe the laser ionization of atoms. Next, a generalized
@@ -74,10 +75,10 @@ laser field intensity increases~\cite{KeldyshSFA}.
 At moderate intensities, $I < 10^{14}\ \mathrm{W/cm^{2}}$, atomic
 states undergo a transition from bound states into the continuum due
 to the multiphoton excitation linked to the interaction with the laser
-field, this phenomenon is known as multiphoton ionization (MPI). The
-interaction with intense laser fields induces an ac Stark shift of the
-atomic bound states that is responsible for the peak suppression in
-the ionization spectrum as the field intensity
+field, this phenomenon is known as multiphoton ionization
+(\textsc{mpi}). The interaction with intense laser fields induces an
+ac Stark shift of the atomic bound states that is responsible for the
+peak suppression in the ionization spectrum as the field intensity
 increases~\cite{MullerStark_1988}. While states near the nucleus have
 a negligible shift in energy due their strong bond and are, in fact,
 harder to influence by the field, the upward shift of the higher
@@ -92,16 +93,16 @@ energetically forbiden, in a smoothly varying pulse ionization
 channels may not be closed for the entire pulse, in such a way that
 the corresponding peak in the ionization spectrum will not vanish
 completely~\cite{Protopapas_mpi_tunneling,Joachain_mpi_tunneling}. The
-number of photons required for MPI to take place depends on the
-typical binding energies of the initial states, $E_{i} = -I_{p}$. For
-ionization of a hydrogen atom, $I_{p} \sim 13.6\ \rm{eV}$, with a
-typical photon energy of $\hbar\omega \sim 1.5\ \rm{eV}$ at
-$800\ \rm{nm}$, at least $9$ photons are necessary for the outer
-electrons to escape the binding potential of the atom and reach the
-continuum. While for the helium atom, $I_{p} \sim 24.5\ \rm{eV}$,
-under a laser photon energy of $\hbar\omega = 1.58\ \rm{eV}$, which we
-consider in this chapter, at least $15$ photons are needed for
-ionization to occur.
+number of photons required for \textsc{mpi} to take place depends on
+the typical binding energies of the initial states, $E_{i} =
+-I_{p}$. For ionization of a hydrogen atom, $I_{p} \sim
+13.6\ \rm{eV}$, with a typical photon energy of $\hbar\omega \sim
+1.5\ \rm{eV}$ at $800\ \rm{nm}$, at least $9$ photons are necessary
+for the outer electrons to escape the binding potential of the atom
+and reach the continuum. While for the helium atom, $I_{p} \sim
+24.5\ \rm{eV}$, under a laser photon energy of $\hbar\omega =
+1.58\ \rm{eV}$, which we consider in this chapter, at least $15$
+photons are needed for ionization to occur.
 
 At sufficiently high intensity, $I > 10^{14}\ \mathrm{W/cm^2}$, and
 low frequency, the number of photons required for ionization grows
@@ -133,7 +134,7 @@ competing mechanisms that characterize the ionization process. For
 $\gamma < 1$, tunneling dynamics will dominate, whereas for $\gamma >
 1$ multiphoton dynamics will prevail. In this chapter, we will refer
 to the tunneling regime as it is one of the fundamental processes in
-ATI.
+\textsc{ati}.
 
 \begin{figure}
   \centering
@@ -159,12 +160,12 @@ ATI.
 % use illustration from literature (PRL72_Paulus)
 
 Even though the Keldysh formalism for strong-field ionization provided
-very good agreement with experimental data of electron ATI spectra for
-helium ionization~\cite{Walker_1994exp}, rescattering effects were not
-included in the theory and it failed to reproduce the rescattering
-induced plateau that is visible in measurements along a broad energy
-spectrum~\cite{Paulus_1994plateau, Walker_1996}, and emerged as a
-prevalent feature in the ATI energy
+very good agreement with experimental data of electron \textsc{ati}
+spectra for helium ionization~\cite{Walker_1994exp}, rescattering
+effects were not included in the theory and it failed to reproduce the
+rescattering induced plateau that is visible in measurements along a
+broad energy spectrum~\cite{Paulus_1994plateau, Walker_1996}, and
+emerged as a prevalent feature in the \textsc{ati} energy
 spectrum. Figure~\ref{fig:plateau_ATI} shows the presence of such
 plateau as a marked change of slope in the ionization spectrum of rare
 gases. A recollision picture in which the strong-field ionization is
@@ -179,10 +180,11 @@ effects and reveals the complex structure of the ionization spectrum.
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/plateauPRL72}
-  \caption{ATI spectra for various noble gases, at a wavelength of
-    $\lambda = 630\ \rm{nm}$ and an intensity of $I \simeq 2\times
-    10^{14}\ \rm{W/cm^{2}}$ ($3\times 10^{14}\ \rm{W/cm^{2}}$ for
-    He). From Ref.~\cite{Paulus_1994plateau}}
+  \caption{\textsc{ati} spectra for various noble gases, at a
+    wavelength of $\lambda = 630\ \rm{nm}$ and an intensity of $I
+    \simeq 2\times 10^{14}\ \rm{W/cm^{2}}$ ($3\times
+    10^{14}\ \rm{W/cm^{2}}$ for He). From
+    Ref.~\cite{Paulus_1994plateau}}
   \label{fig:plateau_ATI}
 \end{figure}
 
@@ -214,7 +216,8 @@ H(t) & = & -\frac{1}{2} \nabla^{2} + H_{I}(t) + V(\mathbf{r}),
 which includes the binding potential of the parent ion,
 $V(\mathbf{r})$, and the interaction with the laser field,
 $H_{I}(t)=-\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
-approximation in the length gauge~\cite{Kopold_1997sfa}.
+approximation in the length gauge~\cite{Kopold_1997sfa} (see
+Appendix~\ref{app:L_gauge}).
 
 The time-evolution operator satisfies an integral equation, namely the
 Dyson equation~\cite{Kopold_1997sfa, cjp2010_keldysh}, which
@@ -309,13 +312,13 @@ electric field of the laser, as the field changes in sign, away and
 back to the core for several laser periods. Under these conditions
 they may scatter, at least once, off the atomic potential before
 finally leaving the laser pulse. Rescattering mechanisms determine the
-universal picture of ATI
+universal picture of \textsc{ati}
 spectra~\cite{Becker_rescattering1994,Walker_1996,BeckerRescattering_2018},
 and, along with momentum conservation, represent the origin of the
 characteristic plateau that is present in linear-polarization
 generated spectra~\cite{PRL72ATIplateau}. In this section, we are
-concerned with exploring the ATI energy spectrum of such electrons
-that interact further with the atomic core and rescatter.
+concerned with exploring the \textsc{ati} energy spectrum of such
+electrons that interact further with the atomic core and rescatter.
 
 % pra55 kopold
 % derivation of eq.6, generalized of keldysh amplitude
@@ -442,9 +445,9 @@ form
 Both contributions the one from direct electrons described by the
 Keldysh amplitude as well as that from rescattering electrons which
 interact one more time with the binding potential are considered when
-studying the convergence of the ATI matrix element that generates the
-ionization spectrum. Our calculation considers a laser field with
-$\hbar\omega = 1.58\ \rm{eV}$ at an intensity of
+studying the convergence of the \textsc{ati} matrix element that
+generates the ionization spectrum. Our calculation considers a laser
+field with $\hbar\omega = 1.58\ \rm{eV}$ at an intensity of
 $10^{15}\ \rm{W}/\rm{cm}^{2}$, acting upon a He atom with $E_{0} =
 -0.9\ \rm{a.u.}$ as the binding energy. Atomic units are used for the
 field intensity so the relative strengths of the laser versus the
@@ -530,8 +533,8 @@ Given that the transition amplitude that describes the rescattering of
 an electron to its binding potential~(\ref{eq:Mp_quad}) is a
 generalization of the Keldysh
 amplitude~(\ref{eq:keldysh_amp_explicit}) one should expect that the
-generalized ATI spectrum contains that of direct electrons at low
-electron energies. A comparison between Eqs.~(\ref{eq:Mp_rew})
+generalized \textsc{ati} spectrum contains that of direct electrons at
+low electron energies. A comparison between Eqs.~(\ref{eq:Mp_rew})
 and~(\ref{eq:keldysh_amp_explicit}) illustrates that, for a given
 value of $l$, the function $F(l)$ should be proportional to the Bessel
 factor $J_{l}\left( \frac{U_{p}}{2\omega} \right)$. This calculation
@@ -618,11 +621,11 @@ about $2.5\rm{U_{p}}$.
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/He/l20304050Keldysh.pdf}
-\caption{ATI spectrum of zero-range model for helium by a linearly
-  polarized field with a laser intensity of $10^{15}\ \rm{W/cm^{2}}$
-  with $\hbar\omega = 1.58\ \rm{eV}$ describing direct electrons. Each
-  curve corresponds to a finite value of $l_{\rm{max}}$ in the
-  standard Keldysh amplitude.}
+\caption{\textsc{ati} spectrum of zero-range model for helium by a
+  linearly polarized field with a laser intensity of
+  $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega = 1.58\ \rm{eV}$
+  describing direct electrons. Each curve corresponds to a finite
+  value of $l_{\rm{max}}$ in the standard Keldysh amplitude.}
 \label{fig:keldysh_convergence}
 \end{figure}
 
@@ -666,10 +669,10 @@ field~\cite{Kopold_1997sfa,Paulus_1994plateau,Paulus_1994plateau_classical}.
 \begin{subfigure}[b]{0.5\linewidth}
   \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/He/l7080n512WP40PG25MR35vsKeldysh.pdf}
 \end{subfigure}
-\caption{ATI spectrum of a zero-range He model with a binding energy
-  of $E_{0} = -0.9\ \rm{a.u.}$ by a linearly polarized field with a
-  laser intensity of $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega =
-  1.58\ \rm{eV}$ in terms of an increasing Bessel order,
+\caption{\textsc{ati} spectrum of a zero-range He model with a binding
+  energy of $E_{0} = -0.9\ \rm{a.u.}$ by a linearly polarized field
+  with a laser intensity of $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega
+  = 1.58\ \rm{eV}$ in terms of an increasing Bessel order,
   $l_{\rm{max}}$, as a function of the electron energy (in
   colour). The result from the standard Keldysh approximation is shown
   as the black dotted line.}
@@ -692,8 +695,8 @@ field~\cite{Kopold_1997sfa,Paulus_1994plateau,Paulus_1994plateau_classical}.
 % of a strong laser field
 The study on the H$_{2}$O molecular orbitals presented in
 Chapter~\ref{cha:dc_h2o} is extended in this section with the aim of
-exploring the ATI spectrum of the $1b_{1}$ and $1b_{2}$ molecular
-orbitals previously characterized as spherical orbitals. The
+exploring the \textsc{ati} spectrum of the $1b_{1}$ and $1b_{2}$
+molecular orbitals previously characterized as spherical orbitals. The
 zero-range model calculation carried out in the previous section
 combined with the strong-field approximation is applied to these
 valence orbitals in order to explore their response to an intense
@@ -730,8 +733,8 @@ electron yield which follows that of direct electrons for low
 energies, i.e., electrons energies for which the direct spectrum is
 not vanished and the rescattering effects are not taken into
 account. This section is aimed to validate the previous statement and
-explore the convergence of the ATI spectrum of these two simplified
-representations of H$_{2}$O orbitals.
+explore the convergence of the \textsc{ati} spectrum of these two
+simplified representations of H$_{2}$O orbitals.
 
 Figures~\ref{fig:1b1_vs_keldysh} and~\ref{fig:1b2_vs_keldysh} show the
 values taken by the function $F(l)$ for a set of values of
@@ -820,7 +823,7 @@ and~\ref{fig:1b2_spectrum} as a function of the electron energy. The
 evolution of the electron yield is presented in terms of the Bessel
 order $l$, $40 \leq l \leq 80$. As it can be noticed, expanding the
 sum in Eq.~(\ref{eq:Mp_quad}) up to $l_{\rm{max}} = 80$, purple curve,
-leads to convergence of the ATI spectrum for both molecular
+leads to convergence of the \textsc{ati} spectrum for both molecular
 orbitals. Consistently with the comparison with the standard Keldysh
 amplitude shown in Figures~\ref{fig:1b1_vs_keldysh}
 and~\ref{fig:1b2_vs_keldysh}, as $l$ increases a higher working
@@ -839,12 +842,12 @@ describes the spectrum consisting entirely of rescattered electrons.
   \centering
   \includegraphics[width=0.75\textwidth]
                   {figures/ch_ATI_SFA/1b1/l40to80n512WP50PG25MR35vsKeldysh.pdf}
-  \caption{ATI spectrum for the $1b_{1}$ MO of H$_{2}$O by a linearly
-    polarized field with laser intensity of $10^{15}\ \rm{W/cm^{2}}$
-    with $\hbar\omega = 1.58\ \rm{eV}$ in terms of an increasing
-    Bessel order, $l$, as a function of the electron energy (in
-    colour). The result from the standard Keldysh approximation is
-    shown as the black dotted line.}
+  \caption{\textsc{ati} spectrum for the $1b_{1}$ MO of H$_{2}$O by a
+    linearly polarized field with laser intensity of
+    $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega = 1.58\ \rm{eV}$ in
+    terms of an increasing Bessel order, $l$, as a function of the
+    electron energy (in colour). The result from the standard Keldysh
+    approximation is shown as the black dotted line.}
   \label{fig:1b1_spectrum}
 \end{figure}
 
@@ -852,12 +855,12 @@ describes the spectrum consisting entirely of rescattered electrons.
   \centering
   \includegraphics[width=0.75\textwidth]
                   {figures/ch_ATI_SFA/1b2/l40to80n512WP50PG25MR35vsKeldysh.pdf}
-  \caption{ATI spectrum for the $1b_{2}$ MO of H$_{2}$O by a linearly
-    polarized field with laser intensity of $10^{15}\ \rm{W/cm^{2}}$
-    with $\hbar\omega = 1.58\ \rm{eV}$ in terms of an increasing
-    Bessel order, $l$, as a function of the electron energy (in
-    colour). The result from the standard Keldysh approximation is
-    shown as the black dotted line.}
+  \caption{\textsc{ati} spectrum for the $1b_{2}$ MO of H$_{2}$O by a
+    linearly polarized field with laser intensity of
+    $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega = 1.58\ \rm{eV}$ in
+    terms of an increasing Bessel order, $l$, as a function of the
+    electron energy (in colour). The result from the standard Keldysh
+    approximation is shown as the black dotted line.}
   \label{fig:1b2_spectrum}
 \end{figure}
 
