@@ -16,26 +16,27 @@ evaluation~\cite{LewensteinSPA_1994} of the multidimensional integral
 for the transition amplitude obtained in the previous chapter. This
 semi-classical approximation provides a deeper physical insight than
 the expansion in Bessel functions from the improved Keldysh
-approximation~\cite{Kopold_1997sfa} as it captures the essential
+approximation~\cite{Kopold_1997sfa}, as it captures the essential
 underlying physics. It also establishes a connection between
 \textsc{ati} calculations within the framework of the strong-field
 approximation and the concept of quantum
 paths~\cite{KopoldOptComm2000}, which represent space-time
 trajectories of the tunneling electrons. This concept has its origins
 in the alternative formulation of quantum mechanics introduced by
-Feynman in terms of path integrals~\cite{RevModPhysFeynman}, where the
-probability amplitude of a quantum mechanical process can be
+Feynman in terms of path integrals~\cite{RevModPhysFeynman}, in which
+the probability amplitude of a quantum mechanical process can be
 represented as a coherent superposition of contributions from all
 possible spatio-temporal paths that connect the initial and final
 state of the system.
 
-This chapter is intended to reproduce the work of Kopold
-et. al.~\cite{KopoldOptComm2000,phd_Kopold} in order to explore for
-numerical stability. In view of this, the arguments introduced in
-their saddle-point analysis of \textsc{ati} are presented in the
-following sections. The saddle-point approximation establishes the
-connection between the quantum mechanical path integral formalism and
-the improved Keldysh approximation discussed in
+This chapter presents the arguments of Kopold
+et. al.~\cite{KopoldOptComm2000,phd_Kopold} in an attempt to reproduce
+their study of \textsc{ati} with electron rescattering on atoms and
+test for numerical stability. In view of this, the arguments
+introduced in their saddle-point analysis of \textsc{ati} are
+presented in the following sections. The saddle-point approximation
+establishes the connection between the quantum mechanical path
+integral formalism and the improved Keldysh approximation discussed in
 Sec.~\ref{kopold_sfa}. The transition amplitude that describes the
 ionization of an electron under an external laser field is evaluated
 within the two frameworks, that in which only direct electrons are
@@ -93,8 +94,12 @@ return to its parent ion at a later time $t$ and rescatter after
 propagating with momentum $\mathbf{k}$ in the continuum under the
 action of the external field.
 
-In the length gauge (see Appendix~\ref{app:L_gauge}), the compact form
-of the Volkov state can be expressed as~\cite{Becker_ati2002}
+As a starting point in the evaluation of the \textsc{ati} probability
+amplitude~\ref{eq:mp_compact} by means of a saddle-point approximation
+we consider the compact form of the Volkov state in the length gauge
+(see Appendix~\ref{app:L_gauge}), which can be expressed
+as~\cite{Becker_ati2002}
+%
 \begin{eqnarray}
 \label{eq:volkov_Lgauge}
 \begin{split}
@@ -102,19 +107,42 @@ of the Volkov state can be expressed as~\cite{Becker_ati2002}
 |\mathbf{p} - e\mathbf{A}(t)\rangle e^{-i S_{\mathbf{p}}(t)},
 \end{split}
 \end{eqnarray}
+%
 where $|\mathbf{p} - e\mathbf{A}(t)\rangle$ represents a plane-wave
-state and $S_{\mathbf{p}}(t) = 1/2m \int\limits^{t} d\tau [\mathbf{p}
-  - e\mathbf{A}(\tau)]^{2}$ denotes the action of the
-system. Consequently, the Volkov time-evolution operator can be
-expressed as an expansion in terms of its Volkov states
+state with momentum $\mathbf{k} = \mathbf{p} - \mathbf{A}(t)$ and
+$S_{\mathbf{p}}(t) = 1/2m \int\limits^{t} d\tau [\mathbf{p} -
+  e\mathbf{A}(\tau)]^{2}$ denotes the action of the system. The Volkov
+time-evolution operator, which replaces the exact time-evolution
+operator in the strong-field approximation~\cite{KeldyshSFA},
+satisfies the Schr\"{o}dinger equation
+%
+\begin{eqnarray}
+  \label{eq:Uv_SchEq}
+  \begin{split}
+    [ i\partial_{t} - H_{I}(t) ] U^{(V)}(t,t') = 0 \\
+    H_{L}(t) = -\frac{1}{2}\nabla^{2} + V_{I}(t)
+  \end{split}
+\end{eqnarray}
+%
+where $V_{I}(t) = \mathbf{r}\cdot\mathbf{E}(t)$ indicates the
+interaction of the electron with the electric field of the laser. It
+can be verified that the Volkov time-evolution operator, expressed in
+terms of a Volkov-state decomposition~(\ref{eq:volkov_Lgauge}) by
+%
 \begin{eqnarray}
 \label{eq:te_volkov}
 \begin{split}
 U^{(V)}(t,t') & = & \int d^{3}\mathbf{k}
 |\psi_{\mathbf{k}}^{(V)}(t) \rangle
-\langle \psi_{\mathbf{k}}^{(V)}(t')|.
+\langle \psi_{\mathbf{k}}^{(V)}(t')|,
 \end{split}
 \end{eqnarray}
+%
+is the solution to the initial-value problem~(\ref{eq:Uv_SchEq}), with
+$U^{(V)}(t',t') = \hat{1}$, where $\hat{1}$ is the unit operator, in
+view of the completeness of the plane wave states as required by the
+evolution operators formalism~\cite{BeckerTEOp_2006,cjp2010_keldysh}.
+%(seeJPhysB39)
 
 Inserting the expansion~(\ref{eq:te_volkov}) into the matrix
 element~(\ref{eq:mp_compact}) and given the time dependence of the
