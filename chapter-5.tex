@@ -140,41 +140,103 @@ U^{(V)}(t,t') & = & \int d^{3}\mathbf{k}
 %
 is the solution to the initial-value problem~(\ref{eq:Uv_SchEq}), with
 $U^{(V)}(t',t') = \hat{1}$, where $\hat{1}$ is the unit operator, in
-view of the completeness of the plane wave states as required by the
+view of the completeness of the plane-wave states as required by the
 evolution operators formalism~\cite{BeckerTEOp_2006,cjp2010_keldysh}.
 %(seeJPhysB39)
 
 Inserting the expansion~(\ref{eq:te_volkov}) into the matrix
-element~(\ref{eq:mp_compact}) and given the time dependence of the
-ground state wave function, $|\psi_{0}(t) \rangle = \exp{(iE_{0}t)} |
-\psi_{0} \rangle$, one may write the probability amplitude
-as~\cite{KopoldOptComm2000}
+element~(\ref{eq:mp_compact}) and taking into acount the time
+dependence of the ground state wave function, $|\psi_{0}(t) \rangle =
+\exp{(iE_{0}t)} | \psi_{0} \rangle$, one may write the probability
+amplitude as the five-dimensional integral~\cite{KopoldOptComm2000}
+%
 \begin{eqnarray}
-\label{eq:me_action}
+  \label{eq:mp_5Dintegral}
+  \begin{split}
+    M_{\mathbf{p}} \sim & \int\limits_{-\infty}\limits^{\infty} dt
+    \int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}\ 
+    \langle [\mathbf{p} - e\mathbf{A}(t)] e^{iS_{\mathbf{p}}(t)} | V |
+    \mathbf{k} - e\mathbf{A}(t) \rangle e^{-iS_{\mathbf{k}}(t)} \\
+    & \times
+    \langle [\mathbf{k} - e\mathbf{A}(t')] e^{iS_{\mathbf{k}}(t')} | V |
+    \psi_{0} \rangle e^{iE_{0}t'} \\
+    \sim &
+    \int\limits_{-\infty}\limits^{\infty} dt
+    \int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}\ 
+    \exp\ i\left[ S_{\mathbf{p}}(t) - S_{\mathbf{k}}(t)
+      + S_{\mathbf{k}}(t') + E_{0}t' \right] \\
+    & \times
+    \langle \mathbf{p} - e\mathbf{A}(t) | V |
+    \mathbf{k} - e\mathbf{A}(t) \rangle 
+    \langle \mathbf{k} - e\mathbf{A}(t') | V |
+    \psi_{0} \rangle.
+  \end{split}
+\end{eqnarray}
+%
+The action for \textsc{ati}, in the exponent
+of~(\ref{eq:mp_5Dintegral}) consists of three terms
+%
+\begin{eqnarray}
+  \label{eq:action_mpintegral}
+  \begin{split}
+    S_{\mathbf{p}}(t, t', \mathbf{k}) & = & - \frac{1}{2m}
+    \int\limits_{t}\limits^{\infty} d\tau [\mathbf{p} - e\mathbf{A}(\tau)]^{2}
+    - \frac{1}{2m} \int\limits_{t'}\limits^{t} d\tau [\mathbf{k} - e\mathbf{A}(\tau)]^{2}
+    + \int\limits_{-\infty}\limits^{t'} d\tau E_{0},
+  \end{split}
+\end{eqnarray}
+%
+which correspond to the action of the entire system after rescattering
+at time $t$, between ionization and rescattering where the
+intermediate free-electron momenta is indicated by $\mathbf{k}$, and
+before the electron is ionized at time $t'$, respectively.
+
+% now the final form that Mp takes, comment from JphysB39
+The rescattering amplitude $M_{\mathbf{p}}$, which accounts for the
+high-energy plateau in the electron energy
+spectrum, takes the form~\cite{Becker_ati2002,BeckerTEOp_2006}
+%
+\begin{eqnarray}
+\label{eq:mp_final}
 \begin{split}
-M_{\mathbf{p}} = & \int\limits_{-\infty}\limits^{\infty} dt
-\int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}
-\ \langle \mathbf{p} - e\mathbf{A}(t) | V | \mathbf{k} - e\mathbf{A}(t) \rangle
-\ \langle \mathbf{k} - e\mathbf{A}(t') | V | \psi_{0} \rangle \\
-&
-\times
-\exp \left[i\left(-\frac{1}{2m} \int\limits_{t}\limits^{\infty}
-d\tau [\mathbf{p} -e\mathbf{A}(\tau)]^{2} -
-\frac{1}{2m} \int\limits_{t'}\limits^{t} d\tau [\mathbf{k} -e\mathbf{A}(\tau)]^{2} +
-\int\limits_{-\infty}\limits^{t'} d\tau |E_{0}|
-\right)
-\right] \\
-\sim &
+M_{\mathbf{p}} \sim &
 \int\limits_{-\infty}\limits^{\infty} dt
 \int\limits_{-\infty}\limits^{t} dt'
 \int d^{3}\mathbf{k} \exp \left[ iS_{\mathbf{p}}(t, t', \mathbf{k}) \right]
-m_{\mathbf{p}}(t, t', \mathbf{k}).
+m_{\mathbf{p}}(t, t', \mathbf{k}),
 \end{split}
 \end{eqnarray}
-As one may notice, the action in the exponent, $S_{\mathbf{p}}(t, t',
-\mathbf{k})$, contains three terms which correspond to the action of
-the entire system after rescattering, between ionization and
-rescattering, and before ionization, respectively.
+%
+with
+%
+\begin{eqnarray}
+  \label{eq:mp_braketfunction}
+  \begin{split}
+    m_{\mathbf{p}}(t, t', \mathbf{k}) & = &
+    \langle \mathbf{p} - e\mathbf{A}(t) | V |
+    \mathbf{k} - e\mathbf{A}(t) \rangle 
+    \langle \mathbf{k} - e\mathbf{A}(t') | V |
+    \psi_{0} \rangle.
+  \end{split}
+\end{eqnarray}
+%
+This amplitude corresponds to the so-called three-step
+model~\cite{Becker_ati2002}, in which $V$ represents the potential
+that the ionized electron feels when it rescatters off its parent
+ion. In order to evaluate the total probability amplitude, one needs
+to integrate over the interval of ionization times $t'$ during which
+the electric field is non-zero, integrate over all intermediate
+electron momenta $\mathbf{k}$, and over all rescattering times $t >
+t'$. The amplitude~(\ref{eq:mp_final}) can be approximated using the
+saddle-point method~[REFS], in which the
+phase~(\ref{eq:action_mpintegral}) of the integrand is expanded about
+its stationary points.
+
+
+% comment from JphysB39 about evaluating Mp using a saddle-point
+% approximation
+
+
 
 % point out the contrast with feynman's path integral
 % p-57 chapter
