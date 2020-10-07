@@ -76,23 +76,23 @@ been valuable in unraveling the physical phenomena behind the
 \textsc{ati} plateau and its cutoff, an intrinsic feature of the
 ionization spectrum.
 
-A quasi-classical analysis of this generalization, based on the saddle
-point method and the path integral
+A quasi-classical analysis of this generalization, based on the
+saddle-point method and the path integral
 formalism~\cite{KopoldOptComm2000,Becker_ellipticalSPA,LewScience2001},
-has been particularly useful as it elucidates fundamental aspects of
+has been particularly useful as it illustrates fundamental aspects of
 the physics underlying strong-field ionization processes as well as
 the formation of their spectra. This approach suggests that one
 pictures the processes taking place in laser-atom interactions, such
 as \textsc{ati} and high-harmonic generation (\textsc{hhg}), in terms
-of electron trajectories in phase space. These quantum trajectories
-follow classical Newtonian dynamics, however, must take place in the
-complex plane to account for tunneling ionization. Consequently, they
-present non-zero imaginary components which determine the probability
-of the process. Their physical content is reflected in the electron
-dynamics once it has been ionized at time $t'$, the electron may
-return to its parent ion at a later time $t$ and rescatter after
-propagating with momentum $\mathbf{k}$ in the continuum under the
-action of the external field.
+of electron trajectories in phase space. These quantum trajectories,
+as it is explained below, follow classical Newtonian dynamics,
+however, must take place in the complex plane to account for tunneling
+ionization. Consequently, they present non-zero imaginary components
+which determine the probability of the process. Their physical content
+is reflected in the electron dynamics once it has been ionized at time
+$t'$, the electron may return to its parent ion at a later time $t$
+and rescatter after propagating with momentum $\mathbf{k}$ in the
+continuum under the action of the external field.
 
 As a starting point in the evaluation of the \textsc{ati} probability
 amplitude~\ref{eq:mp_compact} by means of a saddle-point approximation
@@ -227,22 +227,20 @@ ion. In order to evaluate the total probability amplitude, one needs
 to integrate over the interval of ionization times $t'$ during which
 the electric field is non-zero, integrate over all intermediate
 electron momenta $\mathbf{k}$, and over all rescattering times $t >
-t'$. The amplitude~(\ref{eq:mp_final}) can be approximated using the
-saddle-point method~[REFS], in which the
-phase~(\ref{eq:action_mpintegral}) of the integrand is expanded about
-its stationary points.
-
-
+t'$. The amplitude~(\ref{eq:mp_final}) can be approximated using a
+saddle-point method~\cite{Lewenstein_1995}, in which the leading
+contribution to the \textsc{ati} spectrum is determined by requiring
+stationarity of the quasiclassical
+action~(\ref{eq:action_mpintegral}).
 % comment from JphysB39 about evaluating Mp using a saddle-point
 % approximation
-
 
 
 % point out the contrast with feynman's path integral
 % p-57 chapter
 It is revealing to point out the contrast of the ionization
-amplitude~(\ref{eq:me_action}) obtained with the strong-field
-approximation with its analogous representation in terms of Feynman's
+amplitude~(\ref{eq:mp_final}), obtained with the strong-field
+approximation, with its analogous representation in terms of Feynman's
 path integral formulation~\cite{RevModPhysFeynman}. The time evolution
 operator of the entire system has the path integral representation
 \begin{eqnarray}
@@ -266,21 +264,21 @@ the strong-field approximation, to a sum over a few quantum orbits. By
 implementing the strong-field approximation we have approximated the
 exact action of the system at the various stages of the process:
 before ionization, in between ionization and rescattering, and after
-rescattering, as Eq.~(\ref{eq:me_action}) indicates, where the
-ionization amplitude is computed by means of a sum over the
+rescattering, as Eq.~(\ref{eq:action_mpintegral}) indicates. The
+ionization amplitude is then computed by means of a sum over the
 exponential of the action over a five-parameter set of paths,
 parametrized by the ionization time $t'$, the rescattering time $t$
 and the canonical momentum of the orbit denoted by
 $\mathbf{k}$~\cite{KopoldOptComm2000}.
 
 The five-dimensional set of paths over which the transition
-amplitude~(\ref{eq:me_action}) is evaluated can be reduced further by
+amplitude~(\ref{eq:mp_final}) is evaluated can be reduced further by
 implementing a saddle point approximation of the
 integral~\cite{KopoldOptComm2000}, in which a handful of relevant
 paths remains to be considered. Since the terms of the quasi-classical
-action in Eq.~(\ref{eq:me_action}) are proportional to $I_{p}$,
-$U_{p}$, $p^{2}$ and $k^{2}$, which are large under intense laser
-fields, the factors $\exp(-i S/\hbar)$ oscillate rapidly and the
+action in Eq.~(\ref{eq:action_mpintegral}) are proportional to
+$I_{p}$, $U_{p}$, $p^{2}$ and $k^{2}$, which are large under intense
+laser fields, the factors $\exp(-i S/\hbar)$ oscillate rapidly and the
 integrals in the transition amplitude can be approximated by the value
 of the integrands at the stationary points, saddle points, of the
 quasi-classical actions. The condition
@@ -320,7 +318,7 @@ describe complex orbits which restrains a straightforward
 visualization of the trajectories.
 
 %p-56 chapter ATI
-The probability amplitude~(\ref{eq:me_action}) can now be expressed in
+The probability amplitude~(\ref{eq:mp_final}) can now be expressed in
 terms of the saddle-point solutions as~\cite{KopoldOptComm2000}
 \begin{eqnarray}
 \label{eq:Mp_final}
