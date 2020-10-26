@@ -189,12 +189,10 @@ of~(\ref{eq:mp_5Dintegral}) consists of three terms
 which correspond to the action of the entire system after rescattering
 at time $t$, between ionization and rescattering where the
 intermediate free-electron momenta is indicated by $\mathbf{k}$, and
-before the electron is ionized at time $t'$, respectively.
-
-% now the final form that Mp takes, comment from JphysB39
-The rescattering amplitude $M_{\mathbf{p}}$, which accounts for the
-high-energy plateau in the electron energy
-spectrum, takes the form~\cite{Becker_ati2002,BeckerTEOp_2006}
+before the electron is ionized at time $t'$, respectively. The
+rescattering amplitude, $M_{\mathbf{p}}$, which accounts for the
+high-energy plateau in the electron energy spectrum, takes the
+form~\cite{Becker_ati2002,BeckerTEOp_2006}
 %
 \begin{eqnarray}
 \label{eq:mp_final}
@@ -271,17 +269,32 @@ parametrized by the ionization time $t'$, the rescattering time $t$
 and the canonical momentum of the orbit denoted by
 $\mathbf{k}$~\cite{KopoldOptComm2000}.
 
-The five-dimensional set of paths over which the transition
+% ref from Principles...Lewenstein&LHuillier
+% it is needed here an explanation of what the saddle-point
+% approximation is and why it is justified to use it
+In the low-frequency limit and for high-intensity laser fields, the
+five-dimensional set of paths over which the transition
 amplitude~(\ref{eq:mp_final}) is evaluated can be reduced further by
-implementing a saddle point approximation of the
-integral~\cite{KopoldOptComm2000}, in which a handful of relevant
-paths remains to be considered. Since the terms of the quasi-classical
-action in Eq.~(\ref{eq:action_mpintegral}) are proportional to
-$I_{p}$, $U_{p}$, $p^{2}$ and $k^{2}$, which are large under intense
-laser fields, the factors $\exp(-i S/\hbar)$ oscillate rapidly and the
-integrals in the transition amplitude can be approximated by the value
-of the integrands at the stationary points, saddle points, of the
-quasi-classical actions. The condition
+invoking the saddle-point approximation~\cite{,Lewenstein_1995} to
+calculate the integral over $\mathbf{p}$ as well as $t$ and $t'$. In
+this regime, the transition amplitude contains a rapidly oscillating
+factor, $\exp\ iS_{\mathbf{p}}(t, t', \mathbf{k})$, provided that the
+parameters $U_{p}$, $I_{p}$, and $p^{2}$ in the quasi-classical
+action~(\ref{eq:action_mpintegral}) are large enough. The major
+contributions to the integrals in~(\ref{eq:mp_final}) come from the
+saddle points, which are the solutions of $S''_{\mathbf{p}}(q_{i}) =
+0$ that render the phase stationary.
+% mention deformation of the integration path into the complex plane
+% mention why the trajectories are complex
+In the process of evaluating the transition amplitude, the phase of
+the integrand is expanded about the saddle-points along the path of
+steepest descent in the complex plane. As a result, a handful of
+relevant paths remains to be considered in order to explore the
+\textsc{ati} spectrum~\cite{KopoldOptComm2000}. Since the tunneling
+process of an electron is involved in this analysis, these paths take
+place in the complex plane.
+%
+The condition
 \begin{eqnarray}
 \label{eq:S_stationary}
 \begin{split}
@@ -362,7 +375,7 @@ with the parent ion, has the form~\cite{phd_Kopold,Becker_ati2002}
 \begin{eqnarray}
   \label{eq:action_direct}
   \begin{split}
-  S(t_{0}) & = &
+  S_{\mathbf{p}}(t_{0}) & = &
 -\frac{1}{2m}\int_{t_{0}}^{\infty}{d\tau [\mathbf{p} - e\mathbf{A}(\tau)]^{2}}
 - \int_{-\infty}^{t_{0}}{d\tau E_{0}},
 \end{split}
@@ -376,13 +389,13 @@ $dS_{\mathbf{p}} / dt_{0} = 0$, the integral~(\ref{eq:Mp_final}) is
 evaluated by implementing a saddle-point
 approximation~\cite{spa_1960}. This consists in expanding the phase of
 the integrand, $\Phi(t) = (1/\eta) S(t) = (\omega / U_{p}) S(t)$, in
-the vicinity of the points where the phase is stationary. This results
-in determining the solutions of
+the vicinity of the points where the phase is stationary, which
+results in determining the solutions of
 %
 \begin{eqnarray}
   \label{eq:stationary_points}
   \begin{split}
-    \frac{\partial S}{\partial t_{0}} & = &
+    \frac{\partial S_{\mathbf{p}}}{\partial t_{0}} & = &
     \frac{1}{2m} (\mathbf{p} - e\mathbf{A}(t_{0}))^{2} + |E_{0}| = 0.
   \end{split}
 \end{eqnarray}
@@ -414,22 +427,29 @@ $\mathbf{p}$ and the direction of polarization of the laser field,
 $\hat{x}$. The electron energy, as it propagates in the continuum, is
 indicated by $E_{p} = p^{2}/2m$. As Eqs.~(\ref{eq:ReIm_eqs}) indicate,
 a single electron energy $E_{p}$ is associated with four saddle-points
-$\omega t_{0s}$, $s = 1, \dots, 4$, which merge into one another by
-complex conjugation. These complex roots are illustrated in
+$\omega t_{0s}$, $s = 1, \dots, 4$, which are related to each other by
+complex conjugation.  These complex roots are illustrated in
 Figure~\ref{fig:sp_direct} for electron energies within the range $(0,
-\dots, 6U_{p})$. The contours defined by the saddle points in phase
-space illustrate the integration paths to follow for a given electron
-energy when constructing the \textsc{ati} spectrum.
+\dots, 6U_{p})$. The saddle points with positive imaginary parts,
+$t_{01}$ and $t_{02}$, are shown in blue, whereas the red connected
+dots, $t_{03}$ and $t_{04}$, indicate points with negative imaginary
+parts. The contours defined by the saddle points in phase space
+illustrate the integration paths to follow for a given electron energy
+when constructing the \textsc{ati} spectrum.
 
 % include plot with the saddle-points for direct trajectories
 \begin{figure}
   \centering
   \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/spDirectElectrons}
-  \caption{Saddle points obtained from Eqs.~(\ref{eq:ReIm_eqs})
-    associated with direct trajectories of electrons ionized by a
-    linearly polarized field with laser intensity of
-    $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega = 1.58\ \rm{eV}$ for
-    electron energies within $E_{p} < 6 U_{p}$.}
+  \caption{Representation of the saddle points corresponding to
+    Eqs.~(\ref{eq:ReIm_eqs}) that indicate the complex ionization
+    times associated with direct trajectories of electrons ionized by
+    a linearly polarized field with laser intensity of
+    $10^{15}\ \rm{W/cm^{2}}$ and $\hbar\omega = 1.58\ \rm{eV}$. The
+    connected dots correspond to discrete energies within the range
+    $(0, \dots, 6 U_{p})$. The trajectories with $\mathrm{Im}\ \omega
+    t_{0i} > 0$ are shown in blue, while the ones with
+    $\mathrm{Im}\ \omega t_{0i} < 0$ are indicated in red.}
   \label{fig:sp_direct}
 \end{figure}
 
