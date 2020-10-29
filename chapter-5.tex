@@ -453,6 +453,8 @@ when constructing the \textsc{ati} spectrum.
   \label{fig:sp_direct}
 \end{figure}
 
+% see Appendix B in Kopold dissertation where the Gaussian
+% approximation is justified
 A Taylor expansion of the action~(\ref{eq:action_direct}) around the
 saddle points allows to approximate the \textsc{kfr} matrix element
 for direct electrons by a Gaussian function~\cite{phd_Kopold}
@@ -539,7 +541,13 @@ is approximated by a Gaussian, which results in~\cite{phd_Kopold}
 Equation~(\ref{eq:Mp_spa_direct}) approximates the \textsc{ati}
 spectrum for an electron that, after being ionized at some time
 $t_{0}$ under a strong laser field, propagates under the influence of
-the field with no further interaction with the binding potential.
+the field with no further interaction with the binding potential. For
+a given electron energy, $E_{p}$, the probability
+amplitude~(\ref{eq:Mp_spa_direct}) is evaluated along the integration
+trajectory that contains the saddle-points with positive imaginary
+parts, $t_{01}$ and $t_{02}$, indicated as blue connected dots in
+Figure~\ref{fig:sp_direct}, in order to obtain a converging result
+when evaluating the exponential term in $M_{\mathbf{p}}$.
 
 % include contour plots for constant values of Im(\Phi) and
 % integration path
@@ -559,14 +567,12 @@ helium atom calculated by means of the saddle-point
 approximation~(\ref{eq:Mp_spa_direct}) is displayed
 Figure~\ref{fig:ati_direct} by dash-dotted lines. The \textsc{ati}
 spectrum corresponding to the exact Keldysh amplitude is indicated
-with black dots. For a given electron energy, $E_{p}$, the probability
-amplitude~(\ref{eq:Mp_spa_direct}) was evaluated along the integration
-trajectory that contains the saddle-points with positive imaginary
-parts, $t_{01}$ and $t_{02}$ indicated in Figure~\ref{fig:sp_direct},
-in order to obtain a converging result when evaluating the exponential
-term in $M_{\mathbf{p}}$. The complex path of these saddle points is
-indicated by blue dots in Fig.~\ref{fig:sp_direct} as the electron
-energy increases from $0$ to $4 U_{p}$. The saddle-point approximation
+with black dots.
+% NOT SURE ABOUT WHERE THIS GOES
+%The complex path of these saddle points is indicated
+%by blue dots in Fig.~\ref{fig:sp_direct} as the electron energy
+%increases from $0$ to $4 U_{p}$.
+The saddle-point approximation
 mirrors the fully quantum calculation in terms of an expansion in
 Bessel functions. Similarly to what the Keldysh \textsc{sfa} results
 point out, the saddle-point approximation generates an \textsc{ati}
@@ -576,13 +582,13 @@ interaction with the parent ion.
 
 \begin{figure}
   \centering
-  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/SPvsKeldysh}
+  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/SPvsKeldysh_spa_discrete}
   \caption{Calculated \textsc{ati} spectrum using Keldysh formalism
     (black dots) and the saddle-point approximation (dash-dot line) in
     terms of trajectories $1$ and $2$, for a laser intensity of
     $10^{15}\ \rm{W/cm^{2}}$, $\hbar\omega = 1.58\ \rm{eV}$, and a
     binding energy of $E_{0} = -0.9\ \rm{a.u.}$ for a zero-range He
-    model. The electron energies are expressed in multiples of
+    model. The electron energies are expressed in units of
     $U_{p}$. The Keldysh parameter was set to $\gamma = 0.654$, and
     the ratio $U_{p}/\omega$ was set to $\eta = 17.9$.}
   \label{fig:ati_direct}
