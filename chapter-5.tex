@@ -453,24 +453,89 @@ when constructing the \textsc{ati} spectrum.
   \label{fig:sp_direct}
 \end{figure}
 
-% see Appendix B in Kopold dissertation where the Gaussian
+% - see Appendix B in Kopold dissertation where the Gaussian
 % approximation is justified
-A Taylor expansion of the action~(\ref{eq:action_direct}) around the
-saddle points allows to approximate the \textsc{kfr} matrix element
-for direct electrons by a Gaussian function~\cite{phd_Kopold}
+% - explain what the method of steepest descend (or spa) consists of and
+% how the integral defining the Mp vals can be expressed as a Gaussian
+% as a result of this approximation
+% - express Mp in eq.5.6 as a contour integral in terms of s(z) and g(z)
+% as it is shown in appendix B of Kopold thesis
+% - look up method of steepest descent.pdf
+In a saddle-point evaluation of the integral~(\ref{eq:mp_final}), it
+is convenient to refer to the assymptotic evaluation of the expression
 %
 \begin{eqnarray}
-  \label{eq:KFR_Mp}
-  \begin{split}
-    M_{\mathbf{p}} & \sim & \int\limits_{0}\limits^{T} dt\ e^{i \eta \Phi(t)},
-  \end{split}
+  \label{eq:I_eta_contour}
+  I(\eta) = \int\limits_{\mathcal{C}} dz g(z) e^{\eta s(z)}
 \end{eqnarray}
 %
-where the phase is defined as $\Phi(t) = S_{\mathbf{p}}(t)\omega /
-U_{p}$, and the period of the laser field is indicated by $T$. The
-integration path to follow is defined by a contour of saddle points
-whose locations, given by Eq.~(\ref{eq:ReIm_eqs}), are known
-analitically for a linearly polarized laser field.
+provided the functions $s(z)$ and $g(z)$ are analytic, the integration
+contour $\mathcal{C}$ is deformed into a composition of contours
+$\mathcal{C}_{s}$ coinciding with the path of steepest descent. This
+transformation into the complex plane, in which the function $s(z = x
++ iy) = u(x,y) + iv(x, y)$, leads to express the saddle-point
+condition as
+\begin{eqnarray}
+  \label{eq:sp_uv_complex}
+  (\nabla u) \cdot (\nabla v) = 0,
+\end{eqnarray}
+% mention that the contour is chosen by method of steepest descent
+% where Im(v) = constant and what that represents in terms of the
+% saddle points contributions to the integral. then taylor expansion
+% in the vicinity of the saddle points leads to the Gaussian function
+% for Mp
+indicating that the curves along the directions of $\nabla u$ and
+$\nabla v$ always meet orthogonally at any point. Along a contour
+$\mathcal{C}_{s}$ of steepest descent of $u(x,y)$ through a saddle
+point of $u(x,y)$, the function $v(x,y) = v(x_{s},y_{s})$ is a
+constant, and one can express the oscillating term as
+\begin{eqnarray}
+  \label{eq:exp_steepest}
+  e^{\eta u(x,y) + i \eta v(x,y)} = e^{\eta u(x,y)} e^{i \eta v(x_{s},y_{s})}.
+\end{eqnarray}
+Along such a contour, the main contribution to the integral in the
+transition probability comes from the saddle point $z_{s} = x_{s} +
+iy_{s}$ or its immediate vicinity. Therefore, a Taylor expansion of
+the action~(\ref{eq:action_direct}) around the saddle point $z_{s}$ in
+the form
+\begin{eqnarray}
+  \label{eq:taylor_exp}
+  s(z) \simeq s(z_{s}) + \frac{1}{2!}s''(z_{s})(z - z_{s})^{2} 
+\end{eqnarray}
+is justified. This approximation allows for an analytic determination
+of the saddle point contributions to the
+integral~(\ref{eq:I_eta_contour}), which can be written as a Gaussian
+integral and evaluates to
+\begin{eqnarray}
+  \label{eq:I_Gaussian}
+  I(\eta) \simeq \sum\limits_{s\mathrm{\epsilon} \mathcal{Z}_{\mathcal{C}}}
+  \pm g(z_{s}) e^{\eta s(z_{s})} \sqrt{\frac{2\pi}{-\eta s''(z_{s})}},
+\end{eqnarray}
+provided that the original contour $C$ is deformed into a composition
+$\mathcal{C}_{\mathrm{max}}$ of contours
+$\mathcal{C}_{s,\mathrm{max}}$ which are regions where $s(z)$ and
+$g(z)$ are analytic, with identical boundary points
+$\partial\mathcal{C}_{\mathrm{max}} = \partial\mathcal{C}$. The sum
+in~(\ref{eq:I_Gaussian}) runs over a partial set of all saddle points
+whose contours $\mathcal{C}_{s,\mathrm{max}}$ combine into
+$\mathcal{C}_{\mathrm{max}}$.
+
+%A Taylor expansion of the action~(\ref{eq:action_direct}) around the
+%saddle points allows to approximate the \textsc{kfr} matrix element
+%for direct electrons by a Gaussian function~\cite{phd_Kopold}
+%
+%\begin{eqnarray}
+%  \label{eq:KFR_Mp}
+%  \begin{split}
+%    M_{\mathbf{p}} & \sim & \int\limits_{0}\limits^{T} dt\ e^{i \eta \Phi(t)},
+%  \end{split}
+%\end{eqnarray}
+%
+%where the phase is defined as $\Phi(t) = S_{\mathbf{p}}(t)\omega /
+%U_{p}$, and the period of the laser field is indicated by $T$. The
+%integration path to follow is defined by a contour of saddle points
+%whose locations, given by Eq.~(\ref{eq:ReIm_eqs}), are known
+%analitically for a linearly polarized laser field.
 
 % explain how to choose the relevant contours and the figure in phase space
 % then explain eq.B25 from Kopold
