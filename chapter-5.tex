@@ -469,12 +469,12 @@ is convenient to refer to the assymptotic evaluation of the expression
   I(\eta) = \int\limits_{\mathcal{C}} dz g(z) e^{\eta s(z)}
 \end{eqnarray}
 %
-provided the functions $s(z)$ and $g(z)$ are analytic, the integration
-contour $\mathcal{C}$ is deformed into a composition of contours
-$\mathcal{C}_{s}$ coinciding with the path of steepest descent. This
-transformation into the complex plane, in which the function $s(z = x
-+ iy) = u(x,y) + iv(x, y)$, leads to express the saddle-point
-condition as
+in the case where the functions $s(z)$ and $g(z)$ are analytic and
+$\eta > 0$. The integration contour $\mathcal{C}$ is deformed into a
+composition of contours $\mathcal{C}_{s}$ coinciding with the path of
+steepest descent. This transformation into the complex plane, in which
+the function $s(z = x + iy) = u(x,y) + iv(x, y)$, leads to express the
+saddle-point condition as
 \begin{eqnarray}
   \label{eq:sp_uv_complex}
   (\nabla u) \cdot (\nabla v) = 0,
@@ -485,34 +485,50 @@ condition as
 % in the vicinity of the saddle points leads to the Gaussian function
 % for Mp
 indicating that the curves along the directions of $\nabla u$ and
-$\nabla v$ always meet orthogonally at any point. Along a contour
-$\mathcal{C}_{s}$ of steepest descent of $u(x,y)$ through a saddle
-point of $u(x,y)$, the function $v(x,y) = v(x_{s},y_{s})$ is a
-constant, and one can express the oscillating term as
+$\nabla v$ always meet orthogonally at any point.  Ideally, one needs
+a path near a point $z = z_{s}$ such that $u(x,y)$ attains a peak and
+decreases away from $z = z_{s}$. But the imaginary part $v(x,y)$ will
+in general also change and the exponential factor $e^{i\eta v}$ will
+oscillate rapidly in the vicinity of $z_{s}$. If the point $z = z_{s}$
+coincides with a saddle point, a suitable path is one where $v(x,y)$
+is nearly constant as one moves away from $z_{s}$, in other words,
+when the exponential term in~(\ref{eq:I_eta_contour}) can be expressed
+as
+%
 \begin{eqnarray}
   \label{eq:exp_steepest}
-  e^{\eta u(x,y) + i \eta v(x,y)} = e^{\eta u(x,y)} e^{i \eta v(x_{s},y_{s})}.
+  e^{\eta u(x,y) + i \eta v(x,y)} = e^{\eta u(x,y)} e^{i \eta v(x_{s},y_{s})},
 \end{eqnarray}
-Along such a contour, the main contribution to the integral in the
+%
+Along the direction of steepest descent for the surface $u(x,y) =
+u(x_{s},y_{s})$, defined by $-\nabla u|_{z_{s}}$, the Cauchy-Riemann
+equations justify that the tangents to the surface $v(x,y) =
+v(x_{s},y_{s})$ lie in the direction of steepest descent through
+$z_{s}$. In a contour $\mathcal{C}_{s}$ that goes through the saddle
+points of $s(z)$, the main contribution to the integral in the
 transition probability comes from the saddle point $z_{s} = x_{s} +
 iy_{s}$ or its immediate vicinity. Therefore, a Taylor expansion of
 the action~(\ref{eq:action_direct}) around the saddle point $z_{s}$ in
 the form
+%
 \begin{eqnarray}
   \label{eq:taylor_exp}
   s(z) \simeq s(z_{s}) + \frac{1}{2!}s''(z_{s})(z - z_{s})^{2} 
 \end{eqnarray}
+%
 is justified. This approximation allows for an analytic determination
 of the saddle point contributions to the
 integral~(\ref{eq:I_eta_contour}), which can be written as a Gaussian
 integral and evaluates to
+%
 \begin{eqnarray}
   \label{eq:I_Gaussian}
   I(\eta) \simeq \sum\limits_{s\mathrm{\epsilon} \mathcal{Z}_{\mathcal{C}}}
   \pm g(z_{s}) e^{\eta s(z_{s})} \sqrt{\frac{2\pi}{-\eta s''(z_{s})}},
 \end{eqnarray}
-provided that the original contour $C$ is deformed into a composition
-$\mathcal{C}_{\mathrm{max}}$ of contours
+%
+provided that the original contour $\mathcal{C}$ is deformed into a
+composition $\mathcal{C}_{\mathrm{max}}$ of contours
 $\mathcal{C}_{s,\mathrm{max}}$ which are regions where $s(z)$ and
 $g(z)$ are analytic, with identical boundary points
 $\partial\mathcal{C}_{\mathrm{max}} = \partial\mathcal{C}$. The sum
