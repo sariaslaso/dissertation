@@ -485,8 +485,8 @@ saddle-point condition as
 % in the vicinity of the saddle points leads to the Gaussian function
 % for Mp
 indicating that the curves along the directions of $\nabla u$ and
-$\nabla v$ always meet orthogonally at any point.  Ideally, one needs
-a path near a point $z = z_{s}$ such that $u(x,y)$ attains a peak and
+$\nabla v$ always meet orthogonally at any point. Ideally, one needs a
+path near a point $z = z_{s}$ such that $u(x,y)$ attains a peak and
 decreases away from $z = z_{s}$. But the imaginary part $v(x,y)$ will
 in general also change and the exponential factor $e^{i\eta v}$ will
 oscillate rapidly in the vicinity of $z_{s}$. If the point $z = z_{s}$
@@ -497,19 +497,21 @@ as
 %
 \begin{eqnarray}
   \label{eq:exp_steepest}
-  e^{\eta u(x,y) + i \eta v(x,y)} = e^{\eta u(x,y)} e^{i \eta v(x_{s},y_{s})},
+  e^{\eta u(x,y) + i \eta v(x,y)} = e^{\eta u(x,y)} e^{i \eta v(x_{s},y_{s})}.
 \end{eqnarray}
 %
-Along the direction of steepest descent for the surface $u(x,y) =
-u(x_{s},y_{s})$, defined by $-\nabla u|_{z_{s}}$, the Cauchy-Riemann
-equations justify that the tangents to the surface $v(x,y) =
-v(x_{s},y_{s})$ lie in the direction of steepest descent through
-$z_{s}$. In a contour $\mathcal{C}_{s}$ that goes through the saddle
-points of $s(z)$, the main contribution to the integral in the
-transition probability comes from the saddle point $z_{s} = x_{s} +
-iy_{s}$ or its immediate vicinity. Therefore, a Taylor expansion of
-the action~(\ref{eq:action_direct}) around the saddle point $z_{s}$ in
-the form
+Therefore, in order to calculate the saddle point contributions to the
+integral, one chooses the integration path such that
+$\mathrm{Im}\ s(z) = \mathrm{Im}\ s(z_{s})$. Along the direction of
+steepest descent for the surface $u(x,y) = u(x_{s},y_{s})$, defined by
+$-\nabla u|_{z_{s}}$, the Cauchy-Riemann equations justify that the
+tangents to the surface $v(x,y) = v(x_{s},y_{s})$ lie in the direction
+of steepest descent through $z_{s}$. In a contour $\mathcal{C}_{s}$
+that goes through the saddle points of $s(z)$, the main contribution
+to the integral in the transition probability comes from the saddle
+point $z_{s} = x_{s} + iy_{s}$ or its immediate vicinity. Therefore, a
+Taylor expansion of the action~(\ref{eq:action_direct}) around the
+saddle point $z_{s}$ in the form
 %
 \begin{eqnarray}
   \label{eq:taylor_exp}
@@ -519,7 +521,7 @@ the form
 is justified. This approximation allows for an analytic determination
 of the saddle point contributions to the
 integral~(\ref{eq:I_eta_contour}), which can be written as a Gaussian
-integral and evaluates to
+integral and evaluates to~\cite{phd_Kopold}
 %
 \begin{eqnarray}
   \label{eq:I_Gaussian}
@@ -536,22 +538,38 @@ in~(\ref{eq:I_Gaussian}) runs over a partial set of all saddle points
 whose contours $\mathcal{C}_{s,\mathrm{max}}$ combine into
 $\mathcal{C}_{\mathrm{max}}$.
 
-%A Taylor expansion of the action~(\ref{eq:action_direct}) around the
-%saddle points allows to approximate the \textsc{kfr} matrix element
-%for direct electrons by a Gaussian function~\cite{phd_Kopold}
+Accordingly, the \textsc{kfr} matrix element for direct electrons can
+be approximated by a Gaussian function~\cite{phd_Kopold}
 %
-%\begin{eqnarray}
-%  \label{eq:KFR_Mp}
-%  \begin{split}
-%    M_{\mathbf{p}} & \sim & \int\limits_{0}\limits^{T} dt\ e^{i \eta \Phi(t)},
-%  \end{split}
-%\end{eqnarray}
+\begin{eqnarray}
+  \label{eq:KFR_Mp}
+  \begin{split}
+    M_{\mathbf{p}} & \sim & \int\limits_{0}\limits^{T} dt\ e^{i \eta \Phi(t)},
+  \end{split}
+\end{eqnarray}
 %
-%where the phase is defined as $\Phi(t) = S_{\mathbf{p}}(t)\omega /
-%U_{p}$, and the period of the laser field is indicated by $T$. The
-%integration path to follow is defined by a contour of saddle points
-%whose locations, given by Eq.~(\ref{eq:ReIm_eqs}), are known
-%analitically for a linearly polarized laser field.
+in which the phase is defined as $\Phi(t) = S_{\mathbf{p}}(t)\omega /
+U_{p}$, and the period of the laser field is indicated by $T$. The
+integration path to follow is defined by a contour of saddle points
+whose locations, given by Eq.~(\ref{eq:ReIm_eqs}), are known
+analitically for a linearly polarized laser field. This expression
+results in~\cite{phd_Kopold}
+%
+\begin{eqnarray}
+  \label{eq:Mp_spa_direct}
+  \begin{split}
+    M_{\mathbf{p}} & \sim & \sum\limits_{i}
+    \sqrt{\frac{2\pi\hbar}{-i S''_{\mathbf{p}}(t_{s_{i}})}}
+    \exp iS_{\mathbf{p}}(t_{s_{i}}),
+  \end{split}
+\end{eqnarray}
+%
+where $t_{s_{i}}$ denote the saddle points that lie in the contour of
+interest. Equation~(\ref{eq:Mp_spa_direct}) approximates the
+\textsc{ati} spectrum for an electron that, after being ionized at
+some time $t_{0}$ under a strong laser field, propagates under the
+influence of the field with no further interaction with the binding
+potential.
 
 % explain how to choose the relevant contours and the figure in phase space
 % then explain eq.B25 from Kopold
@@ -568,7 +586,7 @@ components of the phase take the form~\cite{phd_Kopold}
 \begin{eqnarray}
   \label{eq:phase_im}
   \begin{split}
-    \mathrm{Im}(i\Phi(t)) & = & \omega t_{r} ( 1 + \frac{E_{p}}{U_{p}}
+    \mathrm{Im}\ i\Phi(t) & = & \omega t_{r} ( 1 + \frac{E_{p}}{U_{p}}
     + 2\gamma^{2} ) +
     \frac{1}{2} \sin 2\omega t_{r} \cosh 2\omega t_{i}
     + 2\sqrt{\frac{2E_{p}}{U_{p}}} \sin\omega t_{r} \cosh\omega t_{i}
@@ -578,7 +596,7 @@ components of the phase take the form~\cite{phd_Kopold}
 \begin{eqnarray}
   \label{eq:phase_re}
   \begin{split}
-    -\mathrm{Re}(i\Phi(t)) & = & \omega t_{i} (
+    -\mathrm{Re}\ i\Phi(t) & = & \omega t_{i} (
     1 + \frac{E_{p}}{U_{p}} + 2\gamma^{2} )
     + \frac{1}{2} \cos 2\omega t_{r} \sinh 2\omega t_{i}
     + 2\sqrt{\frac{2E_{p}}{U_{p}}} \cos\omega t_{r} \sinh\omega t_{i}.
@@ -608,22 +626,8 @@ point, $t_{02}$, to $\omega t = 2\pi + i\infty$, and finally along
 $C_{b}$ to $\omega t = 2\pi$. The integrands along $C_{a}$ and $C_{b}$
 are identical and the integrals add up to zero due to the reversed
 integration orders. Along contours $C_{1}$ and $C_{2}$, the integrand
-is approximated by a Gaussian, which results in~\cite{phd_Kopold}
-% explain how to generate the spectrum having obtained the phase
-\begin{eqnarray}
-  \label{eq:Mp_spa_direct}
-  \begin{split}
-    M_{\mathbf{p}} & \sim & \sum\limits_{i = 1,2}
-    \sqrt{\frac{2\pi\hbar}{-i S''_{\mathbf{p}}(t_{s_{i}})}}
-    \exp iS_{\mathbf{p}}(t_{s_{i}}).
-  \end{split}
-\end{eqnarray}
-%
-Equation~(\ref{eq:Mp_spa_direct}) approximates the \textsc{ati}
-spectrum for an electron that, after being ionized at some time
-$t_{0}$ under a strong laser field, propagates under the influence of
-the field with no further interaction with the binding potential. For
-a given electron energy, $E_{p}$, the probability
+is approximated by the Gaussian~(\ref{eq:Mp_spa_direct}). For a given
+electron energy, $E_{p}$, the probability
 amplitude~(\ref{eq:Mp_spa_direct}) is evaluated along the integration
 trajectory that contains the saddle-points with positive imaginary
 parts, $t_{01}$ and $t_{02}$, indicated as blue connected dots in
