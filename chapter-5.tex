@@ -551,7 +551,7 @@ be approximated by a Gaussian function~\cite{phd_Kopold}
 in which the phase is defined as $\Phi(t) = S_{\mathbf{p}}(t)\omega /
 U_{p}$, and the period of the laser field is indicated by $T$. The
 integration path to follow is defined by a contour of saddle points
-whose locations, given by Eq.~(\ref{eq:ReIm_eqs}), are known
+whose locations, indicated in Eq.~(\ref{eq:ReIm_eqs}), are known
 analitically for a linearly polarized laser field. This expression
 results in~\cite{phd_Kopold}
 %
@@ -574,10 +574,10 @@ potential.
 % explain how to choose the relevant contours and the figure in phase space
 % then explain eq.B25 from Kopold
 
-In order to visualize the regions in phase space where the action $S$
-is stationary and, consequently, construct an integration path of
-stationary phase through the saddle-points, it is convenient to carry
-out the substitution $t \to t_{r} + it_{i}$ in
+In order to visualize the regions in phase space where the action
+$S_{\mathbf{p}}$ is stationary and, consequently, construct an
+integration path of stationary phase through the saddle-points, it is
+convenient to carry out the substitution $t \to t_{r} + it_{i}$ in
 Eq.~(\ref{eq:action_direct}). For a monochromatic laser
 field~(\ref{eq:lp_field}), and assuming that the electron path is
 parallel to the electric field of the laser, the real and imaginary
@@ -626,13 +626,15 @@ point, $t_{02}$, to $\omega t = 2\pi + i\infty$, and finally along
 $C_{b}$ to $\omega t = 2\pi$. The integrands along $C_{a}$ and $C_{b}$
 are identical and the integrals add up to zero due to the reversed
 integration orders. Along contours $C_{1}$ and $C_{2}$, the integrand
-is approximated by the Gaussian~(\ref{eq:Mp_spa_direct}). For a given
-electron energy, $E_{p}$, the probability
+is approximated by the Gaussian~(\ref{eq:Mp_spa_direct}) with $i = 1,
+2$. For a given electron energy, $E_{p}$, the probability
 amplitude~(\ref{eq:Mp_spa_direct}) is evaluated along the integration
 trajectory that contains the saddle-points with positive imaginary
 parts, $t_{01}$ and $t_{02}$, indicated as blue connected dots in
 Figure~\ref{fig:sp_direct}, in order to obtain a converging result
 when evaluating the exponential term in $M_{\mathbf{p}}$.
+% add some reference to the path of steepest descent mentioned above
+% to make this description connect with the formalism of saddle points
 
 % include contour plots for constant values of Im(\Phi) and
 % integration path
@@ -642,28 +644,27 @@ when evaluating the exponential term in $M_{\mathbf{p}}$.
   \caption{Phase contours of constant $\mathrm{Im}\ i\Phi(t)$ for the
     saddle points $t_{01}(t_{03})$ (blue lines) and $t_{02}(t_{04})$
     (red lines) corresponding to an electron energy of $2.27 U_{p}$
-    projected on the complex plane. The regions in a purple scale
-    represent contours of constant $\mathrm{Re}\ i\Phi(t)$.}
+    projected on the complex plane. The allowed integration contour
+    runs over the saddle points with positive imaginary parts,
+    $t_{01}$ and $t_{02}$. The regions in a purple scale represent the
+    real part of the exponent in Eq.~(\ref{eq:KFR_Mp}),
+    $\mathrm{Re}\ i\Phi(t)$, in which dark/light regions stand for
+    small/large real parts .}
   \label{fig:sp_contours}
 \end{figure}
 
 The described ionization spectrum of direct electrons for a model
 helium atom calculated by means of the saddle-point
-approximation~(\ref{eq:Mp_spa_direct}) is displayed
+approximation~(\ref{eq:Mp_spa_direct}) is displayed in
 Figure~\ref{fig:ati_direct} by dash-dotted lines. The \textsc{ati}
 spectrum corresponding to the exact Keldysh amplitude is indicated
-with black dots.
-% NOT SURE ABOUT WHERE THIS GOES
-%The complex path of these saddle points is indicated
-%by blue dots in Fig.~\ref{fig:sp_direct} as the electron energy
-%increases from $0$ to $4 U_{p}$.
-The saddle-point approximation
-mirrors the fully quantum calculation in terms of an expansion in
-Bessel functions. Similarly to what the Keldysh \textsc{sfa} results
-point out, the saddle-point approximation generates an \textsc{ati}
-spectrum that vanishes at approximately $2.5 U_{p}$ as the electron
-escapes the effects of the binding potential without further
-interaction with the parent ion.
+with black dots. The saddle-point approximation mirrors the fully
+quantum calculation in terms of an expansion in Bessel
+functions. Similarly to what the Keldysh \textsc{sfa} results point
+out, the saddle-point approximation generates an \textsc{ati} spectrum
+that vanishes at approximately $2.5 U_{p}$ as the electron escapes the
+effects of the binding potential without further interaction with the
+parent ion.
 
 \begin{figure}
   \centering
@@ -683,15 +684,29 @@ interaction with the parent ion.
 \subsection{\label{sec:spa_resc} Trajectories with rescattering}
 
 % fundamental features of rescattering, how is this approached
-Incorporating rescattering effects in the study of \textsc{ati}
-expands the possible physical interpretations to the ionization
-spectrum, in particular, it provides a comprehensible description to
-the origin of the \textsc{ati}
-plateau~\cite{Paulus_1994plateau,BeckerRescattering_2018}. It is the
+% see PhysRevA55 comments about rescattering and the plateau (introduction)
+Incorporating rescattering effects, in which ionized electrons are
+allowed to return to the parent ion, is of great significance in the
+study of \textsc{ati} as it expands the possible physical
+interpretations to the ionization spectrum. In particular, it
+elucidates the origin of the extended \textsc{ati} plateau which can
+be observed at high electron energies~\cite{Walker_1996}. This
+plateau, which can be thoroughly justified when rescattering effects
+are included in the \textsc{ati}
+study~\cite{Paulus_1994plateau,BeckerRescattering_2018}, has been well
+described by a three-step model that employs a zero-range binding
+potential as well as rescattering
+effects~\cite{Becker_rescattering1994,Kopold_1997sfa}. It is the
 purpose of this section to revisit a saddle-point approximation of the
 rescattering picture in which the quantum orbits of the ionized
 electron play an essential part in the formation of the \textsc{ati}
 spectrum~\cite{KopoldOptComm2000}.
+
+
+%which can be fully justified when a rescattering description
+%of the \textsc{ati} process is included in the
+%analysis~\cite{Paulus_1994plateau,BeckerRescattering_2018}.
+
 
 % equations to determine the physical magnitudes (t, t', k) that
 % define the complex trajectories, i.e., saddle points
@@ -704,8 +719,10 @@ $\mathbf{k}_{S}$, however, the model accounts for further interaction
 with the binding potential as the electron is considered to return to
 within the vicinity of the ion at time $t_{S}$, rescattering time, at
 which the electron acquires its final asymptotic momentum
-$\mathbf{p}$. The relevant quantum trajectories, defined by $(t'_{S},
-t_{S}, \mathbf{k}_{S})$, are given by the saddle-point
+$\mathbf{p}$.
+
+The relevant quantum trajectories, defined by $(t'_{S}, t_{S},
+\mathbf{k}_{S})$, are given by the saddle-point
 equations~(\ref{eq:saddle_eqs}) which have their origin in the
 condition that the action of the system remains stationary along those
 points. For the linearly-polarized field~(\ref{eq:lp_field}), after
