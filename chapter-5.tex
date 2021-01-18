@@ -31,8 +31,8 @@ state of the system.
 
 This chapter presents the arguments of Kopold
 et. al.~\cite{KopoldOptComm2000,phd_Kopold} in an attempt to reproduce
-their study of \textsc{ati} with electron rescattering on atoms and
-test for numerical stability. In view of this, the arguments
+their study of \textsc{ati} on atoms, including electron rescattering,
+and test for numerical stability. In view of this, the arguments
 introduced in their saddle-point analysis of \textsc{ati} are
 presented in the following sections. The saddle-point approximation
 establishes the connection between the quantum mechanical path
@@ -67,8 +67,8 @@ harmonic generation~\cite{LewensteinSPA_1994,Lewenstein_1995} by means
 of a quantum model that takes into account additional interaction of
 the ionizing electron with the ion core including higher order terms
 in a perturbative expansion leading to rescattering effects. This
-model, non restricted to zero-range potentials, constitutes a quantum
-mechanical formulation of the two-step semiclassical
+model, which extends beyond zero-range potentials, constitutes a
+quantum mechanical formulation of the two-step semiclassical
 picture~\cite{Becker_2step1986}, which has proven to be crucial in
 understanding strong-field laser-atom interactions. These models,
 which incorporate rescattering effects of the excited electrons, have
@@ -91,13 +91,13 @@ ionization. Consequently, they present non-zero imaginary components
 which determine the probability of the process. Their physical content
 is reflected in the electron dynamics once it has been ionized at time
 $t'$, the electron may return to its parent ion at a later time $t$
-and rescatter after propagating with momentum $\mathbf{k}$ in the
-continuum under the action of the external field.
+and rescatter after propagating in the continuum with momentum
+$\mathbf{k}$ under the action of the external field.
 
 As a starting point in the evaluation of the \textsc{ati} probability
-amplitude~\ref{eq:mp_compact} by means of a saddle-point approximation
-we consider the compact form of the Volkov state in the length gauge
-(see Appendix~\ref{app:L_gauge}), which can be expressed
+amplitude~\ref{eq:mp_compact} by means of a saddle-point
+approximation, we consider the compact form of the Volkov state in the
+length gauge (see Appendix~\ref{app:L_gauge}), which can be expressed
 as~\cite{Becker_ati2002}
 %
 \begin{eqnarray}
@@ -125,9 +125,11 @@ satisfies the Schr\"{o}dinger equation
 \end{eqnarray}
 %
 where $V_{I}(t) = \mathbf{r}\cdot\mathbf{E}(t)$ indicates the
-interaction of the electron with the electric field of the laser. It
-can be verified that the Volkov time-evolution operator, expressed in
-terms of a Volkov-state decomposition~(\ref{eq:volkov_Lgauge}) by
+interaction of the electron with the electric field of the laser. In
+view of the completeness of the plane-wave states as required by the
+evolution operators formalism, it can be verified that the Volkov
+time-evolution operator, expressed in terms of a Volkov-state
+decomposition~(\ref{eq:volkov_Lgauge}) by
 %
 \begin{eqnarray}
 \label{eq:te_volkov}
@@ -139,9 +141,8 @@ U^{(V)}(t,t') & = & \int d^{3}\mathbf{k}
 \end{eqnarray}
 %
 is the solution to the initial-value problem~(\ref{eq:Uv_SchEq}), with
-$U^{(V)}(t',t') = \hat{1}$, where $\hat{1}$ is the unit operator, in
-view of the completeness of the plane-wave states as required by the
-evolution operators formalism~\cite{BeckerTEOp_2006,cjp2010_keldysh}.
+$U^{(V)}(t',t') = \hat{1}$, where $\hat{1}$ is the unit
+operator~\cite{BeckerTEOp_2006,cjp2010_keldysh}.
 %(seeJPhysB39)
 
 Inserting the expansion~(\ref{eq:te_volkov}) into the matrix
@@ -493,7 +494,7 @@ oscillate rapidly in the vicinity of $z_{s}$. If the point $z = z_{s}$
 coincides with a saddle point, a suitable path is one where $v(x,y)$
 is nearly constant as one moves away from $z_{s}$, in other words,
 when the exponential term in~(\ref{eq:I_eta_contour}) can be expressed
-as
+as~\cite{phd_Kopold}
 %
 \begin{eqnarray}
   \label{eq:exp_steepest}
@@ -805,10 +806,10 @@ spectrum.
 % include discussion of short and long trajectories following this
 % paragraph
 \begin{figure}
-  \begin{subfigure}[b]{0.55\linewidth}
+  \begin{subfigure}[b]{0.5\linewidth}
     \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/return1to6inset.pdf}
   \end{subfigure}
-  \begin{subfigure}[b]{0.55\linewidth}
+  \begin{subfigure}[b]{0.5\linewidth}
     \includegraphics[width=\textwidth]{figures/ch_ATI_SPA/rescattering/release1to6.pdf}
   \end{subfigure}
   \caption{Results of a numerical determination of the return time
@@ -1002,8 +1003,6 @@ reflects its cutoff energy, upon which the sequence of interference
 maxima and minima is terminated by a sharp peak where the two
 trajectories diverge and one of them increases exponentially and stops
 contributing to the spectrum.
-
-
 
 %Quantita- tively, however, its contribution is the second-most
 %important and, consequently, its cutoff is visible in the complete
