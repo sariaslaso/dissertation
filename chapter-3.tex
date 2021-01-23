@@ -1,15 +1,47 @@
 \chapter{H$_{2}$O in an external electric dc field}
 \label{cha:dc_h2o}
 
+% H2O in strong dc fields
+% effective potential
+% outline of the chapter
+
+The stark resonance parameters, which characterize the shift of the
+molecular energy levels under an external dc field, are fundamental in
+the study of the strong dc field ionization of molecular orbitals. In
+the case of the water molecule, the multicentre nature and,
+consequently, the additional degrees of freedom, make the strong dc
+field ionization of H$_{2}$O an attractive and challenging problem
+from the point of view of a theoretical description as well as
+experimentally. Complex variable techniques, such as an exterior
+complex scaling~\cite{Simon_1979,Scrinzi_2010} and complex-absorbing
+potentiasl~\cite{RissMeyer_1993,Krause_2014}, have been implemented in
+order to address the problem of molecular static-field ionization and
+compute the induced Stark resonances.
+
 The dc Stark problem for the H$_{2}$O valence orbitals is addressed in
-this chapter through the implementation of a complex scaling approach
-that allows to study the effect of an external dc field on each
-molecular orbital independently. The construction of an effective
-potential that reflects the indivual properties of the orbitals is
-crucial in this analysis.
+this chapter by the implementation of a modified exterior complex
+scaling approach that allows to study the ionization of the molecular
+orbitals of H$_{2}$O under a strong dc field. The construction of an
+effective potential which reflects the indivual properties of the
+orbitals is crucial in this
+analysis~\cite{sarias_2016,sarias_2017}. In
+Sec.~\ref{ch:h2o_structure}, we formulate the problem with emphasis on
+the representation of the molecular orbitals. The exterior complex
+scaling formalism and its implementation are introduced in
+Sec.~\ref{ch:h2o_ecs} as a crucial step in finding a numerical
+solution to the problem. The Stark resonance parameters are then
+presented in Sec.~\ref{ch:stark_params}.
+
+
+
+%Our study involves deriving an effective potential that reproduces the
+%symmetry properties of each molecular orbital in order to study the
+%Stark resonances for the water molecule under an external static
+%electric field
 
 
 \section{Molecular structure of H$_{2}$O}
+\label{ch:h2o_structure}
 % Formulation of the Problem
 
 % representation of the orbitals, fig.1 in the papers (also fig.2 of
@@ -17,9 +49,13 @@ crucial in this analysis.
 
 
 \section{Partial differential equation approach to the problem}
+\label{ch:h2o_pde}
+
 \subsection{Exterior complex scaling}
+\label{ch:h2o_ecs}
 
 \section{Stark resonance parameters}
+\label{ch:stark_params}
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
 \subsection{$3a_{1}$ molecular orbital}
 
