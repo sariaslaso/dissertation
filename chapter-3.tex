@@ -26,10 +26,13 @@ effective potential, which reflects the indivual properties of the
 orbitals, is crucial in this analysis. In Sec.~\ref{ch:h2o_structure},
 we formulate the problem with emphasis on the representation of the
 molecular orbitals. The exterior complex scaling formalism and its
-implementation are introduced in Sec.~\ref{ch:h2o_ecs} as a crucial
-step in finding a numerical solution to the problem. The Stark
-resonance parameters are then presented in Sec.~\ref{ch:stark_params},
-in which the symmetry properties of the orbitals are considered
+implementation are introduced in Sec.~\ref{ch:1b1_1b2} and
+Sec.~\ref{ch:3a1} as a crucial step in finding a numerical solution to
+a spherically symmetric problem, in the case of the $1b_{1}$ and
+$1b_{2}$ orbitals, and the problem of a non-central effective
+potential, in the case of the $3a_{1}$ orbital. The Stark resonance
+parameters are then presented in Sec.~\ref{ch:stark_params}, in which
+the symmetry properties of the orbitals are considered
 independently. The analysis presented in this chapter compiles that
 of~\cite{sarias_2016,sarias_2017}.
 
@@ -87,46 +90,30 @@ $np_{z}$ parts of the \textsc{mo}, the strong asymmetry introduced by
 the two protons of the H$_{2}$O molecule located in the $y-z$ plane
 leading to significant admixtures of $s-$type Slater orbitals in the
 Moccia \textsc{sto}s~\cite{Moccia_1964} would have been neglected with
-a spherically symmetric potential. Hence, the dc ionization problem
-for the $3a_{1}$ \textsc{mo} was addressed by defining a reduced
-single-centre Moccia wavefunction,
-%
-\begin{eqnarray}
-  \begin{split}
-    \psi_{3a_{1}}(r,\theta) = \sum_{n,l} c_{nl0} \varphi_{nl0}(r,\theta),
-  \end{split}
-  \label{eq:psi_3a1}
-\end{eqnarray}
-%
-that incorporates \textsc{sto}s of $2s$ and $2p_{z}$ type.
-
-
-%The symmetry
-%properties of these orbitals motivated separate descriptions for the
-%spherical orbitals and the non-spherical one.
-
-
-
-
-
-
-
-
-
+a spherically symmetric potential. Hence, for the dc ionization
+problem of the $3a_{1}$ \textsc{mo} \textsc{sto}s of type $2s$ and
+$2p_{z}$ were incorporated in the analysis.
 
 
 
 % representation of the orbitals, fig.1 in the papers (also fig.2 of
 % the jphysb), with related comments
 
+\section{$1b_{1}$ and $1b_{2}$ molecular orbitals}
+\label{ch:1b1_1b2}
+\subsection{\textsc{pde} approach in spherical polar coordinates}
+
+\section{$3a_{1}$ molecular orbital}
+\label{ch:3a1}
+\subsection{Interpolation and Latter correction of the
+  non-spherical effective potential}
 
 
+%\section{Partial differential equation approach to the problem}
+%\label{ch:h2o_pde}
 
-\section{Partial differential equation approach to the problem}
-\label{ch:h2o_pde}
-
-\subsection{Exterior complex scaling}
-\label{ch:h2o_ecs}
+%\subsection{Exterior complex scaling}
+%\label{ch:h2o_ecs}
 
 \section{Stark resonance parameters}
 \label{ch:stark_params}
