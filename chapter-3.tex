@@ -9,11 +9,12 @@ The stark resonance parameters, which characterize the shift of the
 molecular energy levels under an external dc field, are fundamental in
 the study of the strong dc field ionization of molecular orbitals
 (\textsc{mo}s). In the case of the water molecule, the multicentre
-nature and, consequently, the additional degrees of freedom, make the
-strong dc field ionization of H$_{2}$O an attractive and challenging
-problem from the point of view of a theoretical description as well as
-experimentally. Complex variable techniques, such as an exterior
-complex scaling~\cite{Simon_1979,Scrinzi_2010} and complex-absorbing
+nature of the combined Coulomb interactions and, consequently, the
+additional degrees of freedom, make the strong dc field ionization of
+H$_{2}$O an attractive and challenging problem from the point of view
+of a theoretical description as well as experimentally. Complex
+variable techniques, such as an exterior complex
+scaling~\cite{Simon_1979,Scrinzi_2010} and complex-absorbing
 potentiasl~\cite{RissMeyer_1993,Krause_2014}, have been implemented in
 order to address the problem of molecular static-field ionization and
 compute the induced Stark resonances.
@@ -25,16 +26,15 @@ orbitals of H$_{2}$O under a strong dc field. The construction of an
 effective potential, which reflects the indivual properties of the
 orbitals, is crucial in this analysis. In Sec.~\ref{ch:h2o_structure},
 we formulate the problem with emphasis on the representation of the
-molecular orbitals. The exterior complex scaling formalism and its
-implementation are introduced in Sec.~\ref{ch:1b1_1b2} and
-Sec.~\ref{ch:3a1} as a crucial step in finding a numerical solution to
-a spherically symmetric problem, in the case of the $1b_{1}$ and
-$1b_{2}$ orbitals, and the problem of a non-central effective
-potential, in the case of the $3a_{1}$ orbital. The Stark resonance
-parameters are then presented in Sec.~\ref{ch:stark_params}, in which
-the symmetry properties of the orbitals are considered
-independently. The analysis presented in this chapter compiles that
-of~\cite{sarias_2016,sarias_2017}.
+molecular orbitals. The exterior complex scaling formalism is
+introduced in Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial
+step in finding a numerical solution to a spherically symmetric
+problem, in the case of the $1b_{1}$ and $1b_{2}$ orbitals, and the
+problem of a non-central effective potential, in the case of the
+$3a_{1}$ orbital. The Stark resonance parameters are then presented in
+Sec.~\ref{ch:stark_params}, in which the symmetry properties of the
+orbitals are considered independently. The analysis presented in this
+chapter compiles that of~\cite{sarias_2016,sarias_2017}.
 
 
 \section{Molecular structure of H$_{2}$O}
@@ -55,6 +55,13 @@ structure of diatomical molecules~\cite{Pitzer_1968}. On the other
 hand, the direct application of these multicentre orbitals for
 strong-field studies implies significant computational and
 methodological challenges.
+
+The present work is limited to study the valence molecular orbitals of
+H$_{2}$O. The wavefunctions for the $1b_{1}$ and $1b_{2}$ molecular
+orbitals, which correspond to the $2p_{x}$ and $2p_{y}$ oxygen
+orbitals, are dominated by a single angular mometum symmetry. The
+$3a_{1}$ \textsc{mo}, on the other hand, consists mainly of the oxygen
+$2s$ and $2p_{z}$ and the hydrogen $1s$ atomic orbitals.
 
 The general expression for the basis functions, introduced as a set of
 single-center
