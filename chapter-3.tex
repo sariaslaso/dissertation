@@ -73,7 +73,7 @@ defined as a Slater-type orbital (\textsc{sto}),
 %
 \begin{eqnarray}
   \begin{split}
- f_{n, l, m}(\zeta,r,\theta,\phi) & = & \sqrt{\frac{(2\zeta)^{2n+1}}{(2n)!}}
+ f_{nlm}(\zeta,r,\theta,\phi) & = & \sqrt{\frac{(2\zeta)^{2n+1}}{(2n)!}}
  r^{n-1} \exp(-\zeta r) S_{l, m}(\theta,\phi),
  \end{split}
 \label{eq:sto}
@@ -115,9 +115,69 @@ The Schr\"{o}dinger equation for the bound-state problem of a
 molecular orbital within an effective potential $V_{\mathrm{eff}}(r)$
 is expressed in shperical polar coordinates as
 %
-%sch. eq.
+\begin{eqnarray}
+  [ -\frac{1}{2} \frac{d^2}{dr^2} + \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r)] \psi
+  & = & E\psi,
+\label{eq:sch_noCS}
+\end{eqnarray}
 %
+where $\hat{L}^{2}$ is the orbital quantum momentum operator. The
+present study involves the construction of the effective
+orbital-dependent potential $V_{\mathrm{eff}}(r)$ extracted from the
+single-centre Moccia wave functions~\cite{Moccia_1964}. Then an
+exterior complex scaling (\textsc{ecs})~[REFS] is applied to determine
+the numerical solution of the problem associated with a molecular
+orbital in the presence of a strong electric dc field applied along
+the $z$ direction.
 
+In order to determine the efective potential corresponding to each
+molecular orbital, a reduced single-centre Moccia wavefunction of the
+form
+%
+\begin{eqnarray}
+  \begin{split}
+    \psi_{1b_{1},1b_{2}}(r) & = & \sum\limits_{i} c_{nlm} f_{nlm}(\zeta_{i}, r),
+    \label{eq:sto_1b1_1b2}
+  \end{split}
+\end{eqnarray}
+%
+is inserted in the Schr\"{o}dinger equation~(\ref{eq:sch_noCS}) as an
+approximation of the respective orbital, $1b_{1}$ or $1b_{2}$, with an
+eigenstate of a spherically symmetric potential. The functions
+$f_{nlm}(r)$ represent the radial part of the Slater
+orbitals~(\ref{eq:sto}) with $|m|=1$ for the magnetic quantum number,
+and we limited the expansion to \textsc{sto}s of $2p_{x}$ and $2p_{y}$
+type. The set of coefficients, given in Table~[REF], represents a
+reduced selection of the expansion parameters given by Moccia for the
+ground state of the water molecule~\cite{Moccia_1964}.
+
+\begin{table}[t]
+ \centering
+  \caption{Expansion coefficients and nonlinear coefficients for the
+    $1b_{1}$ and $1b_{2}$ molecular orbitals of H$_{2}$O. The
+    parameters used in our reduced \textsc{sto} expansion are
+    indicated as included.}
+  \begin{tabular}{lrrrr}
+    \toprule
+    $(n,l, m)$ & & $\zeta_{i}$ & $c_{nlm}^{1b_{1}}$ & $c_{nlm}^{1b_{2}}$ \\
+    \midrule
+    $(2,1,1)$ & included & $1.510$ & $0.72081$ & $\cdots$ \\
+    $(2,1,1)$ & included & $2.440$ & $0.11532$ & $\cdots$ \\
+    $(2,1,1)$ & included & $3.920$ & $0.24859$ & $\cdots$ \\
+    $(3,2,1)$ & excluded & $1.600$ & $0.05473$ & $\cdots$ \\
+    $(3,2,1)$ & excluded & $2.400$ & $0.00403$ & $\cdots$ \\
+    $(4,3,1)$ & excluded & $1.950$ & $0.00935$ & $\cdots$ \\
+    $(4,3,3)$ & excluded & $1.950$ & $-0.02691$ & $\cdots$ \\
+    $(2,1,-1)$ & included & $1.510$ & $\cdots$ & $0.88270$ \\
+    $(2,1,-1)$ & included & $2.440$ & $\cdots$ & $-0.07083$ \\
+    $(2,1,-1)$ & included & $3.920$ & $\cdots$ & $0.23189$ \\
+    $(3,2,-1)$ & excluded & $1.600$ & $\cdots$ & $0.25445$ \\
+    $(3,2,-1)$ & excluded & $2.400$ & $\cdots$ & $-0.01985$ \\
+    $(4,3,-1)$ & excluded & $1.950$ & $\cdots$ & $0.04526$ \\
+    $(4,3,-3)$ & excluded & $1.950$ & $\cdots$ & $-0.06381$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 Figure~\ref{fig:h2o_1b1_1b2} shows a scheme of the geometry of the
 system, where the orientation of the $1b_{1}$ and $1b_{2}$
