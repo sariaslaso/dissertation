@@ -130,9 +130,9 @@ the numerical solution of the problem associated with a molecular
 orbital in the presence of a strong electric dc field applied along
 the $z$ direction.
 
-In order to determine the efective potential corresponding to each
-molecular orbital, a reduced single-centre Moccia wavefunction of the
-form
+As a first step in solving Eq.~(\ref{eq:sch_noCS}) for the H$_{2}$O
+molecular orbitals, we introduce the reduced single-centre Moccia
+wavefunction,
 %
 \begin{eqnarray}
   \begin{split}
@@ -141,22 +141,23 @@ form
   \end{split}
 \end{eqnarray}
 %
-is inserted in the Schr\"{o}dinger equation~(\ref{eq:sch_noCS}) as an
-approximation of the respective orbital, $1b_{1}$ or $1b_{2}$, with an
-eigenstate of a spherically symmetric potential. The functions
-$f_{nlm}(r)$ represent the radial part of the Slater
-orbitals~(\ref{eq:sto}) with $|m|=1$ for the magnetic quantum number,
-and we limited the expansion to \textsc{sto}s of $2p_{x}$ and $2p_{y}$
-type. The set of coefficients, given in Table~[REF], represents a
-reduced selection of the expansion parameters given by Moccia for the
-ground state of the water molecule~\cite{Moccia_1964}.
+which approximates the molecular orbital by an eigenstate of a
+spherically symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$
+represent the radial part of the Slater orbitals~(\ref{eq:sto}) with
+$|m|=1$ for the magnetic quantum number in which the \textsc{sto}
+expansion is limited to $2p_{x}$ and $2p_{y}$ orbitals,
+respectively. The set of expansion coefficients and non-linear
+coefficients in~(\ref{eq:sto_1b1_1b2}), given in
+Table~\ref{tab:1b11b2_coef}, represents a reduced selection of the
+expansion parameters given by Moccia for the ground state of the water
+molecule~\cite{Moccia_1964}.
 
 \begin{table}[t]
  \centering
-  \caption{Expansion coefficients and nonlinear coefficients for the
-    $1b_{1}$ and $1b_{2}$ molecular orbitals of H$_{2}$O. The
-    parameters used in our reduced \textsc{sto} expansion are
-    indicated as included.}
+  \caption{\label{tab:1b11b2_coef} Expansion coefficients and
+    nonlinear coefficients for the $1b_{1}$ and $1b_{2}$ molecular
+    orbitals of H$_{2}$O. The parameters used in our reduced
+    \textsc{sto} expansion are indicated as included.}
   \begin{tabular}{lrrrr}
     \toprule
     $(n,l, m)$ & & $\zeta_{i}$ & $c_{nlm}^{1b_{1}}$ & $c_{nlm}^{1b_{2}}$ \\
@@ -178,6 +179,28 @@ ground state of the water molecule~\cite{Moccia_1964}.
     \bottomrule
   \end{tabular}
 \end{table}
+
+In order to determine the effective potential corresponding to each
+molecular orbital, the wavefunction~(\ref{eq:sto_1b1_1b2}) is inserted
+into the single-electron Schr\"{o}dinger equation~(\ref{eq:sch_noCS}),
+which is then solved for $V_{\mathrm{eff}}^{(1)}(r)$. Afterwards, we
+apply the so-called Latter correction~\cite{LatterCor_1955} to ensure
+that the effective potential converges asymptotically to $-1/r$, as
+expected in a Coulomb potential:
+%
+\begin{eqnarray}
+V_{\mathrm{eff}}(r) = \left\{
+\begin{split}
+V_{\mathrm{eff}}^{(1)}(r)\  & \mathrm{for} & r < r_{0} \\
+-1/r\  & \mathrm{for} & r > r_{0}
+\end{split}
+\right.
+\label{eq:coulomb_tail}
+\end{eqnarray}
+%
+
+
+
 
 Figure~\ref{fig:h2o_1b1_1b2} shows a scheme of the geometry of the
 system, where the orientation of the $1b_{1}$ and $1b_{2}$
