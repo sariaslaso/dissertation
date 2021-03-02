@@ -1,5 +1,5 @@
 \chapter{H$_{2}$O in an external electric dc field}
-\label{cha:dc_h2o}
+\label{ch:dc_h2o}
 
 % H2O in strong dc fields
 % effective potential
@@ -125,10 +125,28 @@ where $\hat{L}^{2}$ is the orbital quantum momentum operator. The
 present study involves the construction of the effective
 orbital-dependent potential $V_{\mathrm{eff}}(r)$ extracted from the
 single-centre Moccia wave functions~\cite{Moccia_1964}. Then an
-exterior complex scaling (\textsc{ecs})~[REFS] is applied to determine
-the numerical solution of the problem associated with a molecular
-orbital in the presence of a strong electric dc field applied along
-the $z$ direction.
+exterior complex scaling (\textsc{ecs})~\cite{Simon_1979} is applied
+to determine the numerical solution of the problem associated with a
+molecular orbital in the presence of a strong electric dc field
+applied along the $z$ direction~\cite{sarias_2016}. A schematic
+representation of the geometry of the system is shown in
+Figure~\ref{fig:h2o_1b1_1b2}, where the orientation of the $1b_{1}$
+and $1b_{2}$ \textsc{mo}s is indicated with respect to the plane where
+the protons are located. The direction of the applied electric field
+along $\hat{z}$ is included as well.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.25\textwidth]{figures/ch_H2O/orbitals.eps}
+  \caption{Schematic display of the $1b_{1}\approx 2p_{x}$ (shown in
+    yellow along the $x$ axis) and $1b_{2}\approx 2p_{y}$ (shown in
+    blue along the $y$ axis) molecular orbitals. Also indicated (in
+    green on the $y-z$ plane) is the orientation of the protons. The
+    $z$ axis (in red) is the direction of the external electric field
+    of strength $F_{0}$.}
+  \label{fig:h2o_1b1_1b2}
+\end{figure}
+
 
 As a first step in solving Eq.~(\ref{eq:sch_noCS}) for the H$_{2}$O
 molecular orbitals, we introduce the reduced single-centre Moccia
@@ -144,7 +162,7 @@ wavefunction,
 which approximates the molecular orbital by an eigenstate of a
 spherically symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$
 represent the radial part of the Slater orbitals~(\ref{eq:sto}) with
-$|m|=1$ for the magnetic quantum number in which the \textsc{sto}
+$|m|=1$ for the magnetic quantum number, in which the \textsc{sto}
 expansion is limited to $2p_{x}$ and $2p_{y}$ orbitals,
 respectively. The set of expansion coefficients and non-linear
 coefficients in~(\ref{eq:sto_1b1_1b2}), given in
@@ -183,8 +201,8 @@ molecule~\cite{Moccia_1964}.
 In order to determine the effective potential corresponding to each
 molecular orbital, the wavefunction~(\ref{eq:sto_1b1_1b2}) is inserted
 into the single-electron Schr\"{o}dinger equation~(\ref{eq:sch_noCS}),
-which is then solved for $V_{\mathrm{eff}}^{(1)}(r)$. Afterwards, we
-apply the so-called Latter correction~\cite{LatterCor_1955} to ensure
+which is then solved for $V_{\mathrm{eff}}^{(1)}(r)$. Afterwards, the
+so-called Latter correction~\cite{LatterCor_1955} is applied to ensure
 that the effective potential converges asymptotically to $-1/r$, as
 expected in a Coulomb potential:
 %
@@ -195,32 +213,82 @@ V_{\mathrm{eff}}^{(1)}(r)\  & \mathrm{for} & r < r_{0} \\
 -1/r\  & \mathrm{for} & r > r_{0}
 \end{split}
 \right.
+,
 \label{eq:coulomb_tail}
 \end{eqnarray}
 %
-
-
-
-
-Figure~\ref{fig:h2o_1b1_1b2} shows a scheme of the geometry of the
-system, where the orientation of the $1b_{1}$ and $1b_{2}$
-\textsc{mo}s is represented with respect to the plane where the
-protons are located. The direction of the applied electric field along
-$\hat{z}$ is included as well.
+where the point $r_{0}$ is determined from $V_{\mathrm{eff}}^{(1)}(r_{0}) =
+-1/r_{0}$, and is found to be sufficiently large that the original
+self-consistent field orbital energy used to derive
+$V_{\mathrm{eff}}^{(1)}(r)$ is close to the eigenenergy
+of~(\ref{eq:sch_noCS}), with at least two significant digits of
+agreement, with $V_{\mathrm{eff}}(r)$ given
+by~(\ref{eq:coulomb_tail}).
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.25\textwidth]{figures/ch_H2O/orbitals.eps}
-  \caption{Schematic display of the $1b_{1}\approx 2p_{x}$ (shown in
-    yellow along the $x$ axis) and $1b_{2}\approx 2p_{y}$ (shown in
-    blue along the $y$ axis) molecular orbitals. Also indicated (in
-    green on the $y-z$ plane) is the orientation of the protons. The
-    $z$ axis (in red) is the direction of the external electric field
-    of strength $F_{0}$.}
-  \label{fig:h2o_1b1_1b2}
+  \includegraphics[width=0.75\textwidth]{figures/ch_H2O/Veff1b11b2.eps}
+  \caption{Electronic effective potential in atomic units for the
+    $1b_{1}\approx 2p_{x}$ (black) and $1b_{2}\approx 2p_{y}$ (blue)
+    \textsc{mo}s of the H$_{2}$O molecule. The solid lines give the
+    potential as derived from~(\ref{eq:sch_noCS}) using the
+    \textsc{scf} orbitals and eigenenergies, while the dashed lines
+    show the potentials after the Latter correction is applied. The
+    dot-dashed lines indicate the eigenenergies obtained from the
+    Moccia wavefunctions~\cite{Moccia_1964}.}
+  \label{fig:Veff1b11b2}
 \end{figure}
 
-\subsection{\textsc{pde} approach in spherical polar coordinates}
+Figure~\ref{fig:Veff1b11b2} shows a comparison of the effective
+potential $V_{\mathrm{eff}}^{(1)}(r)$ (solid lines), with black
+representing the $1b_{1}$ \textsc{mo} and blue representing the
+$1b_{2}$ \textsc{mo}, derived from the Moccia wavefunctions
+representing the $1b_{1}$ and $1b_{2}$
+\textsc{mo}s~\cite{Moccia_1964}, and the transformed electronic
+potential $V_{\mathrm{eff}}(r)$ (dashed lines) after the Latter
+correction was implemented. The effective potentials for the $1b_{1}$
+and $1b_{2}$ \textsc{mo}s are given as the shallower and deeper
+curves. As Figure~\ref{fig:Veff1b11b2} illustrates, one drawback of
+the method is that the effective potential is orbital dependent. A
+direct consequence is that the value of $r=r_{0}$, which sets the
+position in $r$ where the Coulombic tail is imposed, differs between
+the \textsc{mo}s, being almost two times larger for the $1b_{2}$
+compared to the $1b_{1}$ \textsc{mo}.
+
+
+\subsection{PDE approach and exterior complex scaling}
+\label{ch:ecs_1b11b2}
+
+This section discusses the partial differential equation approach that
+is implemented in order to calculate the relevant resonance parameters
+in the problem of the H$_{2}$O molecule exposed to a strong dc
+field. Having obtained an effective potential to defined the
+field-free Schr\"{o}dinger equation~(\ref{eq:sch_noCS}) for an orbital
+obtained in the \textsc{scf} method, the problem of the dc ionization
+of the molecule is developed further.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{$3a_{1}$ molecular orbital}
 \label{ch:3a1}
@@ -236,6 +304,10 @@ $\hat{z}$ is included as well.
 
 \section{Stark resonance parameters}
 \label{ch:stark_params}
+
+% In the following subsections we present plots of the ionization
+% parameters for a set of external dc field amplitudes...
+
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
 \subsection{$3a_{1}$ molecular orbital}
 
