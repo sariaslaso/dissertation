@@ -335,13 +335,55 @@ is more appropriate, as the potential needs to have analyticity
 properties only in the region affected by the scaling, where one can
 look for solutions which decay exponentially in the assymptotic region
 of the potential. Both methods have been widely used in scattering
-problems~\cite{complexScalingBaslev, complexScalingSimon}, and also in
+problems~\cite{complexScalingBaslev, complexScalingSimon}, in studies
+of the Stark problem for multi-electron
+systems~\cite{ScrinziJChemPhys_ECS,ScrinziJPhysB_ECS}, as well as in
 time-dependent Schr\"{o}dinger equation problems for strong
 fields~\cite{ecsRuiz, ecsTao, ecsScrinzi}.
 
+For our aim of studying the field ionization properties of H$_{2}$O
+orbitals, we implement a modified \textsc{ecs} technique in which the
+radial coordinates are extended into the complex plane by a phase
+factor, which is turned on gradually beyond some distance from the
+origin. This method allows us to address the tunneling and
+over-barrier ionization problem by avoiding the complication of
+describing quasibound states with outgoing waves for $r \to
+\infty$. In the present work, the complex scaling transformation is
+given by
+%
+\begin{eqnarray}
+  \begin{split}
+    r & \rightarrow & r\exp(i\chi(r)),
+  \end{split}
+\label{eq:ecs_r}
+\end{eqnarray}
+%
+where $\chi$ is defined as a function of the $r$ coordinate with the
+purpose of making the scaling gradually effective from some vicinity
+of $r = r_{\mathrm{s}}$ on,
+%
+\begin{eqnarray}
+  \begin{split}
+    \chi(r) & = & \frac{\chi_{\mathrm{s}}}{1+\exp[-\frac{1}{\Delta r}
+        (r - r_{\mathrm{s}})]}.
+  \end{split}
+\label{eq:ecs_theta}
+\end{eqnarray} 
+%
+For given $r_{\mathrm{s}}$ one has to choose $\Delta r$ to be
+sufficiently small, so that the function $\chi(r)$ starts from small
+values at $r = 0$. For large $r$, it converges to the value
+$\chi_{\mathrm{s}}$.
 
-
-
+The set of possible values for the asymptotic scaling angle
+$\chi_{\mathrm{s}}$ and the parameters $r_{\mathrm{s}}$ and $\Delta
+r$, which control where and how quickly the scaling is turned on, is
+explored in detail in order to establish how sensitive the
+\textsc{pde} solutions are and to test the effectiveness of the
+comples scaling technique to absorb the outgoing wave. Numerous tests
+were carried out to ensure that the ``exact'' results of
+Telnov~\cite{Telnov_1989} for atomic hydrogen orbitals including $2p$
+are reproduced.
 
 
 
