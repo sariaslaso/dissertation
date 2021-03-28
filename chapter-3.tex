@@ -312,10 +312,6 @@ in~\cite{Telnov_1989}. It is then necessary to generate a more general
 solution by solving the \textsc{pde} numerically, e.g., by applying a
 finite-element method.
 
-%update this paragraph with more refs from the notes
-% now explain what complex scaling is and ECS
-% then reference some problems they have been used in
-% then explain our approach
 The ionization regime of the water molecule is described by means of a
 non-Hermitian Hamiltonian that reveals discrete resonance eigenvalues
 containing information about the quasibound states that tunnel through
@@ -385,6 +381,45 @@ were carried out to ensure that the ``exact'' results of
 Telnov~\cite{Telnov_1989} for atomic hydrogen orbitals including $2p$
 are reproduced.
 
+In order to investigate the effects of the dc field on the H$_{2}$O
+orbital energies it is necessary to consider the extra terms that the
+\textsc{ecs}~(\ref{ecs_r}) introduces in the Schr\"{o}dinger
+equation~(\ref{eq:pde}). Additionally, we need to turn the scaling on
+only in the regime $r > r_{0}$, as Eq.~(\ref{eq:coulomb_tail})
+indicates, such that we have a simple Coulomb potential in the scaling
+region. In order to make use of standard finite-element methods, the
+complex-valued wave function is separated into real and imaginary
+parts, such that a system of coupled differential equations is
+obtained as follows:
+%
+\begin{eqnarray}
+  -\frac{1}{2}\frac{\partial^{2}\psi_{R}}{\partial r^2}-\frac{1}{2r^2}
+  (\frac{\cos\theta}{\sin\theta}\frac{\partial\psi_{R}}{\partial\theta}+
+  \frac{\partial^{2}\psi_{R}}{\partial\theta^2}) \nonumber\\
+  +(\frac{m^2}{2r^2\sin^2\theta}+V_{\rm{eff}}^{R}(r)c_{2}-V_{\rm{eff}}^{I}(r)s_{2}
+  -E_{R}c_{2}+E_{I}s_{2}+
+  F_{0}r\cos\theta c_{3})\psi_{R} \nonumber\\
+  +(-V_{\rm{eff}}^{R}(r)s_{2}-V_{\rm{eff}}^{I}(r)c_{2}+E_{R}s_{2}+E_{I}c_{2}-F_{0}r\cos\theta
+  s_{3})\psi_{I} & = & 0, \nonumber\\
+  \vspace{1cm}
+  -\frac{1}{2}\frac{\partial^{2}\psi_{I}}{\partial r^2}-\frac{1}{2r^2}
+  (\frac{\cos\theta}{\sin\theta}\frac{\partial\psi_{I}}{\partial\theta}+
+  \frac{\partial^{2}\psi_{I}}{\partial\theta^2}) \nonumber\\
+  +(\frac{m^2}{2r^2\sin^2\theta}+V_{\rm{eff}}^{R}(r)c_{2}-V_{\rm{eff}}^{I}(r)s_{2}
+  -E_{R}c_{2}+E_{I}s_{2}+
+  F_{0}r\cos\theta c_{3})\psi_{I} \nonumber\\
+  +(V_{\rm{eff}}^{R}(r)s_{2}+V_{\rm{eff}}^{I}(r)c_{2}-E_{R}s_{2}-E_{I}c_{2}+F_{0}r\cos\theta
+  s_{3})\psi_{R} & = & 0.
+\label{pde_system}
+\end{eqnarray}
+%
+The labels $R$ and $I$ stand for real and imaginary parts,
+respectively; also, the notation $[c_{k},s_{k}]$ is introduced to
+represent $[\cos[k\chi(r)], \sin[k\chi(r)]]$, respectively, with
+$k=2,3$ and $\chi(r)$ defined in~(\ref{eq:ecs_theta}). Note that the
+effective potential has real and imaginary parts on account of the
+coordinate transformation~(\ref{eq:ecs_r}).
+ 
 
 
 
