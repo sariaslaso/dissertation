@@ -180,20 +180,20 @@ molecule~\cite{Moccia_1964}.
     \toprule
     $(n,l, m)$ & & $\zeta_{i}$ & $c_{nlm}^{1b_{1}}$ & $c_{nlm}^{1b_{2}}$ \\
     \midrule
-    $(2,1,1)$ & included & $1.510$ & $0.72081$ & $\cdots$ \\
-    $(2,1,1)$ & included & $2.440$ & $0.11532$ & $\cdots$ \\
-    $(2,1,1)$ & included & $3.920$ & $0.24859$ & $\cdots$ \\
-    $(3,2,1)$ & excluded & $1.600$ & $0.05473$ & $\cdots$ \\
-    $(3,2,1)$ & excluded & $2.400$ & $0.00403$ & $\cdots$ \\
-    $(4,3,1)$ & excluded & $1.950$ & $0.00935$ & $\cdots$ \\
-    $(4,3,3)$ & excluded & $1.950$ & $-0.02691$ & $\cdots$ \\
-    $(2,1,-1)$ & included & $1.510$ & $\cdots$ & $0.88270$ \\
-    $(2,1,-1)$ & included & $2.440$ & $\cdots$ & $-0.07083$ \\
-    $(2,1,-1)$ & included & $3.920$ & $\cdots$ & $0.23189$ \\
-    $(3,2,-1)$ & excluded & $1.600$ & $\cdots$ & $0.25445$ \\
-    $(3,2,-1)$ & excluded & $2.400$ & $\cdots$ & $-0.01985$ \\
-    $(4,3,-1)$ & excluded & $1.950$ & $\cdots$ & $0.04526$ \\
-    $(4,3,-3)$ & excluded & $1.950$ & $\cdots$ & $-0.06381$ \\
+    $(2,1,1)$ & included & $1.510$ & $0.72081$ & --~~ \\
+    $(2,1,1)$ & included & $2.440$ & $0.11532$ & --~~ \\
+    $(2,1,1)$ & included & $3.920$ & $0.24859$ & --~~ \\
+    $(3,2,1)$ & excluded & $1.600$ & $0.05473$ & --~~ \\
+    $(3,2,1)$ & excluded & $2.400$ & $0.00403$ & --~~ \\
+    $(4,3,1)$ & excluded & $1.950$ & $0.00935$ & --~~ \\
+    $(4,3,3)$ & excluded & $1.950$ & $-0.02691$ & --~~ \\
+    $(2,1,-1)$ & included & $1.510$ & --~~ & $0.88270$ \\
+    $(2,1,-1)$ & included & $2.440$ & --~~ & $-0.07083$ \\
+    $(2,1,-1)$ & included & $3.920$ & --~~ & $0.23189$ \\
+    $(3,2,-1)$ & excluded & $1.600$ & --~~ & $0.25445$ \\
+    $(3,2,-1)$ & excluded & $2.400$ & --~~ & $-0.01985$ \\
+    $(4,3,-1)$ & excluded & $1.950$ & --~~ & $0.04526$ \\
+    $(4,3,-3)$ & excluded & $1.950$ & --~~ & $-0.06381$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -467,9 +467,105 @@ single-centre Moccia wavefunction,
 %
 Here the $\varphi_{nl}(r,\theta)$ are Slater orbitals with $m=0$ for
 the magnetic quantum number, and we limited the expansion to
-\textsc{sto}s of $2s$ and $2p_{z}$ type. 
+\textsc{sto}s of $2s$ and $2p_{z}$ type. The parameters are given in
+Table~\ref{tab:3a1_coef} and three $2p_{z}$ orbitals are mixed with
+three $2s$-type orbitals. This set of coefficients represents a
+reduced selection of the expansion parameters given by Moccia for the
+ground state of the water molecule~\cite{Moccia_1964} also shown in
+Table~\ref{tab:3a1_coef}.
 
- 
+\begin{table}[t]
+\centering
+\caption{\label{tab:3a1_coef} Expansion coefficients and non-linear
+  coefficients for the $3a_{1}$ \textsc{mo}. The parameters used in
+  our reduced \textsc{sto} expansion are indicated as included.}
+\begin{tabular}{lrrr}
+\toprule
+$(n,l,m)$ & & $c_{nlm}$ & $\zeta_{i}$ \\
+\midrule[0.25pt]
+ $(1,0,0)$ & excluded & $-0.00848$ & $12.600$ \\
+ $(1,0,0)$ & excluded & $0.08241$ & $7.450$ \\
+\midrule[0.25pt]
+ $(2,1,0)$ & included & $0.79979$ & $1.510$  \\
+ $(2,1,0)$ & included & $0.00483$ & $2.440$  \\
+ $(2,1,0)$ & included & $0.24413$ & $3.920$  \\
+ $(2,0,0)$ & included & $-0.30752$ & $2.200$ \\
+ $(2,0,0)$ & included & $-0.04132$ & $3.240$ \\
+ $(2,0,0)$ & included & $0.14954$ & $1.280$ \\
+\midrule[0.25pt]
+ $(3,2,0)$ & excluded & $0.05935$ & $1.600$ \\
+ $(3,2,0)$ & excluded & $0.00396$ & $2.400$ \\
+ $(3,2,2)$ & excluded & $-0.09293$ & $1.600$ \\
+ $(3,2,2)$ & excluded & $0.01706$ & $2.400$ \\
+ $(4,3,0)$ & excluded & $-0.01929$ & $1.950$ \\
+ $(4,3,2)$ & excluded & $-0.06593$ & $1.950$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The probability densities for the $3a_{1}$ orbital as obtained from
+the reduced expansion~(\ref{eq:3a1Moccia_expansion}) and from the
+Moccia self-consistent results are shown in
+Figures~\ref{fig:3a1_reduced} and~\ref{fig:3a1_Moccia}
+respectively. The protons (in red) defined in the $y-z$ plane. As
+Fig.~\ref{fig:3a1_reduced} indicates, the contributions to the density
+of the $2s-$type states reproduce the proper dependence of the
+$3a_{1}$ probability density with the polar angle $\theta$, as the
+broader hump is located on the negative $z$ axis in the same way as in
+the complete Moccia representation shown in Fig.~\ref{fig:3a1_Moccia}.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.25\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1extended.eps}
+    \caption{Simplified $3a_{1}$ orbital}\label{fig:3a1_reduced}
+  \end{subfigure}
+  \,
+  \begin{subfigure}[b]{0.25\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1Moccia.eps}
+    \caption{Full Moccia $3a_{1}$ orbital}\label{fig:3a1_Moccia}
+  \end{subfigure}
+  \caption{Schematic display of the $3a_{1}$ molecular orbital (shown
+    in blue along the $z$ axis) used to construct
+    $V_{\mathrm{eff}}(r,\theta)$. The orbital obtained from a reduced
+    expansion in \textsc{sto}s is shown in~(\ref{fig:3a1_reduced}),
+    and the complete Moccia orbital is shown
+    in~(\ref{fig:3a1_Moccia}). Also indicated (in red in the $y-z$
+    plane) is the location of the protons. The $\hat{z}-$axis is the
+    direction along which the external electric field of strength
+    $F_{0}$ is applied.}
+  \label{fig:3a1_prob_density}
+\end{figure}
+
+In order to illustrate the fraction of the full Moccia expansion that
+our reduced wavefunction~(\ref{eq:3a1Moccia_expansion}) represents,
+the projections of the probability densities over the $x-y$ plane are
+shown as contours of constant density in
+Figure~\ref{fig:3a1_xycontours}, for the height where the protons are
+located. From the complete Moccia representation of the $3a_{1}$
+\textsc{mo} (in dashed lines), one observes that the location of the
+protons (shown as red circles) has an influence on the shape of the
+upper lobe in the probability density, i.e., it introduces dependence
+on the azimuthal angle $\varphi$. In our simplified expansion, where
+only $l=0,1$ and $m=0$ symmetrical parts were included (shown with
+solid lines), the probability density misses to represent the proper
+azimuthal dependence that follows from the $m\neq 0$ parts.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/ch_H2O/orbitals3a1.eps}
+  \caption{Projections of the probability densities for the $3a_{1}$
+    orbital on the $x-y$ plane. The simplified \textsc{sto} expansion
+    is indicated as continuous blue lines, and the full Moccia
+    expansion is indicated as black dashed lines. The protons are also
+    indicated as red circles. The chosen contour values are $0.5, 0.3,
+    0.2, 0.1$ starting from the innermost contour.}
+  \label{fig:3a1_xycontours}
+\end{figure}
+
+
 
 \subsection{Interpolation and Latter correction of the
   non-spherical effective potential}
