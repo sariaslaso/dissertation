@@ -506,12 +506,12 @@ $(n,l,m)$ & & $c_{nlm}$ & $\zeta_{i}$ \\
 The probability densities for the $3a_{1}$ orbital as obtained from
 the reduced expansion~(\ref{eq:3a1Moccia_expansion}) and from the
 Moccia self-consistent results are shown in
-Figures~\ref{fig:3a1_reduced} and~\ref{fig:3a1_Moccia}
-respectively. The protons (in red) defined in the $y-z$ plane. As
+Figures~\ref{fig:3a1_reduced} and~\ref{fig:3a1_Moccia},
+respectively. The protons (in red) lie in the $y-z$ plane. As
 Fig.~\ref{fig:3a1_reduced} indicates, the contributions to the density
 of the $2s-$type states reproduce the proper dependence of the
 $3a_{1}$ probability density with the polar angle $\theta$, as the
-broader hump is located on the negative $z$ axis in the same way as in
+broader hump is located on the negative $z-$axis in the same way as in
 the complete Moccia representation shown in Fig.~\ref{fig:3a1_Moccia}.
 
 \begin{figure}
@@ -565,13 +565,43 @@ azimuthal dependence that follows from the $m\neq 0$ parts.
   \label{fig:3a1_xycontours}
 \end{figure}
 
+The non-spherical effective potential corresponding to the
+\textsc{sto} expansion~(\ref{eq:3a1Moccia_expansion}),
+$V_{\mathrm{eff}}(r,\theta)$, is obtained from the Schr\"{o}dinger
+equation in spherical polar coordinates,
+%
+\begin{eqnarray}
+  \left[ -\frac{1}{2} \nabla^{2} +
+  V_{\rm{eff}}(r,\theta) \right] \psi_{3a_{1}}(r,\theta) =
+  E_{3a_{1}} \psi_{3a_{1}}(r,\theta).
+\label{eq:sch_eq3d}
+\end{eqnarray}
+%
+For given $E_{3a_{1}}$ and $\psi_{3a_{1}}(r,\theta)$ it is
+straightforward to solve~(\ref{eq:sch_eq3d}) for
+$V_{\mathrm{eff}}(r,\theta)$. In order to use this potential to define
+a Hamiltonian for the $3a_{1}$ orbital in an electric field, an
+asymptotic Latter correction needs to be applied.
+
+Other strategies for finding an effective potential could be pursued,
+such as using a density functional, inserting the Moccia wavefunction,
+and then performing an azimuthal angle average. Ultimately, one owuld
+like to extend density functional theory~(\textsc{dft}) from finding
+ground-state energies to obtaining resonance positions and
+widths. This might be feasible using a combination of time-dependent
+\textsc{dft} and Floquet theory. The goal of the present work is more
+modest: we calculate the response of an isolated molecular orbital in
+a simple approximation. Recently, the problem of small molecules in a
+dc field has revealed the effect of electron-electron interactions on
+Stark resonance parameters~\cite{ScrinziJPhysB_ECS}. It will be
+interesting to observe such effects for the water molecule in future
+work.
 
 
 \subsection{Interpolation and Latter correction of the
   non-spherical effective potential}
 \label{ch:3a1_Latter}
 
-% sec 2.1 of JPhysB
 
 \subsection{Exterior complex scaling}
 \label{ch:3a1_ecs}
