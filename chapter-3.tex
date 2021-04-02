@@ -609,11 +609,12 @@ of the location of the protons. The use of this more general potential
 implies that the Latter criterion~\cite{LatterCor_1955}, which ensures
 the proper asymptotic behaviour of the potential, is not as
 straightforward to implement as in the case of the spherical potential
-discussed previously, where the correction applies beyond a determined
-$r$ value~\cite{sarias_2016}. In this case the correction must be
-implemented in the $r-\theta$ plane, by defining a $\theta-$dependent
-boundary beyond which the potential obtained from~(\ref{eq:sch_eq3d})
-rises above $-1/r$ in the asymptotic region~\cite{sarias_2017}.
+discussed in Sec.~\ref{ch:1b1_1b2}, where the correction applies
+beyond a determined $r$ value~\cite{sarias_2016}. In this case, the
+correction must be implemented in the $r-\theta$ plane, by defining a
+$\theta-$dependent boundary beyond which the potential obtained
+from~(\ref{eq:sch_eq3d}) rises above $-1/r$ in the asymptotic
+region~\cite{sarias_2017}.
 
 The $\theta$ coordinate is fixed at two extreme positions, such as
 $\theta = 0$ and $\theta = \pi$, in order to find the corresponding
@@ -631,6 +632,108 @@ the effective potential to be the non-central potential derived from
 the reduced Moccia wavefunction using Equation~(\ref{eq:sch_eq3d})
 when $r < r_{\mathrm{match}}(\theta)$, and $-1/r$ otherwise.
 
+The weighted functions used to construct the Moccia
+orbitals~\cite{Moccia_1964} imply a potential difficulty in our
+problem. Since these functions are not exact solutions of the
+Schr\"{o}dinger equation but were obtained from the variational
+principle by implementing a self-consistent
+calculation~\cite{Moccia_JCP_2164}, there may be regions in the
+$(r,\theta)$ domain where $\psi_{3a_{1}}(r,\theta)$ vanishes, whereas
+its second derivative remains finite; this produces a nodal line in
+the electronic potential. Thus finding a potential for which our
+approximate wavefunction satisfies a Schr\"{o}dinger equations
+represents an intricate problem.
+
+It turns out that the nodal region is so narrow that when solving the
+Schr\"{o}dinger equation the kinetic energy term dominates and it is
+possible to obtain a solution that remains close to that obtained by
+the \textsc{HF} method~\cite{Moccia_1964}, regardless of the fact that
+there is a region where the effective potential might diverge.
+
+The probability density exhibits two humps indicating the positions of
+the protons, which is consistent with
+Figure~\ref{fig:3a1_prob_density}, and the effects of the mixing with
+the $s-$state. One may argue that one of the reasons this nodal region
+in the potential does not have a negative impact on the results is due
+to the way the $3a_{1}$ orbital responds to the effective potential by
+avoiding this region, its probability density being distributed as
+shown in Figure~\ref{fig:density_contours}. A numerical interpolation
+of $V_{\mathrm{eff}}(r,\theta)$ is implemented in order to ensure it
+continues smoothly over this problematic region.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.245\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ch_H2O/contour3a132s.eps}
+    \caption{}\label{fig:Moccia32s}
+  \end{subfigure}
+  \,
+  \begin{subfigure}[b]{0.275\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{figures/ch_H2O/contour3a1intpl.eps}
+    \caption{}\label{fig:intp32s}
+  \end{subfigure}
+  \caption{Contour plots of the scaled probability density,
+    $|\psi_{\mathrm{3a_{1}}}|^{2}r^{2}\sin(\theta)/(2\pi)$, for the
+    $3a_{1}$ molecular orbital. The orbital density constructed from
+    the reduced \textsc{sto} expansion is shown
+    in~(\ref{fig:Moccia32s}), while the solution obtained from the
+    non-spherical $V_{\mathrm{eff}}(r,\theta)$ with Latter correction
+    is shown in~(\ref{fig:intp32s}) along with a dotted line
+    indicating where the Latter correction acts. Starting from the
+    innermost contours the contour values are $0.45\dots 0.05$ for the
+    upper density lobes and $0.2\dots 0.05$ for the lower density
+    lobes, in steps of $0.05$.}
+  \label{fig:density_contours}
+\end{figure}
+
+The interpolation is achieved by collecting data from the evaluation
+of the potential on two sections of the $(r,\theta)$ grid in the
+vicinity of the nodal line, where the potential evaluates to finite
+values. Then, a numerical interpolation was carried out between those
+regions in order to obtain a continuous function,
+$V_{\mathrm{eff}}^{\mathrm{intp}}(r,\theta)$, on the two-dimensional
+grid. The Latter correction is applied to the interpolated potential
+and the effective potential is defined according to~(\ref{eq:rMatch}):
+%
+\begin{eqnarray}
+  V_{\mathrm{eff}}(r,\theta) = \left\{
+  \begin{split}
+    V_{\mathrm{eff}}^{\mathrm{intp}}(r,\theta)\
+    & \mathrm{~for} & r < r_{\mathrm{match}}(\theta) \\
+    -1/r\ & \mathrm{~for} &  r > r_{\mathrm{match}}(\theta)
+  \end{split}
+\right.
+\label{eq:latterVeff}
+\end{eqnarray}
+%
+
+Figure~\ref{fig:Moccia32s} shows the probability density for the
+$3a_{1}$ \textsc{mo} as a contour plot in the $r-\theta$ plane as
+obtained from the reduced Moccia expansion in
+\textsc{sto}s~(\ref{eq:3a1Moccia_expansion}). Figure~\ref{fig:intp32s}
+shows the same for the solution of the Schr\"{o}dinger
+equation~(\ref{eq:sch_eq3d}) using the interpolated
+$V_{\mathrm{eff}}(r,\theta)$, defined in
+Equation~(\ref{eq:latterVeff}), with the Latter
+correction~\cite{LatterCor_1955} applied in the asymptotic $r-$region.
+
+The effective potential~(\ref{eq:latterVeff}) results in the
+probability density shown in Figure~\ref{fig:intp32s} and yields an
+orbital energy of $-0.5579\ \mathrm{a.u.}$ for the $3a_{1}$
+\textsc{mo}, with a relative change of $0.32\%$ in comparison with the
+self-consistent result of Moccia~\cite{Moccia_1964} of
+$-0.5561\ \mathrm{a.u.}$.
+
+As Figure~\ref{fig:intp32s} indicates, the implementation of the
+Latter correction to the orbital-dependent potential obtained from
+Equation~(\ref{eq:sch_eq3d}), introduces a slight re-adjustment of the
+density, with a somewhat higher probability density in the region $0 <
+\theta < \pi/2$. The probabilities for finding the electron at $\pi/2
+< \theta < \pi$ is $66.2\%$ before the Latter correction is applied
+(Figure~\ref{fig:Moccia32s}) and becomes $63.5\%$ for the case shown
+in Figure~\ref{fig:intp32s}.
 
 \subsection{Exterior complex scaling}
 \label{ch:3a1_ecs}
