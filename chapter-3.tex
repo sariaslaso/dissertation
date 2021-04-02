@@ -602,6 +602,35 @@ work.
   non-spherical effective potential}
 \label{ch:3a1_Latter}
 
+The non-central effective potential, $V_{\mathrm{eff}}(r,\theta)$,
+leads no longer to an orbital of $(l,m)$ symmetry, i.e.,
+$2p_{z}$. This reflects the geometry of the problem as a consequence
+of the location of the protons. The use of this more general potential
+implies that the Latter criterion~\cite{LatterCor_1955}, which ensures
+the proper asymptotic behaviour of the potential, is not as
+straightforward to implement as in the case of the spherical potential
+discussed previously, where the correction applies beyond a determined
+$r$ value~\cite{sarias_2016}. In this case the correction must be
+implemented in the $r-\theta$ plane, by defining a $\theta-$dependent
+boundary beyond which the potential obtained from~(\ref{eq:sch_eq3d})
+rises above $-1/r$ in the asymptotic region~\cite{sarias_2017}.
+
+The $\theta$ coordinate is fixed at two extreme positions, such as
+$\theta = 0$ and $\theta = \pi$, in order to find the corresponding
+$r$ values $r_{0}$ and $r_{\pi}$, for which
+$V_{\mathrm{eff}}(r,\theta) = -1/r$ is satisfied, then we interpolate
+between them by introducing the $\theta-$dependent function
+%
+\begin{eqnarray}
+r_{\rm{match}}(\theta) & = & \bar{r} - (r_{\pi} - \bar{r}) \cos\theta,
+\label{eq:rMatch}
+\end{eqnarray}
+%
+where $\bar{r} = (r_{0} + r_{\pi})/2$. With this approach we redefine
+the effective potential to be the non-central potential derived from
+the reduced Moccia wavefunction using Equation~(\ref{eq:sch_eq3d})
+when $r < r_{\mathrm{match}}(\theta)$, and $-1/r$ otherwise.
+
 
 \subsection{Exterior complex scaling}
 \label{ch:3a1_ecs}
