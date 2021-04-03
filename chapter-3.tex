@@ -647,7 +647,7 @@ represents an intricate problem.
 It turns out that the nodal region is so narrow that when solving the
 Schr\"{o}dinger equation the kinetic energy term dominates and it is
 possible to obtain a solution that remains close to that obtained by
-the \textsc{HF} method~\cite{Moccia_1964}, regardless of the fact that
+the \textsc{hf} method~\cite{Moccia_1964}, regardless of the fact that
 there is a region where the effective potential might diverge.
 
 The probability density exhibits two humps indicating the positions of
@@ -728,7 +728,7 @@ $-0.5561\ \mathrm{a.u.}$.
 
 As Figure~\ref{fig:intp32s} indicates, the implementation of the
 Latter correction to the orbital-dependent potential obtained from
-Equation~(\ref{eq:sch_eq3d}), introduces a slight re-adjustment of the
+Equation~(\ref{eq:sch_eq3d}) introduces a slight re-adjustment of the
 density, with a somewhat higher probability density in the region $0 <
 \theta < \pi/2$. The probabilities for finding the electron at $\pi/2
 < \theta < \pi$ is $66.2\%$ before the Latter correction is applied
@@ -738,7 +738,87 @@ in Figure~\ref{fig:intp32s}.
 \subsection{Exterior complex scaling}
 \label{ch:3a1_ecs}
 
-% sec 2.2 of JPhysB
+For our aim of computing the resonance parameters that describe the
+tunneling process, a modified exterior complex scaling to the radial
+coordinates was implemented. As was described in
+Sec.~\ref{ch:ecs_1b11b2}, the $r-$coordinate is extended into the
+complex plane by the phase function $\chi(r)$,
+Eq.~(\ref{eq:ecs_theta}), with $r$ replaced by $r^{*} =
+r\exp[i\chi(r)]$. The phase function $\chi(r)$ is chosen to be very
+small for $r$ values smaller than the Latter radius $\bar{r}$. It then
+turns on from nearly zero to reach an asymptotic value
+$\chi_{\mathrm{s}}$ at $r-$values just outside where the Latter
+correction is applied, i.e., $r_{\mathrm{s}} > r_{\mathrm{match}}$. In
+such a way as to provide exterior complex scaling without a hard
+radius at which a derivative discontinuity would have to be
+applied~\cite{ecsScrinzi}.
+
+A non-Hermitian Hamiltonian results from considering the additional
+terms that the modified complex scaling to the radial coordinates
+introduces in the Schr\"{o}dinger equation. The complex wavefunction
+is separated into real and imaginary parts, $\psi_{R(I)}$, such that
+the problem of describing the ionization regime of the $3a_{1}$
+\textsc{mo} under an external dc field applied along the orientation
+axis of the orbital is expressed in terms of a system of partial
+differential equations for the real and imaginary parts of
+$\widetilde{\psi}(r,\theta)$ in spherical polar coordinates given
+explicitly as Eq.~(\ref{eq:pde_system}). Schematically, the equations
+are extensions of the field-free Schr\"{o}dinger
+equation~(\ref{eq:sch_eq3d}) and $\widetilde{\psi}(r,\theta)$
+satisfies~\cite{sarias_2017}
+%
+\begin{eqnarray}
+  \begin{split}
+    \left[ -\frac{1}{2}\nabla^{2} + V_{\mathrm{eff}}(r,\theta)
+      \pm F_{0}z \right] \widetilde{\psi} = (E_{R} - i\Gamma/2)
+    \widetilde{\psi},
+  \end{split}
+  \label{eq:sch_tunneling_params}
+\end{eqnarray}
+%
+where $E_{R}$ is the resonance position and $\Gamma$ the
+width. Compared to Eq.~(\ref{eq:sch_eq3d}), the Hamiltonian in
+Eq.~(\ref{eq:sch_tunneling_params}) contains the interaction with the
+external field and complex scaling is responsible for the replacement
+$E_{3a_{1}} \to E_{R} - i\Gamma/2$; while $\widetilde{\psi}$ remains
+square integrable.
+
+The domains of $r$ and $\theta$ values are restricted to the intervals
+$r\in[\epsilon, r_{\mathrm{max}}]$ and $\theta\in[\eta,\pi-\eta]$,
+with typical values $\epsilon = 10^{-2}\ \mathrm{a.u.}$, $\eta =
+10^{-2}$, $r_{\mathrm{max}} = 28\ \mathrm{a.u.}$ In the limit of low
+field strengths, i.e., $F_{0} = 0.05, 0.06$, the value of
+$r_{\mathrm{max}}$ was increased to $40\ \mathrm{a.u.}$ in order to
+ensure the outer turning points lie inside the grid, as the tunneling
+barrier extends to larger $r$.
+
+The problem of finding a solution of the Schr\"{o}dinger equation for
+the $3a_{1}$ \textsc{mo} with contributions of $2s$ and $2p-$type
+states requires a set of boundary conditions that describes the
+properties of the orbital on the grid. In contrast with the $m = \pm
+1$ solutions obtained for the $1b_{1}$ and $1b_{2}$ \textsc{mo}s of
+H$_{2}$O~\cite{sarias_2016}, Neumann boundary conditions are
+implemented for the angular coordinate $\theta$ in order to obtain an
+eigenstate and orbital energy consistent with the variational
+results~\cite{Moccia_1964}. This choice of boundary conditions, that
+the derivative with respect to $\theta$ vanishes at the limits of the
+mesh $(\theta = 0 ~\mathrm{and}~ \theta = \pi)$, leads to solutions
+$\psi_{R(I)}(r,\theta)$ with a probability density consistent with the
+$\theta-$dependence of the $3a_{1}$ orbital, as shown in
+Figure~\ref{fig:density_contours}.
+
+% NEXT SECTION
+%The physical parameters of interest, namely the resonance position,
+%$E_{R}$, and width, $\Gamma = -2E_{I}$, that characterize the
+%tunneling process of the quasi-stationary state when an external
+%electric dc field is applied along the $\pm\hat{z}$ directions, were
+%found by solving the system of partial differential equations
+%(Ref.~\cite{PhysRevA.94.053413}) for a set of field strength values,
+%$F_{0}$, as if it were an inhomogeneous problem. In the vicinity of a
+%location in the $(r,\theta)$ plane where the probability amplitude is
+%expected to be large, a two-parameter root search was implemented to
+%determine $\{E_{R},E_{I}\}$, the complex energy that maximizes the
+%probability density amplitude in the $2d-$grid.
 
 \section{Stark resonance parameters}
 \label{ch:stark_params}
