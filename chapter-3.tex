@@ -823,11 +823,152 @@ Figure~\ref{fig:density_contours}.
 \section{Stark resonance parameters}
 \label{ch:stark_params}
 
-% In the following subsections we present plots of the ionization
-% parameters for a set of external dc field amplitudes...
+In the following subsections we present plots of the physical
+parameters of interest, namely the resonance position, $E_{R}$, and
+width, $\Gamma = -2E_{I}$, that characterize the tunneling process of
+the quasi-stationary state when an external electric dc field is
+applied along the $\pm\hat{z}$ directions. The system of partial
+differential equations~(\ref{eq:pde_system}) is solved for a set of
+field strength values, $F_{0}$, as if it were an inhomogeneous
+problem. In the vicinity of a location in the $(r,\theta)$ plane in
+which the probability amplitude is expected to be large, a
+two-parameter root search is implemented in order to determine
+${E_{R}, E_{I}}$, the complex energy that maximizes the probability
+density amplitude in the $2d-$grid.
+
 
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
+\label{ch:1b1_1b2_results}
+
+% include the plots that the first 3 paragraphs in secIII(PRA2016)
+% refer to about the systematic studies of the relevant parameters for
+% the calculation
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/resPositionvsF1b11b2.eps}
+  \caption{Resonance position as a function of the external field
+    strength $F_{0}$ for the $1b_{1}$ (red circles) and $1b_{2}$ (blue
+    triangles) \textsc{mo}s of H$_{2}$O.}
+  \label{fig:1b11b2_position}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/resWidthvsF1b11b2H1s.eps}
+  \caption{Resonance width as a function of the external field
+    strength $F_{0}$ for the $1b_{1}$ (red circles) and $1b_{2}$ (blue
+    triangles) \textsc{mo}s of H$_{2}$O. For comparison, atomic
+    hydrogen H$(1s)$ ionization rates from
+    Refs.~\cite{Telnov_1989,Kolosov_1987} are shown as crosses.}
+  \label{fig:1b11b2_width}
+\end{figure}
+
+Figure~\ref{fig:1b11b2_position} shows the resonance position $E_{R}$
+as obtained from the present calculations for the weakly bound
+$1b_{1}$ and the strongly bound $1b_{2}$ valence orbitals as a
+function of applied electric field strength $F_{0}$. In the limit of
+zero field the calculation reproduces the \textsc{scf} eigenvalues of
+Moccia~\cite{Moccia_1964}. The field has to be strong (in comparison
+with atomic hydrogen results for $2p$ orbitals~\cite{Telnov_1989}) in
+order to change the resonance position appreciably. For the more
+deeply bound $1b_{2}$ orbital the shift in resonance position
+saturates with field strength.
+
+In Figure~\ref{fig:1b11b2_width} the resonance widths are shown for
+both orbitals as functions of external field strength $F_{0}$. The
+graphs display threshold behavior at the weaker field strengths. As
+expected, we find a lower threshold (critical field strength) for the
+more weakly bound $1b_{1}$ orbital. Interestingly, however, at a field
+strength of about $F_{0} = 0.3\ \mathrm{a.u.}$ the values for the
+widths cross; that is, the deeper bound $1b_{2}$ orbital displays a
+larger ionization rate as the field strength is increased further.
+
+Also shown in Figure~\ref{fig:1b11b2_width} are the widths for the
+H($1s$) orbital from Refs.~\cite{Telnov_1989,Kolosov_1987}. They can
+be compared to the $1b_{1}$ orbital results, since the binding energy
+is very close in the free-field limit. Since the tunneling barrier is
+mostly in the asymptotic regime where the potential energy has a
+$-1/r$ tail, it is not surprising that the widths for
+H$_{2}$O($1b_{1}$) and H($1s$) share some similarity in shape. In the
+tunneling region H($1s$) has an ionization rate that is larger by
+about an order of magnitude. In the over-barrier regime, however, the
+ionization rates come to within a factor of 3. Reasons for why the
+$1b_1$ water molecular orbital is harder to ionize than H($1s$) have
+to do with the different shape of the orbital density ($m=1$ \emph{vs}
+the spherical H($1s$) density), and the substantially more attractive
+potential at shorter distances.
+
+An examination of contour plots of the densities $\Psi^{*}\Psi$, as
+well as of the potential energies $V_{\mathrm{eff}} - F_{0}z$ for
+different field strengths (both as a function of $r,\theta$), allows
+us to make the following observations. For field strengths $F_{0} <
+0.1\ \mathrm{a.u.}$ there is a barrier the electrons need to penetrate
+in order to be ionized. From the potential-energy plot shown in
+Figure~\ref{fig:1b11b2_position} one can see that for weak fields
+(small values of $F_{0}$) the barrier is longer for the more deeply
+bound $1b_{2}$ orbital. This explains why the ionization threshold
+occurs for $F_{0} > 0.1\ \mathrm{a.u.}$ for this orbital, which is
+about a factor of $2$ larger than for the $1b_{1}$ orbital.
+
+The field-strength region where the ionization rates (resonance
+widths) display a change in character, i.e., turn over to rise much
+more gradually with the field strength $F_{0}$, can be characterized
+as a regime where there is a narrow potential saddle at small $\theta$
+in the vicinity of $r \approx 3\ \mathrm{a.u.}$, such that electron
+flux can leave and is then accelerated by the electric field. The
+crossing of the ionization rates for the $1b_{1}$ and $1b_{2}$
+orbitals occurs since the saddle in the potential becomes effectively
+lower at strong fields for the $1b_{2}$ orbital. This can be inferred
+from the comparison of the two effective potentials, which share the
+same asymptotic behaviour beyond $r = 4.3\ \mathrm{a.u.}$ (see
+Figure~\ref{fig:Veff1b11b2}).
+
+The origin for the different radial dependencies of the effective
+potential for the two orbitals can be found in the geometry of the
+water molecule. The weakly bound $1b_{1}$ orbital has its lobes
+perpendicular to the plane defined by the location of the three
+nuclei. Therefore, it is least affected by the two protons. The
+$1b_{2}$ orbital explores the potentials due to the protons more
+strongly in the \textsc{scf} calculation of Moccia, and therefore, the
+resulting $V_{\mathrm{eff}}(r)$ has a more attractive region in the
+range $0.7\ mathrm{a.u.} < r < 4.3\ \mathrm{a.u.}$.
+
+The numerical results are summarized in Table~\ref{tab:1b11b2_results}
+for further reference, i.e., for future comparisons with calculations
+based on other models for the molecular orbitals.
+
+\begin{table}[t]
+\centering
+\caption{\label{tab:1b11b2_results} Resonance positions and widths for
+  different field strengths (in atomic units). The numbers in
+  parentheses indicate the exponent $k$; that is, the numbers are to
+  be multiplied by $10^{k}$.}
+\begin{tabular}{rrrrr}
+\toprule
+ & & $1b_{1}$ & & $1b_{2}$ \\
+$F_{0}$ & $E_{R}$ & $\Gamma$ & $E_{R}$ & $\Gamma$ \\
+\midrule
+$0.1$ & $-0.506$ & $1.14(-3)$ & $-0.689$ & $4.04(-5)$ \\
+$0.2$ & $-0.525$ & $2.28(-2)$ & $-0.718$ & $1.23(-2)$ \\
+$0.3$ & $-0.546$ & $6.74(-2)$ & $-0.760$ & $7.51(-2)$ \\
+$0.4$ & $-0.564$ & $1.24(-1)$ & $-0.790$ & $1.91(-1)$ \\
+$0.5$ & $-0.580$ & $1.90(-1)$ & $-0.796$ & $3.11(-1)$ \\
+$0.6$ & $-0.593$ & $2.61(-1)$ & $-0.797$ & $4.11(-1)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
 \subsection{$3a_{1}$ molecular orbital}
+\label{ch:3a1_results}
+
+
+
+
+
+
+
 
 %%% Local Variables:
 %%% mode: latex
