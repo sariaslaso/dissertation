@@ -137,7 +137,7 @@ along $\hat{z}$ is included as well.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.25\textwidth]{figures/ch_H2O/orbitals.eps}
+  \includegraphics[width=0.25\textwidth]{figures/ch_H2O/1b1_1b2/orbitals.eps}
   \caption{Schematic display of the $1b_{1}\approx 2p_{x}$ (shown in
     yellow along the $x$ axis) and $1b_{2}\approx 2p_{y}$ (shown in
     blue along the $y$ axis) molecular orbitals. Also indicated (in
@@ -227,7 +227,7 @@ by~(\ref{eq:coulomb_tail}).
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.75\textwidth]{figures/ch_H2O/Veff1b11b2.eps}
+  \includegraphics[width=0.75\textwidth]{figures/ch_H2O/1b1_1b2/Veff1b11b2.eps}
   \caption{Electronic effective potential in atomic units for the
     $1b_{1}\approx 2p_{x}$ (black) and $1b_{2}\approx 2p_{y}$ (blue)
     \textsc{mo}s of the H$_{2}$O molecule. The solid lines give the
@@ -518,13 +518,13 @@ the complete Moccia representation shown in Fig.~\ref{fig:3a1_Moccia}.
   \centering
   \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1extended.eps}
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1/3a1extended.eps}
     \caption{Simplified $3a_{1}$ orbital}\label{fig:3a1_reduced}
   \end{subfigure}
   \,
   \begin{subfigure}[b]{0.25\linewidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1Moccia.eps}
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1/3a1Moccia.eps}
     \caption{Full Moccia $3a_{1}$ orbital}\label{fig:3a1_Moccia}
   \end{subfigure}
   \caption{Schematic display of the $3a_{1}$ molecular orbital (shown
@@ -555,7 +555,7 @@ azimuthal dependence that follows from the $m\neq 0$ parts.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.6\textwidth]{figures/ch_H2O/orbitals3a1.eps}
+  \includegraphics[width=0.6\textwidth]{figures/ch_H2O/3a1/orbitals3a1.eps}
   \caption{Projections of the probability densities for the $3a_{1}$
     orbital on the $x-y$ plane. The simplified \textsc{sto} expansion
     is indicated as continuous blue lines, and the full Moccia
@@ -665,13 +665,13 @@ continues smoothly over this problematic region.
   \centering
   \begin{subfigure}[b]{0.245\linewidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/ch_H2O/contour3a132s.eps}
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1/contour3a132s.eps}
     \caption{}\label{fig:Moccia32s}
   \end{subfigure}
   \,
   \begin{subfigure}[b]{0.275\linewidth}
     \centering
-    \includegraphics[width=\textwidth]{figures/ch_H2O/contour3a1intpl.eps}
+    \includegraphics[width=\textwidth]{figures/ch_H2O/3a1/contour3a1intpl.eps}
     \caption{}\label{fig:intp32s}
   \end{subfigure}
   \caption{Contour plots of the scaled probability density,
@@ -846,7 +846,7 @@ density amplitude in the $2d-$grid.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/resPositionvsF1b11b2.eps}
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/1b1_1b2/resPositionvsF1b11b2.eps}
   \caption{Resonance position as a function of the external field
     strength $F_{0}$ for the $1b_{1}$ (red circles) and $1b_{2}$ (blue
     triangles) \textsc{mo}s of H$_{2}$O.}
@@ -855,7 +855,7 @@ density amplitude in the $2d-$grid.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/resWidthvsF1b11b2H1s.eps}
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/1b1_1b2/resWidthvsF1b11b2H1s.eps}
   \caption{Resonance width as a function of the external field
     strength $F_{0}$ for the $1b_{1}$ (red circles) and $1b_{2}$ (blue
     triangles) \textsc{mo}s of H$_{2}$O. For comparison, atomic
@@ -932,7 +932,7 @@ nuclei. Therefore, it is least affected by the two protons. The
 $1b_{2}$ orbital explores the potentials due to the protons more
 strongly in the \textsc{scf} calculation of Moccia, and therefore, the
 resulting $V_{\mathrm{eff}}(r)$ has a more attractive region in the
-range $0.7\ mathrm{a.u.} < r < 4.3\ \mathrm{a.u.}$.
+range $0.7\ \mathrm{a.u.} < r < 4.3\ \mathrm{a.u.}$.
 
 The numerical results are summarized in Table~\ref{tab:1b11b2_results}
 for further reference, i.e., for future comparisons with calculations
@@ -963,10 +963,111 @@ $0.6$ & $-0.593$ & $2.61(-1)$ & $-0.797$ & $4.11(-1)$ \\
 \subsection{$3a_{1}$ molecular orbital}
 \label{ch:3a1_results}
 
+The numerical results from applying the procedure described in
+Section~\ref{ch:3a1} are shown in Figures~\ref{fig:3a1_position}
+and~\ref{fig:3a1_width}.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/3a1/resPosvsForbitals_compf32snew.eps}
+  \caption{Resonance position in atomic units as a function of the
+    external field strength $F_{0}$ and the orientation of the field,
+    along the $\pm\hat{z}$ direction (red triangles/blue circles), for
+    the $3a_{1}$ \textsc{mo} of H$_{2}$O. As a reference, the resonance
+    position values for the $1b_{1}$ (dashed line) and $1b_{2}$
+    (dot-dashed line) \textsc{mo}s are also included.}
+  \label{fig:3a1_position}
+\end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figures/ch_H2O/3a1/resWidthvsForbitals_compf32snew.eps}
+  \caption{Resonance width in atomic units as a function of the
+    external field strength $F_{0}$ and the orientation of the field,
+    along the $\pm\hat{z}$ direction (red triangles/blue circles), for
+    the $3a_{1}$ \textsc{mo} of H$_{2}$O. For reference, the resonance
+    widths for the $1b_{1}$ (dashed line) and $1b_{2}$ (dot-dashed
+    line) \textsc{mo}s are also shown.}
+  \label{fig:3a1_width}
+\end{figure}
 
+The resonance positions $E_{R}$ are shown in
+Figure~\ref{fig:3a1_position} for external fields applied along the
+$\pm\hat{z}$ directions (red triangles/blue circles) for a range of
+external field strengths. For reference, the resonance positions
+obtained for the $1b_{1}$ and $1b_{2}$ \textsc{mo}s using a
+spherically symmetric potential, $V_{\mathrm{eff}}(r)$, are also
+indicated in the form of dashed and dot-dashed lines respectively. For
+zero field strength $F_{0} = 0$ self-consistent eigenenergies obtained
+by Moccia~\cite{Moccia_1964} are included as black crosses for the
+three valence orbitals of interest. As expected, the resonance
+position for the $3a_{1}$ orbital is bracketed by those for the
+$1b_{1}$ and $1b_{2}$ orbitals.
 
+It can be noticed that for external fields applied along the
+$-\hat{z}$ direction, where most of the density is located, the field
+strength $F_{0}$ has to be strong, i.e., $F_{0}>0.1\ \mathrm{a.u.}$,
+for the resonance position to change appreciably. On the other hand,
+the resonance position for fields applied along $+\hat{z}$ appears to
+be more sensitive at weaker fields. However the barrier appears to be
+longer for external fields applied along the $+\hat{z}$ direction, at
+a field strength of about $F_{0} = 0.2\ \mathrm{a.u.}$ the position
+values cross, indicating a higher sensitivity of the resonance
+positions for fields applied along the negative $\hat{z}$ direction as
+the field strength is increased further.
+
+Figure~\ref{fig:3a1_width} shows the resonance widths corresponding to
+external fields applied along the $\pm\hat{z}$ directions, as a
+function of the field strength $F_{0}$. The results obtained with a
+symmetric effective potential, $V_{\mathrm{eff}}(r)$, for the $1b_{1}$
+and $1b_{2}$ \textsc{mo}s are also shown as dashed and dot-dashed
+lines for comparison purposes.
+
+In analogy to the $m=\pm 1$ orbitals, the ionization rates for the
+$3a_{1}$ \textsc{mo}, associated with the lifetime of the decaying
+state via $\Gamma\tau=1$, exhibit a threshold behavior at the weaker
+field strengths. Interestingly, for the two directions of the applied
+field, we find a lower critical field strength for the $3a_{1}$
+orbital in comparison to what the more weakly bound orbital, $1b_{1}$,
+indicates.  In the tunneling region, the $3a_{1}$ orbital for fields
+applied along the $-\hat{z}$ direction (blue squares) shows an
+ionization rate that is about one order of magnitude larger than the
+ionization rate for fields applied in the opposite direction (red
+triangles), this gap becomes narrower as the field strength increases
+toward the over-barrier regime.
+
+The results are summarized in Table~\ref{tab:3a1_results} for further
+reference, to allow comparison with future calculations.
+
+\begin{table}[t]
+\centering
+\caption{\label{tab:3a1_results} Resonance positions and widths for
+  different field strengths (in atomic units). The orientation of the
+  external field is indicated by $\pm\hat{z}$. The numbers in
+  parentheses indicate the exponent $k$, so that the numbers are
+  multiplied by $10^{k}$.}
+\begin{tabular}{rrrrrrrrr}
+\toprule
+&& $3a_{1}(\hat{z})$ && $3a_{1}(-\hat{z})$ && $1b_{1}$ && $1b_{2}$ \\
+\midrule
+$F_{0}$&$E_{R}$&$\Gamma$&$E_{R}$&$\Gamma$&$E_{R}$&$\Gamma$&$E_{R}$&$\Gamma$ \\
+\midrule
+$0.05$ &   --~~ &$1.09(-6)$&$-0.556$&$8.91(-6)$ & --~~ & --~~ & --~~ & --~~ \\
+$0.06$ &   --~~ &$3.23(-5)$&$-0.556$&$1.41(-4)$ & --~~ & --~~ & --~~ & --~~ \\
+$0.07$ &$-0.582$&$4.82(-4)$&$-0.557$&$1.09(-3)$&$-0.502$&$9.82(-5)$ & --~~ & --~~ \\
+$0.08$ &$-0.587$&$1.03(-3)$&$-0.559$&$2.31(-3)$&$-0.503$&$2.38(-4)$ & --~~ & --~~ \\
+$0.09$ &$-0.594$&$2.26(-3)$&$-0.568$&$5.65(-3)$&$-0.504$&$5.72(-4)$ & --~~ & --~~ \\
+$0.1$  &$-0.600$&$5.53(-3)$&$-0.573$&$1.26(-2)$&$-0.506$&$1.14(-3)$&$-0.689$&$4.04(-5)$\\
+$0.125$&$-0.617$&$1.54(-2)$&$-0.589$&$3.21(-2)$&$-0.510$&$3.76(-3)$&$-0.694$&$5.45(-4)$\\
+$0.15$ &$-0.635$&$3.41(-2)$&$-0.607$&$7.39(-2)$&$-0.515$&$8.73(-3)$&$-0.701$&$2.04(-3)$\\
+$0.2$  &$-0.668$&$7.98(-2)$&$-0.656$&$1.72(-1)$&$-0.525$&$2.28(-2)$&$-0.718$&$1.23(-2)$\\
+$0.25$ &$-0.698$&$1.37(-1)$&$-0.708$&$2.92(-1)$&$-0.536$&$4.33(-2)$&$-0.739$&$3.61(-2)$\\
+$0.3$  &$-0.724$&$2.07(-1)$&$-0.796$&$4.31(-1)$&$-0.546$&$6.74(-2)$&$-0.760$&$7.51(-2)$\\
+$0.35$ &$-0.747$&$2.81(-1)$&$-0.859$&$5.40(-1)$&$-0.555$&$9.46(-2)$&$-0.778$&$1.27(-1)$\\
+$0.4$  &$-0.765$&$3.60(-1)$&$-0.957$&$6.40(-1)$&$-0.564$&$1.24(-1)$&$-0.790$&$1.91(-1)$\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 
 
