@@ -123,17 +123,18 @@ is expressed in shperical polar coordinates as
 %
 where $\hat{L}^{2}$ is the orbital quantum momentum operator. The
 present study involves the construction of the effective
-orbital-dependent potential $V_{\mathrm{eff}}(r)$ extracted from the
-single-centre Moccia wave functions~\cite{Moccia_1964}. Then an
-exterior complex scaling (\textsc{ecs})~\cite{Simon_1979} is applied
-to determine the numerical solution of the problem associated with a
-molecular orbital in the presence of a strong electric dc field
-applied along the $\hat{z}-$direction~\cite{sarias_2016}. A schematic
-representation of the geometry of the system is shown in
-Figure~\ref{fig:h2o_1b1_1b2}, where the orientation of the $1b_{1}$
-and $1b_{2}$ \textsc{mo}s is indicated with respect to the plane where
-the protons are located. The direction of the applied electric field
-along $\hat{z}$ is included as well.
+orbital-dependent potential, $V_{\mathrm{eff}}(r)$, extracted from the
+single-centre Moccia wave functions~\cite{Moccia_1964}. This is
+followed by the implementation of an exterior complex scaling
+(\textsc{ecs})~\cite{Simon_1979} to determine the numerical solution
+of the problem associated with a molecular orbital in the presence of
+a strong electric dc field applied along the
+$\hat{z}-$direction~\cite{sarias_2016}. A schematic representation of
+the geometry of the system is shown in Figure~\ref{fig:h2o_1b1_1b2},
+where the orientation of the $1b_{1}$ and $1b_{2}$ \textsc{mo}s is
+indicated with respect to the plane where the protons are located. The
+direction of the applied electric field along $\hat{z}$ is included as
+well.
 
 \begin{figure}
   \centering
@@ -165,7 +166,7 @@ represent the radial part of the Slater orbitals~(\ref{eq:sto}) with
 $|m|=1$ for the magnetic quantum number, in which the \textsc{sto}
 expansion is limited to $2p_{x}$ and $2p_{y}$ orbitals,
 respectively. The set of expansion coefficients and non-linear
-coefficients in~(\ref{eq:sto_1b1_1b2}), given in
+coefficients in~(\ref{eq:sto_1b1_1b2}), indicated in
 Table~\ref{tab:1b11b2_coef}, represents a reduced selection of the
 expansion parameters given by Moccia for the ground state of the water
 molecule~\cite{Moccia_1964}.
@@ -427,7 +428,7 @@ $[\eta,\pi - \eta]$, respectively. The parameters $\epsilon$ and
 $\eta$ that define the coordinate ranges were chosen to be of the
 order of $10^{-3}\ \mathrm{a.u.}$, and the $r$ coordinate extends to
 $r_{\mathrm{max}} = 20\ \mathrm{a.u.}$ In order to find a correct set
-of $\psi_{R{I}}(r,\theta)$ solutions, it is essential to impose proper
+of $\psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
 boundary conditions that ensure the wave functions vanish at the
 limits of the mesh. For the $|m| = 1$ states we impose the condition
 $\psi_{R{I}}(\epsilon,\theta) = \epsilon \sin(\theta) = \epsilon
@@ -835,6 +836,46 @@ which the probability amplitude is expected to be large, a
 two-parameter root search is implemented in order to determine
 ${E_{R}, E_{I}}$, the complex energy that maximizes the probability
 density amplitude in the $2d-$grid.
+
+We explored the influence of a set of parameters involved in the
+two-dimensional problem~(\ref{eq:pde_system}) on the eigenvalue
+$E_{R}+iE_{I}$ which describes the ionization process as an
+exponential decay in time in terms of resonance position and
+half-width. In addition to testing the code against known results for
+atomic hydrogen~\cite{Telnov_1989}, we have performed systematic
+studies of our results for the H$_{2}$O orbitals against a number of
+parameters in order to assess the accuracy of these results. One
+parameter concerns the limiting resolution with which the
+finite-element method proceeds (the \textsc{maxcellsize} parameter in
+the \emph{Mathematica}~10 implementation of \textsc{ndsolve}, which we
+call $\Delta$). For values $\Delta<0.02\ \rm{a.u.}$ we find stability
+in the eigenvalues (real and imaginary parts) of two-three significant
+digits. For the results quoted in Secs.~\ref{ch:1b1_1b2_results}
+and~\ref{ch:3a1_results}, we then applied the more stringent criterion
+of $\Delta=0.01\ \rm{a.u.}$
+
+The second parameter which was investigated is the range where the
+complex scaling function sets in, i.e., $r_{s}$ and $\Delta r$ in
+Eq.~(\ref{eq:ecs_theta}). For the scaling method to work we require
+scaling to set in for $r > r_0$ when the effective potential represents
+a simple Coulomb tail, which in practice is satisfied by
+$r_{s} > 2r_{0}$. We also need $\Delta r < 2\ \rm{a.u.}$ to guarantee
+smooth turn-on in this region. Small values of $\Delta r$ pose
+challenges for the automated finite-element method, since in the limit
+of $\Delta r \to 0$ one would need to implement the derivative
+discontinuity in the solution as discussed by
+Scrinzi~\cite{ecsScrinzi}. We find stable results for the real and
+imaginary parts of the eigenenergies at the level of three significant
+digits for the range $10 < r_{s} < 15\ \rm{a.u.}$ Larger values would
+require an increase in the computational domain beyond
+$r=20\ \rm{a.u.}$
+
+Finally, another systematic that was explored is the choice of the
+ultimate scaling angle reached at large $r$, namely the value of
+$\chi_{\rm{s}}$ in~(\ref{eq:ecs_theta}). For an accuracy demand of
+three significant digits, and the other parameters chosen in the
+ranges described above stability in the resonance widths is achieved
+for $0.6< \chi_{\rm{s}} < 1.2$ rad.
 
 
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
