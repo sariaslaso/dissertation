@@ -1,9 +1,45 @@
+
 \chapter{Electronic Structure of H$_{2}$O}
 \label{cha:scf_h2o}
 
+% read
+% references -> Rootham-Hartree-Fock -> RoothaanRevModPhys(1951).pdf
+% books -> Levine -> ch.15
+
+% initial calculations of the water molecule carried out by means of a
+% multicentre HF evaluation of Slater-type orbitals
+
+% approach implemented by Moccia, described in JChemPhys40_2164
+
+This chapter presents a brief compilation of the principles of the
+Hartree-Fock (\textsc{hf}) formulation implemented in problems of
+molecular quantum mechanics. Section~\ref{ch:var_hf} summarizes the
+principles in the Roothaan formulation of the Hartree-Fock formalism,
+in which the Hartree-Fock orbitals are expressed as linear
+combinations of suitable analytical functions~\cite{Roothaan_HF}. For
+molecules, the calculation of electronic wavefunctions is more
+intricate than that for atoms since it is preferable to use basis
+functions centred about the several nuclei~[REF PITZER PAPER ON
+  H2O]. This implies the difficult task of evaluating multicentre
+integrals. Sec.~\ref{ch:scf_sto} describes a different approach that
+consists of using a set of basis functions all referred to one common
+origin and has reported satisfactory results in calculations of
+self-consistent field molecular orbitals of AH$_{n}$-type
+molecules~\cite{Moccia_JCP_2164, Moccia_1964}.
+
+
+
 
 \section{Variational Hartree-Fock Method}
+\label{ch:var_hf}
+% HF self-consistent field method to determine molecular orbitals
+
 \section{Self-Consistent Field Slater Orbitals}
+\label{ch:scf_sto}
+
+% Slater orbitals in Moccia's calculations
+
+
 
 %%% Local Variables:
 %%% mode: latex
