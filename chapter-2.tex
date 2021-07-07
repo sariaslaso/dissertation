@@ -4,7 +4,9 @@
 
 % read
 % references -> Rootham-Hartree-Fock -> RoothaanRevModPhys(1951).pdf
-% books -> Levine -> ch.15
+% books -> Levine -> ch.15, ch.11
+
+% mention the Ellison and Shull calculations on H2O that are reference
 
 % initial calculations of the water molecule carried out by means of a
 % multicentre HF evaluation of Slater-type orbitals
@@ -28,16 +30,54 @@ calculations of self-consistent field molecular orbitals of
 AH$_{n}$-type molecules~\cite{Moccia_JCP_2164, Moccia_1964}.
 
 
-
-
 \section{Variational Hartree-Fock Method}
 \label{ch:var_hf}
 % HF self-consistent field method to determine molecular orbitals
 
+% define starting point to determine the fock equations
+
+% define AP (antisymmetrized product)
+
+% state fosk's equations
+
+% describe Roothaan's SCF method for a closed-shell ground state
+% (linear combination of atomic orbitals)
+
+The starting point in the Hartree-Fock self-consistent field
+(\textsc{scf}) method is the antisymmetrized product (\textsc{ap}) of
+$N$ one-electron wave functions, called molecular spinorbitals, which
+contain space and spin coordinates of the
+electrons~\cite{Roothaan_HF},
+% insert equation of the AP here
+%
+\begin{eqnarray}
+  \begin{split}
+    \Phi & = & \sqrt{N!}\psi_{1}^{[1} \psi_{2}^{2} \cdots \psi_{N}^{N} =
+    (N!)^{-1/2}
+    \begin{vmatrix}
+      \psi_{1}^{1} & \psi_{2}^{1} & \cdots & \psi_{N}^{1} \\
+      \psi_{1}^{2} & \psi_{2}^{2} & \cdots & \psi_{N}^{2} \\
+      \cdots & \cdots & \cdots & \cdots \\
+      \psi_{1}^{N} & \psi_{2}^{N} & \cdots & \psi_{N}^{N}
+    \end{vmatrix}
+  \end{split},
+  \label{eq:AP}
+\end{eqnarray}
+%
+where the superscripts $[1\ 2 \cdots N]$ indicate that one must
+consider all the permutations of the sequence $1\ 2 \cdots N$ such
+that the Pauli principle is satisfied, that is, each \textsc{mo}
+$\varphi_{i}$ may occur not more than twice (corresponding to opposite
+spin signs) in the product wave function.
+
+
+
+
+
 \section{Self-Consistent Field Slater Orbitals}
 \label{ch:scf_sto}
 
-% Slater orbitals in Moccia's calculations
+% Slater orbitals in Moccia's calculations following Roothaan procedure
 
 
 
