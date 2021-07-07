@@ -43,6 +43,8 @@ AH$_{n}$-type molecules~\cite{Moccia_JCP_2164, Moccia_1964}.
 % describe Roothaan's SCF method for a closed-shell ground state
 % (linear combination of atomic orbitals)
 
+
+
 The starting point in the Hartree-Fock self-consistent field
 (\textsc{scf}) method is the antisymmetrized product (\textsc{ap}) of
 $N$ one-electron wave functions, called molecular spinorbitals, which
@@ -66,9 +68,13 @@ electrons~\cite{Roothaan_HF},
 %
 where the superscripts $[1\ 2 \cdots N]$ indicate that one must
 consider all the permutations of the sequence $1\ 2 \cdots N$ such
-that the Pauli principle is satisfied, that is, each \textsc{mo}
-$\varphi_{i}$ may occur not more than twice (corresponding to opposite
-spin signs) in the product wave function.
+that the Pauli exclusion principle is satisfied, that is, each
+\textsc{mo} $\varphi_{i}$ may occur not more than twice (corresponding
+to opposite spin signs) in the product wave function.
+
+Initially, one guesses an antisymmetric linear
+combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
+until no further improvement is obtained in the wave functions.
 
 
 
