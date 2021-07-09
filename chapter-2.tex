@@ -44,13 +44,9 @@ AH$_{n}$-type molecules~\cite{Moccia_JCP_2164, Moccia_1964}.
 % (linear combination of atomic orbitals)
 
 
-
 The starting point in the Hartree-Fock self-consistent field
 (\textsc{scf}) method is the antisymmetrized product (\textsc{ap}) of
-$N$ one-electron wave functions, called molecular spinorbitals, which
-contain space and spin coordinates of the
-electrons~\cite{Roothaan_HF},
-% insert equation of the AP here
+$N$ one-electron wave functions~\cite{Roothaan_HF},
 %
 \begin{eqnarray}
   \begin{split}
@@ -66,15 +62,36 @@ electrons~\cite{Roothaan_HF},
   \label{eq:AP}
 \end{eqnarray}
 %
-where the superscripts $[1\ 2 \cdots N]$ indicate that one must
-consider all the permutations of the sequence $1\ 2 \cdots N$ such
-that the Pauli exclusion principle is satisfied, that is, each
-\textsc{mo} $\varphi_{i}$ may occur not more than twice (corresponding
-to opposite spin signs) in the product wave function.
+where the spinorbital $\psi_{k}^{\mu} = \varphi_{i(k)}(x^{\mu},
+y^{\mu}, z^{\mu}) \eta_{k}(s^{\mu})$ factors into a molecular orbital
+(\textsc{mo}) and a spin function; the superscript $\mu$ indicates the
+spatial and spin coordinates of the $\mu$th electron, and the
+subscripts $k$ and $i$ label the different molecular spinorbitals
+(\textsc{mso}'s) and \textsc{mo}'s, respectively. The superscripts
+$[1\ 2 \cdots N]$ indicate that one must consider all the permutations
+of the sequence $1\ 2 \cdots N$ such that the Pauli exclusion
+principle is satisfied, that is, each \textsc{mo} $\varphi_{i}$ may
+occur not more than twice (corresponding to opposite spin signs) in
+the product wave function.
+
+For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
+is made up of complete electron shells, the Hartree-Fock method looks
+for those \textsc{mo}'s that minimize the variational energy
+%
+\begin{eqnarray}
+  \begin{split}
+    E & = & 2\sum\limits_{i} H_{i} + \sum\limits_{ij} (2J_{ij} -
+    K_{ij}).
+  \end{split}
+  \label{eq:HF_energy}
+\end{eqnarray}
+%
+The orbital energies $H_{i}$, the Coulomb integrals $J_{ij}$ and
+exchange integrals $K_{ij}$ are defined by
 
 Initially, one guesses an antisymmetric linear
 combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
-until no further improvement is obtained in the wave functions.
+until no further improvement is obtained in the wave functions. 
 
 
 
