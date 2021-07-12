@@ -87,7 +87,31 @@ for those \textsc{mo}'s that minimize the variational energy
 \end{eqnarray}
 %
 The orbital energies $H_{i}$, the Coulomb integrals $J_{ij}$ and
-exchange integrals $K_{ij}$ are defined by
+exchange integrals $K_{ij}$ are defined by~\cite{Roothaan_HF}
+%
+\begin{eqnarray}
+  \begin{split}
+    H_{i} & = & \int \bar{\varphi}_{i} H \varphi_{i} dv
+  \end{split}
+  \label{eq:orbital_Hi}
+\end{eqnarray}
+%
+\begin{eqnarray}
+  \begin{split}
+    J_{ij} & = & \int \frac{\bar\varphi_{i}^{\mu} \bar\varphi_{j}^{\nu}
+      \varphi_{i}^{\mu} \varphi_{j}^{\nu}}{r^{\mu\nu}} dv^{\mu\nu}
+  \end{split}
+  \label{eq:Coulomb_integral}
+\end{eqnarray}
+%
+\begin{eqnarray}
+  \begin{split}
+    K_{ij} & = & \int \frac{\bar\varphi_{i}^{\mu} \bar\varphi_{j}^{\nu}
+      \varphi_{j}^{\mu} \varphi_{i}^{\nu}}{r^{\mu\nu}} dv^{\mu\nu}
+  \end{split}
+  \label{eq:exchange_integral}
+\end{eqnarray}
+
 
 Initially, one guesses an antisymmetric linear
 combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
