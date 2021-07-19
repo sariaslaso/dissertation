@@ -92,9 +92,10 @@ energy~\cite{Roothaan_HF}
 The first sum in Eq.~(\ref{eq:HF_energy}) represents the energy of all
 the electrons in the field of the nuclei alone, where the Hamiltonian
 operator for the $i$th electron is $H_{i} = -\frac{1}{2}
-\nabla_{i}^{2} - \sum\limits_{\alpha} \frac{1}{r^{i\alpha}}$. In
-addition, the Coulomb integrals $J_{ij}$ and exchange integrals
-$K_{ij}$ are defined by
+\nabla_{i}^{2} - \sum\limits_{\alpha} \frac{1}{r^{i\alpha}}$. The
+remaining sum contains the electronic interactions, in which the
+Coulomb integrals $J_{ij}$ and exchange integrals $K_{ij}$ are defined
+by
 %
 \begin{subequations}
   \begin{equation} \label{eq:Coulomb}
@@ -111,42 +112,13 @@ $K_{ij}$ are defined by
 where the integration goes over the spatial coordinates of the
 $\mu$th and the $\nu$th electron
 
-
-
-
-%The orbital energies $H_{i}$, the Coulomb integrals $J_{ij}$ and
-%exchange integrals $K_{ij}$ are defined by~\cite{Roothaan_HF}
-%
-%\begin{eqnarray}
-%  \begin{split}
-%    H_{i} & = & \int \bar{\varphi}_{i} H \varphi_{i} dv,
-%  \end{split}
-%  \label{eq:orbital_Hi}
-%\end{eqnarray}
-%
-%\begin{eqnarray}
-%  \begin{split}
-%    J_{ij} & = & \int \frac{\bar\varphi_{i}^{\mu} \bar\varphi_{j}^{\nu}
-%      \varphi_{i}^{\mu} \varphi_{j}^{\nu}}{r^{\mu\nu}} dv^{\mu\nu},
-%  \end{split}
-%  \label{eq:Coulomb_integral}
-%\end{eqnarray}
-%
-%\begin{eqnarray}
-%  \begin{split}
-%    K_{ij} & = & \int \frac{\bar\varphi_{i}^{\mu} \bar\varphi_{j}^{\nu}
-%      \varphi_{j}^{\mu} \varphi_{i}^{\nu}}{r^{\mu\nu}} dv^{\mu\nu}.
-%  \end{split}
-%  \label{eq:exchange_integral}
-%\end{eqnarray}
-%
-
-
-
-
-Initially, one guesses an antisymmetric linear
-combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
-until no further improvement is obtained in the wave functions. 
+The Hartree-Fock \textsc{scf} method looks for those molecular
+orbitals $\varphi_{i}$ that minimize the variational
+energy~(\ref{eq:HF_energy}). 
+Initially, one guesses an antisymmetric
+linear combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative
+process until no further improvement is obtained in the wave
+functions.
 
 
 \section{Self-Consistent Field Slater Orbitals}
