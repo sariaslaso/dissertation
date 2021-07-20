@@ -114,11 +114,30 @@ $\mu$th and the $\nu$th electron
 
 The Hartree-Fock \textsc{scf} method looks for those molecular
 orbitals $\varphi_{i}$ that minimize the variational
-energy~(\ref{eq:HF_energy}). 
-Initially, one guesses an antisymmetric
-linear combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative
-process until no further improvement is obtained in the wave
-functions.
+energy~(\ref{eq:HF_energy}). In an iterative process, the molecular
+orbitals that form the \textsc{ap}~(\ref{eq:AP}) are corrected by an
+infinitesimal amount $\delta\varphi_{i}$, that along with the
+requirement that the molecular orbitals continue to form an
+orthonormal basis, leads to express the variation of the energy
+as~\cite{Roothaan_HF}
+%
+\begin{eqnarray}
+  \begin{split}
+    \delta E & = & 2 \sum\limits_{i} \int (\delta\bar\varphi_{i})
+    \{ H + \sum\limits_{j} (2J_{j} - K_{j}) \} \varphi_{i} dv +
+    2 \sum\limits_{i} \int (\delta\varphi_{i})
+    \{ \bar H + \sum\limits_{j} (2\bar J_{j} - \bar K_{j}) \}
+    \bar\varphi_{i} dv
+  \end{split}
+  \label{eq:delta_Ehf}
+\end{eqnarray}
+%
+
+% DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
+
+Initially, one guesses an antisymmetric linear
+combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
+until no further improvement is obtained in the wave functions.
 
 
 \section{Self-Consistent Field Slater Orbitals}
