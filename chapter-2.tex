@@ -133,11 +133,63 @@ as~\cite{Roothaan_HF}
 \end{eqnarray}
 %
 
+In order for the energy~(\ref{eq:HF_energy}) to reach its absolute
+minimum, the condition $\delta E = 0$ must be satisfied for any choice
+of \textsc{mo}s that conform an orthonormal basis. This condition can
+be expressed as~\cite{Roothaan_HF,Levine_QChem}
+%
+% eq. (14.30) Levine
+\begin{eqnarray}
+  \begin{split}
+    \{H_{i} + \sum\limits_{j} ( 2J_{ij} - K_{ij} ) \} \varphi_{i} & = &
+    \sum\limits_{j} \varphi_{j} \epsilon_{ji}
+  \end{split}
+\label{eq:deltaEzero}
+\end{eqnarray}
+%
+which leads to obtain the orbital energies $\epsilon_{i}$ once an
+initial guess for the occupied \textsc{mo}s has been made. One can
+define the Hartree-Fock operator $\hat{F}$ by
+%
+\begin{eqnarray}
+  \begin{split}
+    \hat{F} & = & \hat{H} +
+    \sum\limits_{j} [ 2\hat{J}_{j} - \hat{K}_{j} ]
+  \end{split}
+  \label{eq:F_operator}
+\end{eqnarray}
+%
+where the Coulomb and exchange operators, defined
+in~(\ref{eq:Coulomb}) and~(\ref{eq:exchange}) are expressed by means of
+%
+\begin{subequations}
+  \begin{equation}\label{eq:one_indxJ}
+    J_{i}^{\mu} \varphi^{\mu} = \left( \int
+    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
+         {r^{\mu\nu}} dv^{\nu}
+         \right) \varphi^{\mu}
+  \end{equation}
+  %
+  \begin{equation}\label{eq:one_indxK}
+    K_{i}^{\mu} \varphi^{\mu} = \left( \int
+    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
+         {r^{\mu\nu}} dv^{\nu}
+         \right) \varphi^{\mu}
+  \end{equation}
+\end{subequations}
+%
+where the integrals are taken over all space. The operator $J_{i}$
+represents the potential energy which would arise from an electron
+distributed in space with a density $|\varphi_{i}|^{2}$, while the
+operator $K_{i}$ has no classical analog.
+  
+
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
 
-Initially, one guesses an antisymmetric linear
-combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative process
-until no further improvement is obtained in the wave functions.
+% Initially, one guesses an antisymmetric linear
+% combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative
+% process until no further improvement is obtained in the wave
+% functions.
 
 
 \section{Self-Consistent Field Slater Orbitals}
