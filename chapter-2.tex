@@ -181,7 +181,36 @@ in~(\ref{eq:Coulomb}) and~(\ref{eq:exchange}) are expressed by means of
 where the integrals are taken over all space. The operator $J_{i}$
 represents the potential energy which would arise from an electron
 distributed in space with a density $|\varphi_{i}|^{2}$, while the
-operator $K_{i}$ has no classical analog.
+operator $K_{i}$ has no classical analog. Consequently, the
+Hartree-Fock \textsc{scf} problem can be addressed as the problem of
+finding the best set of molecular orbitals that
+satisfy~\cite{Roothaan_HF,Levine_QChem}
+%
+\begin{eqnarray}
+  \begin{split}
+    F \varphi_{i} & = & \sum\limits_{j} \varphi_{j} \epsilon_{ji}.
+  \end{split}
+  \label{eq:Fock_operator}
+\end{eqnarray}
+%
+
+% reference other works that used this (Roothaan)formalism
+The formalism introduced by Roothaan~\cite{Roothaan_HF} in which the
+Hartree-Fock orbitals are expressed as linear combinations of suitable
+analytical functions represented a crucial development in obtaining
+accurate numerical results~[CITE REFS TO THIS] that approximate to the
+best \textsc{mo}s of a molecule. In this approach, the molecular
+orbitals are expressed by a linear combination of atomic orbitals,
+%
+\begin{eqnarray}
+  \begin{split}
+    \varphi_{i} & = \sum\limits_{s} c_{si} \chi_{s}
+  \end{split}
+  \label{eq:lcao_roothaan}
+\end{eqnarray}
+%
+
+
   
 
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
