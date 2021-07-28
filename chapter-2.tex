@@ -200,16 +200,25 @@ Hartree-Fock orbitals are expressed as linear combinations of suitable
 analytical functions represented a crucial development in obtaining
 accurate numerical results~[CITE REFS TO THIS] that approximate to the
 best \textsc{mo}s of a molecule. In this approach, the molecular
-orbitals are expressed by a linear combination of atomic orbitals,
+orbitals are expressed by a linear combination of atomic
+orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
-    \varphi_{i} & = \sum\limits_{s} c_{si} \chi_{s}
+    \varphi_{i} & = \sum\limits_{s=1}\limits^{b} c_{si} \chi_{s}.
   \end{split}
   \label{eq:lcao_roothaan}
 \end{eqnarray}
 %
-
+Given that the sum~(\ref{eq:lcao_roothaan}) is an approximation to the
+exact Hartree-Fock \textsc{mo}s, the \textsc{ap} built from these
+molecular orbitals would be a less good approximation to the exact
+\textsc{ap} built from the Hartree-Fock \textsc{mo}s. The number of
+basis functions, $b$, as well as the proper choice of basis functions
+$\chi_{s}$ are essential in order to obtain \textsc{mo}s that resemble
+the Hartree-Fock \textsc{mo}s with negligible
+error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
+%p.410 levine
 
   
 
