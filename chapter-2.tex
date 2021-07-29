@@ -190,14 +190,14 @@ satisfy~\cite{Roothaan_HF,Levine_QChem}
   \begin{split}
     F \varphi_{i} & = & \sum\limits_{j} \varphi_{j} \epsilon_{ji}.
   \end{split}
-  \label{eq:Fock_operator}
+  \label{eq:Fock_operator_problem}
 \end{eqnarray}
 %
 
 % reference other works that used this (Roothaan)formalism
 The formalism introduced by Roothaan~\cite{Roothaan_HF} in which the
 Hartree-Fock orbitals are expressed as linear combinations of suitable
-analytical functions represented a crucial development in obtaining
+analytical functions represents a crucial development in obtaining
 accurate numerical results~[CITE REFS TO THIS] that approximate to the
 best \textsc{mo}s of a molecule. In this approach, the molecular
 orbitals are expressed by a linear combination of atomic
@@ -220,6 +220,14 @@ the Hartree-Fock \textsc{mo}s with negligible
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 %p.410 levine
 
+The problem of obtaining the best set of \textsc{mo}s for a
+closed-shell ground state consists in finding the set of coefficients
+$c_{si}$ for which the energy of the asociated \textsc{ap} reaches its
+absolute minimum. The \textsc{lcao} self-consistent field procedure
+begins with an initial guess for the linear combination of basis
+functions~(\ref{eq:lcao_roothaan}). This initial set is used to
+compute the Fock operator from equations~(\ref{eq:F_operator})
+to~(\ref{eq:one_indxK}).
   
 
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
