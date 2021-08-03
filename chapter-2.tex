@@ -227,7 +227,44 @@ absolute minimum. The \textsc{lcao} self-consistent field procedure
 begins with an initial guess for the linear combination of basis
 functions~(\ref{eq:lcao_roothaan}). This initial set is used to
 compute the Fock operator from equations~(\ref{eq:F_operator})
-to~(\ref{eq:one_indxK}).
+to~(\ref{eq:one_indxK}). The matrix elements $F_{rs}$
+%
+\begin{eqnarray}
+  \begin{split}
+    F_{rs} & \equiv & \langle \chi_{r} | \hat{F} | \chi_{s} \rangle
+  \end{split}
+  \label{eq:F_matrix}
+\end{eqnarray}
+%
+are then evaluated in order to determine the nontrivial solutions of
+the set of $b$ simultaneous linear equations of the form
+%
+\begin{eqnarray}
+  \begin{split}
+    \sum\limits_{s=1}\limits^{b} c_{si} (F_{rs} - \epsilon_{i}S_{rs}) = 0 &
+    ~~~~ r = 1,2,\dots,b
+  \end{split}
+  \label{eq:set_linear_eqs}
+\end{eqnarray}
+%
+that results from inserting the expansion~(\ref{eq:lcao_roothaan})
+into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}). The
+solutions $\{\epsilon_{i}, c_{si}\}$ that describe the \textsc{mo}s
+$\varphi_{i}$ are the roots of the secular
+equation~\cite{Roothaan_HF,Levine_QChem}
+%
+\begin{eqnarray}
+  \begin{split}
+    \mathrm{det} (F_{rs} - \epsilon_{i}S_{rs}) = 0, &
+    ~~~~ S_{rs} \equiv \langle \chi_{r} | \chi_{s} \rangle,
+  \end{split}
+  \label{eq:secular_eigenvalues}
+\end{eqnarray}
+%
+that represent the $n$ ground state orbitals with their respective
+\textsc{lcao} orbital energies.
+%p.77 Roothaan
+%p.410 Levine
   
 
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
