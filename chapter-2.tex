@@ -249,8 +249,7 @@ the set of $b$ simultaneous linear equations of the form
 %
 that results from inserting the expansion~(\ref{eq:lcao_roothaan})
 into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}). The
-solutions $\{\epsilon_{i}, c_{si}\}$ that describe the \textsc{mo}s
-$\varphi_{i}$ are the roots of the secular
+solutions $\epsilon_{i}$, which are the roots of the secular
 equation~\cite{Roothaan_HF,Levine_QChem}
 %
 \begin{eqnarray}
@@ -261,11 +260,18 @@ equation~\cite{Roothaan_HF,Levine_QChem}
   \label{eq:secular_eigenvalues}
 \end{eqnarray}
 %
-that represent the $n$ ground state orbitals with their respective
-\textsc{lcao} orbital energies.
-%p.77 Roothaan
-%p.410 Levine
-  
+conform an initial set of \textsc{lcao} orbital energies that leads to
+an initial set of coefficients $c_{si}$ and, consequently,
+\textsc{mo}s.
+
+The iterative approach of solving Eq.~(\ref{eq:Fock_operator_problem})
+is one of trial and error, in which one continues to determine
+improved sets of coefficients and orbitals energies, and compares the
+resulting set of improved $c_{si}$ with the existing ones. This
+process is continued until the \textsc{mo} coefficients converge
+according to an established metric and no further improvement is
+observed from one iteration to the next.
+
 
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
 
@@ -279,6 +285,7 @@ that represent the $n$ ground state orbitals with their respective
 \label{ch:scf_sto}
 
 % Slater orbitals in Moccia's calculations following Roothaan procedure
+% describe the procedure in Moccia JChemPhys40_2164
 
 
 
