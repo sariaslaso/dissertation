@@ -1,4 +1,3 @@
-
 \chapter{Electronic Structure of H$_{2}$O}
 \label{cha:scf_h2o}
 
@@ -195,9 +194,9 @@ satisfy~\cite{Roothaan_HF,Levine_QChem}
 %
 
 % reference other works that used this (Roothaan)formalism
-The formalism introduced by Roothaan~\cite{Roothaan_HF} in which the
+The formalism introduced by Roothaan~\cite{Roothaan_HF}, in which the
 Hartree-Fock orbitals are expressed as linear combinations of suitable
-analytical functions represents a crucial development in obtaining
+analytical functions, represents a crucial development in obtaining
 accurate numerical results~[CITE REFS TO THIS] that approximate to the
 best \textsc{mo}s of a molecule. In this approach, the molecular
 orbitals are expressed by a linear combination of atomic
@@ -277,12 +276,10 @@ that leads to rather straightforward results for the
 \textsc{mo}s. This model leads to accurate approximations of the
 Hartree-Fock \textsc{scf} wave function provided the basis
 set~(\ref{eq:lcao_roothaan}) is large
-enough~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}. Taking
-things further to achieve a complete description of the true
-Hartree-Fock wave function is a much more complicated mathematical
-problem.
-
-
+enough~\cite{EllisonShullh2o_1955, Moccia_JCP_2164, Moccia_JCP_2176,
+  Moccia_1964}. Taking things further to achieve a complete
+description of the true Hartree-Fock wave function is a much more
+complicated mathematical problem.
 
 
 % DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
@@ -298,6 +295,39 @@ problem.
 
 % Slater orbitals in Moccia's calculations following Roothaan procedure
 % describe the procedure in Moccia JChemPhys40_2164
+
+The formalism implemented by Moccia to study the ground state of
+XH$_{n}$ molecules~[REF] develops the previously introduced method of
+using electronic wave functions expressed by a one-centre expansion
+with the centre at the X nucleus~\cite{Parr_JCP_1960}[refs1-3 from
+  MocciaJCP-37-910]. This approach, labeled as self-consistent field
+one-centre-expanded molecular orbitals~\cite{Moccia_JCP_2164}, allows
+to evaluate the ground state along with the vibrational spectrum of
+this type of molecules for a given geometrical arrange.
+
+Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
+the initial wave function is expressed as an \textsc{ap} of molecular
+spin orbitals in which each molecular orbital is built as a linear
+combination of Slater-type orbitals (\textsc{sto}s) of the form
+%
+\begin{eqnarray}
+  \begin{split}
+    f_{n,l,m}(\zeta;r,\theta,\phi) & = &
+    \frac{(2\zeta)^{n + \frac{1}{2}}}{[(2n)!]^{\frac{1}{2}}} r^{n-1} e^{-\zeta r}
+    S_{l,m}(\theta,\phi).
+  \end{split}
+  \label{eq:f_STO}
+\end{eqnarray}
+%
+% indicate what each parameter represents and what are the quantities
+% one optimizes in the SCF process of minimizing the total energy
+
+Other more sofisticated calculations~\cite{Pitzer_1968,Pitzer_1970}
+addressed the problem of the electronic structure of the water
+molecule and obtained approximated Hartree-Fock wave functions by
+means of an increasing number of multicentre $s$, $p$, and $d$
+\textsc{sto}s as basis sets.
+
 
 
 
