@@ -308,9 +308,8 @@ this type of molecules for a given geometrical arrange.
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
 spin orbitals in which each molecular orbital is built as a linear
-combination of Slater-type orbitals (\textsc{sto}s), equivalent to the
-Roothaan expansion~(\ref{eq:lcao_roothaan}), with basis functions of
-the form
+combination of Slater-type orbitals (\textsc{sto}s) using basis
+functions of the form
 %
 \begin{eqnarray}
   \begin{split}
@@ -328,10 +327,28 @@ The angular part $S_{l,m}(\theta,\phi)$ in~(\ref{eq:f_STO}) represents
 real spherical harmonics and the orbital exponents $\zeta$'s involved
 in each basis set were obtained by an optimization process closely
 connected with finding the geometrical equilibium configuration of the
-molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The expansion
-coefficients $c_{si}$ in Eq.~(\ref{eq:lcao_roothaan}) are evaluated
-within the same iterative process in order to minimize the electronic
-energy.
+molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion
+introduced in Roothaan's formalism, Eq.~(\ref{eq:lcao_roothaan}), can
+be expressed in terms of Slater-type orbitals as follows
+%
+\begin{eqnarray}
+  \begin{split}
+    \varphi_{i}(\zeta,r,\theta,\phi) & = &
+    \sum\limits_{s=1}\limits^{b} c_{si} f_{s_{n,l,m}}(\zeta,r,\theta,\phi),
+  \end{split}
+  \label{eq:STO_expansion}
+\end{eqnarray}
+%
+where the expansion coefficients $c_{si}$ in are evaluated within the
+same iterative process in order to minimize the electronic energy.
+The $(n,l,m)$ values indicate the size of the basis set implemented
+for a given molecule.
+% mention the expansion of n,l,m values used by Moccia and their
+% comments on improving the calculations
+The \textsc{scf} calculations for the ground
+state of H$_{2}$O reported in~\cite{Moccia_1964}
+
+
  
 % mention that the wave functions could be improved not only by
 % changing nonlinear parameters in the STOs but by increasing the size
@@ -354,7 +371,15 @@ these minima.
 % mention that results cannot be improved drastically by a simple
 % change of basis, and what these moccia results were compared to
 
+% discuss briefly the H2O results that Moccia presents and what they
+% are compared to
 
+
+
+
+
+% going beyond a one-centre expansion and implementing a formalism
+% closer to the true Hatree-Fock method
 Other more sofisticated calculations~\cite{Pitzer_1968,Pitzer_1970}
 addressed the problem of the electronic structure of the water
 molecule and obtained approximated Hartree-Fock wave functions by
