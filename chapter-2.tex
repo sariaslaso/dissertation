@@ -327,9 +327,10 @@ The angular part $S_{l,m}(\theta,\phi)$ in~(\ref{eq:f_STO}) represents
 real spherical harmonics and the orbital exponents $\zeta$'s involved
 in each basis set were obtained by an optimization process closely
 connected with finding the geometrical equilibium configuration of the
-molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion
-introduced in Roothaan's formalism, Eq.~(\ref{eq:lcao_roothaan}), can
-be expressed in terms of Slater-type orbitals as follows
+molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion for
+the molecular orbital $\varphi_{i}$ introduced in Roothaan's
+formalism, Eq.~(\ref{eq:lcao_roothaan}), can be expressed in terms of
+Slater-type orbitals as follows
 %
 \begin{eqnarray}
   \begin{split}
@@ -339,15 +340,20 @@ be expressed in terms of Slater-type orbitals as follows
   \label{eq:STO_expansion}
 \end{eqnarray}
 %
-where the expansion coefficients $c_{si}$ in are evaluated within the
+where the expansion coefficients $c_{si}$ are evaluated within the
 same iterative process in order to minimize the electronic energy.
 The $(n,l,m)$ values indicate the size of the basis set implemented
 for a given molecule.
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
-The \textsc{scf} calculations for the ground
-state of H$_{2}$O reported in~\cite{Moccia_1964}
-
+The \textsc{scf} calculations for the ground state of H$_{2}$O, in
+which the expansion centre was located upon the oxygen
+nucleus~\cite{Moccia_1964}, tested different combinations of
+symmetries and $n$ values in order to obtain the best possible linear
+combination available from a basis set of the
+form~(\ref{eq:f_STO}). Table I in~\cite{Moccia_1964} shows the
+converged numerical results including the geomatrical parameters of
+the equilibrium configuration for the ground state of H$_{2}$O.
 
  
 % mention that the wave functions could be improved not only by
