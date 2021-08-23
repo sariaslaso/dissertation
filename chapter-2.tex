@@ -328,7 +328,7 @@ real spherical harmonics and the orbital exponents $\zeta$'s involved
 in each basis set were obtained by an optimization process closely
 connected with finding the geometrical equilibium configuration of the
 molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion for
-the molecular orbital $\varphi_{i}$ introduced in Roothaan's
+the $i$-th molecular orbital $\varphi_{i}$ introduced in Roothaan's
 formalism, Eq.~(\ref{eq:lcao_roothaan}), can be expressed in terms of
 Slater-type orbitals as follows
 %
@@ -342,8 +342,8 @@ Slater-type orbitals as follows
 %
 where the expansion coefficients $c_{si}$ are evaluated within the
 same iterative process in order to minimize the electronic energy.
-The $(n,l,m)$ values indicate the size of the basis set implemented
-for a given molecule.
+The sets of $(n,l,m)$ values indicate the size of the basis set
+implemented for a given molecule.
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
 The \textsc{scf} calculations for the ground state of H$_{2}$O, in
@@ -352,8 +352,14 @@ nucleus~\cite{Moccia_1964}, tested different combinations of
 symmetries and $n$ values in order to obtain the best possible linear
 combination available from a basis set of the
 form~(\ref{eq:f_STO}). Table I in~\cite{Moccia_1964} shows the
-converged numerical results including the geomatrical parameters of
-the equilibrium configuration for the ground state of H$_{2}$O.
+converged numerical results including the geometrical parameters of
+the equilibrium configuration for the ground state of H$_{2}$O. It
+emerged from these calculations, in which the highest $n$ quantum
+number was set to $4$, that high values of $n$ are not crucial in
+order to obtain rather accurate results since the converged wave
+functions obtained for the \textsc{mo}s could not be dramatically
+improved by simply changing the nonlinear parameters of the
+\textsc{sto}s~(\ref{eq:f_STO}).
 
  
 % mention that the wave functions could be improved not only by
