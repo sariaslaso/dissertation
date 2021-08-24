@@ -297,9 +297,9 @@ complicated mathematical problem.
 % describe the procedure in Moccia JChemPhys40_2164
 
 The formalism implemented by Moccia to study the ground state of
-XH$_{n}$ molecules~[REF] develops the previously introduced method of
-using electronic wave functions expressed by a one-centre expansion
-with the centre at the X
+XH$_{n}$ molecules~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}
+develops the previously introduced method of using electronic wave
+functions expressed by a one-centre expansion with the centre at the X
 nucleus~\cite{Parr_JCP_1960,oneCentre_1961}. This approach, labeled as
 self-consistent field one-centre-expanded molecular
 orbitals~\cite{Moccia_JCP_2164}, allows to evaluate the ground state
@@ -342,8 +342,8 @@ Slater-type orbitals as follows
 \end{eqnarray}
 %
 where the expansion coefficients $c_{si}$ are evaluated within the
-same iterative process in order to minimize the electronic energy.
-The sets of $(n,l,m)$ values indicate the size of the basis set
+iterative process in order to minimize the electronic energy.  The
+sets of $(n,l,m)$ values indicate the size of the basis set
 implemented for a given molecule.
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
@@ -369,12 +369,12 @@ improved by simply changing the nonlinear parameters of the
 As an initial step in the iterative process, some parameters are
 provided as input data. The basis functions that are identified by the
 three integers $n,l,m$ in Eq.~(\ref{eq:f_STO}) and by the orbital
-exponents $\zeta$, and an estimate of the expansion coefficients,
-$c_{si}$, of the molecular orbitals are among these quantities. The
-process of optimization of the nonlinear parameter $\zeta$ reveals a
-strong correlation with the geometrical equilibrium configuration of
-the molecule. The numerical results of the one-centre basis
-\textsc{scf} method
+exponents $\zeta$, as well as an estimate of the expansion
+coefficients, $c_{si}$, of the molecular orbitals are among these
+quantities. The process of optimization of the nonlinear parameter
+$\zeta$ reveals a strong correlation with the geometrical equilibrium
+configuration of the molecule. The numerical results of the one-centre
+basis \textsc{scf} method
 in~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964} were obtained by
 modifying the basis sets~(\ref{eq:lcao_roothaan}) by trial and
 determining the geometrical configuration that minimizes the total
