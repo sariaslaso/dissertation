@@ -15,14 +15,14 @@
 This chapter presents a brief compilation of the principles of the
 Hartree-Fock (\textsc{hf}) formulation implemented in problems of
 molecular quantum mechanics. Section~\ref{ch:var_hf} summarizes the
-principles in the Roothaan formulation of the Hartree-Fock formalism,
-in which the Hartree-Fock orbitals are expressed as linear
-combinations of suitable analytical functions~\cite{Roothaan_HF}. For
-molecules, the calculation of electronic wavefunctions is more
-intricate than that for atoms since it is preferable to use basis
-functions centred about the several
-nuclei~\cite{Pitzer_1968,Pitzer_1970}. This implies the difficult task
-of evaluating multicentre integrals~[REFS]. Sec.~\ref{ch:scf_sto}
+Roothaan formulation of the Hartree-Fock formalism, in which the
+Hartree-Fock orbitals are expressed as linear combinations of suitable
+analytical functions~\cite{Roothaan_HF}. For molecules, the
+calculation of electronic wavefunctions is more intricate than that
+for atoms since it is preferable to use basis functions centred about
+the several nuclei, which implies the difficult task of evaluating
+multicentre
+integrals~\cite{Pitzer_1968,Pitzer_1970}. Sec.~\ref{ch:scf_sto}
 describes a different approach that consists of using a set of basis
 functions all referred to one common origin and has reported
 satisfactory results in calculations of self-consistent field
@@ -194,12 +194,15 @@ satisfy~\cite{Roothaan_HF,Levine_QChem}
 %
 
 % reference other works that used this (Roothaan)formalism
-The formalism introduced by Roothaan~\cite{Roothaan_HF}, in which the
-Hartree-Fock orbitals are expressed as linear combinations of suitable
-analytical functions, represents a crucial development in obtaining
-accurate numerical results~[CITE REFS TO THIS] that approximate to the
-best \textsc{mo}s of a molecule. In this approach, the molecular
-orbitals are expressed by a linear combination of atomic
+The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
+the Hartree-Fock-Roothaan orbitals to be expressed as linear
+combinations of suitable analytical functions, represents a crucial
+development in obtaining accurate numerical results that approximate
+to the true Hartree-Fock \textsc{mo}s of a molecule and predicting
+chemical properties in addition to the binding energy of a
+molecule~\cite{scf_lc_1967,EllisonShullh2o_1955} (\textcolor{red}{ADD
+  MORE REFS HERE}). In this approach, the molecular orbitals are
+expressed by a linear combination of atomic
 orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
@@ -396,6 +399,8 @@ these minima.
 
 % going beyond a one-centre expansion and implementing a formalism
 % closer to the true Hatree-Fock method
+
+% pitzer(1968) compares two types of basis sets...
 Other more sofisticated calculations~\cite{Pitzer_1968,Pitzer_1970}
 addressed the problem of the electronic structure of the water
 molecule and obtained approximated Hartree-Fock wave functions by
