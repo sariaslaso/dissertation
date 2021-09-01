@@ -198,11 +198,12 @@ The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
 the Hartree-Fock-Roothaan orbitals to be expressed as linear
 combinations of suitable analytical functions, represents a crucial
 development in obtaining accurate numerical results that approximate
-to the true Hartree-Fock \textsc{mo}s of a molecule and predicting
-chemical properties in addition to the binding energy of a
+to the true Hartree-Fock \textsc{mo}s of a molecule, as well as
+predicting chemical properties in addition to the binding energy of a
 molecule~\cite{scf_lc_1967,EllisonShullh2o_1955} (\textcolor{red}{ADD
-  MORE REFS HERE}). In this approach, the molecular orbitals are
-expressed by a linear combination of atomic
+  MORE REFS HERE}). % p.293 Levine
+This approach proposes to represent the molecular
+orbitals by a linear combination of atomic
 orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
@@ -296,8 +297,35 @@ complicated mathematical problem.
 \section{Self-Consistent Field Slater Orbitals}
 \label{ch:scf_sto}
 
-% Slater orbitals in Moccia's calculations following Roothaan procedure
-% describe the procedure in Moccia JChemPhys40_2164
+A frequently used set of basis functions in atomic and molecular
+Hartree-Fock calculations, in order to represent molecular wave
+functions as linear combinations of analytical functions, is the set
+of Slater-type orbitals~(\textsc{sto}s) of the form
+%
+\begin{eqnarray}
+  \begin{split}
+    f_{n,l,m}(\zeta;r,\theta,\phi) & = &
+    \frac{(2\zeta)^{n + \frac{1}{2}}}{[(2n)!]^{\frac{1}{2}}} r^{n-1} e^{-\zeta r}
+    S_{l,m}(\theta,\phi),
+  \end{split}
+  \label{eq:f_STO}
+\end{eqnarray}
+%
+where $n,l,$ and $m$ are integers indicating a quantum state, while
+the orbital exponent $\zeta$ satisfies $\zeta \epsilon \Re > 0 $. The
+angular part $S_{l,m}(\theta,\phi)$ represents real spherical
+harmonics.
+
+In order to converge to an exact representation of the Hartree-Fock
+orbitals, it would be necessary to include an infinite number of
+\textsc{sto}s in an expansion of the
+form~(\ref{eq:lcao_roothaan}). However, previous calculations indicate
+that it is possible to obtain highly accurate results by using a
+finite set of conveniently chosen \textsc{sto}s to represent atomic
+wave
+functions~\cite{Clementi_scfIon_1962,Clementi_STOatoms_1974,Bunge_STOtable_1993}
+as well as molecular
+orbitals~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
 The formalism implemented by Moccia to study the ground state of
 XH$_{n}$ molecules~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}
@@ -312,24 +340,9 @@ given geometrical arrange.
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
 spin orbitals in which each molecular orbital is built as a linear
-combination of Slater-type orbitals (\textsc{sto}s) using basis
-functions of the form
-%
-\begin{eqnarray}
-  \begin{split}
-    f_{n,l,m}(\zeta;r,\theta,\phi) & = &
-    \frac{(2\zeta)^{n + \frac{1}{2}}}{[(2n)!]^{\frac{1}{2}}} r^{n-1} e^{-\zeta r}
-    S_{l,m}(\theta,\phi).
-  \end{split}
-  \label{eq:f_STO}
-\end{eqnarray}
-%
-% indicate what each parameter represents and what are the quantities
-% one optimizes in the SCF process of minimizing the total energy
-% describe the process or some relevant steps that Moccia mentions
-The angular part $S_{l,m}(\theta,\phi)$ in~(\ref{eq:f_STO}) represents
-real spherical harmonics and the orbital exponents $\zeta$'s involved
-in each basis set were obtained by an optimization process closely
+combination of Slater-type orbitals (\textsc{sto}s) of the
+form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s involved in
+each basis set were obtained by an optimization process closely
 connected with finding the geometrical equilibium configuration of the
 molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion for
 the $i$-th molecular orbital $\varphi_{i}$ introduced in Roothaan's
@@ -345,9 +358,9 @@ Slater-type orbitals as follows
 \end{eqnarray}
 %
 where the expansion coefficients $c_{si}$ are evaluated within the
-iterative process in order to minimize the electronic energy.  The
-sets of $(n,l,m)$ values indicate the size of the basis set
-implemented for a given molecule.
+iterative process in order to minimize the electronic energy. The sets
+of $(n,l,m)$ values indicate the size of the basis set implemented for
+a given molecule.
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
 The \textsc{scf} calculations for the ground state of H$_{2}$O, in
