@@ -312,7 +312,7 @@ of Slater-type orbitals~(\textsc{sto}s) of the form
 \end{eqnarray}
 %
 where $n,l,$ and $m$ are integers indicating a quantum state, while
-the orbital exponent $\zeta$ satisfies $\zeta \epsilon \Re > 0 $. The
+the orbital exponent $\zeta$ satisfies $\zeta \in \Re > 0 $. The
 angular part $S_{l,m}(\theta,\phi)$ represents real spherical
 harmonics.
 
@@ -324,7 +324,7 @@ that it is possible to obtain highly accurate results by using a
 finite set of conveniently chosen \textsc{sto}s to represent atomic
 wave
 functions~\cite{Clementi_scfIon_1962,Clementi_STOatoms_1974,Bunge_STOtable_1993}
-as well as molecular
+and molecular
 orbitals~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
 The formalism implemented by Moccia to study the ground state of
@@ -341,13 +341,13 @@ Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
 spin orbitals in which each molecular orbital is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
-form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s involved in
-each basis set were obtained by an optimization process closely
+form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s corresponding
+to each basis set were obtained by an optimization process closely
 connected with finding the geometrical equilibium configuration of the
-molecule~\cite{Moccia_JCP_2164,Moccia_1964}. The linear expansion for
-the $i$-th molecular orbital $\varphi_{i}$ introduced in Roothaan's
-formalism, Eq.~(\ref{eq:lcao_roothaan}), can be expressed in terms of
-Slater-type orbitals as follows
+molecule~\cite{Moccia_JCP_2164,Moccia_1964}. Returning to the linear
+expansion for the $i$-th molecular orbital $\varphi_{i}$ introduced in
+Roothaan's formalism, Eq.~(\ref{eq:lcao_roothaan}) can be expressed in
+terms of Slater-type orbitals as follows
 %
 \begin{eqnarray}
   \begin{split}
@@ -357,10 +357,10 @@ Slater-type orbitals as follows
   \label{eq:STO_expansion}
 \end{eqnarray}
 %
-where the expansion coefficients $c_{si}$ are evaluated within the
+where the expansion coefficients $c_{si}$ are evaluated within an
 iterative process in order to minimize the electronic energy. The sets
-of $(n,l,m)$ values indicate the size of the basis set implemented for
-a given molecule.
+of $(n,l,m)$ values indicate the size and orbital symmetries of the
+basis set implemented for a given molecule.
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
 The \textsc{scf} calculations for the ground state of H$_{2}$O, in
@@ -372,7 +372,7 @@ form~(\ref{eq:f_STO}). Table I in~\cite{Moccia_1964} shows the
 converged numerical results including the geometrical parameters of
 the equilibrium configuration for the ground state of H$_{2}$O. It
 emerged from these calculations, in which the highest $n$ quantum
-number was set to $4$, that high values of $n$ are not crucial in
+number was set to $4$, that large values of $n$ are not crucial in
 order to obtain rather accurate results since the converged wave
 functions obtained for the \textsc{mo}s could not be dramatically
 improved by simply changing the nonlinear parameters of the
@@ -385,20 +385,20 @@ functions for a given symmetry.
 % mention that the wave functions could be improved not only by
 % changing nonlinear parameters in the STOs but by increasing the size
 % of the basis set including higher l values (Moccia JCP-37-910)
-As an initial step in the iterative process, some parameters are
-provided as input data. The basis functions that are identified by the
-three integers $n,l,m$ in Eq.~(\ref{eq:f_STO}) and by the orbital
-exponents $\zeta$, as well as an estimate of the expansion
-coefficients, $c_{si}$, of the molecular orbitals are among these
-quantities. The process of optimization of the nonlinear parameter
-$\zeta$ reveals a strong correlation with the geometrical equilibrium
-configuration of the molecule. The numerical results of the one-centre
-basis \textsc{scf} method
-in~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964} were obtained by
-modifying the basis sets~(\ref{eq:lcao_roothaan}) by trial and
-determining the geometrical configuration that minimizes the total
-energy for each set of $\zeta$'s. The final result being the lowest of
-these minima.
+As an initial step in the one-centre \textsc{scf} iterative process
+implemented by
+Moccia~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}, some
+parameters are provided as input data. The basis functions that are
+identified by the three integers $n,l,m$ in Eq.~(\ref{eq:f_STO}) and
+by the orbital exponents $\zeta$, as well as an estimate of the
+expansion coefficients, $c_{si}$, of the molecular orbitals are among
+these quantities. The process of optimization of the nonlinear
+parameter $\zeta$ reveals a strong correlation with the geometrical
+equilibrium configuration of the molecule. The numerical results of
+the one-centre basis \textsc{scf} method in were obtained by modifying
+the basis sets~(\ref{eq:lcao_roothaan}) by trial and determining the
+geometrical configuration that minimizes the total energy for each set
+of $\zeta$'s. The final result being the lowest of these minima.
 
 % mention that results cannot be improved drastically by a simple
 % change of basis, and what these moccia results were compared to
@@ -407,18 +407,33 @@ these minima.
 % are compared to
 
 
-
-
-
 % going beyond a one-centre expansion and implementing a formalism
 % closer to the true Hatree-Fock method
 
 % pitzer(1968) compares two types of basis sets...
-Other more sofisticated calculations~\cite{Pitzer_1968,Pitzer_1970}
-addressed the problem of the electronic structure of the water
-molecule and obtained approximated Hartree-Fock wave functions by
-means of an increasing number of multicentre $s$, $p$, and $d$
-\textsc{sto}s as basis sets.
+Other theoretical studies have addressed the problem of the electronic
+structure of H$_{2}$O within the Hatree-Fock \textsc{scf} scheme using
+multicentre basis functions, and achieved satisfactory total energies
+that approach the Hartree-Fock energies rather
+well~\cite{natureH2O_1960, gaussianH2O_1965, Moccia_oneCenterHF_1967,
+  Reeves_nature_1956}. Many of these calculations, however, used
+extensive sets of basis functions or more complicated forms of wave
+functions, such as Gaussian functions, which does not necessarily lead
+to a precise description of the charge distribution of the molecule
+and, hence, calculations of other quantities such as the electric
+dipole moment.
+%cite pitzer here and their HF calculations
+%and obtained near Hartree-Fock wave functions by means of an
+%increasing number of multicentre $s$, $p$, and $d$ \textsc{sto}s as
+%basis sets~\cite{Pitzer_1968,Pitzer_1970}.
+
+%mention that the scope of this work focuses on the moccia SCF
+%calculations with STOs
+
+
+
+
+
 
 
 
