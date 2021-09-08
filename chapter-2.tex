@@ -333,17 +333,21 @@ develops the previously introduced method of using electronic wave
 functions expressed by a one-centre expansion with the centre at the X
 nucleus~\cite{Parr_JCP_1960,oneCentre_1961}. This approach, labeled as
 self-consistent field one-centre-expanded molecular
-orbitals~\cite{Moccia_JCP_2164}, allows to evaluate the ground state
-along with the vibrational spectrum of this type of molecules for a
-given geometrical arrange.
+orbitals~\cite{Moccia_JCP_2164}, bypasses the complicated task of
+evaluating multicentre integrals by constructing the \textsc{mo}s as
+linear combinations of \textsc{ao}s that are centred at the same point
+in space, and permits to evaluate the ground state along with the
+vibrational spectrum of this type of molecules for a given geometrical
+arrange.
 
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
 spin orbitals in which each molecular orbital is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
 form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s corresponding
-to each basis set were obtained by an optimization process closely
-connected with finding the geometrical equilibium configuration of the
+to each basis set were obtained by means of an optimization process
+closely connected with finding the geometrical equilibium
+configuration of the
 molecule~\cite{Moccia_JCP_2164,Moccia_1964}. Returning to the linear
 expansion for the $i$-th molecular orbital $\varphi_{i}$ introduced in
 Roothaan's formalism, Eq.~(\ref{eq:lcao_roothaan}) can be expressed in
@@ -365,7 +369,7 @@ basis set implemented for a given molecule.
 % comments on improving the calculations
 The \textsc{scf} calculations for the ground state of H$_{2}$O, in
 which the expansion centre was located upon the oxygen
-nucleus~\cite{Moccia_1964}, tested different combinations of
+nucleus~\cite{Moccia_1964}, explored different combinations of
 symmetries and $n$ values in order to obtain the best possible linear
 combination available from a basis set of the
 form~(\ref{eq:f_STO}). Table I in~\cite{Moccia_1964} shows the
@@ -395,10 +399,12 @@ expansion coefficients, $c_{si}$, of the molecular orbitals are among
 these quantities. The process of optimization of the nonlinear
 parameter $\zeta$ reveals a strong correlation with the geometrical
 equilibrium configuration of the molecule. The numerical results of
-the one-centre basis \textsc{scf} method in were obtained by modifying
+the one-centre basis \textsc{scf} method were obtained by modifying
 the basis sets~(\ref{eq:lcao_roothaan}) by trial and determining the
 geometrical configuration that minimizes the total energy for each set
-of $\zeta$'s. The final result being the lowest of these minima.
+of $\zeta$'s. The final result, indicated in Table
+I~\cite{Moccia_1964} for the H$_{2}$O molecule, being the lowest of
+these minima.
 
 % mention that results cannot be improved drastically by a simple
 % change of basis, and what these moccia results were compared to
@@ -410,22 +416,32 @@ of $\zeta$'s. The final result being the lowest of these minima.
 % going beyond a one-centre expansion and implementing a formalism
 % closer to the true Hatree-Fock method
 
-% pitzer(1968) compares two types of basis sets...
-Other theoretical studies have addressed the problem of the electronic
-structure of H$_{2}$O within the Hatree-Fock \textsc{scf} scheme using
-multicentre basis functions, and achieved satisfactory total energies
-that approach the Hartree-Fock energies rather
-well~\cite{natureH2O_1960, gaussianH2O_1965, Moccia_oneCenterHF_1967,
-  Reeves_nature_1956}. Many of these calculations, however, used
-extensive sets of basis functions or more complicated forms of wave
-functions, such as Gaussian functions, which does not necessarily lead
-to a precise description of the charge distribution of the molecule
-and, hence, calculations of other quantities such as the electric
-dipole moment.
+
 %cite pitzer here and their HF calculations
 %and obtained near Hartree-Fock wave functions by means of an
 %increasing number of multicentre $s$, $p$, and $d$ \textsc{sto}s as
 %basis sets~\cite{Pitzer_1968,Pitzer_1970}.
+
+Other theoretical studies have addressed the problem of the electronic
+structure of H$_{2}$O within the Hartree-Fock \textsc{scf} scheme
+using multicentre basis functions, and achieved satisfactory total
+energies that approach the Hartree-Fock energies rather
+well~\cite{natureH2O_1960, gaussianH2O_1965,
+  Moccia_oneCenterHF_1967,Reeves_nature_1956}. Many of these
+calculations, however, used extensive sets of basis functions or more
+complicated forms of wave functions, which does not necessarily imply
+a satisfactory description of the charge distribution of the
+molecule. Gaussian basis sets have also been used in the construction
+of \textsc{mo} expansions with aim of attacking the problem of
+multicentre
+integrals~\cite{gaussianH2O_1965,Neumann_gaussian_1968}. More advanced
+calculations of the H$_{2}$O wave functions in which an increasing
+number of multicentre $s$, $p$, and $d$ \textsc{sto}s was used as
+basis sets were successful in calculating physical properties, such as
+the electric dipole moment and force constants, in good agreement with
+experiment~\cite{Pitzer_1968,Pitzer_1970}.
+
+
 
 %mention that the scope of this work focuses on the moccia SCF
 %calculations with STOs
