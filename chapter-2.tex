@@ -18,7 +18,7 @@ molecular quantum mechanics. Section~\ref{ch:var_hf} summarizes the
 Roothaan formulation of the Hartree-Fock formalism, in which the
 Hartree-Fock orbitals are expressed as linear combinations of suitable
 analytical functions~\cite{Roothaan_HF}. For molecules, the
-calculation of electronic wavefunctions is more intricate than that
+calculation of electronic wave functions is more intricate than that
 for atoms since it is preferable to use basis functions centred about
 the several nuclei, which implies the difficult task of evaluating
 multicentre
@@ -26,7 +26,7 @@ integrals~\cite{Pitzer_1968,Pitzer_1970}. Sec.~\ref{ch:scf_sto}
 describes a different approach that consists of using a set of basis
 functions all referred to one common origin and has reported
 satisfactory results in calculations of self-consistent field
-molecular orbitals of AH$_{n}$-type molecules~\cite{Moccia_JCP_2164,
+molecular orbitals for AH$_{n}$-type molecules~\cite{Moccia_JCP_2164,
   Moccia_1964}.
 
 
@@ -198,13 +198,12 @@ The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
 the Hartree-Fock-Roothaan orbitals to be expressed as linear
 combinations of suitable analytical functions, represents a crucial
 development in obtaining accurate numerical results that approximate
-to the true Hartree-Fock \textsc{mo}s of a molecule, as well as
-predicting chemical properties in addition to the binding energy of a
-molecule~\cite{scf_lc_1967,EllisonShullh2o_1955} (\textcolor{red}{ADD
-  MORE REFS HERE}). % p.293 Levine
-This approach proposes to represent the molecular
-orbitals by a linear combination of atomic
-orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
+to the true Hartree-Fock wave functions of the water molecule, as well
+as predicting chemical properties in addition to the binding energy of
+its ground
+state~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}. This
+approach proposes to represent the molecular orbitals by a linear
+combination of atomic orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
@@ -225,10 +224,10 @@ error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
 The problem of obtaining the best set of \textsc{mo}s for a
 closed-shell ground state consists in finding the set of coefficients
-$c_{si}$ for which the energy of the asociated \textsc{ap} reaches its
-absolute minimum. The \textsc{lcao} self-consistent field procedure
-begins with an initial guess for the linear combination of basis
-functions~(\ref{eq:lcao_roothaan}). This initial set is used to
+$c_{si}$ for which the energy of the associated \textsc{ap} reaches
+its absolute minimum. The \textsc{lcao} self-consistent field
+procedure begins with an initial guess for the linear combination of
+basis functions~(\ref{eq:lcao_roothaan}). This initial set is used to
 compute the Fock operator from equations~(\ref{eq:F_operator})
 to~(\ref{eq:one_indxK}). The matrix elements $F_{rs}$
 %
@@ -346,7 +345,7 @@ spin orbitals in which each molecular orbital is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
 form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s corresponding
 to each basis set were obtained by means of an optimization process
-closely connected with finding the geometrical equilibium
+closely connected with finding the geometrical equilibrium
 configuration of the
 molecule~\cite{Moccia_JCP_2164,Moccia_1964}. Returning to the linear
 expansion for the $i$-th molecular orbital $\varphi_{i}$ introduced in
@@ -422,17 +421,17 @@ these minima.
 %increasing number of multicentre $s$, $p$, and $d$ \textsc{sto}s as
 %basis sets~\cite{Pitzer_1968,Pitzer_1970}.
 
-Other theoretical studies have addressed the problem of the electronic
-structure of H$_{2}$O within the Hartree-Fock \textsc{scf} scheme
-using multicentre basis functions, and achieved satisfactory total
-energies that approach the Hartree-Fock energies rather
+Other studies have addressed the problem of the electronic structure
+of H$_{2}$O within the Hartree-Fock \textsc{scf} scheme using
+multicentre basis functions, and achieved satisfactory total energies
+that approach the Hartree-Fock energies rather
 well~\cite{natureH2O_1960, gaussianH2O_1965,
   Moccia_oneCenterHF_1967,Reeves_nature_1956}. Many of these
 calculations, however, used extensive sets of basis functions or more
 complicated forms of wave functions, which does not necessarily imply
 a satisfactory description of the charge distribution of the
 molecule. Gaussian basis sets have also been used in the construction
-of \textsc{mo} expansions with aim of attacking the problem of
+of \textsc{mo} expansions with the aim of attacking the problem of
 multicentre
 integrals~\cite{gaussianH2O_1965,Neumann_gaussian_1968}. More advanced
 calculations of the H$_{2}$O wave functions in which an increasing
@@ -440,7 +439,6 @@ number of multicentre $s$, $p$, and $d$ \textsc{sto}s was used as
 basis sets were successful in calculating physical properties, such as
 the electric dipole moment and force constants, in good agreement with
 experiment~\cite{Pitzer_1968,Pitzer_1970}.
-
 
 
 %mention that the scope of this work focuses on the moccia SCF
