@@ -50,7 +50,8 @@ formulation to the standard formalism of quantum mechanics allows for
 a time-independent interpretation of strong-field ionization processes
 and quantitative modelling of the associated ionization rates. This is
 possible by means of implementing analytic continuation methods on the
-Hamiltonian, which leads to complex eigenvalues of the form
+Hamiltonian, from which the resonance is obtained as a solution with
+complex eigenvalues of the form
 %
 \begin{eqnarray}
   E = E_{R} + i E_{I} = E_{R} - i \Gamma/2,
@@ -65,11 +66,17 @@ field.
 Several numerical techniques have been introduced within the framework
 of \textsc{nhqm} that implement a complex-scaled Hamiltonian in
 studies of atomic and molecular Stark resonances. It is the scope of
-this chapter to focus on two of these methods, the concept of complex
-absorbing potentials~(\textsc{cap}s) and exterior complex
-scaling~(\textsc{esc}).
+this work to focus on two of these methods, the concept of a complex
+absorbing potential~(\textsc{cap}) introduced as a perturbation to the
+molecular Hamiltonian and exterior complex scaling~(\textsc{esc}).
 
-
+% add artificial potential introduced to absorb outgoing wave
+% relevant parameters in a CAP (equation for the CAP used in the partial wave calculations)
+% approach to obtain the resonances (to remove the perturbation introduced by the CAP)
+A \textsc{cap} is an artificial imaginary potential that is added to
+the Hamiltonian as a perturbation that performs an analytical
+continuation of the Hamiltonian to the complex plane. As a
+consequence, the diverging tale of the wave function is absorbed.
 
 
 \section{Molecular orbital representation of H$_{2}$O}
