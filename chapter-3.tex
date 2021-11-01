@@ -59,16 +59,18 @@ complex eigenvalues of the form
 \end{eqnarray}
 %
 in which the ionization rate, $\Gamma$, induced by the external field
-$F_{0}$ is associated with the imaginary part of the eigenvalue, while
-the real part $E_{R}$ represents the Stark shift under the external
-field.
+$F_{0}$ is associated to the lifetime of the decaying state $\tau$ via
+$\Gamma\tau = 1$, while the real part $E_{R}$ represents the Stark
+shift under the external field.
 
 Several numerical techniques have been introduced within the framework
 of \textsc{nhqm} that implement a complex-scaled Hamiltonian in
 studies of atomic and molecular Stark resonances. It is the scope of
-this work to focus on two of these methods, the concept of a complex
-absorbing potential~(\textsc{cap}) introduced as a perturbation to the
-molecular Hamiltonian and exterior complex scaling~(\textsc{esc}).
+this work to focus on two of these methods to study the response of
+the H$_{2}$O highest-energy orbitals to an external dc-field, the
+concept of a complex absorbing potential~(\textsc{cap}) introduced as
+a perturbation to the molecular Hamiltonian and exterior complex
+scaling~(\textsc{esc}).
 
 % add artificial potential introduced to absorb outgoing wave
 
@@ -81,10 +83,38 @@ molecular Hamiltonian and exterior complex scaling~(\textsc{esc}).
 A \textsc{cap} is introduced as an artificial imaginary potential
 which acts as a perturbation to the Hamiltonian. This artifact allows
 an analytical continuation of the Hamiltonian to the complex plane,
-with the aim of absorbing the diverging tail of the resonance wave
-function. As a result, the solutions of the modified non-Hermitian
-Hamiltonian behave as square-integrable eigenstates within the
-original boundary conditions.
+where it acts as an effective potential that suppresses the diverging
+tail of the resonance wave function in the vicinity of the edges of a
+numerical grid. As a result, the solutions of the modified
+non-Hermitian Hamiltonian behave as square-integrable eigenstates
+within the original boundary conditions.
+
+In general terms, the application of a \textsc{cap} begins with the
+addition of an artificial local potential of the form $-i \eta W(r)$
+to the Hamiltonian of the system, where the parameter $\eta$ indicates
+the strength of the \textsc{cap}, and the function $W(r)$ is most
+commonly defined as a quadratic potential centred at some radius
+$r_{\mathrm{c}}$. Several methods have been tested that study the
+convergence of the resonance energies as the \textsc{cap} strength
+weakens, i.e., as $\eta \to 0$.
+
+
+
+% JAGAU REVIEW ON CS
+% In the limit η → 0, the spectrum becomes continuous, and for each
+% resonance there exists an eigenvalue of Hη that converges to the
+% exact resonance position and width provided that W goes to infinity
+% for r → ∞, is piecewise continuous, and satisfies a few more general
+% requirements (35). That is, an infinitesimally weak CAP (η → 0) is
+% sufficient to stabilize the resonance without perturbing it.
+
+
+% The commonly used strategy for finding an optimal value of η is to
+% compute trajectories, E(η), and then determine ηopt through (35, 46)
+% min|η dE/dη|. The rationale for this criterion is that it minimizes
+% the first-order term in a Taylor expansion of the energy in η (35),
+% but unfortunately, the resonance position and width computed using
+% this criterion are very sensitive to the CAP onset (46, 60, 100).
 
 
 \section{Molecular orbital representation of H$_{2}$O}
