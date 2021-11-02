@@ -80,23 +80,37 @@ scaling~(\textsc{esc}).
 % approach to obtain the resonances (to remove the perturbation
 % introduced by the CAP)
 
-A \textsc{cap} is introduced as an artificial imaginary potential
-which acts as a perturbation to the Hamiltonian. This artifact allows
-an analytical continuation of the Hamiltonian to the complex plane,
-where it acts as an effective potential that suppresses the diverging
-tail of the resonance wave function in the vicinity of the edges of a
-numerical grid. As a result, the solutions of the modified
-non-Hermitian Hamiltonian behave as square-integrable eigenstates
-within the original boundary conditions.
+A \textsc{cap} is introduced as an imaginary potential which allows an
+analytical continuation of the Hamiltonian to the complex plane. This
+artificial perturbation of the system acts as an effective potential
+that suppresses the diverging tail of the resonance wave function in
+the vicinity of the edges of a numerical grid. As a result, the
+solutions of the modified non-Hermitian Hamiltonian behave as
+square-integrable eigenstates within the original boundary conditions.
 
 In general terms, the application of a \textsc{cap} begins with the
 addition of an artificial local potential of the form $-i \eta W(r)$
 to the Hamiltonian of the system, where the parameter $\eta$ indicates
-the strength of the \textsc{cap}, and the function $W(r)$ is most
-commonly defined as a quadratic potential centred at some radius
-$r_{\mathrm{c}}$. Several methods have been tested that study the
-convergence of the resonance energies as the \textsc{cap} strength
-weakens, i.e., as $\eta \to 0$.
+the strength of the \textsc{cap}. The function $W(r)$, which
+determines the onset of the \textsc{cap}, has been most commonly
+defined as a quadratic potential centred at some radius
+$r_{\mathrm{c}}$. The \textsc{cap} approach requires calculating sets
+of complex eigenvalues along complex trajectories, $E(\eta)$,
+determined by the \textsc{cap} strength in order to find an optimal
+finite value of $\eta$ such that it makes the resonance stable, with
+the ultimate goal of removing the perturbation by the \textsc{cap}.
+
+Strategies used to obtain the optimal value of $\eta$ involve a
+Pad\'{e}-approximation-extrapolation
+procedure~\cite{Moiseyev_Pade_2005}, and minimizing first and
+second-order terms in the Taylor expansion of these
+trajectories~\cite{RissMeyer_1993}. Such correction schemes have
+proven to yield accurate results for diatomic molecules with a
+\textsc{cap}.
+% add references cited in the partial wave write-up
+  
+
+
 
 
 
