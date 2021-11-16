@@ -20,21 +20,28 @@ order to address the problem of molecular static-field ionization and
 compute the induced Stark resonances.
 
 The dc Stark problem for the H$_{2}$O valence orbitals is addressed in
-this chapter by the implementation of a modified exterior complex
-scaling approach that allows to study the ionization of the molecular
-orbitals of H$_{2}$O under a strong dc field. The construction of an
-effective potential, which reflects the indivual properties of the
-orbitals, is crucial in this analysis. In Sec.~\ref{ch:h2o_structure},
-we formulate the problem with emphasis on the representation of the
-molecular orbitals. The exterior complex scaling formalism is
-introduced in Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial
-step in finding a numerical solution to a spherically symmetric
-problem, in the case of the $1b_{1}$ and $1b_{2}$ orbitals, and the
-problem of a non-central effective potential, in the case of the
-$3a_{1}$ orbital. The Stark resonance parameters are then presented in
-Sec.~\ref{ch:stark_params}, in which the symmetry properties of the
-orbitals are considered independently. The analysis presented in this
-chapter compiles that of~\cite{sarias_2016,sarias_2017}.
+this chapter by means of two independent approaches within the
+framework on non-Hermitian quantum mechanics, a modified exterior
+complex scaling and a complex absorbing potential. The construction of
+a local effective potential, which reflects the indivual properties of
+the orbitals, is crucial in this analysis. Section~\ref{ch:nonH_qm}
+introduces some of the fundamental aspects of non-Hermitian quantum
+mechanics. In Sec.~\ref{ch:h2o_structure}, we formulate the problem
+with emphasis on the representation of the molecular orbitals. The
+exterior complex scaling formalism is introduced in
+Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial step in finding a
+numerical solution to a spherically symmetric problem, in the case of
+the $1b_{1}$ and $1b_{2}$ orbitals, and the problem of a non-central
+effective potential, in the case of the $3a_{1}$
+orbital. Section~\ref{ch:partial_wave} is concerned with the
+discussion of a partial-wave expansion method implemented for a model
+potential designed to simulate the structure of the H$_{2}$O
+molecule. The problem of dc-ionization of the H$_{2}$O valence
+orbitals is treated in terms of a \textsc{cap}. The Stark resonance
+parameters are then presented in Sec.~\ref{ch:stark_params}, in which
+the symmetry properties of the orbitals are considered
+independently. The analysis presented in this chapter compiles that
+of~\cite{sarias_2016,sarias_2017}.
 
 
 \section{Non-Hermitian quantum mechanics}
@@ -895,6 +902,161 @@ Figure~\ref{fig:density_contours}.
 \label{ch:partial_wave}
 % describe method, problem to solve and implementation of the
 % formalism
+
+%starting point (Madrid potential) we are using a model potential
+%introduced by (Illescas2009) in collision calculations[refs]. describe
+%the pontential, what has been used for [refs]
+
+%use a multipole decomposition to expand the hydrogen terms of the
+%model potential in terms of partial waves
+
+%solve field-free problem and compare to OPM, model potential
+
+The problem of Stark resonances for the H$_{2}$O molecule is treated
+with a partial-wave expansion approach in which the starting point
+involves a three-centre model potential that was initially introduced
+to simulate the structure of the water molecule in a study of ion
+collisions with water molecules~\cite{illescas_modelV_2011}, and was
+later used in numerical calculations of the \textsc{tdse} for
+proton-water collisions~\cite{illescas_2015}. The field-free problem
+is addressed as well in a convergence study of the orbital energies
+for the three H$_{2}$O valence orbitals, namely $1b_{1}, 1b_{2}$ and
+$3a_{1}$, in terms of the partial wave expansion limits. The results
+are contrasted with the self-consistent field calculation that
+includes the model potential and Gaussian-type
+basis~\cite{illescas_2015}.
+
+The model potential is formulated as a superposition of three
+spherical potentials, that represent the oxygen atom, and the two
+hydrogen atoms of the water molecule at the equilibrium configuration
+determined by \textsc{hf} calculations~\cite{illescas_2015}, it has
+the form
+%
+\begin{eqnarray}
+  \begin{split}
+    V_{\mathrm{mod}} = & V_{\mathrm{O}}(r) + V_{\mathrm{H}}(r_{1}) 
+    + V_{\mathrm{H}}(r_{2}) \\
+    V_{\mathrm{O}}(r) = & -\frac{8 - N_{\mathrm{O}}}{r} -
+    \frac{N_{\mathrm{O}}}{r}(1 + \alpha_{\mathrm{O}}r) \exp(-2\alpha_{\mathrm{O}}r) \\
+    V_{\mathrm{H}}(r_{j}) = & -\frac{1 - N_{\mathrm{H}}}{r_{j}} -
+    \frac{N_{\mathrm{H}}}{r_{j}}(1 + \alpha_{\mathrm{H}}r_{j}) \exp(-2\alpha_{\mathrm{H}}r_{j}),
+  \end{split}
+  \label{eq:model_potential}
+\end{eqnarray}
+%
+where $\alpha_{\mathrm{O}} = 1.602$, $\alpha_{\mathrm{H}} = 0.617$ are
+screening parameters, $r_{j}$ indicates the electron position relative
+to either proton ($j=1,2$), and the electron density `charge
+parameters' were chosen as $N_{\mathrm{O}} = 7.185$ and
+$N_{\mathrm{H}} = (9 - N_{\mathrm{O}})/2 = 0.9075$ for three highest
+occupied \textsc{mo}s of H$_{2}$O. 
+
+The following anzats in spherical polar coordinates is introduced for
+the wave function
+%
+\begin{eqnarray}
+  \begin{split}
+    \psi(r,\theta,\phi) & = & \sum\limits_{l=0}\limits^{l_{\mathrm{max}}}
+    \sum\limits_{m=-l}\limits^{l} \frac{u_{lm}(r)}{r}
+    Y_{l}^{m}(\theta, \phi),
+  \end{split}
+  \label{eq:spherical_anzats}
+\end{eqnarray}
+%
+where $Y_{l}^{m}$ represents the complex-valued spherical
+harmonics. The numerical problem then consists of obtaining the
+$u_{lm}(r)$ solutions by solving coupled ordinary differential
+equations.
+
+The partial-wave expansion approach for the hydrogen potentials is
+implemented as follows. The potential for one hydrogen atom placed on
+the $\hat{z}$ axis with distance $R_{j}$ from the oxygen core, as
+indicated in the model potential~(\ref{eq:model_potential}), is
+expressed as an expansion in terms of Legendre polynomials, such that
+for an axially symmetric $\mathrm{O}-\mathrm{H}$ problem one has
+%
+\begin{eqnarray}
+  \begin{split}
+    V_{\mathrm{H}}(r_{j}) & \approx & \sum\limits_{\lambda=0}
+    \limits^{\lambda_{\mathrm{max}}} V_{\lambda}(r) P_{\lambda}(\cos\theta),
+  \end{split}
+  \label{eq:Legendre-pols}
+\end{eqnarray}
+%
+where the channel potentials $V_{\lambda}(r)$ are obtained by
+projecting $V_{\mathrm{H}}(r_{j})$ onto Legendre polynomials. The
+hydrogen atom is then rotated into the position consistent with the
+H$_{2}$O geometry using the addition theorem for spherical harmonics
+%
+\begin{eqnarray}
+  \begin{split}
+    P_{\lambda}(\cos\theta) & = & \frac{4\pi}{2\lambda + 1}
+    \sum\limits_{\mu = -\lambda}\limits^{\lambda} Y_{\lambda}^{\mu}(\hat{r}')
+    \bar{Y}_{\lambda}^{\mu}(\hat{r}''),
+  \end{split}
+  \label{eq:add_sphericalYlm}
+\end{eqnarray}
+%
+where $\cos\theta = \hat{r}'\cdot\hat{r}''$. This leads to obtain one
+expansion for each hydrogen atom expressed in $(r,\theta,\phi)$
+coordinates. The orientations defined by $\theta'$ correspond to one
+half of the opening angle, $52.2\ \mathrm{degrees}$, for each hydrogen
+atom, respectively, and the azimuthal angles are $\phi_{1}'=\pi/2$ and
+$\phi_{2}'=3\pi/2$ in accordance with the geometry described
+in~\cite{Moccia_1964}.
+
+% describe how to obtain the truncated potential for one of the
+% hydrogen atoms
+
+%
+\begin{eqnarray}
+  \begin{split}
+    V_{\mathrm{H}}(r,\theta,\phi) & = & \sum\limits_{\lambda=0}
+    \limits^{\lambda_{\mathrm{max}}} \frac{4\pi}{2\lambda + 1} V_{\lambda}(r)
+    \sum\limits_{\mu=-\lambda}\limits^{\lambda} Y_{\lambda}^{\mu}(\theta,\phi)
+    \bar{Y}_{\lambda}^{\mu}(\theta',\phi_{j})
+  \end{split}
+  \label{eq:expanded_H_potential}
+\end{eqnarray}
+%
+
+% describe how to obtain the structure of the radial equations for the
+% field-free problem and how to solve the numerical problem to obtain
+% the eigenvalues
+
+%
+\begin{eqnarray}
+  \begin{split}
+    -\frac{u_{l,m}''(r)}{2} + \frac{l(l + 1)}{2r^{2}} u_{l,m}(r)
+    + V_{\mathrm{O}}(r) u_{l,m}(r) + \sum\limits_{l',m'}
+    R_{l,m}^{l',m'}(r) u_{l',m'}(r) & = & \varepsilon u_{l,m}(r)
+  \end{split}
+  \label{eq:radial_u}
+\end{eqnarray}
+%
+
+
+
+
+%apply a CAP to determine the resonance eigenstates as a result of an
+%external dc field
+
+%determine the complex eigenvalues with a Pade extrapolation and
+%Riss-Meyer correction method
+
+%ref to the CAP data from the polynomial expansion as work-in-progress
+%(private communication to be published)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
