@@ -1003,11 +1003,8 @@ coordinates. The orientations defined by $\theta'$ correspond to one
 half of the opening angle, $52.2\ \mathrm{degrees}$, for each hydrogen
 atom, respectively, and the azimuthal angles are $\phi_{1}'=\pi/2$ and
 $\phi_{2}'=3\pi/2$ in accordance with the geometry described
-in~\cite{Moccia_1964}.
-
-% describe how to obtain the truncated potential for one of the
-% hydrogen atoms
-
+in~\cite{Moccia_1964}. These transformations result in the truncated
+potential for each hydrogen atom
 %
 \begin{eqnarray}
   \begin{split}
@@ -1024,22 +1021,44 @@ in~\cite{Moccia_1964}.
 % field-free problem and how to solve the numerical problem to obtain
 % the eigenvalues
 
+The partial-wave model potential that results from inserting the
+expansion~(\ref{eq:expanded_H_potential}) into the H$_{2}$O model
+potential introduced in~(\ref{eq:model_potential}) leads to a system
+of radial equations of the form
 %
 \begin{eqnarray}
   \begin{split}
     -\frac{u_{l,m}''(r)}{2} + \frac{l(l + 1)}{2r^{2}} u_{l,m}(r)
     + V_{\mathrm{O}}(r) u_{l,m}(r) + \sum\limits_{l',m'}
-    R_{l,m}^{l',m'}(r) u_{l',m'}(r) & = & \varepsilon u_{l,m}(r)
+    R_{l,m}^{l',m'}(r) u_{l',m'}(r) & = & \varepsilon u_{l,m}(r),
   \end{split}
   \label{eq:radial_u}
 \end{eqnarray}
 %
+in which the matrix elements $R_{l,m}^{l',m'}(r)$ are evaluated by
+means of Gaunt integrals.
 
 
+Once a partial-wave potential has been generated for each hydrogen
+atom one can proceed to find the eigenvalues for the field-free
+problem
 
 
 %apply a CAP to determine the resonance eigenstates as a result of an
 %external dc field
+
+%
+\begin{eqnarray}
+  V_{\mathrm{CAP}} = \left\{
+  \begin{split}
+    -i \eta_{c}(r - r_{c})^{2} \ & \mathrm{~when} & r > r_{c} \\
+    0 \phantom{i \eta_{c}(r - r_{c})^{2}} \ & \mathrm{~when} &  r < r_{c}
+  \end{split}
+\right.
+\label{eq:latterVeff}
+\end{eqnarray}
+%
+
 
 %determine the complex eigenvalues with a Pade extrapolation and
 %Riss-Meyer correction method
