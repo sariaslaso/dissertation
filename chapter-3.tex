@@ -1024,7 +1024,7 @@ potential for each hydrogen atom
 The partial-wave model potential that results from inserting the
 expansion~(\ref{eq:expanded_H_potential}) into the H$_{2}$O model
 potential introduced in~(\ref{eq:model_potential}) leads to a system
-of radial equations of the form
+of coupled radial equations of the form
 %
 \begin{eqnarray}
   \begin{split}
@@ -1035,13 +1035,23 @@ of radial equations of the form
   \label{eq:radial_u}
 \end{eqnarray}
 %
-in which the matrix elements $R_{l,m}^{l',m'}(r)$ are evaluated by
-means of Gaunt integrals.
-
+in which the matrix elements $R_{l,m}^{l',m'}(r)$ contain the
+potentials of the hydrogen atoms as partial-wave expansions, and are
+evaluated by means of Gaunt integrals. The quantum numbers $l,m$
+satisfy $l = 0, \cdots, l_{\mathrm{max}}$, and $-l \leq m \leq l$. The
+reference frame used in this approach places the oxygen atom at the
+origin of coordinates, hence the oxygen potential
+in~(\ref{eq:radial_u}), $V_{\mathrm{O}}(r)$, represents the
+spherically symmetric potential introduced in the model
+potential~(\ref{eq:model_potential}).
 
 Once a partial-wave potential has been generated for each hydrogen
-atom one can proceed to find the eigenvalues for the field-free
-problem
+atom one can proceed to calculate the eigenvalues for the field-free
+problem. The computation of numerical solutions for the coupled
+equations for the different $(l,m)$ channels is carried out using
+\emph{Mathematica}'s \textsc{nde}igensystem package, which implements
+a finite-element mesh to represent the coupled ordinary differential
+equations~(\ref{eq:radial_u}).
 
 
 %apply a CAP to determine the resonance eigenstates as a result of an
