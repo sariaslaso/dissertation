@@ -1038,7 +1038,7 @@ of coupled radial equations of the form
 in which the matrix elements $R_{l,m}^{l',m'}(r)$ contain the
 potentials of the hydrogen atoms as partial-wave expansions, and are
 evaluated by means of Gaunt integrals. The quantum numbers $l,m$
-satisfy $l = 0, \cdots, l_{\mathrm{max}}$, and $-l \leq m \leq l$. The
+satisfy $l = 0, \dots, l_{\mathrm{max}}$, and $-l \leq m \leq l$. The
 reference frame used in this approach places the oxygen atom at the
 origin of coordinates, hence the oxygen potential
 in~(\ref{eq:radial_u}), $V_{\mathrm{O}}(r)$, represents the
@@ -1051,12 +1051,23 @@ problem. The computation of numerical solutions for the coupled
 equations for the different $(l,m)$ channels is carried out using
 \emph{Mathematica}'s \textsc{nde}igensystem package, which implements
 a finite-element mesh to represent the coupled ordinary differential
-equations~(\ref{eq:radial_u}).
-
+equations~(\ref{eq:radial_u}). As the number of $l_{\mathrm{max}}$
+grows, the number of $(l,m)$ channels increases noticeably and the
+problem of finding a numerical solution to~(\ref{eq:radial_u}) becomes
+more sentitive to propagated errors, it is necessary in theses cases
+to increase the working precision of the calculations.
 
 %apply a CAP to determine the resonance eigenstates as a result of an
 %external dc field
 
+The dc-field ionization problem to determine the Stark resonances for
+the H$_{2}$O valence orbitals under an external field applied along
+the $\hat{z}$-direction is stated by including the external field
+potential $-F_{0}r\cos\theta$ in the radial
+equations~(\ref{eq:radial_u}). The problem of determining the complex
+eigenvalues that result from the effect of the external dc field is
+addressed by applying a quadratic complex absorbing
+potential~(\textsc{cap}) of the form
 %
 \begin{eqnarray}
   V_{\mathrm{CAP}} = \left\{
@@ -1064,10 +1075,26 @@ equations~(\ref{eq:radial_u}).
     -i \eta_{c}(r - r_{c})^{2} \ & \mathrm{~when} & r > r_{c} \\
     0 \phantom{i \eta_{c}(r - r_{c})^{2}} \ & \mathrm{~when} &  r < r_{c}
   \end{split}
-\right.
+  \right.
+  .
 \label{eq:latterVeff}
 \end{eqnarray}
 %
+
+% describe what \eta and r_c mean, and how to obtain the eigenvalues
+% from there
+The radius $r_{c}$ indicates the beginning of the region where the
+\textsc{cap} becomes effective. In order to avoid oscillating outgoing
+waves in the numerical solutions, it is a good practice to turn the
+\textsc{cap} on at distances where the partial-wave
+potential~(\ref{eq:expanded_H_potential}) has reached its simple
+asymptotic form. The \textsc{cap} results shown later on for the Stark
+shifts and widths are obtained using $r_{c} = 12$. The parameter
+$\eta_{c}$ indicates the strength of the \textsc{cap}. The eigenvalues
+are computed for an equidistant mesh of strength parameters, such that
+$\eta_{c} = n \times 10^{-3}$ for $n = 20, \dots, 70$.
+
+
 
 
 %determine the complex eigenvalues with a Pade extrapolation and
