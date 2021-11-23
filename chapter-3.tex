@@ -1051,11 +1051,24 @@ problem. The computation of numerical solutions for the coupled
 equations for the different $(l,m)$ channels is carried out using
 \emph{Mathematica}'s \textsc{nde}igensystem package, which implements
 a finite-element mesh to represent the coupled ordinary differential
-equations~(\ref{eq:radial_u}). As the number of $l_{\mathrm{max}}$
-grows, the number of $(l,m)$ channels increases noticeably and the
-problem of finding a numerical solution to~(\ref{eq:radial_u}) becomes
-more sentitive to propagated errors, it is necessary in theses cases
-to increase the working precision of the calculations.
+equations~(\ref{eq:radial_u}).
+
+% describe the finding of the optimal determinant that gives the sol
+% to an n-channel problem
+The $n-$channel problem to obtain the energy eigenvalues is addressed
+in the following manner: given a set of different initial conditions
+and a trial energy value, one can generate $n-$independent solutions
+that are propagated to a given endpoint at large $r$ where one can
+build a determinant of the solutions that is ultimately minimized in
+an iterative process to find the optimal combination of solutions that
+leads to a zero, or small valued, determinant. Ultimately, one wants
+to find the energy eigenvalue associated to the overall solution that
+is bound at some outer radius, i.e., that evaluates to zero or a very
+small value at large $r$. As the number of $l_{\mathrm{max}}$ grows,
+the number of $(l,m)$ channels increases noticeably and the problem of
+finding a numerical solution to~(\ref{eq:radial_u}) becomes more
+sentitive to propagated errors, it is necessary in theses cases to
+increase the working precision of the calculations.
 
 %apply a CAP to determine the resonance eigenstates as a result of an
 %external dc field
