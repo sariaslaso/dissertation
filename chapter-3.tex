@@ -1077,9 +1077,7 @@ The dc-field ionization problem to determine the Stark resonances for
 the H$_{2}$O valence orbitals under an external field applied along
 the $\hat{z}$-direction is stated by including the external field
 potential $-F_{0}r\cos\theta$ in the radial
-equations~(\ref{eq:radial_u}). The problem of determining the complex
-eigenvalues that result from the effect of the external dc field is
-addressed by applying a quadratic complex absorbing
+equations~(\ref{eq:radial_u}). A quadratic complex absorbing
 potential~(\textsc{cap}) of the form
 %
 \begin{eqnarray}
@@ -1089,23 +1087,30 @@ potential~(\textsc{cap}) of the form
     0 \phantom{i \eta_{c}(r - r_{c})^{2}} \ & \mathrm{~when} &  r < r_{c}
   \end{split}
   \right.
-  .
-\label{eq:latterVeff}
+\label{eq:VCAP}
 \end{eqnarray}
 %
+is applied to the system of coupled equations in order to determine
+the complex eigenvalues that result from the effect of the external dc
+field. The Stark problem represents a higher challenge than the
+field-free problem, in this case we are looking for a solution in the
+complex plane and the determinant to be minimized is a complex number,
+which means the condition to be zero should be applied to its norm.
+
 
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
 % from there
-The radius $r_{c}$ indicates the beginning of the region where the
-\textsc{cap} becomes effective. In order to avoid oscillating outgoing
-waves in the numerical solutions, it is a good practice to turn the
-\textsc{cap} on at distances where the partial-wave
-potential~(\ref{eq:expanded_H_potential}) has reached its simple
-asymptotic form. The \textsc{cap} results shown later on for the Stark
-shifts and widths are obtained using $r_{c} = 12$. The parameter
-$\eta_{c}$ indicates the strength of the \textsc{cap}. The eigenvalues
-are computed for an equidistant mesh of strength parameters, such that
-$\eta_{c} = n \times 10^{-3}$ for $n = 20, \dots, 70$.
+The radius $r_{c}$ in~(\ref{eq:VCAP}) indicates the beginning of the
+region where the \textsc{cap} becomes effective. In order to avoid
+oscillating outgoing waves in the numerical solutions, it is a good
+practice to turn the \textsc{cap} on at distances where the
+partial-wave potential~(\ref{eq:expanded_H_potential}) has reached its
+simple asymptotic form. The \textsc{cap} results shown later on for
+the Stark shifts and widths are obtained using $r_{c} = 12$. The
+parameter $\eta_{c}$ indicates the strength of the \textsc{cap}. The
+eigenvalues are computed for an equidistant mesh of strength
+parameters, such that $\eta_{c} = n \times 10^{-3}$ for $n = 20,
+\dots, 70$.
 
 
 
