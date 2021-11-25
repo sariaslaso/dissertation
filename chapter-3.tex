@@ -1090,12 +1090,13 @@ potential~(\textsc{cap}) of the form
 \label{eq:VCAP}
 \end{eqnarray}
 %
-is applied to the system of coupled equations in order to determine
-the complex eigenvalues that result from the effect of the external dc
-field. The Stark problem represents a higher challenge than the
-field-free problem, in this case we are looking for a solution in the
-complex plane and the determinant to be minimized is a complex number,
-which means the condition to be zero should be applied to its norm.
+is applied to the system of coupled differential equations in order to
+determine the complex eigenvalues that result from the effect of the
+external dc field. The Stark problem presents a higher numerical
+challenge than the field-free one, in this case we are looking for a
+solution in the complex plane and the determinant to be minimized is a
+complex number, which implies that the condition of convergence to
+zero should be applied to its norm.
 
 
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
@@ -1105,12 +1106,27 @@ region where the \textsc{cap} becomes effective. In order to avoid
 oscillating outgoing waves in the numerical solutions, it is a good
 practice to turn the \textsc{cap} on at distances where the
 partial-wave potential~(\ref{eq:expanded_H_potential}) has reached its
-simple asymptotic form. The \textsc{cap} results shown later on for
-the Stark shifts and widths are obtained using $r_{c} = 12$. The
-parameter $\eta_{c}$ indicates the strength of the \textsc{cap}. The
-eigenvalues are computed for an equidistant mesh of strength
+simple asymptotic form. This condition is satisfied for $r > 12$ with
+great accuracy. The parameter $\eta_{c}$ indicates the strength of the
+\textsc{cap}. Ideally, the parameter $\eta_{c}$ should be small number
+in order to have a small artifact introduced to the system of
+equations, however, it is important to keep in mind that when
+$\eta_{c}\to 0$ numerical errors may increase. Ultimately, the
+artificial term introduced by the \textsc{cap} needs to be removed
+from the results in order to obtain the resonance parameters.
+
+The complex eigenvalues that result from applying the
+\textsc{cap}~(\ref{eq:VCAP}) to the system of radial
+equations~(\ref{eq:radial_u}) are computed according the following
+scheme. For a given field strength, $F_{0}$, a set of complex
+eigenvalues is computed for an equidistant mesh of strength
 parameters, such that $\eta_{c} = n \times 10^{-3}$ for $n = 20,
-\dots, 70$.
+\dots, 70$. These results are interpolated to a sixth-order polynomial
+as a function of $\eta_{c}$, and then the optimal $\eta$ value is
+calculated according to the Riss-Meyer correction
+scheme~\cite{RissMeyer_1993}, which is implemented up to second order.
+
+
 
 
 
