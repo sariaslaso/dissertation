@@ -1129,9 +1129,9 @@ scheme~\cite{RissMeyer_1993}, which is implemented up to second order.
 
 According to the Riss-Meyer approximation~\cite{RissMeyer_1993}, the
 effects of the \textsc{cap} can be removed by means of an iterative
-correction scheme based on perturbation theory, in which the $n$th
+correction scheme based on perturbation theory, in which the $n$-th
 order corrected energy can be expressed as a truncated Taylor
-expansion of the form 
+expansion of the form
 %
 \begin{eqnarray}
   \begin{split}
@@ -1146,8 +1146,10 @@ expansion of the form
 \end{eqnarray}
 %
 where $E_{\mathrm{fb}}$ stands for the finite-basis trajectory of
-eigenvalues obtained on the $\eta-$grid, and $\tilde{\eta}$ is an
-optimal value for the \textsc{cap} strength given by the condition
+eigenvalues obtained on the $\eta-$grid, and $\tilde{\eta}$ is the
+optimal value of the \textsc{cap} strength at which the total error of
+approximating the exact resonance energy is minimal, $\tilde{\eta}$ is
+given by the condition
 %
 \begin{eqnarray}
   \begin{split}
@@ -1164,7 +1166,10 @@ with $l_{\mathrm{max}}=3$ of the $3a_{1}$ \textsc{mo} is shown in
 Figure~\ref{fig:3a1_RMtrajectory} for a field intensity of $F_{0} =
 -0.1\ \mathrm{a.u.}$. The blue circles indicate the eigenvalues
 corresponding to the interval $[0.003, \dots, 0.06]\ \mathrm{a.u.}$ of
-\textsc{cap} strengths in steps of $10^{-3}\ \mathrm{a.u.}$.
+the \textsc{cap} parameter in steps of $10^{-3}\ \mathrm{a.u.}$. The
+resonance energy corresponding to the stabilization method is shown as
+a red cross, and the Riss-Meyer first and second order corrections are
+shown as green and magenta crosses, respectively.
 
 
 % what the RM corrections represent
