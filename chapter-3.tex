@@ -1159,6 +1159,10 @@ given by the condition
   \label{eq:optimal_eta}
 \end{eqnarray}
 %
+The optimal value for the \textsc{cap} parameter depends on the order
+of the correction scheme. The $n$th order Riss-Meyer correction can be
+interpreted as removal of the artifact provided by the \textsc{cap} by
+$n$th order perturbation theory.
 
 As an illustrative example, the trajectory of complex eigenvalues as a
 function of the \textsc{cap} strength for a partial-wave calculation
@@ -1167,9 +1171,14 @@ Figure~\ref{fig:3a1_RMtrajectory} for a field intensity of $F_{0} =
 -0.1\ \mathrm{a.u.}$. The blue circles indicate the eigenvalues
 corresponding to the interval $[0.003, \dots, 0.06]\ \mathrm{a.u.}$ of
 the \textsc{cap} parameter in steps of $10^{-3}\ \mathrm{a.u.}$. The
-resonance energy corresponding to the stabilization method is shown as
-a red cross, and the Riss-Meyer first and second order corrections are
-shown as green and magenta crosses, respectively.
+stabilization point $(n = 0)$ is shown as a red cross, and the complex
+energy values at the accumulation points for $n = 1, 2$ of the
+Riss-Meyer iterative correction scheme~(equations~(\ref{eq:RM_scheme})
+and~\ref{eq:optimal_eta})) are shown as green and magenta crosses,
+respectively. The accumulation points for $n = 1, 2$ are in close
+proximity to one another, but deviate from the stabilization point.
+
+
 
 
 % what the RM corrections represent
