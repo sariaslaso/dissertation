@@ -1068,7 +1068,7 @@ is bound at some outer radius, i.e., that evaluates to zero or a very
 small value at large $r$. As the number of $l_{\mathrm{max}}$ grows,
 the number of $(l,m)$ channels increases noticeably and the problem of
 finding a numerical solution to~(\ref{eq:radial_u}) becomes more
-sentitive to propagated errors, it is necessary in theses cases to
+sensitive to propagated errors, it is necessary in theses cases to
 increase the working precision of the calculations.
 
 %apply a CAP to determine the resonance eigenstates as a result of an
@@ -1237,18 +1237,19 @@ proximity to one another, but deviate from the stabilization point.
 \section{Stark resonance parameters}
 \label{ch:stark_params}
 
-In the following subsections we present plots of the physical
-parameters of interest, namely the resonance position, $E_{R}$, and
-width, $\Gamma = -2E_{I}$, that characterize the tunneling process of
-the quasi-stationary state when an external electric dc field is
-applied along the $\pm\hat{z}$ directions. The system of partial
-differential equations~(\ref{eq:pde_system}) is solved for a set of
-field strength values, $F_{0}$, as if it were an inhomogeneous
-problem. In the vicinity of a location in the $(r,\theta)$ plane in
-which the probability amplitude is expected to be large, a
-two-parameter root search is implemented in order to determine
-${E_{R}, E_{I}}$, the complex energy that maximizes the probability
-density amplitude in the $2d-$grid.
+Sections~\ref{ch:1b1_1b2_results} and~\ref{ch:3a1_results} present the
+numerical results for the physical parameters of interest, namely the
+resonance position, $E_{R}$, and width, $\Gamma = -2E_{I}$, that
+characterize the tunneling process of the quasi-stationary state when
+an external electric dc field is applied along the $\pm\hat{z}$
+directions. The system of partial differential
+equations~(\ref{eq:pde_system}) is solved for a set of field strength
+values, $F_{0}$, as if it were an inhomogeneous problem. In the
+vicinity of a location in the $(r,\theta)$ plane in which the
+probability amplitude is expected to be large, a two-parameter root
+search is implemented in order to determine ${E_{R}, E_{I}}$, the
+complex energy that maximizes the probability density amplitude in the
+$2d-$grid.
 
 We explored the influence of a set of parameters involved in the
 two-dimensional problem~(\ref{eq:pde_system}) on the eigenvalue
@@ -1283,12 +1284,22 @@ digits for the range $10 < r_{s} < 15\ \rm{a.u.}$ Larger values would
 require an increase in the computational domain beyond
 $r=20\ \rm{a.u.}$
 
-Finally, another systematic that was explored is the choice of the
-ultimate scaling angle reached at large $r$, namely the value of
+Another systematic that was explored is the choice of the ultimate
+scaling angle reached at large $r$, namely the value of
 $\chi_{\rm{s}}$ in~(\ref{eq:ecs_theta}). For an accuracy demand of
 three significant digits, and the other parameters chosen in the
 ranges described above stability in the resonance widths is achieved
 for $0.6< \chi_{\rm{s}} < 1.2$ rad.
+
+Finally, Section~\ref{ch:cap_results} discusses the results of a
+partial-wave expansion method introduced in Sec.~\ref{ch:partial_wave}
+for a model potential that simulates the structure of the H$_{2}$O
+molecule~\cite{illescas_modelV_2011}. The partial-wave approach is
+combined with a quadratic complex absorbing potential in order to
+explore the effect of an external dc field. The resonance positions
+and widths are obtained from the complex eigenvalues associated with
+the non-hermitian analysis of the system of radial
+equations~(\ref{eq:radial_u}) introduced by the \textsc{cap}.
 
 
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
@@ -1530,28 +1541,21 @@ $0.4$  &$-0.765$&$3.60(-1)$&$-0.957$&$6.40(-1)$&$-0.564$&$1.24(-1)$&$-0.790$&$1.
 \subsection{Ionization parameters from a partial-wave approach}
 \label{ch:cap_results}
 
-This section presents the numerical results obtained from implementing
-a multipole decomposition of the model
-potential~(\ref{eq:model_potential}) for the H$_{2}$O molecule
-combined with the effect of a quadratic complex absorbing
-potential. The effect of an external dc field is studied by means of
-complex eigenvalues that result from the non-hermitian analysis of the
-system of radial equations~(\ref{eq:radial_u}) introduced by the
-\textsc{cap}.
-
 Figure~\ref{fig:energies_fieldfree} shows the convergence of the three
 H$_{2}$O valence \textsc{mo} eigenvalues as a function of the basis
 size parameter $l_{\mathrm{max}}$. The comparison with the orbital
-energies obtained originally with the model potential using a Gaussian
-basis in a quantum chemistry program~\cite{illescas_2015} reveals that
-the outermost orbital, $1b_{1}$, with its density perpendicular to the
-molecular plane, converges rapidly, because the density has limited
-overlap with the hydrogen atoms, as indicated in
-Fig.~\ref{fig:h2o_1b1_1b2}. The values fall slightly below the quoted
-values in Refs.~\cite{illescas_2015}. Comparison with the calculated
-value for the most logical comparison point in terms of a local
-self-consistent potential approach, namely the optimized potential
-method~(\textsc{opm})~\cite{opm_2007} is also very good.
+energies obtained previously using the model potential with a Gaussian
+basis in a quantum chemistry program~\cite{illescas_2015} (shown as
+solid lines) reveals that the outermost orbital, $1b_{1}$, with its
+density perpendicular to the molecular plane, converges rapidly,
+because the density has limited overlap with the hydrogen atoms, as
+indicated in Fig.~\ref{fig:h2o_1b1_1b2}. The values fall slightly
+below the quoted values in Refs.~\cite{illescas_2015}. The values
+indicated as dash-dotted lines correspond to a local self-consistent
+potential approach, namely the optimized potential
+method~(\textsc{opm})~\cite{opm_2007}. These values are an interesting
+comparison point since they result from an effective self-consistent
+potential.
 
 The $1b_{1}$ orbital is referred to as the highest occupied molecular
 orbital, and the Koopman's theorem in \textsc{hf}
@@ -1563,7 +1567,7 @@ energies of water can be deduced from photoelectron spectroscopy, but
 they are complicated by vibrational level structures and are
 significantly broadened; quoted values for the three valence orbitals
 correspond to ionization energies of $0.68, 0.54, 0.46$ for $1b_{2},
-3a_{1}, 1b_{1}$, respectively.% cite photoelectron spectroscopy page
+3a_{1}, 1b_{1}$, respectively.\textcolor{red}{ADD REF}
 
 For the $3a_{1}$ orbital, which contributes to the bonding of the
 water molecule the convergence with $l_{\mathrm{max}}$ is not as
