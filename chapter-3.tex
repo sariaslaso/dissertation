@@ -1169,15 +1169,25 @@ function of the \textsc{cap} strength for a partial-wave calculation
 with $l_{\mathrm{max}}=3$ of the $3a_{1}$ \textsc{mo} is shown in
 Figure~\ref{fig:3a1_RMtrajectory} for a field intensity of $F_{0} =
 -0.1\ \mathrm{a.u.}$. The blue circles indicate the eigenvalues
-corresponding to the interval $[0.003, \dots, 0.06]\ \mathrm{a.u.}$ of
-the \textsc{cap} parameter in steps of $10^{-3}\ \mathrm{a.u.}$. The
-stabilization point $(n = 0)$ is shown as a red cross, and the complex
-energy values at the accumulation points for $n = 1, 2$ of the
+corresponding to the range of $\eta$ values $[0.003, \dots, 0.06]$ of
+the \textsc{cap} parameter in steps of $\Delta\eta = 10^{-3}$. The
+results were obtained using \emph{Mathematica}'s
+\textsc{nde}igensystem finite-element solver. The trajectory is smooth
+for larger values of $\eta$, but it shows remarkable variation at
+small $\eta$.
+
+The stabilization point $(n = 0)$ is shown as a red cross, and the
+complex energy values at the accumulation points for $n = 1, 2$ of the
 Riss-Meyer iterative correction scheme~(equations~(\ref{eq:RM_scheme})
 and~\ref{eq:optimal_eta})) are shown as green and magenta crosses,
-respectively. The accumulation points for $n = 1, 2$ are in close
-proximity to one another, but deviate from the stabilization point.
-
+respectively. These $n = 1, 2$ perturbatively corrected energies fall
+below the curve and indicate to be in close proximity to one
+another. Looking at the trajetory of complex eigenvalues and the
+locations of the stabilized value ($n = 0$) as well as the corrected
+values to first and second order in perturbation theory ($n = 1, 2$),
+it can be noticed that the \textsc{cap} results shown in
+Figure~\ref{fig:3a1_RMtrajectory} agree up to three significant
+digits.
 
 % what the RM corrections represent
 % which complex energy was chosen?
