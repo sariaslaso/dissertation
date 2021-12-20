@@ -1166,7 +1166,7 @@ $n$th order perturbation theory.
 
 As an illustrative example, the trajectory of complex eigenvalues as a
 function of the \textsc{cap} strength for a partial-wave calculation
-with $l_{\mathrm{max}}=3$ of the $3a_{1}$ \textsc{mo} is shown in
+with $l_{\mathrm{max}}=3$ for the $3a_{1}$ \textsc{mo} is shown in
 Figure~\ref{fig:3a1_RMtrajectory} for a field intensity of $F_{0} =
 -0.1\ \mathrm{a.u.}$. The blue circles indicate the eigenvalues
 corresponding to the range of $\eta$ values $[0.003, \dots, 0.06]$ of
@@ -1174,7 +1174,7 @@ the \textsc{cap} parameter in steps of $\Delta\eta = 10^{-3}$. The
 results were obtained using \emph{Mathematica}'s
 \textsc{nde}igensystem finite-element solver. The trajectory is smooth
 for larger values of $\eta$, but it shows remarkable variation at
-small $\eta$.
+small $\eta$ (on the left in Fig.~\ref{fig:3a1_RMtrajectory}).
 
 The stabilization point $(n = 0)$ is shown as a red cross, and the
 complex energy values at the accumulation points for $n = 1, 2$ of the
@@ -1187,7 +1187,7 @@ locations of the stabilized value ($n = 0$) as well as the corrected
 values to first and second order in perturbation theory ($n = 1, 2$),
 it can be noticed that the \textsc{cap} results shown in
 Figure~\ref{fig:3a1_RMtrajectory} agree up to three significant
-digits.
+digits, both in resonance position and width.
 
 % what the RM corrections represent
 % which complex energy was chosen?
@@ -1261,40 +1261,40 @@ search is implemented in order to determine ${E_{R}, E_{I}}$, the
 complex energy that maximizes the probability density amplitude in the
 $2d-$grid.
 
-We explored the influence of a set of parameters involved in the
-two-dimensional problem~(\ref{eq:pde_system}) on the eigenvalue
-$E_{R}+iE_{I}$ which describes the ionization process as an
-exponential decay in time in terms of resonance position and
-half-width. In addition to testing the code against known results for
-atomic hydrogen~\cite{Telnov_1989}, we have performed systematic
-studies of our results for the H$_{2}$O orbitals against a number of
-parameters in order to assess the accuracy of these results. One
-parameter concerns the limiting resolution with which the
-finite-element method proceeds (the \textsc{maxcellsize} parameter in
-the \emph{Mathematica}~10 implementation of \textsc{ndsolve}, which we
-call $\Delta$). For values $\Delta<0.02\ \rm{a.u.}$ we find stability
-in the eigenvalues (real and imaginary parts) of two-three significant
-digits. For the results quoted in Secs.~\ref{ch:1b1_1b2_results}
-and~\ref{ch:3a1_results}, we then applied the more stringent criterion
-of $\Delta=0.01\ \rm{a.u.}$
+A study of the influence of a set of numerical parameters involved in
+the two-dimensional problem~(\ref{eq:pde_system}) on the complex
+eigenvalue $E_{R}+iE_{I}$, which describes the ionization process as
+an exponential decay in time in terms of resonance position and
+half-width, is carried out. In addition to testing the code against
+known results for atomic hydrogen~\cite{Telnov_1989}, a systematic
+study of the results for the H$_{2}$O valence orbitals against a
+number of parameters is performed in order to assess their
+accuracy. One parameter concerns the limiting resolution with which
+the finite-element method proceeds (the \textsc{maxcellsize} parameter
+in the \emph{Mathematica}~10 implementation of \textsc{ndsolve},
+denoted as $\Delta$). For values $\Delta < 0.02\ \rm{a.u.}$ we find
+stability in the eigenvalues (real and imaginary parts) of two-three
+significant digits. For the results quoted in
+Secs.~\ref{ch:1b1_1b2_results} and~\ref{ch:3a1_results}, the more
+stringent criterion of $\Delta=0.01\ \rm{a.u.}$ is applied.
 
-The second parameter which was investigated is the range where the
+The second parameter analyzed in this chapter is the range where the
 complex scaling function sets in, i.e., $r_{s}$ and $\Delta r$ in
-Eq.~(\ref{eq:ecs_theta}). For the scaling method to work we require
-scaling to set in for $r > r_0$ when the effective potential represents
-a simple Coulomb tail, which in practice is satisfied by
-$r_{s} > 2r_{0}$. We also need $\Delta r < 2\ \rm{a.u.}$ to guarantee
-smooth turn-on in this region. Small values of $\Delta r$ pose
-challenges for the automated finite-element method, since in the limit
-of $\Delta r \to 0$ one would need to implement the derivative
-discontinuity in the solution as discussed by
-Scrinzi~\cite{ecsScrinzi}. We find stable results for the real and
-imaginary parts of the eigenenergies at the level of three significant
-digits for the range $10 < r_{s} < 15\ \rm{a.u.}$ Larger values would
-require an increase in the computational domain beyond
-$r=20\ \rm{a.u.}$
+Eq.~(\ref{eq:ecs_theta}). For the scaling method to work the scaling
+is required to set in for $r > r_0$, where the effective potential
+represents a simple Coulomb tail, which in practice is satisfied by
+$r_{s} > 2r_{0}$. Additionally, the condition $\Delta r <
+2\ \rm{a.u.}$ is needed to guarantee a smooth turn-on of the scaling
+in this region. Small values of $\Delta r$ pose challenges for the
+automated finite-element method, since in the limit of $\Delta r \to
+0$ one would need to implement the derivative discontinuity in the
+solution as discussed by Scrinzi~\cite{ecsScrinzi}. We find stable
+results for the real and imaginary parts of the eigenenergies at the
+level of three significant digits for the range $10 < r_{s} <
+15\ \rm{a.u.}$ Larger values would require an increase in the
+computational domain beyond $r=20\ \rm{a.u.}$
 
-Another systematic that was explored is the choice of the ultimate
+Another systematic that is explored is the choice of the ultimate
 scaling angle reached at large $r$, namely the value of
 $\chi_{\rm{s}}$ in~(\ref{eq:ecs_theta}). For an accuracy demand of
 three significant digits, and the other parameters chosen in the
