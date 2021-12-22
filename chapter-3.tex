@@ -1301,15 +1301,18 @@ three significant digits, and the other parameters chosen in the
 ranges described above stability in the resonance widths is achieved
 for $0.6< \chi_{\rm{s}} < 1.2$ rad.
 
-Finally, Section~\ref{ch:cap_results} discusses the results of a
+Finally, Section~\ref{ch:cap_results} discusses the results of the
 partial-wave expansion method introduced in Sec.~\ref{ch:partial_wave}
 for a model potential that simulates the structure of the H$_{2}$O
 molecule~\cite{illescas_modelV_2011}. The partial-wave approach is
 combined with a quadratic complex absorbing potential in order to
-explore the effect of an external dc field. The resonance positions
-and widths are obtained from the complex eigenvalues associated with
-the non-hermitian analysis of the system of radial
-equations~(\ref{eq:radial_u}) introduced by the \textsc{cap}.
+study the effects of an external dc field. The angular momentum basis
+in the model potential expansion is truncated at $l_{\mathrm{max}} =
+2$ and $l_{\mathrm{max}} = 3$ including all the associated $m$
+values. The resonance positions and widths are obtained from the
+complex eigenvalues associated with the non-hermitian analysis of the
+system of radial equations~(\ref{eq:radial_u}) introduced by the
+\textsc{cap}.
 
 
 \subsection{$1b_{1}$ and $1b_{2}$ molecular orbitals}
@@ -1559,13 +1562,13 @@ basis in a quantum chemistry program~\cite{illescas_2015} (shown as
 solid lines) reveals that the outermost orbital, $1b_{1}$, with its
 density perpendicular to the molecular plane, converges rapidly,
 because the density has limited overlap with the hydrogen atoms, as
-indicated in Fig.~\ref{fig:h2o_1b1_1b2}. The values fall slightly
-below the quoted values in Refs.~\cite{illescas_2015}. The values
-indicated as dash-dotted lines correspond to a local self-consistent
-potential approach, namely the optimized potential
-method~(\textsc{opm})~\cite{opm_2007}. These values are an interesting
-comparison point since they result from an effective self-consistent
-potential.
+indicated in Fig.~\ref{fig:h2o_1b1_1b2}. The calculated orbital
+energies fall slightly below the quoted values in
+Refs.~\cite{illescas_2015}. The values indicated as dash-dotted lines
+correspond to a local self-consistent potential approach, namely the
+optimized potential method~(\textsc{opm})~\cite{opm_2007}. These
+values are an interesting comparison point since they result from an
+effective self-consistent potential.
 
 The $1b_{1}$ orbital is referred to as the highest occupied molecular
 orbital, and the Koopman's theorem in \textsc{hf}
@@ -1577,7 +1580,8 @@ energies of water can be deduced from photoelectron spectroscopy, but
 they are complicated by vibrational level structures and are
 significantly broadened; quoted values for the three valence orbitals
 correspond to ionization energies of $0.68, 0.54, 0.46$ for $1b_{2},
-3a_{1}, 1b_{1}$, respectively.\textcolor{red}{ADD REF}
+3a_{1}, 1b_{1}$,
+respectively~\cite{2020Photoelectron}.
 
 For the $3a_{1}$ orbital, which contributes to the bonding of the
 water molecule the convergence with $l_{\mathrm{max}}$ is not as
@@ -1586,7 +1590,6 @@ Stark resonance parameter calculations for this case. Convergence with
 $l_{\mathrm{max}}$ is really slow for the bonding orbital $1b_{2}$ due
 to the fact that a considerable amount of electron density appears
 along each O-H bond.
-
 
 \begin{figure}
   \centering
@@ -1602,6 +1605,28 @@ along each O-H bond.
     Ref.~\cite{opm_2007} are shown as dash-dotted lines.}
   \label{fig:energies_fieldfree}
 \end{figure}
+
+The results of complex eigenenergies for the outermost \textsc{mo}
+$1b_{1}$ are shown in Fig.~\ref{fig:1b1_cap} for $l_{\mathrm{max}} =
+2,3$ as green and red crosses, respectively. As a comparison the
+results obtained from the one-centre expansion local potential
+combined with a modified \textsc{ecs} are indicated as purple
+crosses. The left panel indicates the real part of the eigenvalue as
+the resonance position, and the right panel shows the imaginary part,
+which represents the resonance width. When the electric field is
+pointing towards the oxygen atom, $F_{z} < 0$, the electrons are
+attracted towards the protons, which lowers their eigenenergy
+considerably (binding is represented by the magnitude of the real
+part). When the electric field is pointing away from the oxygen,
+$F_{z} > 0$, the electrons are attracted towards the nucleus, which
+initially reflects as a slight decrease in binding, but eventually the
+attraction to the oxygen reinforces their binding.
+
+The resonance width shown in the right panel indicates that there is a
+strong dependence on the field strength at weak fields where the
+tunneling regime dominates. Where there is a marked increase in the
+exponential decay rate. As the field strength increases one observes a
+turnover towards the over-barrier ionization regime.
 
 
 \begin{figure}
