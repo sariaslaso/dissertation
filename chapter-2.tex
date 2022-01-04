@@ -20,7 +20,7 @@ Hartree-Fock orbitals are expressed as linear combinations of suitable
 analytical functions~\cite{Roothaan_HF}. For molecules, the
 calculation of electronic wave functions is more intricate than that
 for atoms since it is preferable to use basis functions centred about
-the several nuclei, which implies the difficult task of evaluating
+several nuclei, which implies the difficult task of evaluating
 multicentre
 integrals~\cite{Pitzer_1968,Pitzer_1970}. Sec.~\ref{ch:scf_sto}
 describes a different approach that consists of using a set of basis
@@ -72,7 +72,7 @@ $i$ label the different molecular spin-orbitals (\textsc{mso}'s) and
 indicate that one must consider all the permutations of the sequence
 $1\ 2 \cdots N$ such that the Pauli exclusion principle is satisfied,
 that is, each \textsc{mo} $\varphi_{i}^{\mu}$ may occur not more than
-twice (corresponding to opposite spin signs) in the product wave
+twice (corresponding to opposite spin projections) in the product wave
 function.
 
 For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
@@ -134,8 +134,8 @@ as~\cite{Roothaan_HF}
 
 In order for the energy~(\ref{eq:HF_energy}) to reach its absolute
 minimum, the condition $\delta E = 0$ must be satisfied for any choice
-of \textsc{mo}s that conform an orthonormal basis. This condition can
-be expressed as~\cite{Roothaan_HF,Levine_QChem}
+of \textsc{mo}s that form an orthonormal basis. This condition can be
+expressed as~\cite{Roothaan_HF,Levine_QChem}
 %
 % eq. (14.30) Levine
 \begin{eqnarray}
@@ -198,8 +198,8 @@ The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
 the Hartree-Fock-Roothaan orbitals to be expressed as linear
 combinations of suitable analytical functions, represents a crucial
 development in obtaining accurate numerical results that approximate
-to the true Hartree-Fock wave functions of the water molecule, as well
-as predicting chemical properties in addition to the binding energy of
+the true Hartree-Fock wave functions of the water molecule, as well as
+predicting chemical properties in addition to the binding energy of
 its ground
 state~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}. This
 approach introduces a representation of the molecular orbitals by
@@ -251,7 +251,8 @@ the set of $b$ simultaneous linear equations of the form
 \end{eqnarray}
 %
 that results from inserting the expansion~(\ref{eq:lcao_roothaan})
-into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}). The
+into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}), and
+represents a linear algebra generalized eigenvalue problem. The
 solutions $\epsilon_{i}$, which are the roots of the secular
 equation~\cite{Roothaan_HF,Levine_QChem}
 %
@@ -263,9 +264,8 @@ equation~\cite{Roothaan_HF,Levine_QChem}
   \label{eq:secular_eigenvalues}
 \end{eqnarray}
 %
-conform an initial set of \textsc{lcao} orbital energies that leads to
-an initial set of coefficients $c_{si}$ and, consequently,
-\textsc{mo}s.
+form an initial set of \textsc{lcao} orbital energies that leads to an
+initial set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
 
 The iterative approach of solving Eq.~(\ref{eq:Fock_operator_problem})
 is one of trial and error, in which one continues to determine
@@ -322,8 +322,7 @@ orbitals, it would be necessary to include an infinite number of
 form~(\ref{eq:lcao_roothaan}). However, previous calculations indicate
 that it is possible to obtain highly accurate results by using a
 finite set of conveniently chosen \textsc{sto}s to represent atomic
-wave
-functions~\cite{Clementi_scfIon_1962,Clementi_STOatoms_1974,Bunge_STOtable_1993}
+orbitals~\cite{Clementi_scfIon_1962,Clementi_STOatoms_1974,Bunge_STOtable_1993}
 and molecular
 orbitals~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
@@ -344,7 +343,7 @@ Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
 spin orbitals in which each molecular orbital is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
-form~(\ref{eq:f_STO}). The orbital exponents $\zeta$'s corresponding
+form~(\ref{eq:f_STO}). The orbital exponents $\zeta_{i}$ corresponding
 to each basis set were obtained by means of an optimization process
 closely connected with finding the geometrical equilibrium
 configuration of the
@@ -382,7 +381,7 @@ functions obtained for the \textsc{mo}s could not be dramatically
 improved by simply changing the nonlinear parameters of the
 \textsc{sto}s~(\ref{eq:f_STO}). Rather, a precise selection of the
 orbital exponents $\zeta$'s of a moderate number of basis functions
-indicated to be crucial at improving the radial behaviour of the wave
+indicated to be crucial for improving the radial behaviour of the wave
 functions for a given symmetry.
 
  
@@ -425,7 +424,7 @@ these minima.
 Other studies have addressed the problem of the electronic structure
 of H$_{2}$O within the Hartree-Fock \textsc{scf} scheme using
 multicentre basis functions, and achieved satisfactory total energies
-that approach the Hartree-Fock energies rather
+that approach the converged Hartree-Fock energies rather
 well~\cite{natureH2O_1960, gaussianH2O_1965,
   Moccia_oneCenterHF_1967,Reeves_nature_1956}. Many of these
 calculations, however, used extensive sets of basis functions or more
