@@ -162,13 +162,10 @@ expressed as~\cite{Roothaan_HF,Levine_QChem}
 %
 where $\epsilon_{ji}$ are the elements of a Hermitian matrix obtained
 in the variational procedure of minimizing the
-energy~(\ref{eq:HF_energy}).
-% LINK THE MATRIX ELEMENTS WITH THE ORBITAL ENERGIES OBTAINED BY
-% SOLVING AN EIGENVALUE PROBLEM
-
-which leads to obtain the orbital energies $\epsilon_{i}$ once an
-initial guess for the occupied \textsc{mo}s has been made. One can
-define the Hartree-Fock operator $\hat{F}$ by
+energy~(\ref{eq:HF_energy})~\cite{Roothaan_HF}. Once an initial guess
+for the occupied \textsc{mo}s has been introduced, the orbital
+energies $\epsilon_{i}$ can be obtained as the energy eigenvalues of
+the Fock operator, $\hat{F}$, that satisfies
 %
 \begin{eqnarray}
   \begin{split}
@@ -197,7 +194,7 @@ in~(\ref{eq:Coulomb}) and~(\ref{eq:exchange}) are expressed by means of
   \end{equation}
 \end{subequations}
 %
-where the integrals are taken over all space. The operator $J_{i}$
+and the integrals are taken over all space. The operator $J_{i}$
 represents the potential energy which would arise from an electron
 distributed in space with a density $|\varphi_{i}|^{2}$, while the
 operator $K_{i}$ has no classical analog. Consequently, the
@@ -220,9 +217,9 @@ combinations of suitable analytical functions, represents a crucial
 development in obtaining accurate numerical results that approximate
 the true Hartree-Fock wave functions of the water molecule, as well as
 predicting chemical properties in addition to the binding energy of
-its ground
-state~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}. This
-approach introduces a representation of the molecular orbitals by
+its ground state
+~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}.
+This approach introduces a representation of the molecular orbitals by
 means of a linear combination of atomic
 orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
@@ -233,15 +230,19 @@ orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
   \label{eq:lcao_roothaan}
 \end{eqnarray}
 %
+%p.410 levine
 Given that the sum~(\ref{eq:lcao_roothaan}) is an approximation to the
 exact Hartree-Fock \textsc{mo}s, the \textsc{ap} built from these
 molecular orbitals would be a less good approximation to the exact
-\textsc{ap} built from the Hartree-Fock \textsc{mo}s. The number of
-basis functions, $b$, as well as the proper choice of basis functions
+\textsc{ap} built from the Hartree-Fock \textsc{mo}s. In the limit of
+using an infinitely large basis set, $b\to\infty$, the basis functions
+would form a complete set and approximate accurately to the exact
+Hartree-Fock \textsc{scf} wave function. The number of basis
+functions, $b$, as well as the proper choice of basis functions
 $\chi_{s}$ are essential in order to obtain \textsc{mo}s that resemble
 the Hartree-Fock \textsc{mo}s with negligible
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
-%p.410 levine
+
 
 The problem of obtaining the best set of \textsc{mo}s for a
 closed-shell ground state consists in finding the set of coefficients
@@ -288,7 +289,8 @@ form an initial set of \textsc{lcao} orbital energies that leads to an
 initial set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
 
 The iterative approach of solving Eq.~(\ref{eq:Fock_operator_problem})
-is one of trial and error, in which one continues to determine
+looks for the \textsc{mo}s $\varphi_{i}$ that minimize the variational
+energy~(\ref{eq:HF_energy}), in which one continues to determine
 improved sets of coefficients and orbitals energies, and compares the
 resulting set of improved $c_{si}$ with the existing ones. This
 process is continued until the \textsc{mo} coefficients converge
