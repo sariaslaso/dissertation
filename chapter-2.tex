@@ -43,11 +43,28 @@ molecular orbitals for AH$_{n}$-type molecules~\cite{Moccia_JCP_2164,
 % describe Roothaan's SCF method for a closed-shell ground state
 % (linear combination of atomic orbitals)
 
-
 As a starting point in the self-consistent field~(\textsc{scf})
-molecular orbital~(\textsc{mo}) calculations, the molecular
-Hartree-Fock wave function is written as the antisymmetrized product
-(\textsc{ap}) of $N$ one-electron wave functions~\cite{Roothaan_HF},
+molecular orbital~(\textsc{mo}) calculations, the $N-$electron
+Hartree-Fock wave function for a molecule is written as the
+antisymmetrized product (\textsc{ap}) of $N$ one-electron wave
+functions~\cite{Roothaan_HF}. A molecular spin-orbital~(\textsc{mso})
+which factors into a molecular orbital and a spin function that
+depends on the space and spin coordinates of the $\mu$th electron can
+be defined as
+%
+\begin{eqnarray}
+  \psi_{k}^{\mu} & = & \varphi_{i(k)}(x^{\mu}, y^{\mu}, z^{\mu})
+  \eta_{k}(s^{\mu}),
+  \label{eq:mso}
+\end{eqnarray}
+%
+where the superscript $\mu$ stands for the coordinates of the $\mu$th
+electron and the subscripts $k$ and $i$ label the different
+\textsc{mso}s and \textsc{mo}s, respectively,
+
+The total $N$-electron wave function is then built up as a the
+\textsc{ap} of $N$ molecular spin-orbitals of the
+form~(\ref{eq:mso})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
@@ -63,17 +80,14 @@ Hartree-Fock wave function is written as the antisymmetrized product
   \label{eq:AP}
 \end{eqnarray}
 %
-where each spin-orbital $\psi_{k}^{\mu} = \varphi_{i(k)}(x^{\mu},
-y^{\mu}, z^{\mu}) \eta_{k}(s^{\mu})$ factors into a molecular orbital
-and a spin function; the superscript $\mu$ indicates the spatial and
-spin coordinates of the $\mu$th electron, and the subscripts $k$ and
-$i$ label the different molecular spin-orbitals (\textsc{mso}'s) and
-\textsc{mo}'s, respectively. The superscripts $[1\ 2 \cdots N]$
-indicate that one must consider all the permutations of the sequence
-$1\ 2 \cdots N$ such that the Pauli exclusion principle is satisfied,
-that is, each \textsc{mo} $\varphi_{i}^{\mu}$ may occur not more than
-twice (corresponding to opposite spin projections) in the product wave
-function.
+where the superscripts $[1\ 2 \cdots N]$ indicate that one must
+consider all the permutations of the sequence $1\ 2 \cdots N$ such
+that the Pauli exclusion principle is satisfied, that is, each
+\textsc{mo} $\varphi_{i}^{\mu}$ may occur not more than twice
+(corresponding to opposite spin projections) in the product wave
+function~(\ref{eq:AP}). The right-hand side of Eq.~(\ref{eq:AP}) is a
+Slater determinant of \textsc{mso}s that is constructed by taking an
+antisymmetric linear combination of products of spin-orbitals.
 
 For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
 is made up of complete electron shells, the Hartree-Fock method looks
@@ -141,11 +155,17 @@ expressed as~\cite{Roothaan_HF,Levine_QChem}
 \begin{eqnarray}
   \begin{split}
     \{H_{i} + \sum\limits_{j} ( 2J_{ij} - K_{ij} ) \} \varphi_{i} & = &
-    \sum\limits_{j} \varphi_{j} \epsilon_{ji}
+    \sum\limits_{j} \varphi_{j} \epsilon_{ji},
   \end{split}
 \label{eq:deltaEzero}
 \end{eqnarray}
 %
+where $\epsilon_{ji}$ are the elements of a Hermitian matrix obtained
+in the variational procedure of minimizing the
+energy~(\ref{eq:HF_energy}).
+% LINK THE MATRIX ELEMENTS WITH THE ORBITAL ENERGIES OBTAINED BY
+% SOLVING AN EIGENVALUE PROBLEM
+
 which leads to obtain the orbital energies $\epsilon_{i}$ once an
 initial guess for the occupied \textsc{mo}s has been made. One can
 define the Hartree-Fock operator $\hat{F}$ by
