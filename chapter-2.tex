@@ -355,7 +355,7 @@ arrange.
 
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
-spin orbitals in which each molecular orbital is built as a linear
+spin-orbitals in which each molecular orbital is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
 form~(\ref{eq:f_STO}). The orbital exponents $\zeta_{i}$ corresponding
 to each basis set were obtained by means of an optimization process
@@ -369,7 +369,7 @@ terms of Slater-type orbitals as follows
 \begin{eqnarray}
   \begin{split}
     \varphi_{i}(\zeta,r,\theta,\phi) & = &
-    \sum\limits_{s=1}\limits^{b} c_{si} f_{s_{n,l,m}}(\zeta,r,\theta,\phi),
+    \sum\limits_{s=1}\limits^{b} c_{si} f_{s_{n,l,m}}(\zeta_{si},r,\theta,\phi),
   \end{split}
   \label{eq:STO_expansion}
 \end{eqnarray}
@@ -393,11 +393,11 @@ emerged from these calculations, in which the highest $n$ quantum
 number was set to $4$, that large values of $n$ are not crucial in
 order to obtain rather accurate results since the converged wave
 functions obtained for the \textsc{mo}s could not be dramatically
-improved by simply changing the nonlinear parameters, $\zeta_{i}$, of
-the \textsc{sto}s~(\ref{eq:f_STO}). Rather, a precise selection of the
-orbital exponents $\zeta_{i}$ of a moderate number of basis functions
-indicated to be crucial for improving the radial behaviour of the wave
-functions for a given symmetry.
+improved by simply changing the nonlinear parameters of the
+\textsc{sto}s, $\zeta_{i}$,~(\ref{eq:f_STO}). Rather, a precise
+selection of the orbital exponents $\zeta_{i}$ of a moderate number of
+basis functions indicated to be crucial for improving the radial
+behaviour of the wave functions for a given symmetry.
 
  
 % mention that the wave functions could be improved not only by
@@ -414,11 +414,13 @@ these quantities. The process of optimization of the nonlinear
 parameter $\zeta$ reveals a strong correlation with the geometrical
 equilibrium configuration of the molecule. The numerical results of
 the one-centre basis \textsc{scf} method were obtained by modifying
-the basis sets~(\ref{eq:lcao_roothaan}) by a variational method and
-determining the geometrical configuration that minimizes the total
-energy for each set of $\zeta$'s. The final result, indicated in Table
-I~\cite{Moccia_1964} for the H$_{2}$O molecule, being the lowest of
-these minima.
+the basis sets~(\ref{eq:lcao_roothaan}) implementing a variational
+method and determining the geometrical configuration that minimizes
+the total energy for each set of $\zeta$'s. The final results,
+indicated in Table I~\cite{Moccia_1964} for the H$_{2}$O molecule,
+correspond to the geometrical configuration that provides the lowest
+total energy among the different sets considered.
+
 
 % mention that results cannot be improved drastically by a simple
 % change of basis, and what these moccia results were compared to
@@ -443,11 +445,9 @@ that approach the converged Hartree-Fock energies rather
 well~\cite{natureH2O_1960, gaussianH2O_1965,
   Moccia_oneCenterHF_1967,Reeves_nature_1956}. Many of these
 calculations, however, used extensive sets of basis functions or more
-complicated forms of wave functions, which does not necessarily imply
-a satisfactory description of the charge distribution of the
-molecule. Gaussian basis sets have also been used in the construction
-of \textsc{mo} expansions with the aim of attacking the problem of
-multicentre
+complicated forms of wave functions. Gaussian basis sets have also
+been used in the construction of \textsc{mo} expansions with the aim
+of attacking the problem of multicentre
 integrals~\cite{gaussianH2O_1965,Neumann_gaussian_1968}. More advanced
 calculations of the H$_{2}$O wave functions in which an increasing
 number of multicentre $s$, $p$, and $d$ \textsc{sto}s was used as
