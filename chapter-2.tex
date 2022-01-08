@@ -308,14 +308,6 @@ description of the true Hartree-Fock wave function is a much more
 complicated mathematical problem.
 
 
-% DESCRIBE THE STEPS THAT FORM THE HF SCF METHOD
-
-% Initially, one guesses an antisymmetric linear
-% combination~(\ref{eq:AP}) followed by a \textsc{scf} iterative
-% process until no further improvement is obtained in the wave
-% functions.
-
-
 \section{Self-Consistent Field Slater Orbitals}
 \label{ch:scf_sto}
 
@@ -333,7 +325,7 @@ of Slater-type orbitals~(\textsc{sto}s) of the form
   \label{eq:f_STO}
 \end{eqnarray}
 %
-where $n,l,$ and $m$ are integers indicating a quantum state, while
+where $n,l,$ and $m$ are integers indicating a basis function, while
 the orbital exponent $\zeta$ satisfies $\zeta \in \Re > 0 $. The
 angular part $S_{l,m}(\theta,\phi)$ represents real spherical
 harmonics.
@@ -386,6 +378,7 @@ where the expansion coefficients $c_{si}$ are evaluated within an
 iterative process in order to minimize the electronic energy. The sets
 of $(n,l,m)$ values indicate the size and orbital symmetries of the
 basis set implemented for a given molecule.
+
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
 The \textsc{scf} calculations for the ground state of H$_{2}$O, in
@@ -400,9 +393,9 @@ emerged from these calculations, in which the highest $n$ quantum
 number was set to $4$, that large values of $n$ are not crucial in
 order to obtain rather accurate results since the converged wave
 functions obtained for the \textsc{mo}s could not be dramatically
-improved by simply changing the nonlinear parameters of the
-\textsc{sto}s~(\ref{eq:f_STO}). Rather, a precise selection of the
-orbital exponents $\zeta$'s of a moderate number of basis functions
+improved by simply changing the nonlinear parameters, $\zeta_{i}$, of
+the \textsc{sto}s~(\ref{eq:f_STO}). Rather, a precise selection of the
+orbital exponents $\zeta_{i}$ of a moderate number of basis functions
 indicated to be crucial for improving the radial behaviour of the wave
 functions for a given symmetry.
 
@@ -421,9 +414,9 @@ these quantities. The process of optimization of the nonlinear
 parameter $\zeta$ reveals a strong correlation with the geometrical
 equilibrium configuration of the molecule. The numerical results of
 the one-centre basis \textsc{scf} method were obtained by modifying
-the basis sets~(\ref{eq:lcao_roothaan}) by trial and determining the
-geometrical configuration that minimizes the total energy for each set
-of $\zeta$'s. The final result, indicated in Table
+the basis sets~(\ref{eq:lcao_roothaan}) by a variational method and
+determining the geometrical configuration that minimizes the total
+energy for each set of $\zeta$'s. The final result, indicated in Table
 I~\cite{Moccia_1964} for the H$_{2}$O molecule, being the lowest of
 these minima.
 
