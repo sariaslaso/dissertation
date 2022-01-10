@@ -6,15 +6,16 @@
 % outline of the chapter
 
 
-The stark resonance parameters, which characterize the shift of the
-molecular energy levels under an external dc field, are fundamental in
-the study of the strong dc field ionization of molecular orbitals
-(\textsc{mo}s). In the case of the water molecule, the multicentre
-nature of the combined Coulomb interactions and, consequently, the
-additional degrees of freedom, make the strong dc field ionization of
-H$_{2}$O an attractive and challenging problem from the point of view
-of a theoretical description as well as experimentally. Complex
-variable techniques, such as an exterior complex
+The Stark resonance parameters, which characterize the shift and decay
+width of the molecular energy levels under an external dc field, are
+fundamental in the study of the strong dc field ionization of
+molecular orbitals (\textsc{mo}s). In the case of the water molecule,
+the multicentre nature of the combined Coulomb interactions and,
+consequently, the additional degrees of freedom, make the strong dc
+field ionization of H$_{2}$O an attractive and challenging problem
+from the point of view of a theoretical description as well as
+experimentally.% refs [14-17 pra]
+Complex variable techniques, such as exterior complex
 scaling~\cite{Simon_1979,ecsScrinzi} and complex-absorbing
 potentials~\cite{RissMeyer_1993,Krause_2014}, have been implemented in
 order to address the problem of molecular static-field ionization and
@@ -23,17 +24,18 @@ compute the induced Stark resonances.
 The dc Stark problem for the H$_{2}$O valence orbitals is addressed in
 this chapter by means of two independent approaches within the
 framework on non-Hermitian quantum mechanics, a modified exterior
-complex scaling and a complex absorbing potential. The construction of
-a local effective potential, which reflects the indivual properties of
-the orbitals, is crucial in this analysis. Section~\ref{ch:nonH_qm}
-introduces some of the fundamental aspects of non-Hermitian quantum
-mechanics. In Sec.~\ref{ch:h2o_structure}, we formulate the problem
-with emphasis on the representation of the molecular orbitals. The
-exterior complex scaling formalism is introduced in
-Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial step in finding a
-numerical solution to a spherically symmetric problem, in the case of
-the $1b_{1}$ and $1b_{2}$ orbitals, and the problem of a non-central
-effective potential, in the case of the $3a_{1}$
+complex scaling and a complex absorbing potential~(\textsc{cap}). The
+construction of a local effective potential, which reflects the
+indivual properties of the orbitals, is crucial in this
+analysis. Section~\ref{ch:nonH_qm} introduces some of the fundamental
+aspects of non-Hermitian quantum mechanics. In
+Sec.~\ref{ch:h2o_structure}, we formulate the problem with emphasis on
+the representation of the molecular orbitals. The exterior complex
+scaling formalism is introduced in Secs.~\ref{ch:1b1_1b2}
+and~\ref{ch:3a1} as a crucial step in finding a numerical solution to
+a spherically symmetric problem, in the case of the $1b_{1}$ and
+$1b_{2}$ orbitals, and the problem of a non-central effective
+potential, in the case of the $3a_{1}$
 orbital. Section~\ref{ch:partial_wave} is concerned with the
 discussion of a partial-wave expansion method implemented for a model
 potential designed to simulate the structure of the H$_{2}$O
@@ -50,9 +52,9 @@ of~\cite{sarias_2016,sarias_2017}.
 % introduction of the basic principles of this formulation of QM
 % introduce complex-variable methods used later on: ECS and CAP
 
-The study of resonance phenomena, such as atomic and molecular
-strong-field ionization events, has been successfully approached
-within the framework of non-Hermitian quantum
+Resonance phenomena, such as atomic and molecular strong-field
+ionization events, have been successfully approached within the
+framework of non-Hermitian quantum
 mechanics~(\textsc{nhqm})~\cite{Moiseyev_NHQM}. This alternative
 formulation to the standard formalism of quantum mechanics allows for
 a time-independent interpretation of strong-field ionization processes
@@ -78,7 +80,7 @@ this work to focus on two of these methods to study the response of
 the H$_{2}$O highest-energy orbitals to an external dc-field, the
 concept of a complex absorbing potential~(\textsc{cap}) introduced as
 a perturbation to the molecular Hamiltonian and a modified exterior
-complex scaling~(\textsc{esc}).
+complex scaling~(\textsc{ecs}).
 
 % add artificial potential introduced to absorb outgoing wave
 
@@ -88,13 +90,14 @@ complex scaling~(\textsc{esc}).
 % approach to obtain the resonances (to remove the perturbation
 % introduced by the CAP)
 
-A \textsc{cap} is introduced as an imaginary potential which allows an
-analytical continuation of the Hamiltonian to the complex plane. This
-artificial perturbation of the system acts as an effective potential
-that suppresses the diverging tail of the resonance wave function in
-the vicinity of the edges of a numerical grid. As a result, the
-solutions of the modified non-Hermitian Hamiltonian behave as
-square-integrable eigenstates within the original boundary conditions.
+A \textsc{cap} is introduced as an imaginary potential which
+introduces an analytical continuation of the Hamiltonian to the
+complex plane. This artificial perturbation of the system acts as an
+effective absorber potential that suppresses the diverging tail of the
+resonance wave function in the vicinity of the edges of a numerical
+grid. As a result, the solutions of the modified non-Hermitian
+Hamiltonian behave as square-integrable eigenstates.
+%within the original boundary conditions.
 
 In general terms, the application of a \textsc{cap} begins with the
 addition of an artificial local potential of the form $-i \eta W(r)$
@@ -102,7 +105,8 @@ to the Hamiltonian of the system, where the parameter $\eta$ indicates
 the strength of the \textsc{cap}. The function $W(r)$, which
 determines the onset of the \textsc{cap}, has been most commonly
 defined as a quadratic potential centred at some radius
-$r_{\mathrm{c}}$. The \textsc{cap} approach requires calculating sets
+$r_{\mathrm{c}}$.%add refs?
+The \textsc{cap} approach requires calculating sets
 of complex eigenvalues along complex trajectories, $E(\eta)$,
 determined by the \textsc{cap} strength in order to find an optimal
 finite value of $\eta$ such that it makes the resonance stable, with
@@ -159,25 +163,26 @@ implies significant computational and methodological challenges.
 
 The present work is intended to study the valence molecular orbitals
 of H$_{2}$O, $1b_{1}$, $1b_{2}$ and $3a_{1}$. The wave functions for
-the $1b_{1}$ and $1b_{2}$ molecular orbitals, which correspond to the
-$2p_{x}$ and $2p_{y}$ oxygen orbitals, are dominated by a single
-angular mometum symmetry. The $3a_{1}$ \textsc{mo}, on the other hand,
-consists mainly of the oxygen $2s$ and $2p_{z}$ and the hydrogen $1s$
-atomic orbitals.
+the $1b_{1}$ and $1b_{2}$ molecular orbitals, which can be
+approximated as the $2p_{x}$ and $2p_{y}$ oxygen orbitals, are
+dominated by a single angular mometum symmetry. The $3a_{1}$
+\textsc{mo}, on the other hand, consists mainly of the oxygen $2s$ and
+$2p_{z}$ and the hydrogen $1s$ atomic orbitals.
 
 The general expression for the basis functions, introduced as a set of
-single-center
-wave functions~\cite{Moccia_1964,Moccia_JCP_2164,Moccia_JCP_2176}, is a
+single-center wave
+functions~\cite{Moccia_1964,Moccia_JCP_2164,Moccia_JCP_2176}, is a
 Slater-type orbital as defined in Eq.~(\ref{eq:f_STO}). The expansion
 coefficients and nonlinear coeficients $\{\zeta_{i}\}$, determined by
-the Roothaan's self-consistent-field
+Roothaan's self-consistent-field
 method~\cite{Moccia_1964,Roothaan_1951} introduced in
 Sec.~\ref{ch:scf_sto}, are used to construct a reduced form of the
 radial functions that describe all the molecular orbitals. More
 specifically, we are interested in using a reduced \textsc{sto}
-expansion to construct an effective pontential that describes the
-response of the H$_{2}$O valence orbitals when applying an electric dc
-field along the symmetry axis (i.e., the $z-$axis).
+expansion to construct an effective potential that describes an
+H$_{2}$O bound state as a first step in studying the response of the
+H$_{2}$O valence orbitals when applying an electric dc field along the
+symmetry axis (i.e., the $z-$axis).
 
 Based on their symmetry properties, independent descriptions of the
 valence molecular orbitals of H$_{2}$O are constructed. The dominant
