@@ -188,15 +188,17 @@ Based on their symmetry properties, independent descriptions of the
 valence molecular orbitals of H$_{2}$O are constructed. The dominant
 components of the $1b_{1}$ and $1b_{2}$ orbitals, namely the $np_{x}$
 and $np_{y}$ parts, are used to derive spherically symmetric effective
-orbital-dependent potentials~\cite{sarias_2016}. While a similar
-procedure is implemented for the $3a_{1}$ orbital, i.e., retaining the
-$np_{z}$ parts of the \textsc{mo}, the strong asymmetry introduced by
-the two protons located in the $y-z$ plane leading to significant
-admixtures of $s-$type Slater orbitals in the Moccia
-\textsc{sto}s~\cite{Moccia_1964} would have been ignored with a
-spherically symmetric potential. Hence, for the dc ionization problem
-of the $3a_{1}$ \textsc{mo}, \textsc{sto}s of type $2s$ and $2p_{z}$
-are incorporated in the analysis.
+orbital-dependent potentials~\cite{sarias_2016}. A similar procedure
+is implemented for the $3a_{1}$ orbital, in which the $np_{z}$ parts
+of the \textsc{mo} are retained. Additionally, the strong asymmetry
+introduced by the two protons located in the $y-z$ plane is
+incorporated in the analysis by including \textsc{sto}s of type $2s$
+and $2p_{z}$ in the orbital expansion for the $3a_{1}$
+\textsc{mo}. This extended \textsc{sto} expansion leads to a
+non-spherical effective potential that contains the significant
+admixtures of $s-$type Slater orbitals in the Moccia \textsc{sto}
+expansion~\cite{Moccia_1964}.
+ 
 
 
 % representation of the orbitals, fig.1 in the papers (also fig.2 of
@@ -236,9 +238,9 @@ well.
   \caption{Schematic display of the $1b_{1}\approx 2p_{x}$ (shown in
     yellow along the $x$ axis) and $1b_{2}\approx 2p_{y}$ (shown in
     blue along the $y$ axis) molecular orbitals. Also indicated (in
-    green on the $y-z$ plane) is the orientation of the protons. The
-    $z$ axis (in red) is the direction of the external electric field
-    of strength $F_{0}$.}
+    green on the $y-z$ plane) is the location of the protons. The $z$
+    axis (in red) is the direction of the external electric field of
+    strength $F_{0}$.}
   \label{fig:h2o_1b1_1b2}
 \end{figure}
 
@@ -256,7 +258,7 @@ wave function,
 %
 which approximates the molecular orbital by an eigenstate of a
 spherically symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$
-represent the radial part of the Slater orbitals~(\ref{eq:sto}) with
+represent the radial part of the Slater orbitals~(\ref{eq:f_STO}) with
 $|m|=1$ for the magnetic quantum number, in which the \textsc{sto}
 expansion is limited to $2p_{x}$ and $2p_{y}$ orbitals,
 respectively. The set of expansion coefficients and non-linear
@@ -517,10 +519,10 @@ coordinate transformation~(\ref{eq:ecs_r}).
  
 The \textsc{pde} system~(\ref{eq:pde_system}) is solved numerically on
 a rectangular mesh defined by the $(r, \theta)$ coordinates, which
-take values in the domains $[\epsilon, r_{\mathrm{max}}]$ and
-$[\eta,\pi - \eta]$, respectively. The parameters $\epsilon$ and
-$\eta$ that define the coordinate ranges were chosen to be of the
-order of $10^{-3}\ \mathrm{a.u.}$, and the $r$ coordinate extends to
+take values in the domains $\epsilon < r < r_{\mathrm{max}}$ and $\eta
+< \theta < \pi - \eta$, respectively. The parameters $\epsilon$ and
+$\eta$ that limit the coordinate ranges were chosen to be of the order
+of $10^{-3}\ \mathrm{a.u.}$, and the $r$ coordinate extends to
 $r_{\mathrm{max}} = 20\ \mathrm{a.u.}$ In order to find a correct set
 of $\psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
 boundary conditions that ensure the wave functions vanish at the
@@ -556,7 +558,7 @@ The proposed method to address this problem is to define a reduced
 single-centre Moccia wave function,
 %
 \begin{eqnarray}
-\psi_{3a_{1}}(r,\theta) = \sum_{n,l} c_{nl0} \varphi_{nl0}(r,\theta).
+\psi_{3a_{1}}(r,\theta) = \sum_{n,l} c_{nl0} \varphi_{nl}(r,\theta).
 \label{eq:3a1Moccia_expansion}
 \end{eqnarray}
 %
@@ -653,8 +655,8 @@ azimuthal dependence that follows from the $m\neq 0$ parts.
   \includegraphics[width=0.6\textwidth]{figures/ch_H2O/3a1/orbitals3a1.eps}
   \caption{Projections of the probability densities for the $3a_{1}$
     orbital on the $x-y$ plane. The simplified \textsc{sto} expansion
-    is indicated as continuous blue lines, and the full Moccia
-    expansion is indicated as black dashed lines. The protons are also
+    is shown by continuous blue lines, and the full Moccia expansion
+    is represented by black dashed lines. The proton locations are
     indicated as red circles. The chosen contour values are $0.5, 0.3,
     0.2, 0.1$ starting from the innermost contour.}
   \label{fig:3a1_xycontours}
@@ -698,15 +700,16 @@ work.
 \label{ch:3a1_Latter}
 
 The non-central effective potential, $V_{\mathrm{eff}}(r,\theta)$,
-leads no longer to an orbital of $(l,m)$ symmetry, i.e.,
-$2p_{z}$. This reflects the geometry of the problem as a consequence
-of the location of the protons. The use of this more general potential
-implies that the Latter criterion~\cite{LatterCor_1955}, which ensures
-the proper asymptotic behaviour of the potential, is not as
-straightforward to implement as in the case of the spherical potential
-discussed in Sec.~\ref{ch:1b1_1b2}, where the correction applies
-beyond a determined $r$ value~\cite{sarias_2016}. In this case, the
-correction must be implemented in the $r-\theta$ plane, by defining a
+leads no longer to an orbital of $(l,m)$ symmetry for the case of the
+$3a_{1}$ orbital. This reflects the geometry of the problem as a
+consequence of the location of the protons. The use of this more
+general potential implies that the Latter
+criterion~\cite{LatterCor_1955}, which ensures the proper asymptotic
+behaviour of the potential, is not as straightforward to implement as
+in the case of the spherical potential discussed in
+Sec.~\ref{ch:1b1_1b2}, where the correction applies beyond a
+determined $r$ value~\cite{sarias_2016}. In this case, the correction
+must be implemented in the $r-\theta$ plane, by defining a
 $\theta-$dependent boundary beyond which the potential obtained
 from~(\ref{eq:sch_eq3d}) rises above $-1/r$ in the asymptotic
 region~\cite{sarias_2017}.
@@ -735,7 +738,7 @@ principle by implementing a self-consistent
 calculation~\cite{Moccia_JCP_2164}, there may be regions in the
 $(r,\theta)$ domain where $\psi_{3a_{1}}(r,\theta)$ vanishes, whereas
 its second derivative remains finite; this produces a nodal line in
-the electronic potential. Thus finding a potential for which our
+the electronic potential. Thus, finding a potential for which our
 approximate wave function satisfies a Schr\"{o}dinger equations
 represents an intricate problem.
 
