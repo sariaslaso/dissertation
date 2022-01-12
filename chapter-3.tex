@@ -846,9 +846,10 @@ r\exp[i\chi(r)]$. The phase function $\chi(r)$ is chosen to be very
 small for $r$ values smaller than the Latter radius $\bar{r}$. It then
 turns on from nearly zero to reach an asymptotic value
 $\chi_{\mathrm{s}}$ at $r-$values just outside where the Latter
-correction is applied, i.e., $r_{\mathrm{s}} > r_{\mathrm{match}}$. In
-such a way as to provide exterior complex scaling without a hard
-radius at which a derivative discontinuity would have to be
+correction is applied, i.e., $r_{\mathrm{s}} >
+r_{\mathrm{match}}$. The purpose of using the phase function $\chi(r)$
+is to implement \textsc{ecs} in a gradual fashion and avoid having an
+$r-$value at which a derivative discontinuity would have to be
 applied~\cite{ecsScrinzi}.
 
 A non-Hermitian Hamiltonian results from considering the additional
@@ -867,9 +868,9 @@ satisfies~\cite{sarias_2017}
 %
 \begin{eqnarray}
   \begin{split}
-    \left[ -\frac{1}{2}\nabla^{2} + V_{\mathrm{eff}}(r,\theta)
-      \pm F_{0}z \right] \widetilde{\psi} = (E_{R} - i\Gamma/2)
-    \widetilde{\psi},
+    \left[ -\frac{1}{2}\nabla^{2} + V_{\mathrm{eff}}(r, \theta)
+      \pm F_{0}z \right] \widetilde{\psi}(r,\theta) = (E_{R} - i\Gamma/2)
+    \widetilde{\psi}(r, \theta),
   \end{split}
   \label{eq:sch_tunneling_params}
 \end{eqnarray}
@@ -878,23 +879,23 @@ where $E_{R}$ is the resonance position and $\Gamma$ the
 width. Compared to Eq.~(\ref{eq:sch_eq3d}), the Hamiltonian in
 Eq.~(\ref{eq:sch_tunneling_params}) contains the interaction with the
 external field and complex scaling is responsible for the replacement
-$E_{3a_{1}} \to E_{R} - i\Gamma/2$; while $\widetilde{\psi}$ remains
-square integrable.
+$E_{3a_{1}} \to E_{R} - i\Gamma/2$; while $\widetilde{\psi}(r,
+\theta)$ remains square integrable.
 
 The domains of $r$ and $\theta$ values are restricted to the intervals
 $r\in[\epsilon, r_{\mathrm{max}}]$ and $\theta\in[\eta,\pi-\eta]$,
 with typical values $\epsilon = 10^{-2}\ \mathrm{a.u.}$, $\eta =
 10^{-2}$, $r_{\mathrm{max}} = 28\ \mathrm{a.u.}$ In the limit of low
-field strengths, i.e., $F_{0} = 0.05, 0.06$, the value of
-$r_{\mathrm{max}}$ was increased to $40\ \mathrm{a.u.}$ in order to
-ensure the outer turning points lie inside the grid, as the tunneling
-barrier extends to larger $r$.
+field strengths, i.e., $F_{0} = 0.05\ \mathrm{a.u.},
+0.06\ \mathrm{a.u.}$, the value of $r_{\mathrm{max}}$ was increased to
+$40\ \mathrm{a.u.}$ in order to ensure the outer turning points lie
+inside the grid, as the tunneling barrier extends to larger $r$.
 
 The problem of finding a solution of the Schr\"{o}dinger equation for
 the $3a_{1}$ \textsc{mo} with contributions of $2s$ and $2p-$type
 states requires a set of boundary conditions that describes the
-properties of the orbital on the grid. In contrast with the $m = \pm
-1$ solutions obtained for the $1b_{1}$ and $1b_{2}$ \textsc{mo}s of
+properties of the orbital on the grid. In contrast with the numerical
+solutions obtained for the $1b_{1}$ and $1b_{2}$ \textsc{mo}s of
 H$_{2}$O~\cite{sarias_2016}, Neumann boundary conditions are
 implemented for the angular coordinate $\theta$ in order to obtain an
 eigenstate and orbital energy consistent with the variational
@@ -931,9 +932,8 @@ proton-water collisions~\cite{illescas_2015}. The field-free problem
 is addressed as well in a convergence study of the orbital energies
 for the three H$_{2}$O valence orbitals, namely $1b_{1}, 1b_{2}$ and
 $3a_{1}$, in terms of the partial wave expansion limits. The results
-are contrasted with the self-consistent field calculation that
-includes the model potential and Gaussian-type
-basis~\cite{illescas_2015}.
+are contrasted with a previous calculation that includes the model
+potential and Gaussian-type basis~\cite{illescas_2015}.
 
 The model potential is formulated as a superposition of three
 spherical potentials, that represent the oxygen atom, and the two
@@ -960,7 +960,7 @@ parameters' were chosen as $N_{\mathrm{O}} = 7.185$ and
 $N_{\mathrm{H}} = (9 - N_{\mathrm{O}})/2 = 0.9075$ for three highest
 occupied \textsc{mo}s of H$_{2}$O. 
 
-The following anzats in spherical polar coordinates is introduced for
+The following anzatz in spherical polar coordinates is introduced for
 the wave function
 %
 \begin{eqnarray}
@@ -1006,14 +1006,14 @@ H$_{2}$O geometry using the addition theorem for spherical harmonics
   \label{eq:add_sphericalYlm}
 \end{eqnarray}
 %
-where $\cos\theta = \hat{r}'\cdot\hat{r}''$. This leads to obtain one
-expansion for each hydrogen atom expressed in $(r,\theta,\phi)$
-coordinates. The orientations defined by $\theta'$ correspond to one
-half of the opening angle, $52.2\ \mathrm{degrees}$, for each hydrogen
-atom, respectively, and the azimuthal angles are $\phi_{1}'=\pi/2$ and
-$\phi_{2}'=3\pi/2$ in accordance with the geometry described
-in~\cite{Moccia_1964}. These transformations result in the truncated
-potential for each hydrogen atom
+where $\cos\theta = \hat{r}'\cdot\hat{r}''$. These transformations
+lead to obtain one expansion for each hydrogen atom expressed in
+$(r,\theta,\phi)$ coordinates. The orientations defined by $\theta'$
+correspond to one half of the opening angle, $52.2\ \mathrm{degrees}$,
+for each hydrogen atom, respectively, and the azimuthal angles are
+$\phi_{1}'=\pi/2$ and $\phi_{2}'=3\pi/2$ in accordance with the
+geometry described in~\cite{Moccia_1964}. As a result, a truncated
+potential of the form
 %
 \begin{eqnarray}
   \begin{split}
@@ -1025,6 +1025,7 @@ potential for each hydrogen atom
   \label{eq:expanded_H_potential}
 \end{eqnarray}
 %
+is obtained for each hydrogen atom. 
 
 % describe how to obtain the structure of the radial equations for the
 % field-free problem and how to solve the numerical problem to obtain
@@ -1046,11 +1047,11 @@ of coupled radial equations of the form
 %
 in which the matrix elements $R_{l,m}^{l',m'}(r)$ contain the
 potentials of the hydrogen atoms as partial-wave expansions, and are
-evaluated by means of Gaunt integrals. The quantum numbers $l,m$
-satisfy $l = 0, \dots, l_{\mathrm{max}}$, and $-l \leq m \leq l$. The
-reference frame used in this approach places the oxygen atom at the
-origin of coordinates, hence the oxygen potential
-in~(\ref{eq:radial_u}), $V_{\mathrm{O}}(r)$, represents the
+evaluated by means of Gaunt integrals~\cite{marko_partialwave}. The
+quantum numbers $l,m$ satisfy $l = 0, \dots, l_{\mathrm{max}}$, and
+$-l \leq m \leq l$. The reference frame used in this approach places
+the oxygen atom at the origin of coordinates, hence the oxygen
+potential in~(\ref{eq:radial_u}), $V_{\mathrm{O}}(r)$, represents the
 spherically symmetric potential introduced in the model
 potential~(\ref{eq:model_potential}).
 
@@ -1067,15 +1068,15 @@ equations~(\ref{eq:radial_u}).
 The $n-$channel problem to obtain the energy eigenvalues is addressed
 in the following manner: given a set of different initial conditions
 and a trial energy value, the system of coupled
-equations~(\ref{eq:radial_u}) can generate $n-$independent solutions
+equations~(\ref{eq:radial_u}) can generate $n$ independent solutions
 that are propagated to a given endpoint at large $r$ where one can
 build a determinant of the solutions that is ultimately minimized in
 an iterative process to find the optimal combination of solutions that
 leads to a zero, or small valued, determinant. Ultimately, one wants
 to find the energy eigenvalue associated to the overall solution that
 is bound at some outer radius, i.e., that evaluates to zero or a very
-small value at large $r$. As the number of $l_{\mathrm{max}}$ grows,
-the number of $(l,m)$ channels increases noticeably and the problem of
+small value at large $r$. As the number $l_{\mathrm{max}}$ grows, the
+number of $(l,m)$ channels increases noticeably and the problem of
 finding a numerical solution to~(\ref{eq:radial_u}) becomes more
 sensitive to propagated errors, it is necessary in theses cases to
 increase the working precision of the calculations.
@@ -1118,12 +1119,13 @@ practice to turn the \textsc{cap} on at distances where the
 partial-wave potential~(\ref{eq:expanded_H_potential}) has reached its
 simple asymptotic form. This condition is satisfied for $r > 12$ with
 great accuracy. The parameter $\eta_{c}$ indicates the strength of the
-\textsc{cap}. Ideally, the parameter $\eta_{c}$ should be small number
-in order to have a small artifact introduced to the system of
-equations, however, it is important to keep in mind that when
+\textsc{cap}. Ideally, the parameter $\eta_{c}$ should be a small
+number in order to have a small artifact introduced to the system of
+equations. However, it is important to keep in mind that when
 $\eta_{c}\to 0$ numerical errors may increase. Ultimately, the
 artificial term introduced by the \textsc{cap} needs to be removed
-from the results in order to obtain the resonance parameters.
+from the results in order to obtain the resonance
+parameters~\cite{RissMeyer_1993}.
 
 The complex eigenvalues that result from applying the
 \textsc{cap}~(\ref{eq:VCAP}) to the system of radial
@@ -1136,11 +1138,11 @@ as a function of $\eta_{c}$, and then the optimal $\eta$ value is
 calculated according to the Riss-Meyer correction
 scheme~\cite{RissMeyer_1993}, which is implemented up to second order.
 
-According to the Riss-Meyer approximation~\cite{RissMeyer_1993}, the
-effects of the \textsc{cap} can be removed by means of an iterative
-correction scheme based on perturbation theory, in which the $n$-th
-order corrected energy can be expressed as a truncated Taylor
-expansion of the form
+According to the Riss-Meyer scheme~\cite{RissMeyer_1993}, the effects
+of the \textsc{cap} can be removed by means of an iterative correction
+scheme based on perturbation theory, in which the $n$-th order
+corrected energy can be expressed as a truncated Taylor expansion of
+the form
 %
 \begin{eqnarray}
   \begin{split}
@@ -1183,7 +1185,9 @@ the \textsc{cap} parameter in steps of $\Delta\eta = 10^{-3}$. The
 results were obtained using \emph{Mathematica}'s
 \textsc{nde}igensystem finite-element solver. The trajectory is smooth
 for larger values of $\eta$, but it shows remarkable variation at
-small $\eta$ (on the left in Fig.~\ref{fig:3a1_RMtrajectory}).
+small $\eta$ (on the left in Fig.~\ref{fig:3a1_RMtrajectory}), which
+illustrates the above mentioned difficulty in solving the
+Schr\"{o}dinger equation when $\eta_{c}\to 0$.
 
 The stabilization point $(n = 0)$ is shown as a red cross, and the
 complex energy values at the accumulation points for $n = 1, 2$ of the
@@ -1368,8 +1372,8 @@ graphs display threshold behavior at the weaker field strengths. As
 expected, we find a lower threshold (critical field strength) for the
 more weakly bound $1b_{1}$ orbital. Interestingly, however, at a field
 strength of about $F_{0} = 0.3\ \mathrm{a.u.}$ the values for the
-widths cross; that is, the deeper bound $1b_{2}$ orbital displays a
-larger ionization rate as the field strength is increased further.
+widths cross; that is, the more deeply bound $1b_{2}$ orbital displays
+a larger ionization rate as the field strength is increased further.
 
 Also shown in Figure~\ref{fig:1b11b2_width} are the widths for the
 H($1s$) orbital from Refs.~\cite{Telnov_1989,Kolosov_1987}. They can
@@ -1380,11 +1384,11 @@ $-1/r$ tail, it is not surprising that the widths for
 H$_{2}$O($1b_{1}$) and H($1s$) share some similarity in shape. In the
 tunneling region H($1s$) has an ionization rate that is larger by
 about an order of magnitude. In the over-barrier regime, however, the
-ionization rates come to within a factor of 3. Reasons for why the
-$1b_1$ water molecular orbital is harder to ionize than H($1s$) have
-to do with the different shape of the orbital density ($m=1$ \emph{vs}
-the spherical H($1s$) density), and the substantially more attractive
-potential at shorter distances.
+ionization rates approach each other to within a factor of 3. Reasons
+for why the $1b_1$ water molecular orbital is harder to ionize than
+H($1s$) have to do with the different shape of the orbital density
+($m=1$ \emph{vs} the spherical H($1s$) density), and the substantially
+more attractive potential at shorter distances.
 
 An examination of contour plots of the densities $\Psi^{*}\Psi$, as
 well as of the potential energies $V_{\mathrm{eff}} - F_{0}z$ for
@@ -1510,16 +1514,16 @@ symmetric effective potential, $V_{\mathrm{eff}}(r)$, for the $1b_{1}$
 and $1b_{2}$ \textsc{mo}s are also shown as dashed and dot-dashed
 lines for comparison purposes.
 
-In analogy to the $m=\pm 1$ orbitals, the ionization rates for the
-$3a_{1}$ \textsc{mo}, associated with the lifetime of the decaying
-state via $\Gamma\tau=1$, exhibit a threshold behaviour at the weaker
-field strengths. Interestingly, for the two directions of the applied
-field, we find a lower critical field strength for the $3a_{1}$
-orbital in comparison to what the more weakly bound orbital, $1b_{1}$,
-indicates.  In the tunneling region, the $3a_{1}$ orbital for fields
-applied along the $-\hat{z}$ direction (blue squares) shows an
-ionization rate that is about one order of magnitude larger than the
-ionization rate for fields applied in the opposite direction (red
+In analogy to the $1b_{1}$ and $1b_{2}$ orbitals, the ionization rates
+for the $3a_{1}$ \textsc{mo}, associated with the lifetime of the
+decaying state via $\Gamma\tau=1$, exhibit a threshold behaviour at
+the weaker field strengths. Interestingly, for the two directions of
+the applied field, we find a lower critical field strength for the
+$3a_{1}$ orbital in comparison to what the more weakly bound orbital,
+$1b_{1}$, indicates.  In the tunneling region, the $3a_{1}$ orbital
+for fields applied along the $-\hat{z}$ direction (blue squares) shows
+an ionization rate that is about one order of magnitude larger than
+the ionization rate for fields applied in the opposite direction (red
 triangles), this gap becomes narrower as the field strength increases
 toward the over-barrier regime.
 
@@ -1610,8 +1614,9 @@ along each O-H bond.
     and red, respectively. The eigenvalues obtained for the model
     potential as quoted in Ref.~\cite{illescas_2015} are shown as
     solid lines. Also as a reference, the eigenvalues for an
-    exchange-only density functional theory approximation from
-    Ref.~\cite{opm_2007} are shown as dash-dotted lines.}
+    exchange-only density functional theory approximation
+    (\textsc{opm}) from Ref.~\cite{opm_2007} are shown as dash-dotted
+    lines.}
   \label{fig:energies_fieldfree}
 \end{figure}
 
@@ -1628,9 +1633,8 @@ pushed towards the protons, which lowers their eigenenergy
 considerably (binding is represented by the magnitude of the real
 part). When the electric field is pointing away from the oxygen,
 $F_{z} > 0$, the electrons are attracted towards the nucleus, which
-initially reflects as a slight decrease in binding, but eventually the
-attraction to the oxygen reinforces their binding as the field
-strength increases.
+initially decrease in binding, but eventually the attraction to the
+oxygen reinforces their binding as the field strength increases.
 
 The resonance width shown in the right panel indicates that there is a
 strong dependence on the field strength at weak fields where the
