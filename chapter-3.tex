@@ -14,29 +14,39 @@ the multicentre nature of the combined Coulomb interactions and,
 consequently, the additional degrees of freedom, make the strong dc
 field ionization of H$_{2}$O an attractive and challenging problem
 from the point of view of a theoretical description as well as
-experimentally.% refs [14-17 pra]
-Complex variable techniques, such as exterior complex
-scaling~\cite{Simon_1979,ecsScrinzi} and complex-absorbing
-potentials~\cite{RissMeyer_1993,Krause_2014}, have been implemented in
-order to address the problem of molecular static-field ionization and
-compute the induced Stark resonances.
+experimentally. % refs [14-17 pra]
+Complex variable techniques, such as exterior complex scaling
+(\textsc{ecs})~\cite{Simon_1979,ecsScrinzi} and complex-absorbing
+potentials (\textsc{cap})~\cite{RissMeyer_1993,Krause_2014}, have been
+implemented in order to address the problem of molecular static-field
+ionization and compute the induced Stark resonances.
 
 The dc Stark problem for the H$_{2}$O valence orbitals is addressed in
-this chapter by means of two independent approaches within the
-framework on non-Hermitian quantum mechanics, a modified exterior
-complex scaling and a complex absorbing potential~(\textsc{cap}). The
-construction of a local effective potential, which reflects the
-indivual properties of the orbitals, is crucial in this
-analysis. Section~\ref{ch:nonH_qm} introduces some of the fundamental
-aspects of non-Hermitian quantum mechanics. In
-Sec.~\ref{ch:h2o_structure}, we formulate the problem with emphasis on
-the representation of the molecular orbitals. The exterior complex
-scaling formalism is introduced in Secs.~\ref{ch:1b1_1b2}
-and~\ref{ch:3a1} as a crucial step in finding a numerical solution to
-a spherically symmetric problem, in the case of the $1b_{1}$ and
-$1b_{2}$ orbitals, and the problem of a non-central effective
-potential, in the case of the $3a_{1}$
-orbital. Section~\ref{ch:partial_wave} is concerned with the
+this chapter within the framework of non-Hermitian quantum
+mechanics~\cite{Moiseyev_NHQM}. Two independent complex variable
+techniques are implemented in order to modify the divergent outgoing
+wave functions into the physical domain of square integrable wave
+functions. A modified \textsc{ecs}, in which the Hamiltonian of the
+system is gradually rotated into the complex plane to obtain the
+resonance parameters induced by an external dc field, is the first of
+these approaches. The construction of a local effective potential,
+which reflects the individual properties of the orbitals, is crucial
+in this study. An alternative analysis is based on a quadratic
+\textsc{cap} which requires successive calculations of complex
+eigenvalues along a trajectory that is determined by the strength
+parameter of the \textsc{cap}. The \textsc{cap} method is then
+combined with a correction scheme in order to eliminate the artifact
+introduced in the Hamiltonian by the complex absorber.
+
+Section~\ref{ch:nonH_qm} introduces some of the fundamental aspects of
+non-Hermitian quantum mechanics. In Sec.~\ref{ch:h2o_structure}, we
+formulate the problem with emphasis on the representation of the
+molecular orbitals. The exterior complex scaling formalism is
+introduced in Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial
+step in finding a numerical solution to a spherically symmetric
+problem, in the case of the $1b_{1}$ and $1b_{2}$ orbitals, and the
+problem of a non-central effective potential, in the case of the
+$3a_{1}$ orbital. Section~\ref{ch:partial_wave} is concerned with the
 discussion of a partial-wave expansion method implemented for a model
 potential designed to simulate the structure of the H$_{2}$O
 molecule. The problem of dc-ionization of the H$_{2}$O valence
@@ -1593,8 +1603,7 @@ energies of water can be deduced from photoelectron spectroscopy, but
 they are complicated by vibrational level structures and are
 significantly broadened; quoted values for the three valence orbitals
 correspond to ionization energies of $0.68, 0.54, 0.46$ for $1b_{2},
-3a_{1}, 1b_{1}$,
-respectively~\cite{2020Photoelectron}.
+3a_{1}, 1b_{1}$, respectively~\cite{2020Photoelectron}.
 
 For the $3a_{1}$ orbital, which contributes to the bonding of the
 water molecule the convergence with $l_{\mathrm{max}}$ is not as
