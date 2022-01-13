@@ -41,12 +41,12 @@ introduced in the Hamiltonian by the complex absorber.
 Section~\ref{ch:nonH_qm} introduces some of the fundamental aspects of
 non-Hermitian quantum mechanics. In Sec.~\ref{ch:h2o_structure}, we
 formulate the problem with emphasis on the representation of the
-molecular orbitals. The exterior complex scaling formalism is
-introduced in Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial
-step in finding a numerical solution to a spherically symmetric
-problem, in the case of the $1b_{1}$ and $1b_{2}$ orbitals, and the
-problem of a non-central effective potential, in the case of the
-$3a_{1}$ orbital. Section~\ref{ch:partial_wave} is concerned with the
+molecular orbitals. The \textsc{ecs} formalism is introduced in
+Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial step in finding a
+numerical solution to a spherically symmetric problem, in the case of
+the $1b_{1}$ and $1b_{2}$ orbitals, and the problem of a non-central
+effective potential, in the case of the $3a_{1}$
+orbital. Section~\ref{ch:partial_wave} is concerned with the
 discussion of a partial-wave expansion method implemented for a model
 potential designed to simulate the structure of the H$_{2}$O
 molecule. The problem of dc-ionization of the H$_{2}$O valence
@@ -88,9 +88,8 @@ of \textsc{nhqm} that implement a complex-scaled Hamiltonian in
 studies of atomic and molecular Stark resonances. It is the scope of
 this work to focus on two of these methods to study the response of
 the H$_{2}$O highest-energy orbitals to an external dc-field, the
-concept of a complex absorbing potential~(\textsc{cap}) introduced as
-a perturbation to the molecular Hamiltonian and a modified exterior
-complex scaling~(\textsc{ecs}).
+concept of a \textsc{cap} introduced as a perturbation to the
+molecular Hamiltonian and a modified \textsc{ecs}.
 
 % add artificial potential introduced to absorb outgoing wave
 
@@ -134,13 +133,13 @@ a low-frequency ac field~\cite{Tsog_H2mol_ac_2013}.
 
 An alternative method to divert the divergent resonance wave functions
 into the physical domain of square integrable solutions is the
-exterior complex scaling~\cite{Simon_1979}, in which one or more
-coordinates are rotated into the complex plane at a boundary of the
-problem. The application of the complex scaling in an external region,
-which keeps the coordinates unscaled in some range of the potential,
-avoids the numerical difficulties that arise when the potential is not
-dilation analytic. This approach, however, imposes explicit
-discontinuity conditions on the wave function and its
+\textsc{ecs}~\cite{Simon_1979}, in which one or more coordinates are
+rotated into the complex plane at a boundary of the problem. The
+application of the complex scaling in an external region, which keeps
+the coordinates unscaled in some range of the potential, avoids the
+numerical difficulties that arise when the potential has
+singularities. This approach, however, imposes explicit discontinuity
+conditions on the wave function and its
 derivatives~\cite{ScrinziJChemPhys_ECS}. The method of \textsc{ecs}
 has proven to be useful in acting as a perfect absorber of the
 outgoing flux when solving the \textsc{tdse} with strong laser
@@ -148,6 +147,8 @@ fields~\cite{ecsScrinzi}. The implementation of a smooth \textsc{ecs}
 to the radial coordinates of an orbital-dependent Hamiltonian that
 represents the H$_{2}$O valence orbitals is one of the motivations of
 the current chapter.
+
+% MENTION THAT ECS AND CAP ARE EQUIVALENT IN SOME WAY 
 
 
 \section{Molecular orbital representation of H$_{2}$O}
@@ -159,15 +160,11 @@ calculation of the H$_{2}$O molecular states using a single-center
 Slater orbital
 basis~\cite{Moccia_1964,Moccia_JCP_2164,Moccia_JCP_2176}, applied to
 collision studies~\cite{Montanari_2013} and compared to experimental
-electron spectroscopy~\cite{Hafied_2007}. Other elaborate descriptions
-of the molecular structure of H$_{2}$O formulated within the
-independent-electron approximation by the self-consistent field
-(\textsc{scf}), or variational Hartree-Fock method with multicentre
-Slater orbitals, in which the pioneering work of Ellison and
-Shull~\cite{EllisonShullh2o_1955} is revised, are reference for
-describing the electronic structure of diatomic molecules by means of
-an expansion of Slater
-orbitals~\cite{Pitzer_1968,Pitzer_1970}. However, the direct
+electron spectroscopy~\cite{Hafied_2007}. Accurate descriptions of the
+molecular structure of H$_{2}$O, and other diatomic molecules, have
+been obtained by means of the variational Hartree-Fock method using
+multicentre Slater orbitals as basis
+functions~\cite{Pitzer_1968,Pitzer_1970}. However, the direct
 application of these multicentre orbitals for strong-field studies
 implies significant computational and methodological challenges.
 
@@ -192,7 +189,12 @@ specifically, we are interested in using a reduced \textsc{sto}
 expansion to construct an effective potential that describes an
 H$_{2}$O bound state as a first step in studying the response of the
 H$_{2}$O valence orbitals when applying an electric dc field along the
-symmetry axis (i.e., the $z-$axis).
+symmetry axis (i.e., the $z-$axis). For the study shown in this
+chapter, the external dc field is oriented in the molecular
+plane. Both geometries are considered, the field pointing away from
+the oxygen atom along the centre line passing in between the two
+hydrogen atoms, $\hat{F}_{0} > 0$, and the reverse orientation,
+$\hat{F}_{0} < 0$.
 
 Based on their symmetry properties, independent descriptions of the
 valence molecular orbitals of H$_{2}$O are constructed. The dominant
@@ -220,9 +222,12 @@ expansion~\cite{Moccia_1964}.
 The Schr\"{o}dinger equation for the bound-state problem of a
 molecular orbital within an effective potential $V_{\mathrm{eff}}(r)$
 is expressed in shperical polar coordinates as
+% see eq. 6.8 Levine
 %
 \begin{eqnarray}
-  [ -\frac{1}{2} \frac{d^2}{dr^2} + \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r)] \psi
+  [ -\frac{1}{2} (\frac{\partial^{2}}{\partial r^{2}} +
+    \frac{2}{r} \frac{\partial}{\partial r}) +
+    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r)] \psi
   & = & E\psi,
 \label{eq:sch_noCS}
 \end{eqnarray}
@@ -253,7 +258,6 @@ well.
     strength $F_{0}$.}
   \label{fig:h2o_1b1_1b2}
 \end{figure}
-
 
 As a first step in solving Eq.~(\ref{eq:sch_noCS}) for the H$_{2}$O
 molecular orbitals, we introduce the reduced single-centre Moccia
@@ -408,6 +412,8 @@ E & = & E_{R} + iE_{I} = E_{R} - i\frac{\Gamma}{2}.
 \label{eq:complex_E}
 \end{eqnarray}
 %
+% EXPLAIN HERE THAT M=\PM-1 ARE THE 2P_1 AND 2P_-1 EIGENSTATES OF L_Z
+% AND 2P_X AND 2P_Y ARE LINEAR COMBINATIONS OF THESE L_Z EIGENSTATES
 The imaginary part $\Gamma$ is related to the lifetime of the decaying
 state $\tau$ via $\Gamma\tau = 1$. For the $1b_{1}$ and $1b_{2}$
 orbitals we have $m=\pm 1$, respectively. The presence of the
@@ -473,6 +479,7 @@ of $r = r_{\mathrm{s}}$ on,
 \label{eq:ecs_theta}
 \end{eqnarray} 
 %
+% ADD GRAPH OF \chi(r)
 For given $r_{\mathrm{s}}$ one has to choose $\Delta r$ to be
 sufficiently small, so that the function $\chi(r)$ starts from small
 values at $r = 0$. For large $r$, it converges to the value
@@ -933,17 +940,18 @@ Figure~\ref{fig:density_contours}.
 %solve field-free problem and compare to OPM, model potential
 
 The problem of Stark resonances for the H$_{2}$O molecule is treated
-with a partial-wave expansion approach in which the starting point
-involves a three-centre model potential that was initially introduced
-to simulate the structure of the water molecule in a study of ion
-collisions with water molecules~\cite{illescas_modelV_2011}, and was
-later used in numerical calculations of the \textsc{tdse} for
-proton-water collisions~\cite{illescas_2015}. The field-free problem
-is addressed as well in a convergence study of the orbital energies
-for the three H$_{2}$O valence orbitals, namely $1b_{1}, 1b_{2}$ and
-$3a_{1}$, in terms of the partial wave expansion limits. The results
-are contrasted with a previous calculation that includes the model
-potential and Gaussian-type basis~\cite{illescas_2015}.
+with a partial-wave expansion approach~\cite{marko_partialwave} in
+which the starting point involves a three-centre model potential that
+was initially introduced to simulate the structure of the water
+molecule in a study of ion collisions with water
+molecules~\cite{illescas_modelV_2011}, and was later used in numerical
+calculations of the \textsc{tdse} for proton-water
+collisions~\cite{illescas_2015}. The field-free problem is addressed
+as well in a convergence study of the orbital energies for the three
+H$_{2}$O valence orbitals, namely $1b_{1}, 1b_{2}$ and $3a_{1}$, in
+terms of the partial wave expansion limits. The results are contrasted
+with a previous calculation that includes the model potential and
+Gaussian-type basis~\cite{illescas_2015}.
 
 The model potential is formulated as a superposition of three
 spherical potentials, that represent the oxygen atom, and the two
@@ -1023,7 +1031,7 @@ correspond to one half of the opening angle, $52.2\ \mathrm{degrees}$,
 for each hydrogen atom, respectively, and the azimuthal angles are
 $\phi_{1}'=\pi/2$ and $\phi_{2}'=3\pi/2$ in accordance with the
 geometry described in~\cite{Moccia_1964}. As a result, a truncated
-potential of the form
+potential of the form~\cite{marko_partialwave}
 %
 \begin{eqnarray}
   \begin{split}
@@ -1044,7 +1052,7 @@ is obtained for each hydrogen atom.
 The partial-wave model potential that results from inserting the
 expansion~(\ref{eq:expanded_H_potential}) into the H$_{2}$O model
 potential introduced in~(\ref{eq:model_potential}) leads to a system
-of coupled radial equations of the form
+of coupled radial equations of the form~\cite{marko_partialwave}
 %
 \begin{eqnarray}
   \begin{split}
@@ -1501,9 +1509,9 @@ spherically symmetric potential, $V_{\mathrm{eff}}(r)$, are also
 indicated in the form of dashed and dot-dashed lines respectively. For
 zero field strength $F_{0} = 0$ self-consistent eigenenergies obtained
 by Moccia~\cite{Moccia_1964} are included as black crosses for the
-three valence orbitals of interest. As expected, the resonance
-position for the $3a_{1}$ orbital is bracketed by those for the
-$1b_{1}$ and $1b_{2}$ orbitals.
+three valence orbitals of interest. The resonance position for the
+$3a_{1}$ orbital is bracketed by those for the $1b_{1}$ and $1b_{2}$
+orbitals.
 
 It can be noticed that for external fields applied along the
 $-\hat{z}$ direction, where most of the density is located, the field
