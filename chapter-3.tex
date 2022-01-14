@@ -265,7 +265,8 @@ wave function,
 %
 \begin{eqnarray}
   \begin{split}
-    \psi_{1b_{1},1b_{2}}(r) & = & \sum\limits_{i} c_{nlm} f_{nlm}(\zeta_{i}, r),
+    \psi_{1b_{1},1b_{2}}^{nlm}(r) & = & \sum\limits_{i}
+    c_{nlm} f_{nlm}(\zeta_{i}, r),
     \label{eq:sto_1b1_1b2}
   \end{split}
 \end{eqnarray}
@@ -416,14 +417,15 @@ E & = & E_{R} + iE_{I} = E_{R} - i\frac{\Gamma}{2}.
 % AND 2P_X AND 2P_Y ARE LINEAR COMBINATIONS OF THESE L_Z EIGENSTATES
 The imaginary part $\Gamma$ is related to the lifetime of the decaying
 state $\tau$ via $\Gamma\tau = 1$. For the $1b_{1}$ and $1b_{2}$
-orbitals we have $m=\pm 1$, respectively. The presence of the
-effective potential $V_{\mathrm{eff}}(r)$ makes this problem
-challenging in the sense that it is not possible to obtain separable
-solutions like for the hydrogen atom in which a pure Coulomb potential
-leads to separability in parabolic coordinates, as was discussed
-in~\cite{Telnov_1989}. It is then necessary to generate a more general
-solution by solving the \textsc{pde} numerically, e.g., by applying a
-finite-element method.
+orbitals, which are formulated as linear combinations of the $L_{z}$
+eigenstates $2p_{x}$ and $2p_{y}$, respectively, we have $|m| = 1$ in
+Eq.~(\ref{eq:pde}). The presence of the effective potential
+$V_{\mathrm{eff}}(r)$ makes this problem challenging in the sense that
+it is not possible to obtain separable solutions like for the hydrogen
+atom in which a pure Coulomb potential leads to separability in
+parabolic coordinates, as was discussed in~\cite{Telnov_1989}. It is
+then necessary to generate a more general solution by solving the
+\textsc{pde} numerically, e.g., by applying a finite-element method.
 
 The ionization regime of the water molecule is described by means of a
 non-Hermitian Hamiltonian that reveals discrete resonance eigenvalues
@@ -479,11 +481,24 @@ of $r = r_{\mathrm{s}}$ on,
 \label{eq:ecs_theta}
 \end{eqnarray} 
 %
-% ADD GRAPH OF \chi(r)
 For given $r_{\mathrm{s}}$ one has to choose $\Delta r$ to be
 sufficiently small, so that the function $\chi(r)$ starts from small
 values at $r = 0$. For large $r$, it converges to the value
-$\chi_{\mathrm{s}}$.
+$\chi_{\mathrm{s}}$. Figure~\ref{fig:scaling} illustrates the scaling
+function $\chi(r)$ that corresponds to the set of $(\chi_{\mathrm{s}},
+r_{\mathrm{s}}, \Delta r)$ values used in the numerical calculations
+of the dc Stark parameteres for the H$_{2}$O valence orbitals.
+
+% plot of \chi(r)
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{figures/ch_H2O/1b1_1b2/scaling.pdf}
+  \caption{Scaling function corresponding to $\chi_{\mathrm{s}} =
+    0.8\ \mathrm{a.u.}$, $r_{\mathrm{s}} = 13\ \mathrm{a.u.}$, and $1
+    / \Delta r = 1.3\ \mathrm{a.u.}$}
+  \label{fig:scaling}
+\end{figure}
+
 
 The set of possible values for the asymptotic scaling angle
 $\chi_{\mathrm{s}}$ and the parameters $r_{\mathrm{s}}$ and $\Delta
@@ -900,7 +915,7 @@ $E_{3a_{1}} \to E_{R} - i\Gamma/2$; while $\widetilde{\psi}(r,
 \theta)$ remains square integrable.
 
 The domains of $r$ and $\theta$ values are restricted to the intervals
-$r\in[\epsilon, r_{\mathrm{max}}]$ and $\theta\in[\eta,\pi-\eta]$,
+$\epsilon < r < r_{\mathrm{max}}$ and $\eta < \theta < \pi - \eta$,
 with typical values $\epsilon = 10^{-2}\ \mathrm{a.u.}$, $\eta =
 10^{-2}$, $r_{\mathrm{max}} = 28\ \mathrm{a.u.}$ In the limit of low
 field strengths, i.e., $F_{0} = 0.05\ \mathrm{a.u.},
