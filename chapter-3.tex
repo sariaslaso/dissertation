@@ -13,8 +13,9 @@ molecular orbitals (\textsc{mo}s). In the case of the water molecule,
 the multicentre nature of the combined Coulomb interactions and,
 consequently, the additional degrees of freedom, make the strong dc
 field ionization of H$_{2}$O an attractive and challenging problem
-from the point of view of a theoretical description as well as
-experimentally. % refs [14-17 pra]
+from the point of view of a theoretical description.
+%as well as
+%experimentally. % refs [14-17 pra]
 Complex variable techniques, such as exterior complex scaling
 (\textsc{ecs})~\cite{Simon_1979,ecsScrinzi} and complex-absorbing
 potentials (\textsc{cap})~\cite{RissMeyer_1993,Krause_2014}, have been
@@ -190,11 +191,11 @@ expansion to construct an effective potential that describes an
 H$_{2}$O bound state as a first step in studying the response of the
 H$_{2}$O valence orbitals when applying an electric dc field along the
 symmetry axis (i.e., the $z-$axis). For the study shown in this
-chapter, the external dc field is oriented in the molecular
-plane. Both geometries are considered, the field pointing away from
-the oxygen atom along the centre line passing in between the two
-hydrogen atoms, $\hat{F}_{0} > 0$, and the reverse orientation,
-$\hat{F}_{0} < 0$.
+chapter, the external dc field is oriented in the molecular plane,
+which coincides with the $y-z$ plane. Both geometries are considered,
+the field pointing away from the oxygen atom along the centre line
+passing in between the two hydrogen atoms, $\hat{F}_{0} > 0$, and the
+reverse orientation, $\hat{F}_{0} < 0$.
 
 Based on their symmetry properties, independent descriptions of the
 valence molecular orbitals of H$_{2}$O are constructed. The dominant
@@ -227,7 +228,7 @@ is expressed in shperical polar coordinates as
 \begin{eqnarray}
   [ -\frac{1}{2} (\frac{\partial^{2}}{\partial r^{2}} +
     \frac{2}{r} \frac{\partial}{\partial r}) +
-    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r)] \psi
+    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r) ] \psi
   & = & E\psi,
 \label{eq:sch_noCS}
 \end{eqnarray}
@@ -553,10 +554,11 @@ The \textsc{pde} system~(\ref{eq:pde_system}) is solved numerically on
 a rectangular mesh defined by the $(r, \theta)$ coordinates, which
 take values in the domains $\epsilon < r < r_{\mathrm{max}}$ and $\eta
 < \theta < \pi - \eta$, respectively. The parameters $\epsilon$ and
-$\eta$ that limit the coordinate ranges were chosen to be of the order
-of $10^{-3}\ \mathrm{a.u.}$, and the $r$ coordinate extends to
-$r_{\mathrm{max}} = 20\ \mathrm{a.u.}$ In order to find a correct set
-of $\psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
+$\eta$, that limit the coordinate ranges to avoid singularities at the
+origin, were chosen to be of the order of $10^{-3}\ \mathrm{a.u.}$,
+and the $r$ coordinate extends to $r_{\mathrm{max}} =
+20\ \mathrm{a.u.}$ In order to find a correct set of
+$\psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
 boundary conditions that ensure the wave functions vanish at the
 limits of the mesh. For the $|m| = 1$ states we impose the condition
 $\psi_{R{I}}(\epsilon,\theta) = \epsilon \sin(\theta) = \epsilon
@@ -771,7 +773,7 @@ calculation~\cite{Moccia_JCP_2164}, there may be regions in the
 $(r,\theta)$ domain where $\psi_{3a_{1}}(r,\theta)$ vanishes, whereas
 its second derivative remains finite; this produces a nodal line in
 the electronic potential. Thus, finding a potential for which our
-approximate wave function satisfies a Schr\"{o}dinger equations
+approximate wave function satisfies a Schr\"{o}dinger equation
 represents an intricate problem.
 
 It turns out that the nodal region is so narrow that when solving the
@@ -880,7 +882,7 @@ turns on from nearly zero to reach an asymptotic value
 $\chi_{\mathrm{s}}$ at $r-$values just outside where the Latter
 correction is applied, i.e., $r_{\mathrm{s}} >
 r_{\mathrm{match}}$. The purpose of using the phase function $\chi(r)$
-is to implement \textsc{ecs} in a gradual fashion and avoid having an
+is to implement \textsc{ecs} in a smooth fashion and avoid having an
 $r-$value at which a derivative discontinuity would have to be
 applied~\cite{ecsScrinzi}.
 
@@ -1015,7 +1017,8 @@ implemented as follows. The potential for one hydrogen atom placed on
 the $\hat{z}$ axis with distance $R_{j}$ from the oxygen core, as
 indicated in the model potential~(\ref{eq:model_potential}), is
 expressed as an expansion in terms of Legendre polynomials, such that
-for an axially symmetric $\mathrm{O}-\mathrm{H}$ problem one has
+for an axially symmetric $\mathrm{O}-\mathrm{H}$ problem one
+has~\cite{marko_partialwave}
 %
 \begin{eqnarray}
   \begin{split}
@@ -1334,7 +1337,11 @@ $r_{s} > 2r_{0}$. Additionally, the condition $\Delta r <
 in this region. Small values of $\Delta r$ pose challenges for the
 automated finite-element method, since in the limit of $\Delta r \to
 0$ one would need to implement the derivative discontinuity in the
-solution as discussed by Scrinzi~\cite{ecsScrinzi}. We find stable
+solution as discussed by Scrinzi~\cite{ecsScrinzi}. It has been
+discussed in the literature that implementing this smooth exterior
+scaling of the coordinates into the complex plane is equivalent to
+adding a \textsc{cap} to the
+Hamiltonian~\cite{ECS_sim_CAP_1991,ECS_sim_CAP_1998}. We find stable
 results for the real and imaginary parts of the eigenenergies at the
 level of three significant digits for the range $10 < r_{s} <
 15\ \rm{a.u.}$ Larger values would require an increase in the
@@ -1610,16 +1617,17 @@ density perpendicular to the molecular plane, converges rapidly,
 because the density has limited overlap with the hydrogen atoms, as
 indicated in Fig.~\ref{fig:h2o_1b1_1b2}. The calculated orbital
 energies fall slightly below the quoted values in
-Refs.~\cite{illescas_2015}. The values indicated as dash-dotted lines
+Ref.~\cite{illescas_2015}. The values indicated as dash-dotted lines
 correspond to a local self-consistent potential approach, namely the
 optimized potential method~(\textsc{opm})~\cite{opm_2007}. The
 \textsc{opm} represents a Hartree-Fock equivalent calculation in which
 an effective local potential is optimized by means of a variational
 method to yield self-consistent results that correspond to minimizing
 the total energy. The \textsc{opm} total energy and outermost orbital
-energy agree with Hartree-Fock results. The \textsc{opm} values quoted
-in Fig.~\ref{fig:energies_fieldfree} are an interesting comparison
-point since they result from an effective self-consistent potential.
+energy are comparable with Hartree-Fock results. The \textsc{opm}
+values quoted in Fig.~\ref{fig:energies_fieldfree} are an interesting
+comparison point since they result from an effective self-consistent
+potential.
 
 The $1b_{1}$ orbital is referred to as the highest occupied molecular
 orbital, and the Koopman's theorem in \textsc{hf}
