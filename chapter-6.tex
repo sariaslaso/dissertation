@@ -12,7 +12,7 @@ offered for these studies.
 \section{H$_{2}$O in an external dc field}
 \label{ch:h2o_results}
 
-\subsection{$\mathrm{PDE}$ system with a modified $\mathrm{ECS}$}
+\subsection*{$\mathrm{PDE}$ system with a modified $\mathrm{ECS}$}
 
 % describe the approach in a few sentences
 
@@ -20,9 +20,10 @@ offered for these studies.
 % was used, and for the 3a1 mo a dependen with the polar angle was
 % included 
 
-We have carried out a study of the valence orbitals of the H$_{2}$O
-molecule, $1b_{1}$, $1b_{2}$, amd $3a_{1}$, in the presence of an
-external electric dc field. As a starting point, an orbital-dependent
+We have carried out a study of the H$_{2}$O valence orbitals,
+$1b_{1}$, $1b_{2}$, and $3a_{1}$, in the presence of an external
+electric dc field applied along the symmetry axis of the molecule,
+$\mathbf{F} = F_{0}\hat{z}$. As a starting point, an orbital-dependent
 effective potential was extracted from a self-consistent solution for
 the H$_{2}$O \textsc{mo}s expressed as a single-centre Slater-type
 orbital~\cite{Moccia_1964}. The $1b_{1}$ and $1b_{2}$ orbitals were
@@ -32,18 +33,19 @@ case of the $3a_{1}$ orbital, $s-p$ type Slater orbitals were
 considered in addition to retaining the $2p_{z}$ parts of the
 \textsc{mo} expansion.
 
-Then a modified \textsc{ecs} technique was
-applied to the radial coordinates 
-
-
-
-The tunneling ionization and over-barrier
-ionization regimes were explored by finding a numerical solution to
-the \textsc{pde} system defined by an effective potential obtained
-from single-centre Slater-type orbitals. The exterior complex scaling
-parameters and a finite-element resolution parameter were optimized to
-guarantee a minimum of two to three significant digits for the
-solutions.
+A modified \textsc{ecs} technique was applied to the radial
+coordinates in the Schr\"{o}dinger equation with orbital-dependent
+effective potential for each \textsc{mo} as part of solving the
+complex eigenvalue problem to obtain the Stark resonance
+parameters. By means of a phase factor the scaling was turned on
+gradually beyond some distance from the origin of coordinates. The
+\textsc{ecs} parameters, $r_{\mathrm{s}}$ and $\Delta r$, as well as
+the asymptotic scaling angle, $\chi_{\mathrm{s}}$, were optimized in
+order to guarantee a minimum of two to three significant digits in the
+solutions. The tunneling ionization and over-barrier ionization
+regimes were explored by finding a numerical solution to the
+\textsc{pde} system resulting from separating the complex-valued wave
+function into real and imaginary parts~\cite{sarias_2016,sarias_2017}.
 
 
 % 1b1/1b2 results
@@ -57,6 +59,13 @@ potential for different field strengths were carried out in order to
 shed some light on the interpretation of this behaviour.
 
 % 3a1 results
+For the $3a_{1}$ \textsc{mo}, the orientation of the external field
+was extended to negative values, that is the dc field pointing towards
+to oxygen atom fixed at the origin. The relationship of the resonance
+paratemers (position and width) to the neighboring valence orbitals
+$1b_{1}$ and $1b_{2}$ was explored. Interestingly, the $3a_{1}$
+orbital was found to ionize more easily than $1b_{1}$ or $1b_{2}$
+irrespective of the field direction along $\hat{z}$.
 
 These calculations should serve as motivation for further studies of
 molecular orbitals of water using more sophisticated wave
@@ -72,9 +81,20 @@ solve the time-dependent Schr\"{o}dinger equation for realistic
 simulations of these~\cite{Farrell_2011,Falge_2010}.
 
 
-\subsection{Partial-wave approach with a $\mathrm{CAP}$}
+\subsection*{Partial-wave approach with a $\mathrm{CAP}$}
 % partial-wave + CAP approach
 
+Ionization of H$_{2}$O valence orbitals exposed to an external dc
+field was addressed from an alternative perspective as well. A
+three-centre model potential introduced in a study of ion collisions
+with water molecules~\cite{illescas_modelV_2011} was represented as a
+partial-wave expansion in a basis of spherical
+harmonics~\cite{marko_partialwave}.
+
+
+
+% results from comparing the field-free problem with other calculations
+% overall remarks of the numerical results, comparison with ECS technique
 
 
 
