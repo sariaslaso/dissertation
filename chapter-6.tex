@@ -69,13 +69,12 @@ irrespective of the field direction along $\hat{z}$.
 
 These calculations should serve as motivation for further studies of
 molecular orbitals of water using more sophisticated wave
-functions. Without diminishing the results presented here, this work
-needs to be extended to deal with laser fields for practical
-applications. For the hydrogen molecular ion this was done using
-Floquet theory~\cite{Tsog_H2mol_ac_2013}, where some parallels were
-found between monochromatic \textsc{ac} and the \textsc{dc}
-cases. Experimental observations of strong-field ionization of water
-vapour are available for short, intense laser
+functions. It would be interesting to extend this work to deal with
+laser fields for practical applications. For the hydrogen molecular
+ion this was done using Floquet theory~\cite{Tsog_H2mol_ac_2013},
+where some parallels were found between monochromatic \textsc{ac} and
+the \textsc{dc} cases. Experimental observations of strong-field
+ionization of water vapour are available for short, intense laser
 pulses~\cite{exp_h2o_laser_2008,exp_h2o_laser_2014}. One needs to
 solve the time-dependent Schr\"{o}dinger equation for realistic
 simulations of these~\cite{Farrell_2011,Falge_2010}.
@@ -85,7 +84,7 @@ simulations of these~\cite{Farrell_2011,Falge_2010}.
 % partial-wave + CAP approach
 
 Ionization of H$_{2}$O valence orbitals exposed to an external dc
-field was addressed from an alternative perspective as well. The
+field has been addressed from an alternative perspective as well. The
 hydrogen components of a three-centre model potential introduced in a
 study of ion collisions with water
 molecules~\cite{illescas_modelV_2011} was expressed as a partial-wave
@@ -122,25 +121,49 @@ scheme~\cite{RissMeyer_1993}. Comparison of the calculated dc shifts
 and decay rates with the previous results based on a single-centre
 \textsc{scf} orbital dependent effective
 potential~\cite{sarias_2016,sarias_2017}, for which azimuthal symmetry
-was assumed, indicated that the partial-wave expansion of the model
-potential has more geometric flexibility in the resonance solution,
-and therefore shows more prominent features in the behaviour of dc
-shift and decay rate $\Gamma$ as a function of the field strength and
-field orientation.
-
-
-
-
-
-
-
-% results from comparing the field-free problem with other calculations
-% overall remarks of the numerical results, comparison with ECS technique
-
+was assumed, points to the fact that the partial-wave expansion of the
+model potential has more geometric flexibility in the resonance
+solution, and therefore shows more prominent features in the behaviour
+of dc shift and decay rate $\Gamma$ as a function of the field
+strength and field orientation.
 
 
 \section{Above threshold ionization for laser-atom interactions}
 \label{ch:ati_results}
+
+We have investigated the phenomenon of \textsc{ati} for a model-He
+atom in the presence of a strong linearly polarized laser field. A
+generalization of the Keldysh formalism of
+\textsc{sfa}~\cite{KeldyshSFA}, in which rescattering of an electron
+with its parent ion is considered, has been explored in the limiting
+case of a zero-range potential. A systematic study of the numerical
+convergence of the \textsc{ati} spectrum has been carried out by
+evaluating the compact expression for ionization of an atom into a
+scattering state~\cite{Kopold_1997sfa} with asymptotic momentum
+$\mathbf{p}$. Several parameters associated with the numerical
+precision of the calculation, such as the working precision, were
+tuned up in order to reduce the error when evaluating the relevant
+quadrature.
+
+In addition ot the numerical evaluation of the compact expression for
+the transition amplitude, an alternative analysis based on the concept
+of quantum paths~\cite{KopoldOptComm2000} was implemented. This
+approach permitted to generate the \textsc{ati} spectrum by means of a
+saddle-point approximation in which a coherent sum over a reduced
+number of complex trajectories was carried out. For the case of direct
+electrons, a total of two complex trajectories was sufficient to
+generate an \textsc{ati} spectrum that converged to the Keldysh
+model. On the other hand, convergence of the \textsc{ati} spectrum
+including electron rescattering proved to be a more intricate problem.
+
+
+% how it could be extended to a more sophisticated calculation
+% beyond linear polarization
+The zero-range potential model was implemented to generate an
+approximated strong-field ionization spectrum for the $1b_{1}$ and
+$1b_{2}$ molecular orbitals of H$_{2}$O.
+
+
 
 
 
