@@ -85,11 +85,52 @@ simulations of these~\cite{Farrell_2011,Falge_2010}.
 % partial-wave + CAP approach
 
 Ionization of H$_{2}$O valence orbitals exposed to an external dc
-field was addressed from an alternative perspective as well. A
-three-centre model potential introduced in a study of ion collisions
-with water molecules~\cite{illescas_modelV_2011} was represented as a
-partial-wave expansion in a basis of spherical
-harmonics~\cite{marko_partialwave}.
+field was addressed from an alternative perspective as well. The
+hydrogen components of a three-centre model potential introduced in a
+study of ion collisions with water
+molecules~\cite{illescas_modelV_2011} was expressed as a partial-wave
+expansion in a basis of spherical harmonics~\cite{marko_partialwave}
+truncated at $l = l_{\mathrm{max}}$. This representation of the model
+potential in terms of partial waves resulted in a system of radial
+equations of dimensions proportional to the size of the expansion. The
+system of coupled ordinary differential equations for the different
+$(l,m)$ channels was solved numerically by implementing a
+finite-element \emph{Mathematica} method. The precision of the
+calculations was modified accordingly as the number $l_{\mathrm{max}}$
+increased and, consequently, the number of $(l,m)$ channels.
+
+The field-free problem was addressed and orbital energies for the
+valence \textsc{mo}s were obtained for increasing sizes of the
+partial-wave expansion. In a comparison with the solutions for the
+model potential as quoted in a Gaussian orbital basis
+approach~\cite{illescas_2015}, the partial-wave expansion results were
+found to approximate the eigenvalues from above. The outermost orbital
+$1b_{1}$, with its density perpendicular to the molecular plane and
+little overlap with the hydrogen atoms, indicated a fast convergence
+with $l_{\mathrm{max}}$. On the other hand, for the more deeply bound
+\textsc{mo} $1b_{2}$, with a considerable amount of electron density
+along each O$-$H bond, convergence with $l_{\mathrm{max}}$ was
+noticeably slower. Comparison with the eigenvalues obtained for an
+exchange-only \textsc{opm} calculation~\cite{opm_2007} was shown as
+well.
+
+The complex-valued resonance energies were computed by including a
+quadratic \textsc{cap} that was turned on at a distance such that the
+effective potential had reached its simple asymptotic form. The
+eigenvalues were determined by implementing the Riss-Meyer correction
+scheme~\cite{RissMeyer_1993}. Comparison of the calculated dc shifts
+and decay rates with the previous results based on a single-centre
+\textsc{scf} orbital dependent effective
+potential~\cite{sarias_2016,sarias_2017}, for which azimuthal symmetry
+was assumed, indicated that the partial-wave expansion of the model
+potential has more geometric flexibility in the resonance solution,
+and therefore shows more prominent features in the behaviour of dc
+shift and decay rate $\Gamma$ as a function of the field strength and
+field orientation.
+
+
+
+
 
 
 
