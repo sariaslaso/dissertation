@@ -48,9 +48,9 @@ molecular orbital~(\textsc{mo}) calculations, the $N-$electron
 Hartree-Fock wave function for a molecule is written as the
 antisymmetrized product (\textsc{ap}) of $N$ one-electron wave
 functions~\cite{Roothaan_HF}. A molecular spin-orbital~(\textsc{mso})
-which factors into a molecular orbital and a spin function that
-depends on the space and spin coordinates of the $\mu$th electron can
-be defined as
+which factors into a molecular orbital, $\varphi$, and a spinor,
+$\eta$, that depends on the space and spin coordinates of the $\mu$th
+electron can be defined as
 %
 \begin{eqnarray}
   \psi_{k}^{\mu} & = & \varphi_{i(k)}(x^{\mu}, y^{\mu}, z^{\mu})
@@ -90,8 +90,8 @@ Slater determinant of \textsc{mso}s that is constructed by taking an
 antisymmetric linear combination of products of spin-orbitals.
 
 For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
-is made up of complete electron shells, the Hartree-Fock method looks
-for those \textsc{mo}'s that minimize the variational
+is made up of complete electron shells, the Hartree-Fock method seeks
+the \textsc{mo}'s that minimize the variational
 energy~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
@@ -123,7 +123,7 @@ by
 \end{subequations}
 %
 where the integration goes over the spatial coordinates of the
-$\mu$th and the $\nu$th electron
+$\mu$th and the $\nu$th electron.
 
 The Hartree-Fock \textsc{scf} method looks for those molecular
 orbitals $\varphi_{i}$ that minimize the variational
@@ -209,6 +209,24 @@ satisfy~\cite{Roothaan_HF,Levine_QChem}
   \label{eq:Fock_operator_problem}
 \end{eqnarray}
 %
+Without loss of generality, Eq.~(\ref{eq:Fock_operator_problem}) can
+be expressed in the form
+% by means of a unitary transformation (eq.43 roothaan)
+%
+\begin{eqnarray}
+  \begin{split}
+    F \varphi_{i} & = & \epsilon_{i} \varphi_{i},
+  \end{split}
+  \label{eq:Fock_equation}
+\end{eqnarray}
+%
+where $\epsilon_{i}$ are the real elements of a diagonal matrix, which
+results from applying a unitary transformation to the Hermitian matrix
+$\epsilon_{ji}$. The set of Eqs.~(\ref{eq:Fock_equation}), commonly
+known as Fock equations, states that the eigenfunctions of the
+Hermitian operator $F$ are the set of \textsc{mo}s that give the best
+\textsc{ap}, while the eigenvalues $\epsilon_{i}$ represent the
+Hartree-Fock orbital energies~\cite{Roothaan_HF}.
 
 % reference other works that used this (Roothaan)formalism
 The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
@@ -240,7 +258,7 @@ would form a complete set and approximate accurately to the exact
 Hartree-Fock \textsc{scf} wave function. The number of basis
 functions, $b$, as well as the proper choice of basis functions
 $\chi_{s}$ are essential in order to obtain \textsc{mo}s that resemble
-the Hartree-Fock \textsc{mo}s with negligible
+the Hartree-Fock \textsc{mo}s with very small
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
 
