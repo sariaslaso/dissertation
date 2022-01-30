@@ -210,7 +210,7 @@ satisfy~\cite{Roothaan_HF,Levine_QChem}
 \end{eqnarray}
 %
 Without loss of generality, Eq.~(\ref{eq:Fock_operator_problem}) can
-be expressed in the form
+be expressed as the eigenvalue problem
 % by means of a unitary transformation (eq.43 roothaan)
 %
 \begin{eqnarray}
@@ -261,7 +261,6 @@ $\chi_{s}$ are essential in order to obtain \textsc{mo}s that resemble
 the Hartree-Fock \textsc{mo}s with very small
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
-
 The problem of obtaining the best set of \textsc{mo}s for a
 closed-shell ground state consists in finding the set of coefficients
 $c_{si}$ for which the energy of the associated \textsc{ap} reaches
@@ -291,9 +290,10 @@ the set of $b$ simultaneous linear equations of the form
 %
 that results from inserting the expansion~(\ref{eq:lcao_roothaan})
 into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}), and
-represents a linear algebra generalized eigenvalue problem. The
-solutions $\epsilon_{i}$, which are the roots of the secular
-equation~\cite{Roothaan_HF,Levine_QChem}
+represents a linear algebra generalized eigenvalue problem, in which
+the eigenvalues $\epsilon_{i}$ and linear coefficients $c_{si}$ are to
+be obtained. The eigenvalues of Eq.~(\ref{eq:set_linear_eqs}), which
+are the roots of the secular equation~\cite{Roothaan_HF,Levine_QChem}
 %
 \begin{eqnarray}
   \begin{split}
@@ -303,17 +303,18 @@ equation~\cite{Roothaan_HF,Levine_QChem}
   \label{eq:secular_eigenvalues}
 \end{eqnarray}
 %
-form an initial set of \textsc{lcao} orbital energies that leads to an
-initial set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
+form an initial set of \textsc{lcao} orbital energies that leads to a
+set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
 
-The iterative approach of solving Eq.~(\ref{eq:Fock_operator_problem})
-looks for the \textsc{mo}s $\varphi_{i}$ that minimize the variational
+% CLARIFY WHAT IS BEING ITERATED HERE
+The iterative approach of solving Eq.~(\ref{eq:Fock_equation}) looks
+for the \textsc{mo}s $\varphi_{i}$ that minimize the variational
 energy~(\ref{eq:HF_energy}), in which one continues to determine
-improved sets of coefficients and orbitals energies, and compares the
-resulting set of improved $c_{si}$ with the existing ones. This
-process is continued until the \textsc{mo} coefficients converge
-according to an established metric and no further improvement is
-observed from one iteration to the next.
+improved sets of linear coefficients and orbitals energies, and
+compares the resulting set of improved $c_{si}$ with the existing
+ones. This process is continued until the \textsc{mo} coefficients
+converge according to an established metric and no further improvement
+is observed from one iteration to the next.
 
 The \textsc{lcao} self-consistent field formalism is an approximation
 that leads to rather straightforward results for the
