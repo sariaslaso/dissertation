@@ -307,14 +307,20 @@ form an initial set of \textsc{lcao} orbital energies that leads to a
 set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
 
 % CLARIFY WHAT IS BEING ITERATED HERE
-The iterative approach of solving Eq.~(\ref{eq:Fock_equation}) looks
-for the \textsc{mo}s $\varphi_{i}$ that minimize the variational
-energy~(\ref{eq:HF_energy}), in which one continues to determine
-improved sets of linear coefficients and orbitals energies, and
-compares the resulting set of improved $c_{si}$ with the existing
-ones. This process is continued until the \textsc{mo} coefficients
-converge according to an established metric and no further improvement
-is observed from one iteration to the next.
+In the process of solving the set of
+equations~(\ref{eq:Fock_equation}) one looks for the \textsc{mo}s
+$\varphi_{i}$ that minimize the variational
+energy~(\ref{eq:HF_energy}). Initially, one infers a set of
+coefficients $c_{si}$, and, consequently, \textsc{mo}s of the
+form~(\ref{eq:lcao_roothaan}), that are used to compute the Fock
+operator $F$ and solve the secular
+equation~(\ref{eq:secular_eigenvalues}) to obtain an initial set of
+orbital energies $\epsilon_{i}$, which in turn is used to obtain an
+improved set of coefficients by solving the eigenvalue
+problem~(\ref{eq:set_linear_eqs}). This procedure is continued until
+the \textsc{mo} coefficients converge according to an established
+metric and no further improvement is observed from one evaluation to
+the next.
 
 The \textsc{lcao} self-consistent field formalism is an approximation
 that leads to rather straightforward results for the
@@ -354,7 +360,7 @@ orbitals, it would be necessary to include an infinite number of
 \textsc{sto}s in an expansion of the
 form~(\ref{eq:lcao_roothaan}). However, previous calculations indicate
 that it is possible to obtain highly accurate results by using a
-finite set of conveniently chosen \textsc{sto}s to represent atomic
+finite set of \textsc{sto}s to represent atomic
 orbitals~\cite{Clementi_scfIon_1962,Clementi_STOatoms_1974,Bunge_STOtable_1993}
 and molecular
 orbitals~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
