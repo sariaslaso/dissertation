@@ -371,12 +371,9 @@ develops the previously introduced method of using electronic wave
 functions expressed by a one-centre expansion with the centre at the X
 nucleus~\cite{Parr_JCP_1960,oneCentre_1961}. This approach, labeled as
 self-consistent field one-centre-expanded molecular
-orbitals~\cite{Moccia_JCP_2164}, bypasses the complicated task of
-evaluating multicentre integrals by constructing the \textsc{mo}s as
-linear combinations of \textsc{ao}s that are centred at the same point
-in space, and permits to evaluate the ground state along with the
-vibrational spectrum of this type of molecules for a given geometrical
-arrange.
+orbitals~\cite{Moccia_JCP_2164}, permits to evaluate the ground state
+along with the vibrational spectrum of this type of molecules for a
+given geometrical arrange.
 
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
@@ -399,10 +396,10 @@ terms of Slater-type orbitals as follows
   \label{eq:STO_expansion}
 \end{eqnarray}
 %
-where the expansion coefficients $c_{si}$ are evaluated within an
-iterative process in order to minimize the electronic energy. The sets
-of $(n,l,m)$ values indicate the size and orbital symmetries of the
-basis set implemented for a given molecule.
+where the expansion coefficients $c_{si}$ are evaluated within a
+self-consistent procedure in order to minimize the electronic
+energy. The sets of $(n,l,m)$ values indicate the size and orbital
+symmetries of the basis set implemented for a given molecule.
 
 % mention the expansion of n,l,m values used by Moccia and their
 % comments on improving the calculations
@@ -414,10 +411,10 @@ combination available from a basis set of the
 form~(\ref{eq:f_STO}). Table I in~\cite{Moccia_1964} shows the
 converged numerical results including the geometrical parameters of
 the equilibrium configuration for the ground state of H$_{2}$O. It
-emerged from these calculations, in which the highest $n$ quantum
-number was set to $4$, that large values of $n$ are not crucial in
-order to obtain rather accurate results since the converged wave
-functions obtained for the \textsc{mo}s could not be dramatically
+emerged from these calculations, in which the basis parameter $n$ was
+fixed at values as high as $4$, that very large values of $n$ are not
+needed in order to obtain rather accurate results since the converged
+wave functions obtained for the \textsc{mo}s could not be dramatically
 improved by simply changing the nonlinear parameters of the
 \textsc{sto}s, $\zeta_{i}$,~(\ref{eq:f_STO}). Rather, a precise
 selection of the orbital exponents $\zeta_{i}$ of a moderate number of
