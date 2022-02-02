@@ -81,8 +81,9 @@ complex eigenvalues of the form
 %
 in which the ionization rate, $\Gamma$, induced by the external field
 $F_{0}$ is associated to the lifetime of the decaying state $\tau$ via
-$\Gamma\tau = 1$, while the real part $E_{R}$ represents the Stark
-shift under the external field.
+$\Gamma\tau = 1$, while the Stark shift under the external field is
+given by the difference between the real part of the complex-valued
+energy and the ground state energy, $E_{R} - E_{0}$.
 
 Several numerical techniques have been introduced within the framework
 of \textsc{nhqm} that implement a complex-scaled Hamiltonian in
@@ -115,12 +116,12 @@ to the Hamiltonian of the system, where the parameter $\eta$ indicates
 the strength of the \textsc{cap}. The function $W(r)$, which
 determines the onset of the \textsc{cap}, has been most commonly
 defined as a quadratic potential centred at some radius
-$r_{\mathrm{c}}$.%add refs?
-The \textsc{cap} approach requires calculating sets
-of complex eigenvalues along complex trajectories, $E(\eta)$,
-determined by the \textsc{cap} strength in order to find an optimal
-finite value of $\eta$ such that it makes the resonance stable, with
-the ultimate goal of removing the perturbation by the \textsc{cap}.
+$r_{\mathrm{c}}$. The \textsc{cap} approach requires calculating sets
+of complex eigenvalues which form complex trajectories, $E(\eta)$. The
+\textsc{cap} strength $\eta$ is varied in order to find an optimal
+finite value of $\eta$ such that it makes the resonance stable. % explain what does this mean
+The ultimate goal is to remove the perturbation introduced by the
+\textsc{cap}.
 
 Strategies used to obtain the optimal value of $\eta$ include the
 Pad\'{e}-approximation-extrapolation
@@ -194,8 +195,8 @@ symmetry axis (i.e., the $z-$axis). For the study shown in this
 chapter, the external dc field is oriented in the molecular plane,
 which coincides with the $y-z$ plane. Both geometries are considered,
 the field pointing away from the oxygen atom along the centre line
-passing in between the two hydrogen atoms, $\hat{F}_{0} > 0$, and the
-reverse orientation, $\hat{F}_{0} < 0$.
+passing in between the two hydrogen atoms, $F_{0} > 0$, and the
+reverse orientation, $F_{0} < 0$.
 
 Based on their symmetry properties, independent descriptions of the
 valence molecular orbitals of H$_{2}$O are constructed. The dominant
