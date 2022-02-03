@@ -134,7 +134,7 @@ a low-frequency ac field~\cite{Tsog_H2mol_ac_2013}.
 % add references cited in the partial wave write-up and Moiseyev book on NHQM
 
 An alternative method to divert the divergent resonance wave functions
-into the physical domain of square integrable solutions is the
+into the domain of square integrable solutions is the
 \textsc{ecs}~\cite{Simon_1979}, in which one or more coordinates are
 rotated into the complex plane at a boundary of the problem. The
 application of the complex scaling in an external region, which keeps
@@ -223,14 +223,14 @@ expansion~\cite{Moccia_1964}.
 
 The Schr\"{o}dinger equation for the bound-state problem of a
 molecular orbital within an effective potential $V_{\mathrm{eff}}(r)$
-is expressed in shperical polar coordinates as
+is expressed in spherical polar coordinates as
 % see eq. 6.8 Levine
 %
 \begin{eqnarray}
   [ -\frac{1}{2} (\frac{\partial^{2}}{\partial r^{2}} +
     \frac{2}{r} \frac{\partial}{\partial r}) +
-    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r) ] \psi
-  & = & E\psi,
+    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r) ] \psi(r,\theta,\varphi)
+  & = & E\psi(r,\theta,\varphi),
 \label{eq:sch_noCS}
 \end{eqnarray}
 %
@@ -267,7 +267,7 @@ wave function,
 %
 \begin{eqnarray}
   \begin{split}
-    \psi_{1b_{1},1b_{2}}^{nlm}(r) & = & \sum\limits_{i}
+    \psi_{nlm}(r) & = & \sum\limits_{i}
     c_{nlm} f_{nlm}(\zeta_{i}, r),
     \label{eq:sto_1b1_1b2}
   \end{split}
@@ -508,7 +508,7 @@ r$, which control where and how quickly the scaling is turned on, is
 explored in detail in order to establish how sensitive the
 \textsc{pde} solutions are and to test the effectiveness of the
 complex scaling technique to absorb the outgoing wave. Numerous tests
-were carried out to ensure that the ``exact'' results of
+were carried out to ensure that the numerically ``exact'' results of
 Telnov~\cite{Telnov_1989} for atomic hydrogen orbitals including $2p$
 are reproduced.
 
@@ -681,9 +681,9 @@ located. From the complete Moccia representation of the $3a_{1}$
 protons (shown as red circles) has an influence on the shape of the
 upper lobe in the probability density, i.e., it introduces dependence
 on the azimuthal angle $\varphi$. In our simplified expansion, where
-only $l=0,1$ and $m=0$ symmetrical parts were included (shown with
-solid lines), the probability density misses to represent the proper
-azimuthal dependence that follows from the $m\neq 0$ parts.
+only $l=0,1$ and $m=0$ parts were included (shown with solid lines),
+the probability density misses to represent the proper azimuthal
+dependence that follows from the $m\neq 0$ parts.
 
 \begin{figure}
   \centering
@@ -1044,14 +1044,15 @@ H$_{2}$O geometry using the addition theorem for spherical harmonics
   \label{eq:add_sphericalYlm}
 \end{eqnarray}
 %
-where $\cos\theta = \hat{r}'\cdot\hat{r}''$. These transformations
-lead to obtain one expansion for each hydrogen atom expressed in
-$(r,\theta,\phi)$ coordinates. The orientations defined by $\theta'$
-correspond to one half of the opening angle, $52.2\ \mathrm{degrees}$,
-for each hydrogen atom, respectively, and the azimuthal angles are
-$\phi_{1}'=\pi/2$ and $\phi_{2}'=3\pi/2$ in accordance with the
-geometry described in~\cite{Moccia_1964}. As a result, a truncated
-potential of the form~\cite{marko_partialwave}
+where $\cos\theta = \hat{r}'\cdot\hat{r}''$. As a result, the hydrogen
+components of the model potential~(\ref{eq:model_potential}) are
+expressed as partial-wave expansions in $(r,\theta,\phi)$
+coordinates. The orientations defined by $\theta'$ correspond to one
+half of the opening angle, $52.2\ \mathrm{degrees}$, for each hydrogen
+atom, respectively, and the azimuthal angles are $\phi_{1}'=\pi/2$ and
+$\phi_{2}'=3\pi/2$ in accordance with the geometry described
+in~\cite{Moccia_1964}. As a result, a truncated potential of the
+form~\cite{marko_partialwave}
 %
 \begin{eqnarray}
   \begin{split}
@@ -1151,12 +1152,12 @@ zero should be applied to its norm.
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
 % from there
 The radius $r_{c}$ in~(\ref{eq:VCAP}) indicates the beginning of the
-region where the \textsc{cap} becomes effective. In order to avoid
-oscillating outgoing waves in the numerical solutions, it is a good
-practice to turn the \textsc{cap} on at distances where the
-partial-wave potential~(\ref{eq:expanded_H_potential}) has reached its
-simple asymptotic form. This condition is satisfied for $r > 12$ with
-great accuracy. The parameter $\eta_{c}$ indicates the strength of the
+region where the \textsc{cap} turns on. In order to avoid oscillating
+outgoing waves in the numerical solutions, it is a good practice to
+turn the \textsc{cap} on at distances where the partial-wave
+potential~(\ref{eq:expanded_H_potential}) has reached its simple
+asymptotic form. This condition is satisfied for $r > 12$ with great
+accuracy. The parameter $\eta_{c}$ indicates the strength of the
 \textsc{cap}. Ideally, the parameter $\eta_{c}$ should be a small
 number in order to have a small artifact introduced to the system of
 equations. However, it is important to keep in mind that when
@@ -1170,9 +1171,9 @@ The complex eigenvalues that result from applying the
 equations~(\ref{eq:radial_u}) are computed according the following
 scheme. For a given field strength, $F_{0}$, a set of complex
 eigenvalues is computed for an equidistant mesh of strength
-parameters, such that $\eta_{c} = n \times 10^{-3}$ for $n = 20,
-\dots, 70$. These results are interpolated to a sixth-order polynomial
-as a function of $\eta_{c}$, and then the optimal $\eta$ value is
+parameters, e.g., $\eta_{c} = n \times 10^{-3}$ for $n = 20, \dots,
+70$. These results are interpolated to a sixth-order polynomial as a
+function of $\eta_{c}$, and then the optimal $\eta$ value is
 calculated according to the Riss-Meyer correction
 scheme~\cite{RissMeyer_1993}, which is implemented up to second order.
 
@@ -1225,7 +1226,7 @@ results were obtained using \emph{Mathematica}'s
 for larger values of $\eta$, but it shows remarkable variation at
 small $\eta$ (on the left in Fig.~\ref{fig:3a1_RMtrajectory}). This
 demonstrates the above mentioned difficulty in solving the
-Schr\"{o}dinger equation when $\eta_{c}\to 0$.
+Schr\"{o}dinger equation when $\eta\to 0$.
 
 The stabilization point $(n = 0)$ is shown as a red cross, and the
 complex energy values at the accumulation points for $n = 1, 2$ of the
@@ -1356,7 +1357,7 @@ three significant digits, and the other parameters chosen in the
 ranges described above stability in the resonance widths is achieved
 for $0.6< \chi_{\rm{s}} < 1.2$ rad.
 
-Finally, Section~\ref{ch:cap_results} discusses the results of the
+Finally, in Section~\ref{ch:cap_results} we discuss the results of the
 partial-wave expansion method introduced in Sec.~\ref{ch:partial_wave}
 for a model potential that simulates the structure of the H$_{2}$O
 molecule~\cite{illescas_modelV_2011}. The partial-wave approach is
