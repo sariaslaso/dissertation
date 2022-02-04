@@ -153,8 +153,23 @@ a low-frequency ac field~\cite{Tsog_H2mol_ac_2013}.
 
 An alternative method to divert the divergent resonance wave functions
 into the domain of square integrable solutions is the
-\textsc{ecs}~\cite{Simon_1979}, in which one or more coordinates are
-rotated into the complex plane at a boundary of the problem. The
+\textsc{ecs}~\cite{Simon_1979}, in which the Hamiltonian is rotated
+into the complex plane at a boundary of the problem. One applies the
+coordinate transformation
+%
+\begin{eqnarray}
+  x = \left\{
+  \begin{split}
+    x'~~~ & \mathrm{~if} & x' < x_{0} \\
+    e^{i\xi} x' & \mathrm{~if} & x' \geq x_{0}
+  \end{split}
+  \right.
+  ,
+  \label{eq:ecs}
+\end{eqnarray}
+%
+in order to carry out an \textsc{ecs} of the $x$ coordinate at the
+scaling radius $x_{0}$ with scaling angle $\xi < \pi/2$. The
 application of the complex scaling in an external region, which keeps
 the coordinates unscaled in some range of the potential, avoids the
 numerical difficulties that arise when the potential has
