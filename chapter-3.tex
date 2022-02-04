@@ -86,12 +86,14 @@ given by the difference between the real part of the complex-valued
 energy and the ground state energy, $E_{R} - E_{0}$.
 
 Several numerical techniques have been introduced within the framework
-of \textsc{nhqm} that implement a complex-scaled Hamiltonian in
-studies of atomic and molecular Stark resonances. It is the scope of
-this work to focus on two of these methods to study the response of
-the H$_{2}$O highest-energy orbitals to an external dc-field, the
-concept of a \textsc{cap} introduced as a perturbation to the
-molecular Hamiltonian and a modified \textsc{ecs}.
+of \textsc{nhqm} in studies of atomic and molecular Stark
+resonances. These approaches implement a complex-scaled Hamiltonian by
+means of a mapping operator that results in complex eigenvalues and
+provide direct access to the resonant states of the Stark problem. It
+is the scope of this work to focus on two of these methods to study
+the response of the H$_{2}$O highest-energy orbitals to an external
+dc-field, the concept of a \textsc{cap} introduced as a perturbation
+to the molecular Hamiltonian and a modified \textsc{ecs}.
 
 % add artificial potential introduced to absorb outgoing wave
 
@@ -290,7 +292,11 @@ well.
     blue along the $y$ axis) molecular orbitals. Also indicated (in
     green on the $y-z$ plane) is the location of the protons. The $z$
     axis (in red) is the direction of the external electric field of
-    strength $F_{0}$.}
+    strength $F_{0}$. As indicated in the text, positive values of
+    $F_{0}$ correspond to the external field pointing from the oxygen
+    towards the hydrogen atoms; negative values of $F_{0}$ correspond
+    to a field pointing from the hydrogen atoms towards the oxygen
+    atom.}
   \label{fig:h2o_1b1_1b2}
 \end{figure}
 
@@ -420,7 +426,7 @@ applied to the Schr\"{o}dinger equation~(\ref{eq:sch_noCS})
 %
 \begin{eqnarray}
   \begin{split}
-    \psi(r,\theta,\phi) & = & \psi(r,\theta)\exp(im\phi)
+    \psi(r,\theta,\varphi) & = & \psi(r,\theta)\exp(im\varphi)
   \end{split}
 \label{eq:sov}
 \end{eqnarray}
@@ -468,19 +474,18 @@ containing information about the quasibound states that tunnel through
 the barrier or escape over the potential barrier for strong
 fields. Among the different techniques implemented in the study of
 atomic resonances, a standard tool is the method of complex
-scaling~\cite{complexScaling,complexScalingBaslev,complexScalingSimon}. This
-approach consists in extending the analytic domain of the Hamiltonian
-of a given system by means of a mapping operator that results in
-complex eigenvalues which provide direct access to the resonant states
-of the Stark problem. For most phenomenological potentials, such as
-molecules with fixed internuclear distances, a modified method of
-scaling is required as an extension to cases where the potential is
-analytic only outside some bounded region. In these cases, the
-approach of exterior complex scaling (\textsc{ecs})~\cite{Simon_1979}
-is more appropriate, as the potential needs to have analyticity
-properties only in the region affected by the scaling, where one can
-look for solutions which decay exponentially in the asymptotic region
-of the potential. Both methods have been widely used in scattering
+scaling~\cite{complexScaling,complexScalingBaslev,complexScalingSimon}
+introduced in Chapter~\ref{cha:introduction}.
+
+For most phenomenological potentials, such as molecules with fixed
+internuclear distances, a modified method of scaling is required as an
+extension to cases where the potential is analytic only outside some
+bounded region. In these cases, the approach of exterior complex
+scaling (\textsc{ecs})~\cite{Simon_1979} is more appropriate, as the
+potential needs to have analyticity properties only in the region
+affected by the scaling, where one can look for solutions which decay
+exponentially in the asymptotic region of the potential. Approaches of
+complex scaling have been widely used in scattering
 problems~\cite{complexScalingBaslev, complexScalingSimon}, in studies
 of the Stark problem for multi-electron
 systems~\cite{ScrinziJChemPhys_ECS,ScrinziJPhysB_ECS}, as well as in
