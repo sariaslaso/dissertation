@@ -632,7 +632,7 @@ The proposed method to address this problem is to define a reduced
 single-centre Moccia wave function,
 %
 \begin{eqnarray}
-\psi_{3a_{1}}(r,\theta) = \sum_{n,l} c_{nl0} \varphi_{nl}(r,\theta).
+\Psi_{3a_{1}}(r,\theta) = \sum_{n,l} c_{nl0} \varphi_{nl}(r,\theta).
 \label{eq:3a1Moccia_expansion}
 \end{eqnarray}
 %
@@ -743,8 +743,8 @@ equation in spherical polar coordinates,
 %
 \begin{eqnarray}
   \left[ -\frac{1}{2} \nabla^{2} +
-  V_{\rm{eff}}(r,\theta) \right] \psi_{3a_{1}}(r,\theta) =
-  E_{3a_{1}} \psi_{3a_{1}}(r,\theta).
+  V_{\rm{eff}}(r,\theta) \right] \Psi_{3a_{1}}(r,\theta) =
+  E_{3a_{1}} \Psi_{3a_{1}}(r,\theta).
 \label{eq:sch_eq3d}
 \end{eqnarray}
 %
@@ -810,7 +810,7 @@ problem. Since these functions are not exact solutions of the
 Schr\"{o}dinger equation but were obtained from the variational
 principle by implementing a self-consistent
 calculation~\cite{Moccia_JCP_2164}, there may be regions in the
-$(r,\theta)$ domain where $\psi_{3a_{1}}(r,\theta)$ vanishes, whereas
+$(r,\theta)$ domain where $\Psi_{3a_{1}}(r,\theta)$ vanishes, whereas
 its second derivative remains finite; this produces a nodal line in
 the electronic potential. Thus, finding a potential for which our
 approximate wave function satisfies a Schr\"{o}dinger equation
@@ -847,7 +847,7 @@ continues smoothly over this problematic region.
     \caption{}\label{fig:intp32s}
   \end{subfigure}
   \caption{Contour plots of the scaled probability density,
-    $|\psi_{\mathrm{3a_{1}}}|^{2}r^{2}\sin(\theta)/(2\pi)$, for the
+    $|\Psi_{\mathrm{3a_{1}}}|^{2}r^{2}\sin(\theta)/(2\pi)$, for the
     $3a_{1}$ molecular orbital. The orbital density constructed from
     the reduced \textsc{sto} expansion is shown
     in~(\ref{fig:Moccia32s}), while the solution obtained from the
@@ -939,12 +939,12 @@ radius~\cite{ecsScrinzi}.
 A non-Hermitian Hamiltonian results from considering the additional
 terms that the modified complex scaling to the radial coordinates
 introduces in the Schr\"{o}dinger equation. The complex wave function
-is separated into real and imaginary parts, $\psi_{R(I)}$, such that
+is separated into real and imaginary parts, $\Psi_{R(I)}$, such that
 the problem of describing the ionization regime of the $3a_{1}$
 \textsc{mo} under an external dc field applied along the orientation
 axis of the orbital is expressed in terms of a system of partial
 differential equations for the real and imaginary parts of
-$\widetilde{\psi}(r,\theta)$ in spherical polar coordinates given
+$\widetilde{\Psi}(r,\theta)$ in spherical polar coordinates given
 explicitly as Eq.~(\ref{eq:pde_system}). Schematically, the equations
 are extensions of the field-free Schr\"{o}dinger
 equation~(\ref{eq:sch_eq3d}) and $\widetilde{\psi}(r,\theta)$
@@ -953,8 +953,8 @@ satisfies~\cite{sarias_2017}
 \begin{eqnarray}
   \begin{split}
     \left[ -\frac{1}{2}\nabla^{2} + V_{\mathrm{eff}}(r, \theta)
-      \pm F_{0}z \right] \widetilde{\psi}(r,\theta) = (E_{R} - i\Gamma/2)
-    \widetilde{\psi}(r, \theta),
+      \pm F_{0}z \right] \widetilde{\Psi}(r,\theta) = (E_{R} - i\Gamma/2)
+    \widetilde{\Psi}(r, \theta),
   \end{split}
   \label{eq:sch_tunneling_params}
 \end{eqnarray}
@@ -965,7 +965,7 @@ scaled into the complex plane. Compared to Eq.~(\ref{eq:sch_eq3d}),
 the Hamiltonian in Eq.~(\ref{eq:sch_tunneling_params}) contains the
 interaction with the external field and complex scaling is responsible
 for the replacement $E_{3a_{1}} \to E_{R} - i\Gamma/2$; while
-$\widetilde{\psi}(r, \theta)$ remains square integrable.
+$\widetilde{\Psi}(r, \theta)$ remains square integrable.
 
 The domains of $r$ and $\theta$ values are restricted to the intervals
 $\epsilon < r < r_{\mathrm{max}}$ and $\eta < \theta < \pi - \eta$,
@@ -987,7 +987,7 @@ eigenstate and orbital energy consistent with the variational
 results~\cite{Moccia_1964}. This choice of boundary conditions, that
 the derivative with respect to $\theta$ vanishes at the limits of the
 mesh $(\theta = 0 ~\mathrm{and}~ \theta = \pi)$, leads to solutions
-$\psi_{R(I)}(r,\theta)$ with a probability density consistent with the
+$\Psi_{R(I)}(r,\theta)$ with a probability density consistent with the
 $\theta-$dependence of the $3a_{1}$ orbital, as shown in
 Figure~\ref{fig:density_contours}.
 
@@ -1051,7 +1051,7 @@ the wave function
 %
 \begin{eqnarray}
   \begin{split}
-    \psi(r,\theta,\phi) & = & \sum\limits_{l=0}\limits^{l_{\mathrm{max}}}
+    \Psi(r,\theta,\phi) & = & \sum\limits_{l=0}\limits^{l_{\mathrm{max}}}
     \sum\limits_{m=-l}\limits^{l} \frac{u_{lm}(r)}{r}
     Y_{l}^{m}(\theta, \phi),
   \end{split}
