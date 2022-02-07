@@ -265,8 +265,8 @@ is expressed in spherical polar coordinates as
 \begin{eqnarray}
   [ -\frac{1}{2} (\frac{\partial^{2}}{\partial r^{2}} +
     \frac{2}{r} \frac{\partial}{\partial r}) +
-    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r) ] \psi(r,\theta,\varphi)
-  & = & E\psi(r,\theta,\varphi),
+    \frac{\hat{L}^2}{2r^2} + V_{\rm{eff}}(r) ] \Psi(r,\theta,\varphi)
+  & = & E\Psi(r,\theta,\varphi),
 \label{eq:sch_noCS}
 \end{eqnarray}
 %
@@ -427,7 +427,7 @@ applied to the Schr\"{o}dinger equation~(\ref{eq:sch_noCS})
 %
 \begin{eqnarray}
   \begin{split}
-    \psi(r,\theta,\varphi) & = & \psi(r,\theta)\exp(im\varphi)
+    \Psi(r,\theta,\varphi) & = & \Psi(r,\theta)\exp(im\varphi)
   \end{split}
 \label{eq:sov}
 \end{eqnarray}
@@ -437,11 +437,11 @@ coordinates that represents the Stark problem for an H$_{2}$O orbital:
 %
 \begin{eqnarray}
  \begin{split}
-  -\frac{1}{2} \frac{\partial^{2}\psi}{\partial r^2} - \frac{1}{2r^2}
-  (\frac{\cos\theta}{\sin\theta} \frac{\partial\psi}{\partial\theta} + 
-  \frac{\partial^2\psi}{\partial\theta^2})
+  -\frac{1}{2} \frac{\partial^{2}\Psi}{\partial r^2} - \frac{1}{2r^2}
+  (\frac{\cos\theta}{\sin\theta} \frac{\partial\Psi}{\partial\theta} + 
+  \frac{\partial^2 \Psi}{\partial\theta^2})
   + (\frac{m^2}{2r^2 \sin^2\theta} + V_{\mathrm{eff}}(r) - E +
-  F_{0}r\cos\theta)\psi & = & 0.
+  F_{0}r\cos\theta)\Psi & = & 0.
   \end{split}
 \label{eq:pde}
 \end{eqnarray}
@@ -563,23 +563,23 @@ parts, such that a system of coupled differential equations is
 obtained as follows~\cite{sarias_2016}:
 %
 \begin{eqnarray}
-  -\frac{1}{2}\frac{\partial^{2}\psi_{R}}{\partial r^2}-\frac{1}{2r^2}
-  (\frac{\cos\theta}{\sin\theta}\frac{\partial\psi_{R}}{\partial\theta}+
-  \frac{\partial^{2}\psi_{R}}{\partial\theta^2}) \nonumber\\
+  -\frac{1}{2}\frac{\partial^{2}\Psi_{R}}{\partial r^2}-\frac{1}{2r^2}
+  (\frac{\cos\theta}{\sin\theta}\frac{\partial\Psi_{R}}{\partial\theta}+
+  \frac{\partial^{2}\Psi_{R}}{\partial\theta^2}) \nonumber\\
   +(\frac{m^2}{2r^2\sin^2\theta}+V_{\rm{eff}}^{R}(r)c_{2}-V_{\rm{eff}}^{I}(r)s_{2}
   -E_{R}c_{2}+E_{I}s_{2}+
-  F_{0}r\cos\theta c_{3})\psi_{R} \nonumber\\
+  F_{0}r\cos\theta c_{3})\Psi_{R} \nonumber\\
   +(-V_{\rm{eff}}^{R}(r)s_{2}-V_{\rm{eff}}^{I}(r)c_{2}+E_{R}s_{2}+E_{I}c_{2}-F_{0}r\cos\theta
-  s_{3})\psi_{I} & = & 0, \nonumber\\
+  s_{3})\Psi_{I} & = & 0, \nonumber\\
   \vspace{1cm}
-  -\frac{1}{2}\frac{\partial^{2}\psi_{I}}{\partial r^2}-\frac{1}{2r^2}
-  (\frac{\cos\theta}{\sin\theta}\frac{\partial\psi_{I}}{\partial\theta}+
-  \frac{\partial^{2}\psi_{I}}{\partial\theta^2}) \nonumber\\
+  -\frac{1}{2}\frac{\partial^{2}\Psi_{I}}{\partial r^2}-\frac{1}{2r^2}
+  (\frac{\cos\theta}{\sin\theta}\frac{\partial\Psi_{I}}{\partial\theta}+
+  \frac{\partial^{2}\Psi_{I}}{\partial\theta^2}) \nonumber\\
   +(\frac{m^2}{2r^2\sin^2\theta}+V_{\rm{eff}}^{R}(r)c_{2}-V_{\rm{eff}}^{I}(r)s_{2}
   -E_{R}c_{2}+E_{I}s_{2}+
-  F_{0}r\cos\theta c_{3})\psi_{I} \nonumber\\
+  F_{0}r\cos\theta c_{3})\Psi_{I} \nonumber\\
   +(V_{\rm{eff}}^{R}(r)s_{2}+V_{\rm{eff}}^{I}(r)c_{2}-E_{R}s_{2}-E_{I}c_{2}+F_{0}r\cos\theta
-  s_{3})\psi_{R} & = & 0.
+  s_{3})\Psi_{R} & = & 0.
 \label{eq:pde_system}
 \end{eqnarray}
 %
@@ -598,10 +598,10 @@ $\eta$, that limit the coordinate ranges to avoid singularities at the
 origin, were chosen to be of the order of $10^{-3}\ \mathrm{a.u.}$,
 and the $r$ coordinate extends to $r_{\mathrm{max}} =
 20\ \mathrm{a.u.}$ In order to find a correct set of
-$\psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
+$\Psi_{R(I)}(r,\theta)$ solutions, it is essential to impose proper
 boundary conditions that ensure the wave functions vanish at the
 limits of the mesh. For the $|m| = 1$ states we impose the condition
-$\psi_{R{I}}(\epsilon,\theta) = \epsilon \sin(\theta) = \epsilon
+$\Psi_{R(I)}(\epsilon,\theta) = \epsilon \sin(\theta) = \epsilon
 P_{1}^{1}(\theta)$, which is consistent with the assumption that at
 small $r = \epsilon$ the lowest term in an expansion in associated
 Legendre polynomials dominates and behaves like $A r^{2}
