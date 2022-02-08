@@ -448,26 +448,26 @@ coordinates that represents the Stark problem for an H$_{2}$O orbital:
 %
 Here the complex eigenenergy $E$ contains the information about the
 resonance position (real part), i.e., $E_{R}$ and width $\Gamma$
-(imaginary part is $-\Gamma/2$), and may be expressed as
+(imaginary part is $-\Gamma/2$) as indicated in
+Eq.~(\ref{eq:complex_eigenE}).
 %
-\begin{eqnarray}
-E & = & E_{R} + iE_{I} = E_{R} - i\frac{\Gamma}{2}.
-\label{eq:complex_E}
-\end{eqnarray}
+%\begin{eqnarray}
+%E & = & E_{R} + iE_{I} = E_{R} - i\frac{\Gamma}{2}.
+%\label{eq:complex_E}
+%\end{eqnarray}
 %
 % EXPLAIN HERE THAT M=\PM-1 ARE THE 2P_1 AND 2P_-1 EIGENSTATES OF L_Z
 % AND 2P_X AND 2P_Y ARE LINEAR COMBINATIONS OF THESE L_Z EIGENSTATES
-The imaginary part $\Gamma$ is related to the lifetime of the decaying
-state $\tau$ via $\Gamma\tau = 1$. For the $1b_{1}$ and $1b_{2}$
-orbitals, which are formulated as linear combinations of the $L_{z}$
-eigenstates $2p_{x}$ and $2p_{y}$, respectively, we have $|m| = 1$ in
-Eq.~(\ref{eq:pde}). The presence of the effective potential
-$V_{\mathrm{eff}}(r)$ makes this problem challenging in the sense that
-it is not possible to obtain separable solutions like for the hydrogen
-atom in which a pure Coulomb potential leads to separability in
-parabolic coordinates, as was discussed in~\cite{Telnov_1989}. It is
-then necessary to generate a more general solution by solving the
-\textsc{pde} numerically, e.g., by applying a finite-element method.
+For the $1b_{1}$ and $1b_{2}$ orbitals, which are formulated as linear
+combinations of the $L_{z}$ eigenstates $2p_{x}$ and $2p_{y}$,
+respectively, we have $|m| = 1$ in Eq.~(\ref{eq:pde}). The presence of
+the effective potential $V_{\mathrm{eff}}(r)$ makes this problem
+challenging in the sense that it is not possible to obtain separable
+solutions like for the hydrogen atom in which a pure Coulomb potential
+leads to separability in parabolic coordinates, as was discussed
+in~\cite{Telnov_1989}. It is then necessary to generate a more general
+solution by solving the \textsc{pde} numerically, e.g., by applying a
+finite-element method.
 
 The ionization regime of the water molecule is described by means of a
 non-Hermitian Hamiltonian that reveals discrete resonance eigenvalues
