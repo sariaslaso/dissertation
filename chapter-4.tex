@@ -31,25 +31,26 @@ Volkov-state methods~\cite{Faisal_1973, Reiss_1980, Kaminski_1997},
 have revealed their strengths within strong-laser field problems in
 which a numerical solution would involve a computationally taxing
 problem. The strong-field approximation~\cite{KeldyshSFA}, which
-treats the binding potential of the atom as a perturbation once the
-electron has been promoted into the continuum where the external laser
-field governs the electron dynamics, is the foundation to the
-formalism discussed in this chapter.
+treats the binding potential of the atom as a perturbation to the
+ionized electron, is the foundation to the formalism discussed in this
+chapter.
 
-Sec.~\ref{sec:keldysh} presents an overview of the pioneering work by
-Keldysh to describe the laser ionization of atoms. Next, a generalized
-approach that introduces rescattering of the electron back to the
-vicinity of the binding potential is included in
-Sec.~\ref{kopold_sfa}. The ionization regime of a model He atom under
-a strong-laser field is explored in Sec.~\ref{sec:kopold_qm} for both
-scenarios: considering only direct electrons where the ionization
-spectrum is reproduced by the Keldysh amplitude, and using a compact
-expression for the transition amplitude that encloses the limiting
-case of direct trajectories while allowing electrons to rescatter to
-the parent ion as well. Additionally, this study is extended to
-explore the laser ionization of the $1b_{1}$ and $1b_{2}$ molecular
-orbitals of H$_{2}$O in Sec.~\ref{sec:mo_sfa}. The analysis presented
-in this chapter closely follows that of~\cite{Kopold_1997sfa}.
+\textcolor{blue}{[mention Sec 4.1]} Sec.~\ref{sec:keldysh} presents an
+overview of the pioneering work by Keldysh to describe the laser
+ionization of atoms. Next, a generalized approach that introduces
+rescattering of the electron back to the vicinity of the binding
+potential is included in Sec.~\ref{kopold_sfa}. The ionization regime
+of a model He atom under a strong-laser field is explored in
+Sec.~\ref{sec:kopold_qm} for both scenarios: considering only direct
+electrons where the ionization spectrum is reproduced by the Keldysh
+amplitude, and using a compact expression for the transition amplitude
+that encloses the limiting case of direct trajectories while allowing
+electrons to rescatter to the parent ion as well. In addition to
+working out numerical details presented in Kopold's
+dissertation~\cite{phd_Kopold}, in this thesis we explore the laser
+ionization of the $1b_{1}$ and $1b_{2}$ molecular orbitals of H$_{2}$O
+in Sec.~\ref{sec:mo_sfa}. The analysis presented in this chapter
+closely follows that of~\cite{Kopold_1997sfa}.
 
 
 
@@ -75,31 +76,31 @@ laser field intensity increases~\cite{KeldyshSFA}.
 At moderate intensities, $I < 10^{14}\ \mathrm{W/cm^{2}}$, atomic
 states undergo a transition from bound states into the continuum due
 to the multiphoton excitation linked to the interaction with the laser
-field, this phenomenon is known as multiphoton ionization
-(\textsc{mpi}). The interaction with intense laser fields induces an
-ac Stark shift of the atomic bound states that is responsible for the
-peak suppression in the ionization spectrum as the field intensity
-increases~\cite{MullerStark_1988}. While states near the nucleus have
-a negligible shift in energy due their strong bond and are, in fact,
-harder to influence by the field, the upward shift of the higher
-states and continuum can become appreciable in the form of an increase
-in the ionization potential of the atom, $I_{p}$, see
-Figure~\ref{fig:mpi_tunneling}(a). This shift is given by the electron
-ponderomotive energy, $U_{p} = e^{2}E^{2} / 4m\omega^{2}$, which is
-the cycle-averaged kinetic energy of a free electron in the electric
-field of strength $E$ and frequency $\omega$. Although this increase
-in the ionization potential could, possibly, make some transitions
-energetically forbiden, in a smoothly varying pulse ionization
-channels may not be closed for the entire pulse, in such a way that
-the corresponding peak in the ionization spectrum will not vanish
+field. The interaction with intense laser fields induces an ac Stark
+shift of the atomic bound states that is responsible for the peak
+suppression in the ionization spectrum as the field intensity
+increases~\cite{MullerStark_1988}. While $s$ states with low principal
+quantum number $n$, have a negligible shift in energy due their strong
+bond and are, in fact, harder to influence by the field, the upward
+shift of the higher$-n$ states and continuum can become appreciable in
+the form of an increase in the ionization potential of the atom,
+$I_{p}$, see Figure~\ref{fig:mpi_tunneling}(a). This shift is given by
+the electron ponderomotive energy, $U_{p} = e^{2}E^{2} /
+4m\omega^{2}$, which is the cycle-averaged kinetic energy of a free
+electron in the electric field of strength $E$ and frequency
+$\omega$. Although this increase in the ionization potential could,
+possibly, make some transitions energetically forbiden, in a smoothly
+varying pulse ionization channels may not be closed for the entire
+pulse, in such a way that the corresponding peak in the ionization
+spectrum will not vanish
 completely~\cite{Protopapas_mpi_tunneling,Joachain_mpi_tunneling}. The
-number of photons required for \textsc{mpi} to take place depends on
-the typical binding energies of the initial states, $E_{i} =
--I_{p}$. For ionization of a hydrogen atom, $I_{p} \sim
+number of photons required for multiphoton ionization to take place
+depends on the typical binding energies of the initial states, $E_{i}
+= -I_{p}$. For ionization of a hydrogen atom, $I_{p} \sim
 13.6\ \rm{eV}$, with a typical photon energy of $\hbar\omega \sim
 1.5\ \rm{eV}$ at $800\ \rm{nm}$, at least $9$ photons are necessary
 for the outer electrons to escape the binding potential of the atom
-and reach the continuum. While for the helium atom, $I_{p} \sim
+and reach the continuum. For the helium atom, $I_{p} \sim
 24.5\ \rm{eV}$, under a laser photon energy of $\hbar\omega =
 1.58\ \rm{eV}$, which we consider in this chapter, at least $15$
 photons are needed for ionization to occur.
@@ -118,7 +119,7 @@ escape via tunneling, as Figure~\ref{fig:mpi_tunneling}(b)
 illustrates. In the tunneling regime, since the laser field varies
 slowly compared to the response time of the electron, the ionization
 rate becomes the cycle average of the instantaneous dc tunneling
-rate. A fundamental quantity in Keldysh theory, known as Keldysh
+rate. A fundamental quantity in Keldysh theory, known as the Keldysh
 parameter, is the ratio of the incident laser frequency to the
 tunneling rate, and can be written as~\cite{KeldyshSFA}
 %
@@ -128,13 +129,12 @@ tunneling rate, and can be written as~\cite{KeldyshSFA}
 \end{split}
 \end{eqnarray}
 %
-where $I_{p}$ is the field-free atomic ionization potential. The
-Keldysh parameter illustrates the limits of applicability of the
-competing mechanisms that characterize the ionization process. For
-$\gamma < 1$, tunneling dynamics will dominate, whereas for $\gamma >
-1$ multiphoton dynamics will prevail. In this chapter, we will refer
-to the tunneling regime as it is one of the fundamental processes in
-\textsc{ati}.
+where $I_{p}$ is the field-free atomic ionization energy. The Keldysh
+parameter illustrates the limits of applicability of the competing
+mechanisms that characterize the ionization process. For $\gamma < 1$,
+tunneling dynamics will dominate, whereas for $\gamma > 1$ multiphoton
+dynamics will prevail. In this chapter, we focus on the tunneling
+regime in \textsc{ati}.
 
 \begin{figure}
   \centering
@@ -163,15 +163,16 @@ Even though the Keldysh formalism for strong-field ionization provided
 very good agreement with experimental data of electron \textsc{ati}
 spectra for helium ionization~\cite{Walker_1994exp}, rescattering
 effects were not included in the theory and it failed to reproduce the
-rescattering induced plateau that is visible in measurements along a
-broad energy spectrum~\cite{Paulus_1994plateau, Walker_1996}, and
-emerged as a prevalent feature in the \textsc{ati} energy
+plateau that is visible in measurements along a broad energy
+spectrum~\cite{Paulus_1994plateau, Walker_1996}, and emerged as a
+prevalent feature in the \textsc{ati} energy
 spectrum. Figure~\ref{fig:plateau_ATI} shows the presence of such
 plateau as a marked change of slope in the ionization spectrum of rare
-gases. A recollision picture in which the strong-field ionization is
-characterized by several steps, involving tunneling of the electron
-followed by a free interaction with the laser field in which the
-electron returns to the core, was introduced later
+gases \textcolor{blue}{[ELABORATE THAT IT'S WEAKER FOR HE THAN THE
+    OTHER GASES]}. A recollision picture in which the strong-field
+ionization is characterized by several steps, involving tunneling of
+the electron followed by a free interaction with the laser field in
+which the electron returns to the core, was introduced later
 on~\cite{Corkum_1993, LewensteinSPA_1994}. In this chapter we are
 concerned with the numerical evaluation of an improved Keldysh
 approximation~\cite{Kopold_1997sfa} that accounts for rescattering
@@ -180,8 +181,8 @@ effects and reveals the complex structure of the ionization spectrum.
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/plateauPRL72}
-  \caption{\textsc{ati} spectra for various noble gases, at a
-    wavelength of $\lambda = 630\ \rm{nm}$ and an intensity of $I
+  \caption{Experimental \textsc{ati} spectra for various noble gases,
+    at a wavelength of $\lambda = 630\ \rm{nm}$ and an intensity of $I
     \simeq 2\times 10^{14}\ \rm{W/cm^{2}}$ ($3\times
     10^{14}\ \rm{W/cm^{2}}$ for He). From
     Ref.~\cite{Paulus_1994plateau}}
@@ -207,12 +208,14 @@ evolution operator formalism~\cite{BeckerTEOp_2006} is
 implemented. The time-evolution operator, $U(t,t')$, propagates the
 wave function $|\psi(t)\rangle$ from $t'$ to $t$ under the full
 Hamiltonian
+%
 \begin{eqnarray}
 \label{eq:H_ati}
 \begin{split}
 H(t) & = & -\frac{1}{2} \nabla^{2} + H_{I}(t) + V(\mathbf{r}),
 \end{split}
 \end{eqnarray}
+%
 which includes the binding potential of the parent ion,
 $V(\mathbf{r})$, and the interaction with the laser field,
 $H_{I}(t)=-\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
@@ -269,7 +272,7 @@ V(\mathbf{r}) & = & -\lambda\ \delta(\mathbf{r})
 \end{split}
 \end{eqnarray}
 %
-which has a bound state or more depending on
+which has one or more bound states depending on
 $\lambda$~\cite{Becker_rescattering1994, Becker_ati2002}. Zero-range
 potentials have been widely used in tunneling~\cite{Kleber_zeroV1994}
 and multiphoton ionization problems~\cite{Becker_zeroV1990}, as well
@@ -316,9 +319,10 @@ universal picture of \textsc{ati}
 spectra~\cite{Becker_rescattering1994,Walker_1996,BeckerRescattering_2018},
 and, along with momentum conservation, represent the origin of the
 characteristic plateau that is present in linear-polarization
-generated spectra~\cite{Paulus_1994plateau}. In this section, we are
-concerned with exploring the \textsc{ati} energy spectrum of such
-electrons that interact further with the atomic core and rescatter.
+generated spectra~\cite{Paulus_1994plateau}, as shown in
+Fig.~\ref{fig:plateau_ATI}. In this section, we are concerned with
+exploring the \textsc{ati} energy spectrum of such electrons that
+interact further with the atomic core and rescatter.
 
 % pra55 kopold
 % derivation of eq.6, generalized of keldysh amplitude
@@ -337,6 +341,7 @@ time-evolution operator plays an essential role. Inserting the
 expansion for the time-evolution operator into the ionization
 amplitude~(\ref{eq:matrix_element}) one obtains the generalized
 expression~\cite{Kopold_1997sfa}
+%
 \begin{eqnarray}
 \label{eq:mp_2terms}
 \begin{split}
@@ -346,6 +351,7 @@ dt' \langle \psi_{\mathbf{p}}(t) | U^{(V)}(t, t') \{ H_{I}(t') | \psi_{0}(t') \r
 -i \int\limits_{-\infty}^{t'} dt'' V U(t', t'') H_{I}(t'') | \psi_{0}(t'') \rangle \},
 \end{split}
 \end{eqnarray}
+%
 which is still an exact representation of the transition
 amplitude. The first term is the direct amplitude that yields the
 Keldysh matrix element discussed in Sec.~\ref{sec:keldysh}. The second
@@ -353,6 +359,7 @@ term allows for additional interactions with the atomic potential, and
 therefore describes rescattering of the electron. Further algebraic
 transformations on the second term result in the compact expression
 for the ionization amplitude~\cite{Kopold_1997sfa}
+%
 \begin{eqnarray}
 \label{eq:mp_compact}
 \begin{split}
@@ -361,10 +368,11 @@ M_{\mathbf{p}} & = & - \int\limits_{-\infty}\limits^{\infty} dt
 | V U^{(V)}(t, t') V | \psi_{0}(t') \rangle,
 \end{split}
 \end{eqnarray}
+%
 where the scattering state was replaced by a plane wave in order to
 carry out the limit of $t\to\infty$. This expression now describes
 both the direct electrons that depart from the atom without further
-interaction with the binding potential as well as the electrons that
+interaction with the binding potential, as well as the electrons that
 are promoted to the continuum at some time $t'$, and propagate in the
 laser field until some later time $t$ when they return to within the
 range of the binding potential, whereupon they rescatter into their
@@ -442,20 +450,15 @@ form
 \end{split}
 \end{eqnarray}
 %
-Both contributions the one from direct electrons described by the
-Keldysh amplitude as well as that from rescattering electrons which
-interact one more time with the binding potential are considered when
-studying the convergence of the \textsc{ati} matrix element that
-generates the ionization spectrum. Our calculation considers a laser
-field with $\hbar\omega = 1.58\ \rm{eV}$ at an intensity of
-$10^{15}\ \rm{W}/\rm{cm}^{2}$, acting upon a He atom with $E_{0} =
--0.9\ \rm{a.u.}$ as the binding energy. Atomic units are used for the
-field intensity so the relative strengths of the laser versus the
-atomic binding energy are displayed.
+For our calculation we consider a laser field with $\hbar\omega =
+1.58\ \rm{eV}$ at an intensity of $10^{15}\ \rm{W}/\rm{cm}^{2}$,
+acting upon a He atom with $E_{0} = -0.9\ \rm{a.u.}$ as the binding
+energy. Atomic units are used for the field intensity so the relative
+strengths of the laser versus the atomic binding energy are displayed.
 
 The numerical evaluation of the remaining quadrature in
 Eq.~(\ref{eq:Mp_quad}) in terms of the travel time is not
-straightforward as the convergence of the solution indicates to be
+straightforward as the convergence of the solution appears to be
 sensitive to the working precision requested. Given that the integrand
 is independent of the electron energy, associated with $p_{x}$ in
 Eq.~(\ref{eq:Mp_quad}), a fixed value of the Bessel function order $l$
@@ -512,7 +515,7 @@ the initial evaluation until they converge. This happens relatively
 quickly for negative values of $l$ for which the graphic indicates
 that approximately $25$ digits of precision would be enough to obtain
 the converged result. In contrast, for $l>0$ the digits of precision
-needed increased to $50$ for $l = 80$.
+had to be increased to $50$ for $l = 80$.
 
 \begin{figure}
   \centering
@@ -621,7 +624,7 @@ about $2.5\rm{U_{p}}$.
 \begin{figure}
   \centering
   \includegraphics[width=0.75\textwidth]{figures/ch_ATI_SFA/He/l20304050Keldysh.pdf}
-\caption{\textsc{ati} spectrum of zero-range model for helium by a
+\caption{\textsc{ati} spectrum of a zero-range model for helium by a
   linearly polarized field with a laser intensity of
   $10^{15}\ \rm{W/cm^{2}}$ with $\hbar\omega = 1.58\ \rm{eV}$
   describing direct electrons. Each curve corresponds to a finite
@@ -694,7 +697,7 @@ field~\cite{Kopold_1997sfa,Paulus_1994plateau,Becker_1994plateau_classical}.
 % to model how this approximate orbitals would ionize in the presence
 % of a strong laser field
 The study on the H$_{2}$O molecular orbitals presented in
-Chapter~\ref{cha:dc_h2o} is extended in this section with the aim of
+Chapter~\ref{ch:dc_h2o} is extended in this section with the aim of
 exploring the \textsc{ati} spectrum of the $1b_{1}$ and $1b_{2}$
 molecular orbitals previously characterized as spherical orbitals. The
 zero-range model calculation carried out in the previous section
@@ -745,7 +748,7 @@ amplitude~(\ref{eq:keldysh_amp_explicit}) in red and blue,
 respectively. The numerical values of the integral $F(l)$ were
 rescaled for both molecular orbitals, divided by a factor of $5.5$ for
 the $1b_{1}$ MO and by a factor of $6.5$ for the $1b_{2}$ MO, in order
-to make the comparability between the curves visible. Correspondingly,
+to make the comparison between the curves visible. Correspondingly,
 the working precision of the calculations was gradually increased for
 $|l| > 0$ up to a maximum of $50$ digits of precision for
 $l_{\rm{max}} = 80$. As it has been observed for ionization along the
