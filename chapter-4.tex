@@ -171,20 +171,11 @@ prevalent feature in the \textsc{ati} energy
 spectrum. Figure~\ref{fig:plateau_ATI} shows the measured \textsc{ati}
 spectra of rare gases in which a sudden change of slope of the
 envelope of the peak heights or a plateau is observed. These effects
-were observed to evolve in a similar manner at certain range of the
+were observed to evolve in a similar manner at certain ranges of the
 laser-field intensities for all rare
 gases~\cite{Paulus_1994plateau}. For the \textsc{ati} spectra shown in
 Fig.~\ref{fig:plateau_ATI} the plateus are more pronounced for Ar and
 Xe, while it appears to be weaker for He.
-
-A recollision picture in which the strong-field ionization is
-characterized by several steps, involving tunneling of the electron
-followed by a free interaction with the laser field in which the
-electron returns to the core, was introduced later
-on~\cite{Corkum_1993, LewensteinSPA_1994}. In this chapter we are
-concerned with the numerical evaluation of an improved Keldysh
-approximation~\cite{Kopold_1997sfa} that accounts for rescattering
-effects and reveals the complex structure of the ionization spectrum.
 
 \begin{figure}
   \centering
@@ -196,6 +187,15 @@ effects and reveals the complex structure of the ionization spectrum.
     Ref.~\cite{Paulus_1994plateau}}
   \label{fig:plateau_ATI}
 \end{figure}
+
+A recollision picture in which the strong-field ionization is
+characterized by several steps, involving tunneling of the electron
+followed by a free interaction with the laser field in which the
+electron returns to the core, was introduced later
+on~\cite{Corkum_1993, LewensteinSPA_1994}. In this chapter we are
+concerned with the numerical evaluation of an improved Keldysh
+approximation~\cite{Kopold_1997sfa} that accounts for rescattering
+effects and reveals the complex structure of the ionization spectrum.
 
 The probability amplitude for an electron to transfer from the ground
 state of an atom with binding potential $V(\mathbf{r})$ into a
@@ -209,11 +209,10 @@ M_{\mathbf{p}} & = & \lim_{t\to\infty,t'\to -\infty}
 \end{split}
 \end{eqnarray}
 where it is assumed that in the limit of early times, $t'\to -\infty$,
-the exact wave function reduces to the unperturbed wave function
-$\psi_{0}(t)$ of the initial ground state. In order to express the
-total wave function in terms of the unperturbed wave function, the
-evolution operator formalism~\cite{BeckerTEOp_2006} is
-implemented. The time-evolution operator, $U(t,t')$, propagates the
+the exact wave function reduces to the ground state $\psi_{0}(t)$. In
+order to express the total wave function in terms of the unperturbed
+wave function, the evolution operator formalism~\cite{BeckerTEOp_2006}
+is implemented. The time-evolution operator, $U(t,t')$, propagates the
 wave function $|\psi(t)\rangle$ from $t'$ to $t$ under the full
 Hamiltonian
 %
