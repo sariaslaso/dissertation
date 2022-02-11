@@ -500,10 +500,10 @@ $[2\pi/\omega (k-1), 2\pi/\omega k)$, that extends to $+\infty$ is
   singularity at $\tau = 0$ due to the $1/\tau$ factor in $F(l)$, a
   coordinate transform of the form $x \to \sqrt{\tau}$ is implemented
   so that the integrand converges to a finite value as $\tau$
-  approaches zero. This special coordinate transform is suitable only
-  for small values of $\tau$ given that losing the $1/\tau$ factor
-  would slow down the convergence of the integrand to zero at larger
-  times.
+  approaches zero. %This special coordinate transform is suitable only
+  %for small values of $\tau$ given that losing the $1/\tau$ factor
+  %would slow down the convergence of the integrand to zero at larger
+  %times.
 
 
 % include figure with convergence of the value of the integral as the
@@ -554,24 +554,26 @@ the validity of the aforementioned generalization.
 Figure~\ref{fig:integral_keldysh} exhibits a comparison of the
 numerical evaluation of $F(l)$ in~(\ref{eq:Mp_rew}) with the simple
 Bessel function in~(\ref{eq:keldysh_amp_explicit}) for several sets of
-increasing values of $l_{\rm{max}}$. The coefficients that replace the
-integral in the Keldysh amplitude were scaled, divided by a factor of
-$5$, so it is possible to see the agreement. For negative values of
-$l$, at about $l=-30$, the curves begin to differ as the integrals
-oscillate around $10^{-6}\ \rm{(arb.\ units)}$ for a range of negative
-$l$ values that extends from $l\approx -30$ to $l\approx -60$,
-indicating the presence of rescattering as opposed to the case for the
-direct transmission, shown as blue dots, from the Keldysh
-amplitude. As one might notice, for sufficiently small negative values
-of $l$ ($l < -60$) the values of the integral start dropping below,
-indicating that convergence of the ionization spectrum for
-rescattering electrons is to be expected. As the Bessel order, $l$,
-was increased in the evaluation of the quadrature, the working
-precision and precision goal were tuned appropriately so the curves
-would remain comparable. This is consistent with
-Figure~\ref{fig:WP_convergence}, as the order of Bessel functions
-increases, a higher working precision is required in order to find a
-numerical solution to the quadrature.
+increasing values of $l_{\rm{max}}$. It is to be expected that the
+integrals $F(l)$ are a multiple of the Bessel factor in the Keldysh
+amplitude for a given range of $l$ values. This can be observed in
+Fig.~\ref{fig:integral_keldysh} as the Bessel factors (blue dots) are
+divided by a factor of $5$ to place them on the same scale as the time
+integrals $F(l)$ (red dots). For negative values of $l$, at about
+$l=-30$, the curves begin to differ as the integrals oscillate around
+$10^{-6}\ \rm{(arb.\ units)}$ for a range of negative $l$ values that
+extends from $l\approx -30$ to $l\approx -60$, indicating the presence
+of rescattering as opposed to the case for the direct transmission,
+shown as blue dots, from the Keldysh amplitude. As one might notice,
+for sufficiently small negative values of $l$ ($l < -60$) the values
+of the integral start dropping below, indicating that convergence of
+the ionization spectrum for rescattering electrons is to be
+expected. As the Bessel order, $l$, was increased in the evaluation of
+the quadrature, the working precision and precision goal were tuned
+appropriately so the curves would remain comparable. This is
+consistent with Figure~\ref{fig:WP_convergence}, as the order of
+Bessel functions increases, a higher working precision is required in
+order to find a numerical solution to the quadrature.
 
 %As you can see the first 10 points (Lmin=-80 to -70) are smaller
 %compared to the others, so convergence can be expected.
@@ -720,9 +722,9 @@ laser field.
 %valence orbitals $1b_{1}$ and $1b_{2}$.
 
 % mention more the details of the calculation
-Each molecular orbital is treated as an independent atom in which the
-eigenvalues $\epsilon_{1b_{1}}$ and $\epsilon_{1b_{2}}$ obtained from
-the radial representation of their effective potentials,
+Each molecular orbital is treated as an independent spherical orbital
+in which the eigenvalues $\epsilon_{1b_{1}}$ and $\epsilon_{1b_{2}}$
+obtained from the radial representation of their effective potentials,
 $V_{\rm{eff}}(r)$, are considered their binding energies,
 respectively. With this in mind, it is possible to generate the
 ionization spectrum for direct electrons and that for rescattering
