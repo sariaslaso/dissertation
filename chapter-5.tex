@@ -64,8 +64,8 @@ interaction with the atomic binding
 potential~\cite{Kopold_1997sfa}. The \textsc{kfr} theory of
 strong-field approximation has also been extended to the study of
 harmonic generation~\cite{LewensteinSPA_1994,Lewenstein_1995} by means
-of a quantum model that takes into account additional interaction of
-the ionizing electron with the ion core including higher order terms
+of a quantum model that takes into account additional interactions of
+the ionizing electron with the ion core including higher-order terms
 in a perturbative expansion leading to rescattering effects. This
 model, which extends beyond zero-range potentials, constitutes a
 quantum mechanical formulation of the two-step semiclassical
@@ -86,8 +86,9 @@ pictures the processes taking place in laser-atom interactions, such
 as \textsc{ati} and high-harmonic generation (\textsc{hhg}), in terms
 of electron trajectories in phase space. These quantum trajectories,
 as it is explained below, follow classical Newtonian dynamics,
-however, must take place in the complex plane to account for tunneling
-ionization. Consequently, they present non-zero imaginary components
+however, time must be defined in the complex plane to account for
+tunneling ionization. Consequently, they present non-zero imaginary
+components for the ionization time, rescattering time and momentum,
 which determine the probability of the process. Their physical content
 is reflected in the electron dynamics once it has been ionized at time
 $t'$, the electron may return to its parent ion at a later time $t$
@@ -110,26 +111,34 @@ as~\cite{Becker_ati2002}
 %
 where $|\mathbf{p} - e\mathbf{A}(t)\rangle$ represents a plane-wave
 state with momentum $\mathbf{k} = \mathbf{p} - \mathbf{A}(t)$ and
-$S_{\mathbf{p}}(t) = 1/2m \int\limits^{t} d\tau [\mathbf{p} -
-  e\mathbf{A}(\tau)]^{2}$ denotes the action of the system. The Volkov
-time-evolution operator, which replaces the exact time-evolution
-operator in the strong-field approximation~\cite{KeldyshSFA},
-satisfies the Schr\"{o}dinger equation
+%
+\begin{eqnarray}
+  \begin{split}
+    S_{\mathbf{p}}(t) & = & 1/2m \int\limits^{t} d\tau
+    [\mathbf{p} - e \mathbf{A}(\tau)]^{2}
+  \end{split}
+  \label{eq:action_system}
+\end{eqnarray}
+%
+denotes the action of the system. The Volkov time-evolution operator,
+which replaces the exact time-evolution operator in the strong-field
+approximation~\cite{KeldyshSFA}, satisfies the Schr\"{o}dinger
+equation
 %
 \begin{eqnarray}
   \label{eq:Uv_SchEq}
   \begin{split}
     [ i\partial_{t} - H_{I}(t) ] U^{(V)}(t,t') = 0 \\
-    H_{L}(t) = -\frac{1}{2}\nabla^{2} + V_{I}(t)
+    H_{L}(t) = -\frac{1}{2} \nabla^{2} + V_{I}(t) =
+    -\frac{1}{2} \nabla^{2} + \mathbf{r} \cdot \mathbf{E}(t)
   \end{split}
 \end{eqnarray}
 %
-where $V_{I}(t) = \mathbf{r}\cdot\mathbf{E}(t)$ indicates the
-interaction of the electron with the electric field of the laser. In
-view of the completeness of the plane-wave states as required by the
-evolution operators formalism, it can be verified that the Volkov
-time-evolution operator, expressed in terms of a Volkov-state
-decomposition~(\ref{eq:volkov_Lgauge}) by
+where $V_{I}(t)$ indicates the interaction of the electron with the
+electric field of the laser. In view of the completeness of the
+plane-wave states as required by the evolution operator formalism, it
+can be verified that the Volkov time-evolution operator, expressed in
+terms of a Volkov-state decomposition~(\ref{eq:volkov_Lgauge}) by
 %
 \begin{eqnarray}
 \label{eq:te_volkov}
@@ -191,7 +200,7 @@ which correspond to the action of the entire system after rescattering
 at time $t$, between ionization and rescattering where the
 intermediate free-electron momenta is indicated by $\mathbf{k}$, and
 before the electron is ionized at time $t'$, respectively. The
-rescattering amplitude, $M_{\mathbf{p}}$, which accounts for the
+rescattering amplitude, $M_{\mathbf{p}}$, which is responsible for the
 high-energy plateau in the electron energy spectrum, takes the
 form~\cite{Becker_ati2002,BeckerTEOp_2006}
 %
@@ -221,10 +230,10 @@ with
 %
 This amplitude corresponds to the so-called three-step
 model~\cite{Becker_ati2002}, in which $V$ represents the potential
-that the ionized electron feels when it rescatters off its parent
-ion. In order to evaluate the total probability amplitude, one needs
-to integrate over the interval of ionization times $t'$ during which
-the electric field is non-zero, integrate over all intermediate
+that the ionized electron experiences when it rescatters off its
+parent ion. In order to evaluate the total probability amplitude, one
+needs to integrate over the interval of ionization times $t'$ during
+which the electric field is non-zero, integrate over all intermediate
 electron momenta $\mathbf{k}$, and over all rescattering times $t >
 t'$. The amplitude~(\ref{eq:mp_final}) can be approximated using a
 saddle-point method~\cite{Lewenstein_1995}, in which the leading
@@ -239,7 +248,7 @@ action~(\ref{eq:action_mpintegral}).
 % p-57 chapter
 It is revealing to point out the contrast of the ionization
 amplitude~(\ref{eq:mp_final}), obtained with the strong-field
-approximation, with its analogous representation in terms of Feynman's
+approximation, with its analogous representation in terms of Feynman
 path integral formulation~\cite{RevModPhysFeynman}. The time evolution
 operator of the entire system has the path integral representation
 \begin{eqnarray}
@@ -330,7 +339,7 @@ ion, respectively. Since $|E_{0}| > 0$ in~(\ref{eq:saddle_eqs}), the
 condition of energy conservation at the time of ionization cannot be
 satisfied for any real time $t'$. As a consequence, the solutions
 $(t_{S}, t'_{S}, \mathbf{k}_{S})$ of the saddle-point equations
-describe complex orbits which restrains a straightforward
+describe complex orbits which puts limitations on a straightforward
 visualization of the trajectories.
 
 %p-56 chapter ATI
@@ -407,12 +416,12 @@ results in determining the solutions of
 %
 The stationary points from Eq.~(\ref{eq:stationary_points}) have a
 non-zero imaginary component, therefore, it is convenient to split the
-integral of the action~(\ref{eq:action_direct}) into the complex plane
-by implementing the substitution $\omega t_{0} \to \rm{Re}(\omega
-t_{0}) + i\rm{Im}(\omega t_{0})$. For a linearly polarized laser field
-of the form~(\ref{eq:lp_field}), the location of the saddle points can
-be determined analytically and their real and imaginary components
-satisfy the conditions
+integral of the action~(\ref{eq:action_direct}) in the complex time
+domain by implementing the substitution $\omega t_{0} \to
+\rm{Re}(\omega t_{0}) + i\rm{Im}(\omega t_{0})$. For a linearly
+polarized laser field of the form~(\ref{eq:lp_field}), the location of
+the saddle points can be determined analytically and their real and
+imaginary components satisfy the conditions
 %
 \begin{eqnarray}
   \label{eq:ReIm_eqs}
