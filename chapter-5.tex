@@ -294,6 +294,7 @@ action~(\ref{eq:action_mpintegral}) are large enough. The major
 contributions to the integrals in~(\ref{eq:mp_final}) come from the
 saddle points, which are the solutions of $S''_{\mathbf{p}}(q_{i}) =
 0$ that render the phase stationary.
+
 % mention deformation of the integration path into the complex plane
 % mention why the trajectories are complex
 In the process of evaluating the transition amplitude, the phase of
@@ -302,7 +303,7 @@ steepest descent in the complex plane. As a result, a handful of
 relevant paths remains to be considered in order to explore the
 \textsc{ati} spectrum~\cite{KopoldOptComm2000}. Since the tunneling
 process of an electron is involved in this analysis, these paths take
-place in the complex plane.
+place in the complex time domain.
 %
 The condition
 \begin{eqnarray}
@@ -329,7 +330,7 @@ d\tau e\mathbf{A}(\tau).
 %
 The solutions $(t_{S}(\mathrm{Re}\ t_{S} > \mathrm{Re}\ t'_{S}),
 t'_{S}, \mathbf{k}_{S})$, are known as the stationary points of the
-quasicassical action of the system, and define the quantum orbits
+quasiclassical action of the system, and define the quantum orbits
 which are the essential components in building the ionization spectrum
 through the saddle-point approximation. From a physical perspective,
 Eqs.~(\ref{eq:saddle_eqs}) ensure the energy conservation at the time
@@ -440,7 +441,7 @@ where $m = -e = 1$, and $\phi$ is the angle between the momentum
 $\mathbf{p}$ and the direction of polarization of the laser field,
 $\hat{x}$. The electron energy, as it propagates in the continuum, is
 indicated by $E_{p} = p^{2}/2m$. As Eqs.~(\ref{eq:ReIm_eqs}) indicate,
-a single electron energy $E_{p}$ is associated with four saddle-points
+an electron energy $E_{p}$ is associated with four saddle-points
 $\omega t_{0s}$, $s = 1, \dots, 4$, which are related to each other by
 complex conjugation.  These complex roots are illustrated in
 Figure~\ref{fig:sp_direct} for electron energies within the range $(0,
@@ -487,8 +488,8 @@ in the case where the functions $s(z)$ and $g(z)$ are analytic and
 $\eta > 0$. The integration contour $\mathcal{C}$ is deformed into a
 composition of contours $\mathcal{C}_{s}$ coinciding with the path of
 steepest descent. This transformation into the complex plane, in which
-the function $s(z = x + iy) = u(x,y) + iv(x, y)$, leads to express the
-saddle-point condition as
+the function $s(z) = s(x + iy) = u(x,y) + iv(x, y)$, leads to express
+the saddle-point condition as
 \begin{eqnarray}
   \label{eq:sp_uv_complex}
   (\nabla u) \cdot (\nabla v) = 0,
@@ -501,13 +502,13 @@ saddle-point condition as
 indicating that the curves along the directions of $\nabla u$ and
 $\nabla v$ always meet orthogonally at any point. Ideally, one needs a
 path near a point $z = z_{s}$ such that $u(x,y)$ attains a peak and
-decreases away from $z = z_{s}$. But the imaginary part $v(x,y)$ will
-in general also change and the exponential factor $e^{i\eta v}$ will
-oscillate rapidly in the vicinity of $z_{s}$. If the point $z = z_{s}$
-coincides with a saddle point, a suitable path is one where $v(x,y)$
-is nearly constant as one moves away from $z_{s}$, in other words,
-when the exponential term in~(\ref{eq:I_eta_contour}) can be expressed
-as~\cite{phd_Kopold}
+decreases away from $z = z_{s}$. However, the imaginary part $v(x,y)$
+will in general also change and the exponential factor $e^{i\eta v}$
+will oscillate rapidly in the vicinity of $z_{s}$. If the point $z =
+z_{s}$ coincides with a saddle point, a suitable path is one where
+$v(x,y)$ is nearly constant as one moves away from $z_{s}$, in other
+words, when the exponential term in~(\ref{eq:I_eta_contour}) can be
+expressed as~\cite{phd_Kopold}
 %
 \begin{eqnarray}
   \label{eq:exp_steepest}
@@ -700,13 +701,13 @@ interaction with the parent ion.
 % fundamental features of rescattering, how is this approached
 % see PhysRevA55 comments about rescattering and the plateau (introduction)
 Incorporating rescattering effects, in which ionized electrons are
-allowed to return to the parent ion, is of great significance in the
-study of \textsc{ati} as it expands the possible physical
-interpretations to the ionization spectrum. In particular, it
-elucidates the origin of the extended \textsc{ati} plateau which can
-be observed at high electron energies~\cite{Walker_1996}. This
-plateau, a key feature to the laser induced \textsc{ati}, is
-thoroughly justified when rescattering effects are included in the
+allowed to return to the parent ion, is important in the study of
+\textsc{ati} as it expands the possible physical interpretations to
+the ionization spectrum. In particular, it elucidates the origin of
+the extended \textsc{ati} plateau which can be observed at high
+electron energies~\cite{Walker_1996}. This plateau, a key feature to
+the laser induced \textsc{ati}, is thoroughly justified when
+rescattering effects are included in the
 analysis~\cite{Paulus_1994plateau,BeckerRescattering_2018}, and has
 been widely addressed in the literature under the hypothesis that the
 electrons that are responsible for this plateau gain their energy
@@ -772,7 +773,7 @@ for every possible set of saddle points $(t'_{i}, t_{i},
 \mathbf{k}_{i})$, where $i$ indicates the $i-$th quantum
 trajectory. As Eq.~(\ref{eq:return_t}) indicates, solutions for the
 rescattering time come in pairs for each optical cycle $T = 2\pi$ due
-to the combination of $\pm$ signs. Additionally, the multivaluedness
+to the combination of $\pm$ signs. Additionally, the multi-valuedness
 of the $\arccos$ function leads to infinitely many
 solutions. Considering the periodicity of the laser field, we can
 focus our attention to the interval $0 < \mathrm{Re}\ t_{i} < T$ for
@@ -795,8 +796,8 @@ The value of the ponderomotive energy, $U_{p}$, at which the two
 trajectories of a given pair approach each other most closely
 corresponds to the cutoff of this pair. Typically, the orbits that
 correspond to a given cutoff energy are defined as long and short
-orbit~\cite{BeckerRescattering_2018}. Each pair of trajectories
-$(i,j)$ has its well defined cutoff at some energy,
+orbits~\cite{BeckerRescattering_2018}. Each pair of trajectories
+$(i,j)$ has its well-defined cutoff at some energy,
 $E_{\mathrm{cutoff}}$, at which the orbits come together, and the pair
 ceases to contribute to the ionization spectrum for $E_{p} >
 E_{\mathrm{cutoff}}$. The inset in the left panel of
@@ -808,11 +809,11 @@ times, and subsequently the release times, if the electron energy
 exceeds the cutoff energy associated to a given pair. The cutoff
 energy for the pair $(1,2)$ comes out to be $10.24 U_{p}$ as
 Figure~\ref{fig:orbit_pairs} indicates. Typically, the travel time,
-$\mathrm{Re}(t_{i} - t'_{i})$, associated to a quantum orbit indicates
-the relevance of its contribution to the \textsc{ati} spectrum, the
-ones with shorter travel time being qualitatively more relevant, as
-they make up for the strongest contributions to the ionization
-spectrum.
+$\mathrm{Re}(t_{i} - t'_{i})$, associated with a quantum orbit
+indicates the relevance of its contribution to the \textsc{ati}
+spectrum, the ones with shorter travel time being qualitatively more
+relevant, as they make up for the strongest contributions to the
+ionization spectrum.
 % include physical picture indicating that there are two solutions for
 % each optical cycle, as it is mentioned in this paragraph
 
