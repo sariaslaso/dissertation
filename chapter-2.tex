@@ -13,15 +13,14 @@
 % approach implemented by Moccia, described in JChemPhys40_2164
 
 This chapter presents a brief compilation of the principles of the
-Hartree-Fock (\textsc{hf}) formulation implemented in problems of
-molecular quantum mechanics. Section~\ref{ch:var_hf} summarizes the
-Roothaan formulation of the \textsc{hf} formalism, in which the
-\textsc{hf} orbitals are expressed as linear combinations of suitable
-analytical functions~\cite{Roothaan_HF}. For molecules, the
-calculation of electronic wave functions is more intricate than for
-atoms since it is preferable to use basis functions centred about
-several nuclei, which implies the difficult task of evaluating
-multicentre
+\textsc{hf} formulation implemented in problems of molecular quantum
+mechanics. Section~\ref{ch:var_hf} summarizes the Roothaan formulation
+of the \textsc{hf} formalism, in which the \textsc{hf} orbitals are
+expressed as linear combinations of suitable analytical
+functions~\cite{Roothaan_HF}. For molecules, the calculation of
+electronic wave functions is more intricate than for atoms since it is
+preferable to use basis functions centred about several nuclei, which
+implies the difficult task of evaluating multicentre
 integrals~\cite{Pitzer_1968,Pitzer_1970}. Sec.~\ref{ch:scf_sto}
 describes a different approach that consists of using a set of basis
 functions all referred to one common origin and has reported
@@ -44,7 +43,7 @@ molecular orbitals for AH$_{n}$-type molecules~\cite{Moccia_JCP_2164,
 % (linear combination of atomic orbitals)
 
 As a starting point in the \textsc{scf} \textsc{mo} calculations, the
-$N-$electron Hartree-Fock wave function for a molecule is written as
+$N-$electron \textsc{hf} wave function for a molecule is written as
 the antisymmetrized product (\textsc{ap}) of $N$ one-electron wave
 functions~\cite{Roothaan_HF}. A molecular spin-orbital~(\textsc{mso})
 which factors into a molecular orbital, $\varphi$, and a spinor,
@@ -89,7 +88,7 @@ Slater determinant of \textsc{mso}s that is constructed by taking an
 antisymmetric linear combination of products of spin-orbitals.
 
 For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
-is made up of complete electron shells, the Hartree-Fock method seeks
+is made up of complete electron shells, the \textsc{hf} method seeks
 the \textsc{mo}'s that minimize the variational
 energy~\cite{Roothaan_HF}
 %
@@ -124,8 +123,8 @@ by
 where the integration goes over the spatial coordinates of the
 $\mu$th and the $\nu$th electron.
 
-The Hartree-Fock \textsc{scf} method looks for those molecular
-orbitals $\varphi_{i}$ that minimize the variational
+The \textsc{hf} \textsc{scf} method looks for those molecular orbitals
+$\varphi_{i}$ that minimize the variational
 energy~(\ref{eq:HF_energy}). In an iterative process, the molecular
 orbitals that form the \textsc{ap}~(\ref{eq:AP}) are corrected by an
 infinitesimal amount $\delta\varphi_{i}$, that along with the
@@ -197,7 +196,7 @@ and the integrals are taken over all space. The operator $J_{i}$
 represents the potential energy which would arise from an electron
 distributed in space with a density $|\varphi_{i}|^{2}$, while the
 operator $K_{i}$ has no classical analog. Consequently, the
-Hartree-Fock \textsc{scf} problem can be addressed as the problem of
+\textsc{hf} \textsc{scf} problem can be addressed as the problem of
 finding the best set of molecular orbitals that
 satisfy~\cite{Roothaan_HF,Levine_QChem}
 %
@@ -225,14 +224,14 @@ $\epsilon_{ji}$. The set of Eqs.~(\ref{eq:Fock_equation}), commonly
 known as \textsc{hf} equations, states that the eigenfunctions of the
 Hermitian operator $F$ are the set of \textsc{mo}s that give the best
 \textsc{ap}, while the eigenvalues $\epsilon_{i}$ represent the
-Hartree-Fock orbital energies~\cite{Roothaan_HF}.
+\textsc{hf} orbital energies~\cite{Roothaan_HF}.
 
 % reference other works that used this (Roothaan)formalism
 The formalism introduced by Roothaan~\cite{Roothaan_HF}, that allows
 the Hartree-Fock-Roothaan orbitals to be expressed as linear
 combinations of suitable analytical functions, represents a crucial
 development in obtaining accurate numerical results that approximate
-the true Hartree-Fock wave functions of the water molecule, as well as
+the true \textsc{hf} wave functions of the water molecule, as well as
 predicting chemical properties in addition to the binding energy of
 its ground state
 ~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}.
@@ -249,15 +248,15 @@ orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
 %p.410 levine
 Given that the sum~(\ref{eq:lcao_roothaan}) is an approximation to the
-exact Hartree-Fock \textsc{mo}s, the \textsc{ap} built from these
+exact \textsc{hf} \textsc{mo}s, the \textsc{ap} built from these
 molecular orbitals would be a less good approximation to the exact
-\textsc{ap} built from the Hartree-Fock \textsc{mo}s. In the limit of
+\textsc{ap} built from the \textsc{hf} \textsc{mo}s. In the limit of
 using an infinitely large basis set, $b\to\infty$, the basis functions
 would form a complete set and approximate accurately to the exact
-Hartree-Fock \textsc{scf} wave function. The number of basis
-functions, $b$, as well as the proper choice of basis functions
-$\chi_{s}$ are essential in order to obtain \textsc{mo}s that resemble
-the Hartree-Fock \textsc{mo}s with very small
+\textsc{hf} \textsc{scf} wave function. The number of basis functions,
+$b$, as well as the proper choice of basis functions $\chi_{s}$ are
+essential in order to obtain \textsc{mo}s that resemble the
+\textsc{hf} \textsc{mo}s with very small
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
 
 The problem of obtaining the best set of \textsc{mo}s for a
@@ -288,7 +287,7 @@ the set of $b$ simultaneous linear equations of the form
 \end{eqnarray}
 %
 that results from inserting the expansion~(\ref{eq:lcao_roothaan})
-into the Hartree-Fock equations~(\ref{eq:Fock_operator_problem}), and
+into the \textsc{hf} equations~(\ref{eq:Fock_operator_problem}), and
 represents a linear algebra generalized eigenvalue problem, in which
 the eigenvalues $\epsilon_{i}$ and linear coefficients $c_{si}$ are to
 be obtained. The eigenvalues of Eq.~(\ref{eq:set_linear_eqs}), which
@@ -324,11 +323,11 @@ the next.
 The \textsc{lcao} self-consistent field formalism is an approximation
 that leads to rather straightforward results for the
 \textsc{mo}s. This model leads to accurate approximations of the
-Hartree-Fock \textsc{scf} wave function provided the basis
+\textsc{hf} \textsc{scf} wave function provided the basis
 set~(\ref{eq:lcao_roothaan}) is large
 enough~\cite{EllisonShullh2o_1955, Moccia_JCP_2164, Moccia_JCP_2176,
   Moccia_1964}. Taking things further to achieve a complete
-description of the true Hartree-Fock wave function is a much more
+description of the true \textsc{hf} wave function is a much more
 complicated mathematical problem.
 
 
@@ -336,7 +335,7 @@ complicated mathematical problem.
 \label{ch:scf_sto}
 
 A frequently used set of basis functions in atomic and molecular
-Hartree-Fock calculations, in order to represent molecular wave
+\textsc{hf} calculations, in order to represent molecular wave
 functions as linear combinations of analytical functions, is the set
 of Slater-type orbitals~(\textsc{sto}s) of the form
 %
@@ -354,7 +353,7 @@ the orbital exponent $\zeta$ satisfies $\zeta \in \Re > 0 $. The
 angular part $S_{l,m}(\theta,\phi)$ represents real spherical
 harmonics.
 
-In order to converge to an exact representation of the Hartree-Fock
+In order to converge to an exact representation of the \textsc{hf}
 orbitals, it would be necessary to include an infinite number of
 \textsc{sto}s in an expansion of the
 form~(\ref{eq:lcao_roothaan}). However, previous calculations indicate
@@ -461,9 +460,9 @@ among the different sets considered.
 %basis sets~\cite{Pitzer_1968,Pitzer_1970}.
 
 Other studies have addressed the problem of the electronic structure
-of H$_{2}$O within the Hartree-Fock \textsc{scf} scheme using
+of H$_{2}$O within the \textsc{hf} \textsc{scf} scheme using
 multicentre basis functions, and achieved satisfactory total energies
-that approach the converged Hartree-Fock energies rather
+that approach the converged \textsc{hf} energies rather
 well~\cite{natureH2O_1960, gaussianH2O_1965,
   Moccia_oneCenterHF_1967,Reeves_nature_1956}. Many of these
 calculations, however, used extensive sets of basis functions or more
