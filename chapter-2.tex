@@ -141,11 +141,32 @@ as~\cite{Roothaan_HF}
   \label{eq:delta_Ehf}
 \end{eqnarray}
 %
-where $H$ is the Hamiltonian operator that represents the field of the
-nuclei alone, $J_{j}$ is the Coulomb operator, and $K_{j}$ is the
-exchange operator.
-\textcolor{blue}{[DEFINE THE OPERATORS HERE, EQS 2.8a AND 2.8b]}
-
+where $H = -\frac{1}{2}\nabla^{2} -
+\sum\limits_{\alpha}\frac{1}{r^{\alpha}}$ is the Hamiltonian operator
+that represents the field of the nuclei alone. The operators $J_{j}$
+and $K_{j}$ represent the Coulomb operator and exchange operator,
+respectively, and are defined as~\cite{Roothaan_HF}
+%
+\begin{subequations}
+  \begin{equation}\label{eq:one_indxJ}
+    J_{i}^{\mu} \varphi^{\mu} = \left( \int
+    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
+         {r^{\mu\nu}} dv^{\nu}
+         \right) \varphi^{\mu}
+  \end{equation}
+  %
+  \begin{equation}\label{eq:one_indxK}
+    K_{i}^{\mu} \varphi^{\mu} = \left( \int
+    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
+         {r^{\mu\nu}} dv^{\nu}
+         \right) \varphi^{\mu}.
+  \end{equation}
+\end{subequations}
+%
+The Coulomb operator represents the potential energy operator
+associated to an electron distributed in space with a density
+$|\varphi_{j}|^{2}$. On the other hand, the exchange operator has no
+classical analog.
 
 In order for the energy~(\ref{eq:HF_energy}) to reach its absolute
 minimum, the condition $\delta E = 0$ must be satisfied for any choice
@@ -176,31 +197,9 @@ the Fock operator, $\hat{F}$, that satisfies
   \label{eq:F_operator}
 \end{eqnarray}
 %
-where the Coulomb and exchange operators, defined
-in~(\ref{eq:Coulomb}) and~(\ref{eq:exchange}) are expressed by means of
-%
-\begin{subequations}
-  \begin{equation}\label{eq:one_indxJ}
-    J_{i}^{\mu} \varphi^{\mu} = \left( \int
-    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
-         {r^{\mu\nu}} dv^{\nu}
-         \right) \varphi^{\mu}
-  \end{equation}
-  %
-  \begin{equation}\label{eq:one_indxK}
-    K_{i}^{\mu} \varphi^{\mu} = \left( \int
-    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
-         {r^{\mu\nu}} dv^{\nu}
-         \right) \varphi^{\mu}
-  \end{equation}
-\end{subequations}
-%
-and the integrals are taken over all space. The operator $J_{i}$
-represents the potential energy which would arise from an electron
-distributed in space with a density $|\varphi_{i}|^{2}$, while the
-operator $K_{i}$ has no classical analog. Consequently, the
-\textsc{hf} \textsc{scf} problem can be addressed as the problem of
-finding the best set of molecular orbitals that
+
+Consequently, the \textsc{hf} \textsc{scf} problem can be addressed as
+the problem of finding the best set of molecular orbitals that
 satisfy~\cite{Roothaan_HF,Levine_QChem}
 %
 \begin{eqnarray}
