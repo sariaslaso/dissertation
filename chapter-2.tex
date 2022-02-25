@@ -94,14 +94,14 @@ energy~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
-    E & = & 2\sum\limits_{i} H_{i} + \sum\limits_{i}\sum\limits_{j} (2J_{ij} -
+    E & = & 2\sum\limits_{i} h_{i} + \sum\limits_{i}\sum\limits_{j} (2J_{ij} -
     K_{ij}).
   \end{split}
   \label{eq:HF_energy}
 \end{eqnarray}
 %
 The first sum in Eq.~(\ref{eq:HF_energy}) represents the energy of all
-the electrons in the field of the nuclei alone, where $H_{i}$ are the
+the electrons in the field of the nuclei alone, where $h_{i}$ are the
 nuclear-field orbital energies~\cite{Roothaan_HF}. The remaining sum
 contains the electronic interactions, in which the Coulomb integrals
 $J_{ij}$ and exchange integrals $K_{ij}$ are defined by
@@ -142,9 +142,9 @@ as~\cite{Roothaan_HF}
 \end{eqnarray}
 %
 where $H = -\frac{1}{2}\nabla^{2} -
-\sum\limits_{\alpha}\frac{1}{r^{\alpha}}$ is the Hamiltonian operator
-that represents the field of the nuclei alone. The operators $J_{j}$
-and $K_{j}$ represent the Coulomb operator and exchange operator,
+\sum\limits_{\alpha}\frac{1}{r^{\alpha}}$ is the Hamiltonian that
+represents the field of the nuclei alone. The operators $J_{j}$ and
+$K_{j}$ represent the Coulomb operator and exchange operator,
 respectively, and are defined as~\cite{Roothaan_HF}
 %
 \begin{subequations}
@@ -165,7 +165,7 @@ respectively, and are defined as~\cite{Roothaan_HF}
 %
 The Coulomb operator represents the potential energy operator
 associated to an electron distributed in space with a density
-$|\varphi_{j}|^{2}$. On the other hand, the exchange operator has no
+$|\varphi_{i}|^{2}$. On the other hand, the exchange operator has no
 classical analog.
 
 In order for the energy~(\ref{eq:HF_energy}) to reach its absolute
@@ -176,7 +176,7 @@ expressed as~\cite{Roothaan_HF,Levine_QChem}
 % eq. (14.30) Levine
 \begin{eqnarray}
   \begin{split}
-    \{H_{i} + \sum\limits_{j} ( 2J_{ij} - K_{ij} ) \} \varphi_{i} & = &
+    \{H + \sum\limits_{j} ( 2J_{j} - K_{j} ) \} \varphi_{i} & = &
     \sum\limits_{j} \varphi_{j} \epsilon_{ji},
   \end{split}
 \label{eq:deltaEzero}
@@ -187,17 +187,16 @@ in the variational procedure of minimizing the
 energy~(\ref{eq:HF_energy})~\cite{Roothaan_HF}. Once an initial guess
 for the occupied \textsc{mo}s has been introduced, the orbital
 energies $\epsilon_{i}$ can be obtained as the energy eigenvalues of
-the Fock operator, $\hat{F}$, that satisfies
+the Fock operator, $F$, that satisfies
 %
 \begin{eqnarray}
   \begin{split}
-    \hat{F} & = & \hat{H} +
-    \sum\limits_{j} [ 2\hat{J}_{j} - \hat{K}_{j} ]
+    F & = & H +
+    \sum\limits_{j} [ 2 J_{j} - K_{j} ]
   \end{split}
   \label{eq:F_operator}
 \end{eqnarray}
 %
-
 Consequently, the \textsc{hf} \textsc{scf} problem can be addressed as
 the problem of finding the best set of molecular orbitals that
 satisfy~\cite{Roothaan_HF,Levine_QChem}
@@ -272,7 +271,7 @@ to~(\ref{eq:one_indxK}). The matrix elements $F_{rs}$
 %
 \begin{eqnarray}
   \begin{split}
-    F_{rs} & \equiv & \langle \chi_{r} | \hat{F} | \chi_{s} \rangle
+    F_{rs} & \equiv & \langle \chi_{r} | F | \chi_{s} \rangle
   \end{split}
   \label{eq:F_matrix}
 \end{eqnarray}
@@ -282,14 +281,15 @@ the set of $b$ simultaneous linear equations of the form
 %
 \begin{eqnarray}
   \begin{split}
-    \sum\limits_{s=1}\limits^{b} c_{si} (F_{rs} - \epsilon_{i}S_{rs}) = 0 &
-    ~~~~ r = 1,2,\dots,b
+    \sum\limits_{s=1}\limits^{b} c_{si} (F_{rs} - \epsilon_{i}S_{rs}) = 0, &
+    ~~~~ r = 1,2,\dots,b \\
+    S_{rs} \equiv \langle \chi_{r} | \chi_{s} \rangle,~~~~~~~~~~~~
   \end{split}
   \label{eq:set_linear_eqs}
 \end{eqnarray}
 %
 that results from inserting the expansion~(\ref{eq:lcao_roothaan})
-into the \textsc{hf} equations~(\ref{eq:Fock_operator_problem}), and
+into the \textsc{hf} equations~(\ref{eq:Fock_equation}), and
 represents a linear algebra generalized eigenvalue problem, in which
 the eigenvalues $\epsilon_{i}$ and linear coefficients $c_{si}$ are to
 be obtained. The eigenvalues of Eq.~(\ref{eq:set_linear_eqs}), which
@@ -297,8 +297,7 @@ are the roots of the secular equation~\cite{Roothaan_HF,Levine_QChem}
 %
 \begin{eqnarray}
   \begin{split}
-    \mathrm{det} (F_{rs} - \epsilon_{i}S_{rs}) = 0, &
-    ~~~~ S_{rs} \equiv \langle \chi_{r} | \chi_{s} \rangle,
+    \mathrm{det} (F_{rs} - \epsilon_{i}S_{rs}) = 0
   \end{split}
   \label{eq:secular_eigenvalues}
 \end{eqnarray}
