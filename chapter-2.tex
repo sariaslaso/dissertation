@@ -166,7 +166,8 @@ respectively, and are defined as~\cite{Roothaan_HF}
 The Coulomb operator represents the potential energy operator
 associated to an electron distributed in space with a density
 $|\varphi_{i}|^{2}$. On the other hand, the exchange operator has no
-classical analog.
+classical analog. The notation $\bar U$ is used to represent the
+complex conjugate of the operator $U$.
 
 In order for the energy~(\ref{eq:HF_energy}) to reach its absolute
 minimum, the condition $\delta E = 0$ must be satisfied for any choice
@@ -247,18 +248,23 @@ orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
   \label{eq:lcao_roothaan}
 \end{eqnarray}
 %
-%p.410 levine
+%p.409,410 Levine
 Given that the sum~(\ref{eq:lcao_roothaan}) is an approximation to the
 exact \textsc{hf} \textsc{mo}s, the \textsc{ap} built from these
 molecular orbitals would be a less good approximation to the exact
-\textsc{ap} built from the \textsc{hf} \textsc{mo}s. In the limit of
-using an infinitely large basis set, $b\to\infty$, the basis functions
-would form a complete set and approximate accurately to the exact
-\textsc{hf} \textsc{scf} wave function. The number of basis functions,
-$b$, as well as the proper choice of basis functions $\chi_{s}$ are
-essential in order to obtain \textsc{mo}s that resemble the
-\textsc{hf} \textsc{mo}s with very small
+\textsc{ap} built from the \textsc{hf} \textsc{mo}s. In order for the
+linear combination~(\ref{eq:lcao_roothaan}) to be an exact
+representation of a \textsc{hf} \textsc{mo}, the basis functions
+$\chi_{s}$ should form a complete set. However, in practice one is
+limited to a finite (and therefore incomplete) basis set. The number
+of basis functions, $b$, as well as the proper choice of basis
+functions $\chi_{s}$ are essential in order to obtain \textsc{mo}s
+that resemble the \textsc{hf} \textsc{mo}s with very small
 error~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}.
+%OVER-COMPLETENESS: in a large basis set, functions on different atoms
+%start to look alike, and many eigenvalues of the overlap matrix
+%approach zero (https://en.wikipedia.org/wiki/Basis_set_(chemistry))
+
 
 The problem of obtaining the best set of \textsc{mo}s for a
 closed-shell ground state consists in finding the set of coefficients
