@@ -745,25 +745,32 @@ equation in spherical polar coordinates,
 \label{eq:sch_eq3d}
 \end{eqnarray}
 %
-For given $E_{3a_{1}}$ and $\psi_{3a_{1}}(r,\theta)$ it is
-straightforward to solve~(\ref{eq:sch_eq3d}) for
-$V_{\mathrm{eff}}(r,\theta)$. In order to use this potential to define
-a Hamiltonian for the $3a_{1}$ orbital in an electric field, an
-asymptotic Latter correction needs to be applied.
+For given $E_{3a_{1}}$ and $\psi_{3a_{1}}(r,\theta)$, an effective
+potential $V_{\mathrm{eff}}(r,\theta)$ can be constructed from
+Eq.~(\ref{eq:sch_eq3d}) as described in Sec.~\ref{ch:3a1_Latter}. In
+order to use this potential to define a Hamiltonian for the $3a_{1}$
+orbital in an electric field, an asymptotic Latter correction needs to
+be applied.
 
 Other strategies for finding an effective potential could be pursued,
-such as using a density functional, inserting the Moccia wave function,
-and then performing an azimuthal angle average. Ultimately, one would
-like to extend density functional theory~(\textsc{dft}) from finding
-ground-state energies to obtaining resonance positions and
+such as using a density functional, inserting the Moccia wave
+function, and then performing an azimuthal angle average. Ultimately,
+one would like to extend density functional theory~(\textsc{dft}) from
+finding ground-state energies to obtaining resonance positions and
 widths. This might be feasible using a combination of time-dependent
-\textsc{dft} and Floquet theory. The goal of the present work is more
-modest: we calculate the response of an isolated molecular orbital in
-a simple approximation. Recently, the problem of small molecules in a
-dc field has revealed the effect of electron-electron interactions on
-Stark resonance parameters~\cite{ScrinziJPhysB_ECS}. It will be
-interesting to observe such effects for the water molecule in future
-work.
+\textsc{dft} and Floquet theory. Floquet formalism provides a solution
+for the periodically time-dependent Hamiltonian of a system that
+interacts with an external electromagnetic field. The solution to the
+time-dependent Schr\"{o}dinger equation is formulated in terms of
+stationary states by means of a Fourier expansion, which obey a system
+of time-independent coupled differential
+equations~\cite{Joachain_mpi_tunneling,Tsog_H2mol_ac_2013}. The goal
+of the present work is more modest: we calculate the response of an
+isolated molecular orbital in a simple approximation. Recently, the
+problem of small molecules in a dc field has revealed the effect of
+electron-electron interactions on Stark resonance
+parameters~\cite{ScrinziJPhysB_ECS}. It will be interesting to observe
+such effects for the water molecule in future work.
 
 
 \subsection{Interpolation and Latter correction of the
@@ -1476,12 +1483,15 @@ well as of the potential energies $V_{\mathrm{eff}} - F_{0}z$ for
 different field strengths (both as a function of $r,\theta$), allows
 us to make the following observations. For field strengths $F_{0} <
 0.1\ \mathrm{a.u.}$ there is a barrier the electrons need to penetrate
-in order to be ionized. From the potential-energy plot shown in
-Figure~\ref{fig:1b11b2_position} one can see that for weak fields
-(small values of $F_{0}$) the barrier is longer for the more deeply
-bound $1b_{2}$ orbital. This explains why the ionization threshold
-occurs for $F_{0} > 0.1\ \mathrm{a.u.}$ for this orbital, which is
-about a factor of $2$ larger than for the $1b_{1}$ orbital.
+in order to be ionized, which is longer for the more deeply bound
+$1b_{2}$ orbital.
+%From the potential-energy plot shown in
+%Figure~\ref{fig:1b11b2_position} one can see that for weak fields
+%(small values of $F_{0}$) the barrier is longer for the more deeply
+%bound $1b_{2}$ orbital.
+This explains why the ionization threshold occurs for $F_{0} >
+0.1\ \mathrm{a.u.}$ for this orbital, which is about a factor of $2$
+larger than for the $1b_{1}$ orbital.
 
 The field-strength region where the ionization rates (resonance
 widths) display a change in character, i.e., turn over to rise much
