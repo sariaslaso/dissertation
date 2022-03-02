@@ -1179,21 +1179,29 @@ increase the working precision of the calculations.
 The dc-field ionization problem to determine the Stark resonances for
 the H$_{2}$O valence orbitals under an external field applied along
 the $\hat{z}$-direction is stated by including the external field
-potential $-F_{0}r\cos\theta$ in the radial
-equations~(\ref{eq:radial_u}). \textcolor{red}{[EXPLAIN THAT THE
-    EXTERNAL FIELD POTENTIAL IS NOT INCLUDED IN THE RADIAL EQS(3.22),
-    BUT THE SCH.EQ IS SOLVED IN THIS CASE USING THE MODEL POTENTIAL
-    AND THE EXTERNAL FIELD POTENTIAL IS INCLUDED, IT IS EQ(11) IN THE
-    PARTIAL-WAVE PAPER]}
-
-A quadratic complex absorbing potential~(\textsc{cap}) of the
-form~(\ref{eq:VCAP}) is applied to the system of coupled differential
-equations in order to determine the complex eigenvalues that result
-from the effect of the external dc field. The Stark problem presents a
-higher numerical challenge than the field-free one, in this case we
-are looking for a solution in the complex plane and the determinant to
-be minimized is a complex number, which implies that the condition of
-convergence to zero should be applied to its norm.
+potential in the Schr\"{o}dinger equation. The resulting equation
+takes the form~\cite{marko_partialwave}
+%
+\begin{eqnarray}
+    \left[
+      -\frac{1}{2}\nabla^{2} + V(r, \theta, \phi) -
+      F_{0} r \cos\theta
+    \right] \Psi(r, \theta, \phi) = E \Psi(r, \theta, \phi),
+  \label{eq:dc_field_sch_eq}
+\end{eqnarray}
+%
+where $V(r, \theta, \phi)$ is the model
+potential~(\ref{eq:model_potential}) in which the potential for each
+hydrogen atom is expressed as a truncated expansion of the
+form~(\ref{eq:expanded_H_potential}). A quadratic complex absorbing
+potential~(\textsc{cap}) of the form~(\ref{eq:VCAP}) is applied to the
+system of coupled differential equations in order to determine the
+complex eigenvalues that result from the effect of the external dc
+field. The Stark problem presents a higher numerical challenge than
+the field-free one, in this case we are looking for a solution in the
+complex plane and the determinant to be minimized is a complex number,
+which implies that the condition of convergence to zero should be
+applied to its norm.
 
 
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
@@ -1215,10 +1223,10 @@ increase. Ultimately, the artificial term introduced by the
 the resonance parameters~\cite{RissMeyer_1993}.
 
 The complex eigenvalues that result from applying the
-\textsc{cap}~(\ref{eq:VCAP}) to the system of radial
-equations~(\ref{eq:radial_u}) are computed according to the following
-scheme. For a given field strength, $F_{0}$, a set of complex
-eigenvalues is computed for an equidistant mesh of strength
+\textsc{cap}~(\ref{eq:VCAP}) to the system of coupled
+equations~(\ref{eq:dc_field_sch_eq}) are computed according to the
+following scheme. For a given field strength, $F_{0}$, a set of
+complex eigenvalues is computed for an equidistant mesh of strength
 parameters, e.g., $\eta_{\mathrm{c}} = n \times 10^{-3}$ for $n = 20,
 \dots, 70$. These results are interpolated to a sixth-order polynomial
 as a function of $\eta_{\mathrm{c}}$, and then the optimal $\eta$
@@ -1736,9 +1744,6 @@ energies observed in the left panel is accompanied by an increase in
 the decay rate that exceeds the rate observed in the opposite
 direction by about a factor of two in the over-barrier ionization
 regime.
-
-
-
 
 \begin{figure}
   \centering
