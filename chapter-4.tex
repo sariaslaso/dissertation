@@ -35,22 +35,22 @@ treats the binding potential of the atom as a perturbation to the
 ionized electron, is the foundation to the formalism discussed in this
 chapter.
 
-\textcolor{blue}{[mention Sec 4.1]} Sec.~\ref{sec:keldysh} presents an
-overview of the pioneering work by Keldysh to describe the laser
-ionization of atoms. Next, a generalized approach that introduces
-rescattering of the electron back to the vicinity of the binding
-potential is included in Sec.~\ref{kopold_sfa}. The ionization regime
-of a model He atom under a strong-laser field is explored in
-Sec.~\ref{sec:kopold_qm} for both scenarios: considering only direct
-electrons where the ionization spectrum is reproduced by the Keldysh
-amplitude, and using a compact expression for the transition amplitude
-that encloses the limiting case of direct trajectories while allowing
-electrons to rescatter to the parent ion as well. In addition to
-working out numerical details presented in Kopold's
-dissertation~\cite{phd_Kopold}, in this thesis we explore the laser
-ionization of the $1b_{1}$ and $1b_{2}$ molecular orbitals of H$_{2}$O
-in Sec.~\ref{sec:mo_sfa}. The analysis presented in this chapter
-closely follows that of~\cite{Kopold_1997sfa}.
+Section~\ref{sec:mpi&tunneling} introduces some basic notions about
+strong-field ionization. Sec.~\ref{sec:keldysh} presents an overview
+of the pioneering work by Keldysh to describe the laser ionization of
+atoms. Next, a generalized approach that introduces rescattering of
+the electron back to the vicinity of the binding potential is included
+in Sec.~\ref{kopold_sfa}. The ionization regime of a model He atom
+under a strong-laser field is explored in Sec.~\ref{sec:kopold_qm} for
+both scenarios: considering only direct electrons where the ionization
+spectrum is reproduced by the Keldysh amplitude, and using a compact
+expression for the transition amplitude that encloses the limiting
+case of direct trajectories while allowing electrons to rescatter to
+the parent ion as well. In addition to working out numerical details
+presented in Kopold's dissertation~\cite{phd_Kopold}, in this thesis
+we explore the laser ionization of the $1b_{1}$ and $1b_{2}$ molecular
+orbitals of H$_{2}$O in Sec.~\ref{sec:mo_sfa}. The analysis presented
+in this chapter closely follows that of~\cite{Kopold_1997sfa}.
 
 
 
@@ -191,11 +191,12 @@ Xe, while it appears to be weaker for He.
 A recollision picture in which the strong-field ionization is
 characterized by several steps, involving tunneling of the electron
 followed by a free interaction with the laser field in which the
-electron returns to the core, was introduced later
-on~\cite{Corkum_1993, LewensteinSPA_1994}. In this chapter we are
-concerned with the numerical evaluation of an improved Keldysh
-approximation~\cite{Kopold_1997sfa} that accounts for rescattering
-effects and reveals the complex structure of the ionization spectrum.
+electron returns to the core, was introduced later than the standard
+Keldysh description~\cite{Corkum_1993, LewensteinSPA_1994}. In this
+chapter we are concerned with the numerical evaluation of an improved
+Keldysh approximation~\cite{Kopold_1997sfa} that accounts for
+rescattering effects and reveals the complex structure of the
+ionization spectrum.
 
 The probability amplitude for an electron to transfer from the ground
 state of an atom with binding potential $V(\mathbf{r})$ into a
@@ -292,10 +293,10 @@ amplitude~(\ref{eq:keldysh_amp}) yields the expansion
 \label{eq:keldysh_amp_explicit}
 \begin{split}
 M_{\mathbf{p}}^{(0)} \sim &
-\frac{m}{2\pi}\sqrt{2m|E_{0}|}
-\sum\limits_{n} \delta\left(\frac{p^{2}}{2m} + U_{p} + |E_{0}| - n\omega\right) \\
+\frac{1}{2\pi}\sqrt{ 2 |E_{0}| }
+\sum\limits_{n} \delta \left(\frac{p^{2}}{2} + U_{p} + |E_{0}| - n\omega\right) \\
 & \times \sum\limits_{l=-\infty}\limits^{\infty} J_{2l+n}\left(\frac{2p_{x}}{\omega}
-\sqrt{\frac{U_{p}}{m}} \right) J_{l}\left( \frac{U_{p}}{2\omega} \right),
+\sqrt{U_{p}} \right) J_{l}\left( \frac{U_{p}}{2\omega} \right),
 \end{split}
 \end{eqnarray}
 %
@@ -399,10 +400,10 @@ carried out numerically,
 \label{eq:Mp_quad}
 \begin{split}
 M_{\mathbf{p}} \sim &
-\sum\limits_{n} \delta\left(\frac{p^{2}}{2m} + U_{p} + |E_{0}| - n\omega\right)
+\sum\limits_{n} \delta\left(\frac{p^{2}}{2} + U_{p} + |E_{0}| - n\omega\right)
 \sum\limits_{l=-\infty}\limits^{\infty}
-J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{\frac{U_{p}}{m}} \right) \\
-& \times \int\limits_{0}\limits^{\infty} d\tau\ \left( \frac{im}{2\pi\tau} \right)^{3/2}
+J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{U_{p}} \right) \\
+& \times \int\limits_{0}\limits^{\infty} d\tau\ \left( \frac{i}{2\pi\tau} \right)^{3/2}
 \left( e^{-i[|E_{0}|\tau + l\delta(\tau)]} \right. \\
 & \times \exp\left\{-iU_{p}\tau
 \left[1 - \left(\frac{\sin\frac{1}{2}\omega\tau}{\frac{1}{2}\omega\tau}\right)^{2}\right]
@@ -478,14 +479,11 @@ time integral as $F(l)$ by rewriting Eq.~(\ref{eq:Mp_quad}) as
 \begin{eqnarray}
 \label{eq:Mp_rew}
 \begin{split}
-M_{\mathbf{p}} \sim &
-%\sum\limits_{n} \delta\left(\frac{p^{2}}{2m} + U_{p} + |E_{0}| - n\omega\right)
-%\sum\limits_{l=-\infty}\limits^{\infty}
-%J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{\frac{U_{p}}{m}} \right)\ F(l) \\
+  M_{\mathbf{p}} \sim &
   \lim\limits_{|l|_{\rm{max}}\to\infty}
-\sum\limits_{n} \delta\left(\frac{p^{2}}{2m} + U_{p} + |E_{0}| - n\omega\right)
-\sum\limits_{l=-|l|_{\rm{max}}}\limits^{|l|_{\rm{max}}}
-J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{\frac{U_{p}}{m}} \right)\ F(l).
+  \sum\limits_{n} \delta\left(\frac{p^{2}}{2} + U_{p} + |E_{0}| - n\omega\right)
+  \sum\limits_{l=-|l|_{\rm{max}}}\limits^{|l|_{\rm{max}}}
+  J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{U_{p}} \right)\ F(l).
 \end{split}
 \end{eqnarray}
 %
