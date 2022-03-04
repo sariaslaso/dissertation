@@ -220,13 +220,13 @@ Hamiltonian
 \begin{eqnarray}
 \label{eq:H_ati}
 \begin{split}
-H(t) & = & -\frac{1}{2} \nabla^{2} + H_{I}(t) + V(\mathbf{r}),
+H(t) & = & -\frac{1}{2} \nabla^{2} + V_{I}(t) + V(\mathbf{r}),
 \end{split}
 \end{eqnarray}
 %
 which includes the binding potential of the parent ion,
 $V(\mathbf{r})$, and the interaction with the laser field,
-$H_{I}(t)=-\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
+$V_{I}(t)=\mathbf{r}\cdot\mathbf{E}(t)$, under the dipole
 approximation in the length gauge~\cite{Kopold_1997sfa} (see
 Appendix~\ref{app:L_gauge}).
 
@@ -245,25 +245,24 @@ transition amplitude~\cite{Kopold_1997sfa}. The first approximation
 consists of replacing the complete time-evolution operator
 in~(\ref{eq:matrix_element}) by the Volkov time-evolution operator
 $U^{V}(t,t')$, which propagates the wave function of a free electron
-coupled through the interaction $H_{I}(t)$ to the external laser
+coupled through the interaction $V_{I}(t)$ to the external laser
 field and satisfies the Schr\"{o}dinger equation
 %
 \begin{eqnarray}
   \label{eq:Uv_SchEq}
   \begin{split}
-    [ i\partial_{t} - H_{I}(t) ] U^{(V)}(t,t') = 0 \\
+    [ i\partial_{t} - H_{L}(t) ] U^{(V)}(t,t') = 0 \\
     H_{L}(t) = -\frac{1}{2} \nabla^{2} + V_{I}(t) =
     -\frac{1}{2} \nabla^{2} + \mathbf{r} \cdot \mathbf{E}(t),
   \end{split}
 \end{eqnarray}
 %
-where $V_{I}(t)$ indicates the interaction of the electron with the
-electric field of the laser. In other words, the interaction with the
-binding potential is considered a perturbation everywhere except in
-the initial and final states. In the second approximation the
-scattering state, $\psi_{\mathbf{p}}$, is replaced by the Volkov wave
-function, $\psi_{\mathbf{p}}^{(V)}$, which represents the state of a
-free electron in a laser field with time-averaged momentum
+In other words, the interaction with the binding potential is
+considered a perturbation everywhere except in the initial and final
+states. In the second approximation the scattering state,
+$\psi_{\mathbf{p}}$, is replaced by the Volkov wave function,
+$\psi_{\mathbf{p}}^{(V)}$, which represents the state of a free
+electron in a laser field with time-averaged momentum
 $\mathbf{p}$. Further details about the derivation are to be found
 in~\cite{Kopold_1997sfa}. These transformations, along with additional
 algebraic operations, lead to obtain an equivalent form of the
