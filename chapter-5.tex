@@ -146,7 +146,7 @@ operator~\cite{BeckerTEOp_2006,cjp2010_keldysh}.
 Inserting the expansion~(\ref{eq:te_volkov}) into the matrix
 element~(\ref{eq:mp_compact}) and taking into account the time
 dependence of the ground state wave function, $|\psi_{0}(t) \rangle =
-\exp{(iE_{0}t)} | \psi_{0} \rangle$, one may write the probability
+e^{i|E_{0}|t} | \psi_{0} \rangle$, one may write the probability
 amplitude as the five-dimensional integral~\cite{KopoldOptComm2000}
 %
 \begin{eqnarray}
@@ -158,12 +158,12 @@ amplitude as the five-dimensional integral~\cite{KopoldOptComm2000}
     \mathbf{k} - e\mathbf{A}(t) \rangle e^{-iS_{\mathbf{k}}(t)} \\
     & \times
     \langle [\mathbf{k} - e\mathbf{A}(t')] e^{iS_{\mathbf{k}}(t')} | V |
-    \psi_{0} \rangle e^{iE_{0}t'} \\
+    \psi_{0} \rangle e^{i|E_{0}|t'} \\
     \sim &
     \int\limits_{-\infty}\limits^{\infty} dt
     \int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}\ 
     \exp\ i\left[ S_{\mathbf{p}}(t) - S_{\mathbf{k}}(t)
-      + S_{\mathbf{k}}(t') + E_{0}t' \right] \\
+      + S_{\mathbf{k}}(t') + |E_{0}|t' \right] \\
     & \times
     \langle \mathbf{p} - e\mathbf{A}(t) | V |
     \mathbf{k} - e\mathbf{A}(t) \rangle 
@@ -181,7 +181,7 @@ of~(\ref{eq:mp_5Dintegral}) consists of three terms
     S_{\mathbf{p}}(t, t', \mathbf{k}) & = & - \frac{1}{2m}
     \int\limits_{t}\limits^{\infty} d\tau [\mathbf{p} - e\mathbf{A}(\tau)]^{2}
     - \frac{1}{2m} \int\limits_{t'}\limits^{t} d\tau [\mathbf{k} - e\mathbf{A}(\tau)]^{2}
-    + \int\limits_{-\infty}\limits^{t'} d\tau E_{0},
+    + \int\limits_{-\infty}\limits^{t'} d\tau |E_{0}|,
   \end{split}
 \end{eqnarray}
 %
