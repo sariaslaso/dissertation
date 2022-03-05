@@ -19,10 +19,10 @@ can be expressed as
   \end{split}
 \end{eqnarray}
 %
-where $\mathbf{p} = -i\nabla$, $\nabla$ is the gradient operator, and
-$V(\mathbf{r})$ is the binding potential of the atom. In the presence
-of an electromagnetic field, the Hamiltonian is frequently decomposed
-as
+where $\mathbf{p} = -i\hbar\nabla$, $\nabla$ is the gradient operator,
+and $V(\mathbf{r})$ is the binding potential of the atom. In the
+presence of an electromagnetic field, the Hamiltonian is frequently
+decomposed as
 %
 \begin{eqnarray}
   \label{eq:H_decomposed}
@@ -52,21 +52,22 @@ divergence of the vector potential vanishes $\nabla\cdot\mathbf{A} =
 %
 
 A gauge transformation is defined as a change of the electromagnetic
-field potentials $(\mathbf{A}, \phi)$ by the gauge function $\Lambda =
-\Lambda(\mathbf{r},t)$ such that
+field potentials $(\mathbf{A}, \phi)$ and the wave function $\Psi$ by
+the gauge function $\Lambda = \Lambda(\mathbf{r},t)$ such that
 %
 \begin{eqnarray}
   \label{eq:gauge}
   \begin{split}
     \mathbf{A} & \to & \mathbf{A}' = \mathbf{A} + \nabla\Lambda \\
-    \phi & \to & \phi' = \phi - \frac{\partial}{\partial t}\Lambda.
+    \phi & \to & \phi' = \phi - \frac{\partial}{\partial t}\Lambda \\
+    \Psi & \to & \Psi' = e^{-\frac{ie}{\hbar} \Lambda} \Psi
   \end{split}
 \end{eqnarray}
 %
 This transformation leaves the physical fields $\mathbf{E}$ and
 $\mathbf{B}$ unaffected as well as the time dependent Schr\"{o}dinger
-equation $i\frac{\partial}{\partial t}\Psi = H(t)\Psi$. The length
-gauge results from the transformation
+equation $i \hbar \frac{\partial}{\partial t}\Psi' = H(t) \Psi'$. The
+length gauge results from the transformation
 %
 \begin{eqnarray}
   \label{eq:length_gauge}
@@ -95,14 +96,29 @@ Therefore, in the length gauge the \textsc{tdse} becomes
 \begin{eqnarray}
   \label{eq:tdse_length}
   \begin{split}
-    i \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) & = & \left[H_{0} -
+    i \hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) & = &
+    \left[H_{0} -
       e\mathbf{r}\cdot\mathbf{E}(t) \right] \Psi(\mathbf{r}, t).
   \end{split}
 \end{eqnarray}
 %
-The solution of the \textsc{tdse}~(\ref{eq:tdse_length}) is the Volkov
-wave function $\Psi^{V}(\mathbf{r}, t)$, which represents a plane wave
-describing an electron in a strong laser field.
+In the case that the binding potential $V(\mathbf{r})$ is neglected,
+Eq.~(\ref{eq:tdse_length}) takes the form
+%
+\begin{eqnarray}
+  \label{eq:tdse_length_volkov}
+  \begin{split}
+    i \hbar \frac{\partial}{\partial t} \Psi(\mathbf{r}, t) & = &
+    \left[-\frac{1}{2m} \nabla^{2} -
+      e\mathbf{r}\cdot\mathbf{E}(t) \right] \Psi(\mathbf{r}, t),
+  \end{split}
+\end{eqnarray}
+%
+that corresponds to the \textsc{tdse} for a free electron in a laser
+field. The solution of the \textsc{tdse}~(\ref{eq:tdse_length_volkov})
+is the Volkov wave function $\Psi^{V}(\mathbf{r}, t)$, which
+represents a plane wave describing an electron in a strong laser
+field.
 
 %%% Local Variables:
 %%% mode: latex
