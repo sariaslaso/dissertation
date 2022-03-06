@@ -70,11 +70,12 @@ numerous theoretical studies that attempt to formulate an accurate
 description of the H$_{2}$O molecule have been reported. The
 self-consistent field~(\textsc{scf}) method introduced by
 Roothaan~\cite{Roothaan_1951}, which allows to represent the
-Hartree-Fock orbitals of a molecule as expansions of basis functions,
-has been widely implemented in the study of the ground state and
-symmetry properties of H$_{2}$O. Within the \textsc{scf} framework,
-the molecular orbitals wave functions have been approximated using
-multicentre Slater-type atomic orbitals as basis
+Hartree-Fock~(\textsc{hf}) orbitals of a molecule as expansions of
+basis functions, has been widely implemented in the study of the
+ground state and symmetry properties of H$_{2}$O. Within the
+\textsc{scf} framework, the molecular orbitals wave functions have
+been approximated using multicentre Slater-type atomic orbitals as
+basis
 sets~\cite{Reeves_nature_1956,natureH2O_1960,Pitzer_1968,Pitzer_1970},
 as well as Gaussian basis
 functions~\cite{gaussianH2O_1965,Neumann_gaussian_1968}.
@@ -96,14 +97,13 @@ total energy of the ground state configuration of H$_{2}$O.
 % 2.solve system of PDE
 % 3.Implementing a modified exterior complex scaling...
 
-Solving the time-dependent Schr\"{o}dinger equation~(\textsc{tdse}) in
-the study of static-field ionization rates could perhaps seem like a
-logical effort that leads to highly accurate solutions. This approach
-has been implemented, within the framework of Hermitian quantum
-mechanics, in tunneling calculations for the helium
-atom~\cite{static_tdse_He,static_tdse_He_method} in which the
-two-electron Schr\"{o}dinger equation was solved and the results were
-in good agreement with previous
+Solving the \textsc{tdse} in the study of static-field ionization
+rates could perhaps seem like a logical effort that leads to highly
+accurate solutions. This approach has been implemented, within the
+framework of Hermitian quantum mechanics, in tunneling calculations
+for the helium atom~\cite{static_tdse_He,static_tdse_He_method} in
+which the two-electron Schr\"{o}dinger equation was solved and the
+results were in good agreement with previous
 calculations~\cite{static_He_scrinzi}. However, obtaining a numerical
 solution to the many-body \textsc{tdse}, corresponding to molecular
 Stark resonances, remains a challenging problem even for a small
@@ -246,8 +246,8 @@ This dissertation addresses two separate topics, the static-field
 ionization of the H$_{2}$O molecule and the phenomenon of \textsc{ati}
 within the framework of an extended
 \textsc{sfa}. Chapter~\ref{cha:scf_h2o} presents the necessary
-background of the Hartree-Fock formulation that sets the basis for the
-self-consistent field calculation of the H$_{2}$O orbital
+background of the \textsc{hf} formulation that sets the basis for the
+\textsc{scf} calculation of the H$_{2}$O orbital
 energies~\cite{Moccia_1964} used as reference in the study of the
 water molecule under the effect of an external
 field. Chapter~\ref{ch:dc_h2o} contains two independent studies of the

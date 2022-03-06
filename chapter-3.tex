@@ -278,16 +278,15 @@ where $\hat{L}^{2}$ is the orbital quantum momentum operator. The
 present study involves the construction of the effective
 orbital-dependent potential, $V_{\mathrm{eff}}(r)$, extracted from the
 single-centre Moccia wave functions~\cite{Moccia_1964}. This is
-followed by the implementation of an exterior complex scaling
-(\textsc{ecs})~\cite{Simon_1979} to determine the numerical solution
-of the problem associated with a molecular orbital in the presence of
-a strong electric dc field applied along the
-$\hat{z}-$direction~\cite{sarias_2016}. A schematic representation of
-the geometry of the system is shown in Figure~\ref{fig:h2o_1b1_1b2},
-where the orientation of the $1b_{1}$ and $1b_{2}$ \textsc{mo}s is
-indicated with respect to the plane where the protons are located. The
-direction of the applied electric field along $\hat{z}$ is included as
-well.
+followed by the implementation of an \textsc{ecs}~\cite{Simon_1979} to
+determine the numerical solution of the problem associated with a
+molecular orbital in the presence of a strong electric dc field
+applied along the $\hat{z}-$direction~\cite{sarias_2016}. A schematic
+representation of the geometry of the system is shown in
+Figure~\ref{fig:h2o_1b1_1b2}, where the orientation of the $1b_{1}$
+and $1b_{2}$ \textsc{mo}s is indicated with respect to the plane where
+the protons are located. The direction of the applied electric field
+along $\hat{z}$ is included as well.
 
 \begin{figure}
   \centering
@@ -462,13 +461,13 @@ Eq.~(\ref{eq:complex_eigenE}).
 %
 % EXPLAIN HERE THAT M=\PM-1 ARE THE 2P_1 AND 2P_-1 EIGENSTATES OF L_Z
 % AND 2P_X AND 2P_Y ARE LINEAR COMBINATIONS OF THESE L_Z EIGENSTATES
-For the $1b_{1}$ and $1b_{2}$ orbitals, which are formulated as linear
-combinations of the $L_{z}$ eigenstates $2p_{x}$ and $2p_{y}$,
-respectively, we have $|m| = 1$ in Eq.~(\ref{eq:pde}). The presence of
-the effective potential $V_{\mathrm{eff}}(r)$ makes this problem
-challenging in the sense that it is not possible to obtain separable
-solutions like for the hydrogen atom in which a pure Coulomb potential
-leads to separability in parabolic coordinates, as was discussed
+For the $1b_{1}$ and $1b_{2}$ \textsc{mo}s, which are formulated as
+linear combinations of $2p_{x}$ and $2p_{y}$ orbitals, respectively,
+we have $|m| = 1$ in Eq.~(\ref{eq:pde}). The presence of the effective
+potential $V_{\mathrm{eff}}(r)$ makes this problem challenging in the
+sense that it is not possible to obtain separable solutions like for
+the hydrogen atom in which a pure Coulomb potential leads to
+separability in parabolic coordinates, as was discussed
 in~\cite{Telnov_1989}. It is then necessary to generate a more general
 solution by solving the \textsc{pde} numerically, e.g., by applying a
 finite-element method.
@@ -768,9 +767,9 @@ widths. This might be feasible using a combination of time-dependent
 \textsc{dft} and Floquet theory. Floquet formalism provides a solution
 for the periodically time-dependent Hamiltonian of a system that
 interacts with an external electromagnetic field. The solution to the
-time-dependent Schr\"{o}dinger equation is formulated in terms of
-stationary states by means of a Fourier expansion, which obey a system
-of time-independent coupled differential
+\textsc{tdse} is formulated in terms of stationary states by means of
+a Fourier expansion, which obey a system of time-independent coupled
+differential
 equations~\cite{Joachain_mpi_tunneling,Tsog_H2mol_ac_2013}. The goal
 of the present work is more modest: we calculate the response of an
 isolated molecular orbital in a simple approximation. Recently, the
@@ -1200,15 +1199,16 @@ takes the form~\cite{marko_partialwave}
 where $V(r, \theta, \phi)$ is the model
 potential~(\ref{eq:model_potential}) in which the potential for each
 hydrogen atom is expressed as a truncated expansion of the
-form~(\ref{eq:expanded_H_potential}). A quadratic complex absorbing
-potential~(\textsc{cap}) of the form~(\ref{eq:VCAP}) is applied to the
-system of coupled differential equations in order to determine the
-complex eigenvalues that result from the effect of the external dc
-field. The Stark problem presents a higher numerical challenge than
-the field-free one, in this case we are looking for a solution in the
-complex plane and the determinant to be minimized is a complex number,
-which implies that the condition of convergence to zero should be
-applied to its norm.
+form~(\ref{eq:expanded_H_potential}). The energy $E$ is complex-valued
+as indicated in Eq.~(\ref{eq:complex_eigenE}). A quadratic complex
+absorbing potential~(\textsc{cap}) of the form~(\ref{eq:VCAP}) is
+applied to the system of coupled differential equations in order to
+determine the complex eigenvalues that result from the effect of the
+external dc field. The Stark problem presents a higher numerical
+challenge than the field-free one, in this case we are looking for a
+solution in the complex plane and the determinant to be minimized is a
+complex number, which implies that the condition of convergence to
+zero should be applied to its norm.
 
 
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
@@ -1620,12 +1620,13 @@ decaying state via $\Gamma\tau=1$, exhibit a threshold behaviour at
 the weaker field strengths. Interestingly, for the two directions of
 the applied field, we find a lower critical field strength for the
 $3a_{1}$ orbital in comparison to what the more weakly bound orbital,
-$1b_{1}$, indicates. At $F_{0} = 0.05\ \mathrm{a.u.}$, the $3a_{1}$
-orbital for fields applied along the $-\hat{z}$ direction (blue
-circles) shows an ionization rate that is about one order of magnitude
-larger than the ionization rate for fields applied in the opposite
-direction (red triangles), this gap becomes narrower as the field
-strength increases toward the over-barrier regime.
+$1b_{1}$, indicates. In the tunneling region, at $F_{0} =
+0.05\ \mathrm{a.u.}$, the $3a_{1}$ orbital for fields applied along
+the $-\hat{z}$ direction (blue circles) shows an ionization rate that
+is about one order of magnitude larger than the ionization rate for
+fields applied in the opposite direction (red triangles), this gap
+becomes narrower as the field strength increases toward the
+over-barrier regime.
 
 The numerical results for the H$_{2}$O valence orbitals studied in
 this chapter, $1b_{1}$, $1b_{2}$ and $3a_{1}$, are summarized in
