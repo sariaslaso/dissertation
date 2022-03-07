@@ -13,8 +13,7 @@ absorb many more photons than the minimum required to get ionized,
 ejecting an electron of very high energy. The photoelectron energy
 spectrum associated with this effect exhibits a series of peaks
 separated by the energy of a laser photon. This phenomenon is known as
-above threshold ionization (\textsc{ati}) and was first observed by
-Agostini et al~\cite{ATI1979}.
+\textsc{ati} and was first observed by Agostini et al~\cite{ATI1979}.
 
 \textsc{ati} has been tackled by means of diverse approaches, with
 analytical approximations dating back to the Keldysh theory which
@@ -55,7 +54,7 @@ in this chapter closely follows that of~\cite{Kopold_1997sfa}.
 
 %In addiion to exploring the ionization regime of the He atom in
 %Sec.~\ref{sec:kopold_qm}, laser ionization of the $1b_{1}$ and
-%$1b_{2}$ molecular orbitals of H$_{2}$O is discussed in
+%$1b_{2}$ \textsc{mo}s of H$_{2}$O is discussed in
 %Sec.~\ref{sec:mo_sfa}.
 
 \section{\label{sec:mpi&tunneling} Multiphoton versus tunneling ionization}
@@ -466,15 +465,18 @@ form
 \begin{eqnarray}
 \label{eq:lp_field}
 \begin{split}
-\mathbf{A} & = & A_{0}\hat{\mathbf{x}} \cos(\omega t).
+  %\mathbf{A} & = & A_{0}\hat{\mathbf{x}} \cos(\omega t).
+  \mathbf{E}(t) & = & -\omega A_{0} \hat{\mathbf{x}} \sin(\omega t),
 \end{split}
 \end{eqnarray}
 %
-For our calculation we consider a laser field with $\hbar\omega =
-1.58\ \rm{eV}$ at an intensity of $10^{15}\ \rm{W}/\rm{cm}^{2}$,
-acting upon a He atom with $E_{0} = -0.9\ \rm{a.u.}$ as the binding
-energy. Atomic units are used for the field intensity so the relative
-strengths of the laser versus the atomic binding energy are displayed.
+where $A_{0}$ is the amplitude of the vector potential $\mathbf{A}(t)
+= -\int \mathbf{E}(t) dt$. For our calculation we consider a laser
+field with $\hbar\omega = 1.58\ \rm{eV}$ at an intensity of
+$10^{15}\ \rm{W}/\rm{cm}^{2}$, acting upon a He atom with $E_{0} =
+-0.9\ \rm{a.u.}$ as the binding energy. Atomic units are used for the
+field intensity so the relative strengths of the laser versus the
+atomic binding energy are displayed.
 
 The numerical evaluation of the remaining quadrature in
 Eq.~(\ref{eq:Mp_quad}) in terms of the travel time is not
@@ -707,7 +709,7 @@ field~\cite{Kopold_1997sfa,Paulus_1994plateau,Becker_1994plateau_classical}.
 % eq.9 and 11 for 1b1 and 1b2 MOs
 
 % mention studies of the h2o molecule under a laser field, put it in
-% terms of wanting to explore the molecular orbital response
+% terms of wanting to explore the \textsc{mo} response
 
 
 % mention that 1b1 and 1b2 MOs were modelled previously as spherical
@@ -715,30 +717,30 @@ field~\cite{Kopold_1997sfa,Paulus_1994plateau,Becker_1994plateau_classical}.
 % effective potential, under this approximation we extended our study
 % to model how this approximate orbitals would ionize in the presence
 % of a strong laser field
-The study on the H$_{2}$O molecular orbitals presented in
+The study on the H$_{2}$O \textsc{mo}s presented in
 Chapter~\ref{ch:dc_h2o} is extended in this section with the aim of
 exploring the \textsc{ati} spectrum of the $1b_{1}$ and $1b_{2}$
-molecular orbitals previously characterized as spherical orbitals. The
+\textsc{mo}s previously characterized as spherical orbitals. The
 zero-range model calculation carried out in the previous section
 combined with the strong-field approximation is applied to these
 valence orbitals in order to explore their response to an intense
 laser field.
 
 %With the aim of exploring the ionization regime of the water molecule
-%in terms of the molecular orbital response to an intense laser field,
+%in terms of the \textsc{mo} response to an intense laser field,
 %the zero-range model calculation discussed in the previous section, in
 %which the binding potential of the atom is considered to act on the
 %scattered electrons as a delta function, is applied to the H$_{2}$O
 %valence orbitals $1b_{1}$ and $1b_{2}$.
 
 % mention more the details of the calculation
-Each molecular orbital is treated as an independent spherical orbital
+Each \textsc{mo} is treated as an independent spherical orbital
 in which the eigenvalues $\epsilon_{1b_{1}}$ and $\epsilon_{1b_{2}}$
 obtained from the radial representation of their effective potentials,
 $V_{\rm{eff}}(r)$, are considered their binding energies,
 respectively. With this in mind, it is possible to generate the
 ionization spectrum for direct electrons and that for rescattering
-electrons that would correspond to each molecular orbital under a
+electrons that would correspond to each \textsc{mo} under a
 strong-laser field. Inserting the molecular binding energies into
 Eqs.~(\ref{eq:keldysh_amp_explicit}) and~(\ref{eq:Mp_quad}) one can
 explore the convergence of the ionization spectrum in terms of the
@@ -764,7 +766,7 @@ extension of the sum~(\ref{eq:Mp_quad}) in terms of Bessel functions
 and the Bessel term in the standard Keldysh
 amplitude~(\ref{eq:keldysh_amp_explicit}) in red and blue,
 respectively. The numerical values of the integral $F(l)$ were
-rescaled for both molecular orbitals, divided by a factor of $5.5$ for
+rescaled for both \textsc{mo}s, divided by a factor of $5.5$ for
 the $1b_{1}$ MO and by a factor of $6.5$ for the $1b_{2}$ MO, in order
 to make the comparison between the curves visible. Correspondingly,
 the working precision of the calculations was gradually increased for
@@ -777,7 +779,7 @@ the cutoff of the direct-electron spectrum indicates that a
 correlation between the red and blue curves should be expected for a
 range of values of $l_{\rm{max}}$ before deviations due to
 rescattering become substantial. This behaviour can be observed for
-both molecular orbitals for $l < -30$, where the quadrature $F(l)$
+both \textsc{mo}s for $l < -30$, where the quadrature $F(l)$
 reaches a plateau at about $10^{-5}$ that extends up to about $l <
 -60$ where signs of convergence of the time integral $F(l)$ become
 noticeable as the red curve begins to decline.
@@ -839,7 +841,7 @@ noticeable as the red curve begins to decline.
 \end{figure}
 
 The ionization spectra corresponding to the $1b_{1}$ and $1b_{2}$
-molecular orbitals are shown in Figures~\ref{fig:1b1_spectrum}
+\textsc{mo}s are shown in Figures~\ref{fig:1b1_spectrum}
 and~\ref{fig:1b2_spectrum} as a function of the electron energy. The
 evolution of the electron yield is presented in terms of the Bessel
 order $l$, $40 \leq l \leq 80$. As it can be noticed, expanding the
@@ -887,7 +889,7 @@ describes the spectrum consisting entirely of rescattered electrons.
 
 %As mentioned above
 
-% more thorough description of the molecular orbital is needed
+% more thorough description of the \textsc{mo} is needed
 
 
 

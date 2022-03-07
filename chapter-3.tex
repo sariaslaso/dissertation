@@ -16,11 +16,11 @@ field ionization of H$_{2}$O an attractive and challenging problem
 from the point of view of a theoretical description.
 %as well as
 %experimentally. % refs [14-17 pra]
-Complex variable techniques, such as exterior complex scaling
-(\textsc{ecs})~\cite{Simon_1979,ecsScrinzi} and complex-absorbing
-potentials (\textsc{cap})~\cite{RissMeyer_1993,Krause_2014}, have been
-implemented in order to address the problem of molecular static-field
-ionization and compute the induced Stark resonances.
+Complex variable techniques, such as
+\textsc{ecs}~\cite{Simon_1979,ecsScrinzi} and
+\textsc{cap}s~\cite{RissMeyer_1993,Krause_2014}, have been implemented
+in order to address the problem of molecular static-field ionization
+and compute the induced Stark resonances.
 
 The dc Stark problem for the H$_{2}$O valence orbitals is addressed in
 this chapter within the framework of non-Hermitian quantum
@@ -42,7 +42,7 @@ introduced in the Hamiltonian by the complex absorber.
 Section~\ref{ch:nonH_qm} introduces some of the fundamental aspects of
 non-Hermitian quantum mechanics. In Sec.~\ref{ch:h2o_structure}, we
 formulate the problem with emphasis on the representation of the
-molecular orbitals. The \textsc{ecs} formalism is introduced in
+\textsc{mo}s. The \textsc{ecs} formalism is introduced in
 Secs.~\ref{ch:1b1_1b2} and~\ref{ch:3a1} as a crucial step in finding a
 numerical solution to a spherically symmetric problem, in the case of
 the $1b_{1}$ and $1b_{2}$ orbitals, and the problem of a non-central
@@ -211,13 +211,13 @@ the three valence orbitals correspond to ionization energies of $0.68,
 0.54, 0.46$ for $1b_{2}, 3a_{1}, 1b_{1}$,
 respectively~\cite{2020Photoelectron}.
 
-The present work is intended to study the valence molecular orbitals
+The present work is intended to study the valence \textsc{mo}s
 of H$_{2}$O, $1b_{1}$, $1b_{2}$ and $3a_{1}$. The wave functions for
-the $1b_{1}$ and $1b_{2}$ molecular orbitals, which can be
-approximated as the $2p_{x}$ and $2p_{y}$ oxygen orbitals, are
-dominated by a single angular momentum symmetry. The $3a_{1}$
-\textsc{mo}, on the other hand, consists mainly of the oxygen $2s$ and
-$2p_{z}$ and the hydrogen $1s$ atomic orbitals.
+the $1b_{1}$ and $1b_{2}$ \textsc{mo}s, which can be approximated as
+the $2p_{x}$ and $2p_{y}$ oxygen orbitals, are dominated by a single
+angular momentum symmetry. The $3a_{1}$ \textsc{mo}, on the other
+hand, consists mainly of the oxygen $2s$ and $2p_{z}$ and the hydrogen
+$1s$ atomic orbitals.
 
 The general expression for the basis functions, introduced as a set of
 single-center wave
@@ -239,7 +239,7 @@ centre line passing in between the two hydrogen atoms, $F_{0} > 0$,
 and the reverse orientation, $F_{0} < 0$.
 
 Based on their symmetry properties, independent descriptions of the
-valence molecular orbitals of H$_{2}$O are constructed. The dominant
+valence \textsc{mo}s of H$_{2}$O are constructed. The dominant
 components of the $1b_{1}$ and $1b_{2}$ orbitals, namely the $np_{x}$
 and $np_{y}$ parts, are used to derive spherically symmetric effective
 orbital-dependent potentials~\cite{sarias_2016}. A similar procedure
@@ -262,8 +262,8 @@ expansion~\cite{Moccia_1964}.
 \label{ch:1b1_1b2}
 
 The Schr\"{o}dinger equation for the bound-state problem of a
-molecular orbital within an effective potential $V_{\mathrm{eff}}(r)$
-is expressed in spherical polar coordinates as
+\textsc{mo} within an effective potential $V_{\mathrm{eff}}(r)$ is
+expressed in spherical polar coordinates as
 % see eq. 6.8 Levine
 %
 \begin{eqnarray}
@@ -280,8 +280,8 @@ orbital-dependent potential, $V_{\mathrm{eff}}(r)$, extracted from the
 single-centre Moccia wave functions~\cite{Moccia_1964}. This is
 followed by the implementation of an \textsc{ecs}~\cite{Simon_1979} to
 determine the numerical solution of the problem associated with a
-molecular orbital in the presence of a strong electric dc field
-applied along the $\hat{z}-$direction~\cite{sarias_2016}. A schematic
+\textsc{mo} in the presence of a strong electric dc field applied
+along the $\hat{z}-$direction~\cite{sarias_2016}. A schematic
 representation of the geometry of the system is shown in
 Figure~\ref{fig:h2o_1b1_1b2}, where the orientation of the $1b_{1}$
 and $1b_{2}$ \textsc{mo}s is indicated with respect to the plane where
@@ -293,20 +293,19 @@ along $\hat{z}$ is included as well.
   \includegraphics[width=0.25\textwidth]{figures/ch_H2O/1b1_1b2/orbitals.eps}
   \caption{Schematic display of the $1b_{1}\approx 2p_{x}$ (shown in
     yellow along the $x$ axis) and $1b_{2}\approx 2p_{y}$ (shown in
-    blue along the $y$ axis) molecular orbitals. Also indicated (in
-    green on the $y-z$ plane) is the location of the protons. The $z$
-    axis (in red) is the direction of the external electric field of
-    strength $F_{0}$. As indicated in the text, positive values of
-    $F_{0}$ correspond to the external field pointing from the oxygen
-    towards the hydrogen atoms; negative values of $F_{0}$ correspond
-    to a field pointing from the hydrogen atoms towards the oxygen
-    atom.}
+    blue along the $y$ axis) \textsc{mo}s. Also indicated (in green on
+    the $y-z$ plane) is the location of the protons. The $z$ axis (in
+    red) is the direction of the external electric field of strength
+    $F_{0}$. As indicated in the text, positive values of $F_{0}$
+    correspond to the external field pointing from the oxygen towards
+    the hydrogen atoms; negative values of $F_{0}$ correspond to a
+    field pointing from the hydrogen atoms towards the oxygen atom.}
   \label{fig:h2o_1b1_1b2}
 \end{figure}
 
 As a first step in solving Eq.~(\ref{eq:sch_noCS}) for the H$_{2}$O
-molecular orbitals, we introduce the reduced single-centre Moccia
-wave function,
+\textsc{mo}s, we introduce the reduced single-centre Moccia wave
+function,
 %
 \begin{eqnarray}
   \begin{split}
@@ -316,23 +315,22 @@ wave function,
   \end{split}
 \end{eqnarray}
 %
-which approximates the molecular orbital by an eigenstate of a
-spherically symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$
-represent the radial part of the Slater orbitals~(\ref{eq:f_STO}) with
-$|m|=1$ for the magnetic quantum number, in which the \textsc{sto}
-expansion is limited to $2p_{x}$ and $2p_{y}$ orbitals,
-respectively. The set of expansion coefficients and non-linear
-coefficients in~(\ref{eq:sto_1b1_1b2}), indicated in
-Table~\ref{tab:1b11b2_coef}, represents a reduced selection of the
-expansion parameters given by Moccia for the ground state of the water
-molecule~\cite{Moccia_1964}.
+which approximates the \textsc{mo} by an eigenstate of a spherically
+symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$ represent
+the radial part of the Slater orbitals~(\ref{eq:f_STO}) with $|m|=1$
+for the magnetic quantum number, in which the \textsc{sto} expansion
+is limited to $2p_{x}$ and $2p_{y}$ orbitals, respectively. The set of
+expansion coefficients and non-linear coefficients
+in~(\ref{eq:sto_1b1_1b2}), indicated in Table~\ref{tab:1b11b2_coef},
+represents a reduced selection of the expansion parameters given by
+Moccia for the ground state of the water molecule~\cite{Moccia_1964}.
 
 \begin{table}[t]
  \centering
   \caption{\label{tab:1b11b2_coef} Expansion coefficients and
-    nonlinear coefficients for the $1b_{1}$ and $1b_{2}$ molecular
-    orbitals of H$_{2}$O. The parameters used in our reduced
-    \textsc{sto} expansion are indicated as included.}
+    nonlinear coefficients for the $1b_{1}$ and $1b_{2}$ \textsc{mo}s
+    of H$_{2}$O. The parameters used in our reduced \textsc{sto}
+    expansion are indicated as included.}
   \begin{tabular}{lrrrr}
     \toprule
     $(n,l, m)$ & & $\zeta_{i}$ & $c_{nlm}^{1b_{1}}$ & $c_{nlm}^{1b_{2}}$ \\
@@ -356,7 +354,7 @@ molecule~\cite{Moccia_1964}.
 \end{table}
 
 In order to determine the effective potential corresponding to each
-molecular orbital, the wave function~(\ref{eq:sto_1b1_1b2}) is inserted
+\textsc{mo}, the wave function~(\ref{eq:sto_1b1_1b2}) is inserted
 into the single-electron Schr\"{o}dinger equation~(\ref{eq:sch_noCS}),
 which is then solved for $V_{\mathrm{eff}}^{(1)}(r)$. Afterwards, the
 so-called Latter correction~\cite{LatterCor_1955,sarias_2016} is
@@ -435,8 +433,8 @@ applied to the Schr\"{o}dinger equation~(\ref{eq:sch_noCS})
 \label{eq:sov}
 \end{eqnarray}
 %
-leads to a partial differential equation (\textsc{pde}) in spherical
-coordinates that represents the Stark problem for an H$_{2}$O orbital:
+leads to a \textsc{pde} in spherical coordinates that represents the
+Stark problem for an H$_{2}$O orbital:
 %
 \begin{eqnarray}
  \begin{split}
@@ -622,7 +620,7 @@ effectively the complex energy $E$ to maximize the amplitude.
 
 % sec 2 of JPhysB
 In this section we extend the approach to study the dc Stark problem
-for the $3a_{1}$ molecular orbital of H$_{2}$O. Given the orientation
+for the $3a_{1}$ \textsc{mo} of H$_{2}$O. Given the orientation
 of this orbital with respect to the plane in which the two protons are
 located it is deemed necessary to go beyond the spherical effective
 potential approximation, which was implemented in
@@ -701,7 +699,7 @@ the complete Moccia representation shown in Fig.~\ref{fig:3a1_Moccia}.
     \includegraphics[width=\textwidth]{figures/ch_H2O/3a1/3a1Moccia.eps}
     \caption{Full Moccia $3a_{1}$ orbital}\label{fig:3a1_Moccia}
   \end{subfigure}
-  \caption{Schematic display of the $3a_{1}$ molecular orbital (shown
+  \caption{Schematic display of the $3a_{1}$ \textsc{mo} (shown
     in blue along the $z$ axis) used to construct
     $V_{\mathrm{eff}}(r,\theta)$. The orbital obtained from a reduced
     expansion in \textsc{sto}s is shown in~(\ref{fig:3a1_reduced}),
@@ -772,7 +770,7 @@ a Fourier expansion, which obey a system of time-independent coupled
 differential
 equations~\cite{Joachain_mpi_tunneling,Tsog_H2mol_ac_2013}. The goal
 of the present work is more modest: we calculate the response of an
-isolated molecular orbital in a simple approximation. Recently, the
+isolated \textsc{mo} in a simple approximation. Recently, the
 problem of small molecules in a dc field has revealed the effect of
 electron-electron interactions on Stark resonance
 parameters~\cite{ScrinziJPhysB_ECS}. It will be interesting to observe
@@ -858,7 +856,7 @@ continues smoothly over this problematic region.
   \end{subfigure}
   \caption{Contour plots of the scaled probability density,
     $|\Psi_{\mathrm{3a_{1}}}|^{2}r^{2}\sin(\theta)/(2\pi)$, for the
-    $3a_{1}$ molecular orbital. The orbital density constructed from
+    $3a_{1}$ \textsc{mo}. The orbital density constructed from
     the reduced \textsc{sto} expansion is shown
     in~(\ref{fig:Moccia32s}), while the solution obtained from the
     non-spherical $V_{\mathrm{eff}}(r,\theta)$ with Latter correction
@@ -1200,15 +1198,15 @@ where $V(r, \theta, \phi)$ is the model
 potential~(\ref{eq:model_potential}) in which the potential for each
 hydrogen atom is expressed as a truncated expansion of the
 form~(\ref{eq:expanded_H_potential}). The energy $E$ is complex-valued
-as indicated in Eq.~(\ref{eq:complex_eigenE}). A quadratic complex
-absorbing potential~(\textsc{cap}) of the form~(\ref{eq:VCAP}) is
-applied to the system of coupled differential equations in order to
-determine the complex eigenvalues that result from the effect of the
-external dc field. The Stark problem presents a higher numerical
-challenge than the field-free one, in this case we are looking for a
-solution in the complex plane and the determinant to be minimized is a
-complex number, which implies that the condition of convergence to
-zero should be applied to its norm.
+as indicated in Eq.~(\ref{eq:complex_eigenE}). A quadratic
+\textsc{cap} of the form~(\ref{eq:VCAP}) is applied to the system of
+coupled differential equations in order to determine the complex
+eigenvalues that result from the effect of the external dc field. The
+Stark problem presents a higher numerical challenge than the
+field-free one, in this case we are looking for a solution in the
+complex plane and the determinant to be minimized is a complex number,
+which implies that the condition of convergence to zero should be
+applied to its norm.
 
 
 % describe what \eta and r_c mean, and how to obtain the eigenvalues
@@ -1482,7 +1480,7 @@ H$_{2}$O($1b_{1}$) and H($1s$) share some similarity in shape. In the
 tunneling region H($1s$) has an ionization rate that is larger by
 about an order of magnitude. In the over-barrier regime, however, the
 ionization rates approach each other to within a factor of 3. Reasons
-for why the $1b_1$ water molecular orbital is harder to ionize than
+for why the $1b_1$ water \textsc{mo} is harder to ionize than
 H($1s$) have to do with the different shape of the orbital density
 ($m=1$ \emph{vs} the spherical H($1s$) density), and the substantially
 more attractive potential at shorter distances.
@@ -1527,7 +1525,7 @@ range $0.7\ \mathrm{a.u.} < r < 4.3\ \mathrm{a.u.}$.
 
 %The numerical results are summarized in Table~\ref{tab:1b11b2_results}
 %for further reference, i.e., for future comparisons with calculations
-%based on other models for the molecular orbitals.
+%based on other models for the \textsc{mo}s.
 
 %\begin{table}[t]
 %\centering
@@ -1632,7 +1630,7 @@ The numerical results for the H$_{2}$O valence orbitals studied in
 this chapter, $1b_{1}$, $1b_{2}$ and $3a_{1}$, are summarized in
 Table~\ref{tab:3a1_results} for further reference, i.e., to allow
 comparison with future calculations based on other models for the
-molecular orbitals.
+\textsc{mo}s.
 
 
 \begin{table}[t]
@@ -1708,7 +1706,7 @@ along each O-H bond.
 \begin{figure}
   \centering
   \includegraphics[width=0.85\textwidth]{figures/ch_H2O/partial_wave/eigenvalues_fieldfree.pdf}
-  \caption{Eigenvalues for the H$_{2}$O valence molecular orbitals
+  \caption{Eigenvalues for the H$_{2}$O valence \textsc{mo}s
     $1b_{1}, 3a_{1}, 1b_{2}$ obtained from the model
     potential~(\ref{eq:model_potential}) as a function of the basis
     truncation parameter $l_{\mathrm{max}}$ are shown in green, blue

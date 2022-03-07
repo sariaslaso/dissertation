@@ -199,7 +199,7 @@ the Fock operator, $F$, that satisfies
 \end{eqnarray}
 %
 Consequently, the \textsc{hf} \textsc{scf} problem can be addressed as
-the problem of finding the best set of molecular orbitals that
+the problem of finding the best set of \textsc{mo}s that
 satisfy~\cite{Roothaan_HF,Levine_QChem}
 %
 \begin{eqnarray}
@@ -237,7 +237,7 @@ the true \textsc{hf} wave functions of the water molecule, as well as
 predicting chemical properties in addition to the binding energy of
 its ground state
 ~\cite{scf_lc_1967,EllisonShullh2o_1955,Neumann_gaussian_1968,Pitzer_1970,Pitzer_1972}.
-This approach introduces a representation of the molecular orbitals by
+This approach introduces a representation of the \textsc{mo}s by
 means of a linear combination of atomic
 orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %
@@ -251,7 +251,7 @@ orbitals~(\textsc{lcao})~\cite{Roothaan_HF}
 %p.409,410 Levine
 Given that the sum~(\ref{eq:lcao_roothaan}) is an approximation to the
 exact \textsc{hf} \textsc{mo}s, the \textsc{ap} built from these
-molecular orbitals would be a less good approximation to the exact
+\textsc{mo}s would be a less good approximation to the exact
 \textsc{ap} built from the \textsc{hf} \textsc{mo}s. In order for the
 linear combination~(\ref{eq:lcao_roothaan}) to be an exact
 representation of a \textsc{hf} \textsc{mo}, the basis functions
@@ -381,14 +381,14 @@ given geometrical arrange.
 
 Following the Roothaan formalism described in Sec.~\ref{ch:var_hf},
 the initial wave function is expressed as an \textsc{ap} of molecular
-spin-orbitals in which each molecular orbital is built as a linear
+spin-orbitals in which each \textsc{mo} is built as a linear
 combination of Slater-type orbitals (\textsc{sto}s) of the
 form~(\ref{eq:f_STO}). The orbital exponents $\zeta_{i}$ corresponding
 to each basis set were obtained by means of an optimization process
 closely connected with finding the geometrical equilibrium
 configuration of the
 molecule~\cite{Moccia_JCP_2164,Moccia_1964}. Returning to the linear
-expansion for the $i$-th molecular orbital $\varphi_{i}$ introduced in
+expansion for the $i$-th \textsc{mo} $\varphi_{i}$ introduced in
 Roothaan's formalism, Eq.~(\ref{eq:lcao_roothaan}) can be expressed in
 terms of Slater-type orbitals as follows
 %
@@ -436,7 +436,7 @@ Moccia~\cite{Moccia_JCP_2164,Moccia_JCP_2176,Moccia_1964}, some
 parameters are provided as input data. The basis functions that are
 identified by the three integers $n,l,m$ in Eq.~(\ref{eq:f_STO}) and
 by the orbital exponents $\zeta$, as well as an estimate of the
-expansion coefficients, $c_{si}$, of the molecular orbitals are among
+expansion coefficients, $c_{si}$, of the \textsc{mo}s are among
 these quantities. The process of variation of the nonlinear parameter
 $\zeta$ reveals a strong correlation with the geometrical equilibrium
 configuration of the molecule. The numerical results of the one-centre
