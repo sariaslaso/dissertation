@@ -65,8 +65,7 @@ of~\cite{sarias_2016,sarias_2017}.
 
 Resonance phenomena, such as atomic and molecular strong-field
 ionization events, have been successfully approached within the
-framework of non-Hermitian quantum
-mechanics~(\textsc{nhqm})~\cite{Moiseyev_NHQM}. This alternative
+framework of \textsc{nhqm}~\cite{Moiseyev_NHQM}. This alternative
 formulation to the standard formalism of quantum mechanics allows for
 a time-independent interpretation of strong-field ionization processes
 and quantitative modelling of the associated ionization rates. This is
@@ -309,17 +308,17 @@ function,
 %
 \begin{eqnarray}
   \begin{split}
-    \psi_{nlm}(r) & = & \sum\limits_{i}
-    c_{nlm} f_{nlm}(\zeta_{i}, r),
+    \psi_{n}(r) & = & \sum\limits_{i}
+    c_{n}(\zeta_{i}) f_{n}(\zeta_{i}, r),
     \label{eq:sto_1b1_1b2}
   \end{split}
 \end{eqnarray}
 %
 which approximates the \textsc{mo} by an eigenstate of a spherically
-symmetric potential. The functions $f_{nlm}(\zeta_{i},r)$ represent
-the radial part of the Slater orbitals~(\ref{eq:f_STO}) with $|m|=1$
-for the magnetic quantum number, in which the \textsc{sto} expansion
-is limited to $2p_{x}$ and $2p_{y}$ orbitals, respectively. The set of
+symmetric potential. The functions $f_{n}(\zeta_{i},r)$ represent the
+radial part of the Slater orbitals~(\ref{eq:f_STO}) with $|m|=1$ for
+the magnetic quantum number, in which the \textsc{sto} expansion is
+limited to $2p_{x}$ and $2p_{y}$ orbitals, respectively. The set of
 expansion coefficients and non-linear coefficients
 in~(\ref{eq:sto_1b1_1b2}), indicated in Table~\ref{tab:1b11b2_coef},
 represents a reduced selection of the expansion parameters given by
@@ -870,12 +869,12 @@ continues smoothly over this problematic region.
 
 The interpolation is achieved by collecting data from the evaluation
 of the potential on two sections of the $(r,\theta)$ grid in the
-vicinity of the nodal line, where the potential evaluates to finite
+vicinity of the nodal line, where the potential takes on finite
 values. Then, a numerical interpolation was carried out between those
 regions in order to obtain a continuous function,
 $V_{\mathrm{eff}}^{\mathrm{intp}}(r,\theta)$, on the two-dimensional
 grid. The Latter correction is applied to the interpolated potential
-and the effective potential is defined according to~(\ref{eq:rMatch}):
+and the effective potential is defined as
 %
 \begin{eqnarray}
   V_{\mathrm{eff}}(r,\theta) = \left\{
@@ -884,7 +883,8 @@ and the effective potential is defined according to~(\ref{eq:rMatch}):
     & \mathrm{~for} & r < r_{\mathrm{match}}(\theta) \\
     -1/r\ & \mathrm{~for} &  r > r_{\mathrm{match}}(\theta)
   \end{split}
-\right.
+  \right.
+  .
 \label{eq:latterVeff}
 \end{eqnarray}
 %
@@ -1295,11 +1295,11 @@ complex energy values at the accumulation points for $n = 1, 2$ of the
 Riss-Meyer iterative correction scheme~(equations~(\ref{eq:RM_scheme})
 and~\ref{eq:optimal_eta})) are shown as green and magenta crosses,
 respectively. These $n = 1, 2$ perturbatively corrected energies fall
-below the curve and indicate to be in close proximity to one
-another. Looking at the trajectory of complex eigenvalues and the
-locations of the stabilized value ($n = 0$) as well as the corrected
-values to first and second order in perturbation theory ($n = 1, 2$),
-it can be noticed that the \textsc{cap} results shown in
+below the curve and are in close proximity to one another. Looking at
+the trajectory of complex eigenvalues and the locations of the
+stabilized value ($n = 0$) as well as the corrected values to first
+and second order in perturbation theory ($n = 1, 2$), it can be
+noticed that the \textsc{cap} results shown in
 Figure~\ref{fig:3a1_RMtrajectory} agree up to three significant
 digits, both in resonance position and width.
 
@@ -1689,11 +1689,11 @@ comparison point since they result from an effective self-consistent
 potential.
 
 The $1b_{1}$ orbital is referred to as the highest occupied molecular
-orbital, and Koopman's theorem in \textsc{hf}
-theory~\cite{Koopman_th_2018} can be carried over to density
-functional theory~(\textsc{dft}) methods which have a correct
-asymptotic form of the effective potential and have been investigated
-for molecules~\cite{HF_molecules_2010}. 
+orbital, and Koopmans' theorem in \textsc{hf}
+theory~\cite{Koopman_th_2018} can be carried over to \textsc{dft}
+methods which have a correct asymptotic form of the effective
+potential and have been investigated for
+molecules~\cite{HF_molecules_2010}.
 
 For the $3a_{1}$ orbital, which contributes to the bonding of the
 water molecule the convergence with $l_{\mathrm{max}}$ is not as

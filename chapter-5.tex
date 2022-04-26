@@ -62,19 +62,19 @@ rescattering effects, by means of a representation of the
 time-evolution operator as an expansion with respect to the
 interaction with the atomic binding
 potential~\cite{Kopold_1997sfa}. The \textsc{kfr} theory of
-\textsc{sfa} has also been extended to the study of
-harmonic generation~\cite{LewensteinSPA_1994,Lewenstein_1995} by means
-of a quantum model that takes into account additional interactions of
-the ionizing electron with the ion core including higher-order terms
-in a perturbative expansion leading to rescattering effects. This
-model, which extends beyond zero-range potentials, constitutes a
-quantum mechanical formulation of the three-step semiclassical
-picture~\cite{Becker_2step1986}, which has proven to be crucial in
-understanding strong-field laser-atom interactions. These models,
-which incorporate rescattering effects of the excited electrons, have
-been valuable in unraveling the physical phenomena behind the
-\textsc{ati} plateau and its cutoff, an intrinsic feature of the
-ionization spectrum.
+\textsc{sfa} has also been extended to the study of harmonic
+generation (\textsc{hhg})~\cite{LewensteinSPA_1994,Lewenstein_1995} by
+means of a quantum model that takes into account additional
+interactions of the ionizing electron with the ion core including
+higher-order terms in a perturbative expansion leading to rescattering
+effects. This model, which extends beyond zero-range potentials,
+constitutes a quantum mechanical formulation of the three-step
+semiclassical picture~\cite{Becker_2step1986}, which has proven to be
+crucial in understanding strong-field laser-atom interactions. These
+models, which incorporate rescattering effects of the excited
+electrons, have been valuable in unraveling the physical phenomena
+behind the \textsc{ati} plateau and its cutoff, an intrinsic feature
+of the ionization spectrum.
 
 A quasi-classical analysis of this generalization, based on the
 saddle-point method and the path integral
@@ -83,17 +83,17 @@ has been particularly useful as it illustrates fundamental aspects of
 the physics underlying strong-field ionization processes as well as
 the formation of their spectra. This approach suggests that one
 pictures the processes taking place in laser-atom interactions, such
-as \textsc{ati} and high-harmonic generation (\textsc{hhg}), in terms
-of electron trajectories in phase space. These quantum trajectories,
-as it is explained below, follow classical Newtonian dynamics,
-however, time must be defined in the complex plane to account for
-tunneling ionization. Consequently, they present non-zero imaginary
-components for the ionization time, rescattering time and momentum,
-which determine the probability of the process. Their physical content
-is reflected in the electron dynamics: once it has been ionized at
-time $t'$, the electron may return to its parent ion at a later time
-$t$ and rescatter after propagating in the continuum with momentum
-$\mathbf{k}$ under the action of the external field.
+as \textsc{ati} and \textsc{hhg}, in terms of electron trajectories in
+phase space. These quantum trajectories, as it is explained below,
+follow classical Newtonian dynamics, however, time must be defined in
+the complex plane to account for tunneling ionization. Consequently,
+they present non-zero imaginary components for the ionization time,
+rescattering time and momentum, which determine the probability of the
+process. Their physical content is reflected in the electron dynamics:
+once it has been ionized at time $t'$, the electron may return to its
+parent ion at a later time $t$ and rescatter after propagating in the
+continuum with momentum $\mathbf{k}$ under the action of the external
+field.
 
 As a starting point in the evaluation of the \textsc{ati} probability
 amplitude~\ref{eq:mp_compact} by means of a saddle-point
@@ -124,8 +124,8 @@ denotes the action of the system.
 
 In view of the completeness of the plane-wave states as required by
 the evolution operator formalism, it can be verified that the Volkov
-time-evolution operator, which replaces the exact time-evolution
-operator in the \textsc{sfa}~\cite{KeldyshSFA},
+time-evolution operator of Eq.~(\ref{eq:Uv_SchEq}), which replaces the
+exact time-evolution operator in the \textsc{sfa}~\cite{KeldyshSFA},
 expressed in terms of a Volkov-state
 decomposition~(\ref{eq:volkov_Lgauge}) by
 %
@@ -153,7 +153,7 @@ amplitude as the five-dimensional integral~\cite{KopoldOptComm2000}
   \label{eq:mp_5Dintegral}
   \begin{split}
     M_{\mathbf{p}} \sim & \int\limits_{-\infty}\limits^{\infty} dt
-    \int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}\ 
+    \int\limits_{-\infty}\limits^{t} dt' \int d^{3}\mathbf{k}\ 
     \langle [\mathbf{p} + \mathbf{A}(t)] e^{iS_{\mathbf{p}}(t)} | V |
     \mathbf{k} + \mathbf{A}(t) \rangle e^{-iS_{\mathbf{k}}(t)} \\
     & \times
@@ -161,7 +161,7 @@ amplitude as the five-dimensional integral~\cite{KopoldOptComm2000}
     \psi_{0} \rangle e^{i|E_{0}|t'} \\
     \sim &
     \int\limits_{-\infty}\limits^{\infty} dt
-    \int\limits_{-\infty}\limits^{t} \int d^{3}\mathbf{k}\ 
+    \int\limits_{-\infty}\limits^{t} dt' \int d^{3}\mathbf{k}\ 
     \exp\ i\left[ S_{\mathbf{p}}(t) - S_{\mathbf{k}}(t)
       + S_{\mathbf{k}}(t') + |E_{0}|t' \right] \\
     & \times
@@ -237,9 +237,10 @@ action~(\ref{eq:action_mpintegral}).
 % p-57 chapter
 It is revealing to point out the contrast of the ionization
 amplitude~(\ref{eq:mp_final}), obtained with the strong-field
-approximation, with its analogous representation in terms of Feynman
-path integral formulation~\cite{RevModPhysFeynman}. The time evolution
-operator of the entire system has the path integral representation
+approximation, with its analogous representation in terms of the
+Feynman path integral formulation~\cite{RevModPhysFeynman}. The time
+evolution operator of the entire system has the path integral
+representation
 \begin{eqnarray}
 \label{eq:te_path}
 \begin{split}

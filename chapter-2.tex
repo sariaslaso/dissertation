@@ -60,13 +60,13 @@ where the superscript $\mu$ stands for the coordinates of the $\mu$th
 electron and the subscripts $k$ and $i$ label the different
 \textsc{mso}s and \textsc{mo}s, respectively,
 
-The total $N$-electron wave function is then built up as a the
+The total $N$-electron wave function is then built up as an
 \textsc{ap} of $N$ molecular spin-orbitals of the
 form~(\ref{eq:mso})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
-    \Phi & = & \sqrt{N!}\psi_{1}^{[1} \psi_{2}^{\phantom{[]}2} \cdots \psi_{N}^{N]} =
+    \Phi & = & \frac{1}{\sqrt{N!}} \psi_{1}^{[1} \psi_{2}^{\phantom{[]}2} \cdots \psi_{N}^{N]} =
     (N!)^{-1/2}
     \begin{vmatrix}
       \psi_{1}^{1} & \psi_{2}^{1} & \cdots & \psi_{N}^{1} \\
@@ -157,9 +157,9 @@ respectively, and are defined as~\cite{Roothaan_HF}
   %
   \begin{equation}\label{eq:one_indxK}
     K_{i}^{\mu} \varphi^{\mu} = \left( \int
-    \frac{\bar\varphi_{i}^{\nu} \varphi_{i}^{\nu}}
+    \frac{\bar\varphi_{i}^{\nu} \varphi^{\nu}}
          {r^{\mu\nu}} dv^{\nu}
-         \right) \varphi^{\mu}.
+         \right) \varphi_{i}^{\mu}.
   \end{equation}
 \end{subequations}
 %
