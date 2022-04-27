@@ -223,7 +223,7 @@ single-center wave
 functions~\cite{Moccia_1964,Moccia_JCP_2164,Moccia_JCP_2176}, is a
 Slater-type orbital as defined in Eq.~(\ref{eq:f_STO}). The expansion
 coefficients and nonlinear coefficients $\{\zeta_{i}\}$, determined by
-Roothaan's \textsc{scf} method~\cite{Moccia_1964,Roothaan_1951}
+Roothaan's \textsc{scf} method~\cite{Moccia_1964,Roothaan_HF}
 introduced in Sec.~\ref{ch:scf_sto}, are used to construct a reduced
 form of the radial functions that describe all the molecular
 orbitals. More specifically, we are interested in using a reduced
@@ -784,13 +784,13 @@ The non-central effective potential, $V_{\mathrm{eff}}(r,\theta)$,
 leads no longer to an orbital of $(l,m)$ symmetry for the case of the
 $3a_{1}$ orbital. This reflects the geometry of the problem as a
 consequence of the location of the protons. The use of this more
-general potential implies that the Latter
+general potential implies that the so-called Latter
 criterion~\cite{LatterCor_1955}, which ensures the proper asymptotic
-behaviour of the potential, is not as straightforward to implement as
-in the case of the spherical potential discussed in
-Sec.~\ref{ch:1b1_1b2}, where the correction applies beyond a
-determined $r$ value~\cite{sarias_2016}. In this case, the correction
-must be implemented in the $r-\theta$ plane, by defining a
+behaviour of the potential, $V(r)\to -1/r$ as $r\to\infty$, is not as
+straightforward to implement as in the case of the spherical potential
+discussed in Sec.~\ref{ch:1b1_1b2}, where the correction applies
+beyond a determined $r$ value~\cite{sarias_2016}. In this case, the
+correction must be implemented in the $r-\theta$ plane, by defining a
 $\theta-$dependent boundary beyond which the potential obtained
 from~(\ref{eq:sch_eq3d}) rises above $-1/r$ in the asymptotic
 region~\cite{sarias_2017}.
@@ -1314,37 +1314,14 @@ digits, both in resonance position and width.
     $\eta_{\mathrm{c}}$ (blue circles) corresponding to an
     $l_{\mathrm{max}}=3$ calculation of the $3a_{1}$ \textsc{mo}. The
     energy corresponding to the $\eta_{\mathrm{c}}$ stabilization
-    value is shown with a red cross. The first and second order
-    Riss-Meyer corrected energies are indicated as green and magenta
-    crosses, respectively. The electric field strength is
-    $-0.1\ \mathrm{a.u.}$}
+    value ($n=0$ in Eqs.~(\ref{eq:RM_scheme})
+    and~(\ref{eq:optimal_eta})) is shown with a red cross. The first
+    and second order Riss-Meyer corrected energies ($n=1,2$ in
+    Eqs.~(\ref{eq:RM_scheme}) and~(\ref{eq:optimal_eta})) are
+    indicated as green and magenta crosses, respectively. The electric
+    field strength is $-0.1\ \mathrm{a.u.}$}
   \label{fig:3a1_RMtrajectory}
 \end{figure}
-
-
-
-
-%determine the complex eigenvalues with a Pade extrapolation and
-%Riss-Meyer correction method
-
-%ref to the CAP data from the polynomial expansion as work-in-progress
-%(private communication to be published)
-
-
-
-
-% NEXT SECTION
-%The physical parameters of interest, namely the resonance position,
-%$E_{R}$, and width, $\Gamma = -2E_{I}$, that characterize the
-%tunneling process of the quasi-stationary state when an external
-%electric dc field is applied along the $\pm\hat{z}$ directions, were
-%found by solving the system of partial differential equations
-%(Ref.~\cite{PhysRevA.94.053413}) for a set of field strength values,
-%$F_{0}$, as if it were an inhomogeneous problem. In the vicinity of a
-%location in the $(r,\theta)$ plane where the probability amplitude is
-%expected to be large, a two-parameter root search was implemented to
-%determine $\{E_{R},E_{I}\}$, the complex energy that maximizes the
-%probability density amplitude in the $2d-$grid.
 
 
 
@@ -1446,7 +1423,10 @@ system of radial equations~(\ref{eq:radial_u}) introduced by the
     strength $F_{0}$ for the $1b_{1}$ (red circles) and $1b_{2}$ (blue
     triangles) \textsc{mo}s of H$_{2}$O. For comparison, atomic
     hydrogen H$(1s)$ ionization rates from
-    Refs.~\cite{Telnov_1989,Kolosov_1987} are shown as crosses.}
+    Refs.~\cite{Telnov_1989,Kolosov_1987} are shown as crosses. For
+    weak fields one observes a tunnelling regime with `threshold'
+    field strengths where the ionization rate rises quickly with
+    $F_{0}$.}
   \label{fig:1b11b2_width}
 \end{figure}
 
@@ -1624,14 +1604,15 @@ the $-\hat{z}$ direction (blue circles) shows an ionization rate that
 is about one order of magnitude larger than the ionization rate for
 fields applied in the opposite direction (red triangles), this gap
 becomes narrower as the field strength increases toward the
-over-barrier regime.
+over-barrier regime. The strong dependency on field direction implies
+that a different potential barrier is experienced by the electrons for
+the two cases.
 
 The numerical results for the H$_{2}$O valence orbitals studied in
 this chapter, $1b_{1}$, $1b_{2}$ and $3a_{1}$, are summarized in
 Table~\ref{tab:3a1_results} for further reference, i.e., to allow
 comparison with future calculations based on other models for the
 \textsc{mo}s.
-
 
 \begin{table}[t]
 \centering

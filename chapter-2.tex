@@ -66,7 +66,7 @@ form~(\ref{eq:mso})~\cite{Roothaan_HF}
 %
 \begin{eqnarray}
   \begin{split}
-    \Phi & = & \frac{1}{\sqrt{N!}} \psi_{1}^{[1} \psi_{2}^{\phantom{[]}2} \cdots \psi_{N}^{N]} =
+    \Phi & = & \sqrt{N!} \psi_{1}^{[1} \psi_{2}^{\phantom{[]}2} \cdots \psi_{N}^{N]} =
     (N!)^{-1/2}
     \begin{vmatrix}
       \psi_{1}^{1} & \psi_{2}^{1} & \cdots & \psi_{N}^{1} \\
@@ -82,9 +82,9 @@ where the superscripts $[1\ 2 \cdots N]$ indicate that one must
 consider all the permutations of the sequence $1\ 2 \cdots N$ such
 that the Pauli exclusion principle is satisfied, that is, each
 \textsc{mo} $\varphi_{i}^{\mu}$ may occur not more than twice
-(corresponding to opposite spin projections) in the product wave
-function~(\ref{eq:AP}). The right-hand side of Eq.~(\ref{eq:AP}) is a
-Slater determinant of \textsc{mso}s that is constructed by taking an
+(corresponding to opposite spin projections) in the
+\textsc{ap}~(\ref{eq:AP}). The right-hand side of Eq.~(\ref{eq:AP}) is
+a Slater determinant of \textsc{mso}s that is constructed by taking an
 antisymmetric linear combination of products of spin-orbitals.
 
 For a closed-shell structure, in which the \textsc{ap}~(\ref{eq:AP})
@@ -311,7 +311,6 @@ are the roots of the secular equation~\cite{Roothaan_HF,Levine_QChem}
 form an initial set of \textsc{lcao} orbital energies that leads to a
 set of coefficients $c_{si}$ and, consequently, \textsc{mo}s.
 
-% CLARIFY WHAT IS BEING ITERATED HERE
 In the process of solving the set of
 equations~(\ref{eq:Fock_equation}) one looks for the \textsc{mo}s
 $\varphi_{i}$ that minimize the variational
@@ -322,10 +321,10 @@ operator $F$ and solve the secular
 equation~(\ref{eq:secular_eigenvalues}) to obtain an initial set of
 orbital energies $\epsilon_{i}$, which in turn is used to obtain an
 improved set of coefficients by solving the eigenvalue
-problem~(\ref{eq:set_linear_eqs}). This procedure is continued until
-the \textsc{mo} coefficients converge according to an established
-metric and no further improvement is observed from one evaluation to
-the next.
+problem~(\ref{eq:set_linear_eqs}). This procedure to minimize the
+energy is set up carefully as an iteration until the \textsc{mo}
+coefficients converge according to an established norm and no further
+improvement is observed from one evaluation to the next.
 
 The \textsc{lcao} \textsc{scf} formalism is an approximation that
 leads to rather straightforward results for the \textsc{mo}s. This
@@ -355,8 +354,8 @@ of Slater-type orbitals~(\textsc{sto}s) of the form
 \end{eqnarray}
 %
 where $n,l,$ and $m$ are integers indicating a basis function, while
-the orbital exponent $\zeta$ satisfies $\zeta \in \Re > 0 $. The
-angular part $S_{l,m}(\theta,\phi)$ represents real spherical
+the nonlinear variational parameter $\zeta$ satisfies $\zeta \in \Re >
+0 $. The angular part $S_{l,m}(\theta,\phi)$ represents real spherical
 harmonics.
 
 In order to converge to an exact representation of the \textsc{hf}

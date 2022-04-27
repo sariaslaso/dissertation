@@ -124,17 +124,23 @@ laser frequency to the tunneling rate, and can be written
 as~\cite{KeldyshSFA}
 %
 \begin{eqnarray}
+  \label{eq:Keldysh_gamma}
 \begin{split}
 \gamma = \frac{\omega}{\omega_{t}} & = & \sqrt{\frac{I_{p}}{2 U_{p}}},
 \end{split}
 \end{eqnarray}
 %
-where $I_{p}$ is the field-free atomic ionization energy. The Keldysh
-parameter illustrates the limits of applicability of the competing
-mechanisms that characterize the ionization process. For $\gamma < 1$,
-tunneling dynamics will dominate, whereas for $\gamma > 1$ multiphoton
-dynamics will prevail. In this chapter, we focus on the tunneling
-regime in \textsc{ati}.
+where $I_{p}$ is the field-free atomic ionization
+energy. Eq.~(\ref{eq:Keldysh_gamma}) also explains the different time
+scales in the tunnelling regime: when $\gamma < 1$ a bigger ionization
+potential $I_{p}$ is associated with more rapid electron motion inside
+the well. As a result the electron motion is on a faster time scale
+than the laser oscillation period $2\pi/\omega$. The Keldysh parameter
+illustrates the limits of applicability of the competing mechanisms
+that characterize the ionization process. For $\gamma < 1$, tunneling
+dynamics will dominate, whereas for $\gamma > 1$ multiphoton dynamics
+will prevail. In this chapter, we focus on the tunneling regime in
+\textsc{ati}.
 
 \begin{figure}
   \centering
@@ -290,12 +296,14 @@ V(\mathbf{r}) & = & -\lambda\ \delta(\mathbf{r})
 \end{eqnarray}
 %
 which has one or more bound states depending on
-$\lambda$~\cite{Becker_rescattering1994, Becker_ati2002}. Zero-range
-potentials have been widely used in tunneling~\cite{Kleber_zeroV1994}
-and multiphoton ionization problems~\cite{Becker_zeroV1990}, as well
-as to simulate the electron dynamics in molecular systems under
-intense laser fields~\cite{frolov_zeroV2013}. Inserting the zero-range
-potential~(\ref{eq:zero-range}) into the Keldysh
+$\lambda$~\cite{Becker_rescattering1994, Becker_ati2002}, and
+restricts the range of the spatial integration in the
+amplitude~(\ref{eq:keldysh_amp}). Zero-range potentials have been
+widely used in tunneling~\cite{Kleber_zeroV1994} and multiphoton
+ionization problems~\cite{Becker_zeroV1990}, as well as to simulate
+the electron dynamics in molecular systems under intense laser
+fields~\cite{frolov_zeroV2013}. Inserting the zero-range
+potential~(\ref{eq:zero-range}) into the standard Keldysh
 amplitude~(\ref{eq:keldysh_amp}) yields the expansion
 %
 \begin{eqnarray}
@@ -312,11 +320,14 @@ M_{\mathbf{p}}^{(0)} \sim &
 that generates the ionization spectrum of direct electrons
 only~\cite{Kopold_1997sfa}, i.e., without rescattering. After
 ionization, direct electrons escape the laser focus without any
-additional interaction with the ion. Here $U_{p}$ represents the
-ponderomotive potential of an electron moving in the laser field with
-momentum $\mathbf{p}$ parallel to the laser field, $p_{x} =
-|\mathbf{p}|$, $|E_{0}|$ stands for the binding energy, and the
-$J_{n}$ represent Bessel functions.
+additional interaction with the ion. The strength parameter of the
+zero-range potential, i.e., $\lambda$ is effectively replaced by
+$\sqrt{2 |E_{0}|}$. With this approximation one completely neglects
+the Coulomb interaction between ionized electrons and the ion left
+behind. Here $U_{p}$ represents the ponderomotive potential of an
+electron moving in the laser field with momentum $\mathbf{p}$ parallel
+to the laser field, $p_{x} = |\mathbf{p}|$, $|E_{0}|$ stands for the
+binding energy, and the $J_{n}$ represent Bessel functions.
 
 
 \section{\label{kopold_sfa} Generalized ionization amplitude including rescattering}
@@ -437,7 +448,11 @@ e^{-i\omega\tau} & = & Z,
 \end{eqnarray}
 %
 and are determined through the absolute value and phase of the complex
-quantity $Z$, respectively.
+quantity $Z$, respectively. In contrast with the
+amplitude~(\ref{eq:keldysh_amp_explicit}), in which the generalized
+Bessel function describes the emission rate of direct electrons, the
+ionization amplitude~(\ref{eq:Mp_quad}) presents a more complicated
+structure in terms of these oscillating functions.
 
 
 
@@ -497,8 +512,26 @@ time integral as $F(l)$ by rewriting Eq.~(\ref{eq:Mp_quad}) as
   \lim\limits_{|l|_{\rm{max}}\to\infty}
   \sum\limits_{n} \delta\left(\frac{p^{2}}{2} + U_{p} + |E_{0}| - n\omega\right)
   \sum\limits_{l=-|l|_{\rm{max}}}\limits^{|l|_{\rm{max}}}
-  J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{U_{p}} \right)\ F(l).
+  J_{2l+n}\left( \frac{2p_{x}}{\omega} \sqrt{U_{p}} \right)\ F(l),
 \end{split}
+\end{eqnarray}
+%
+where
+%
+\begin{eqnarray}
+  \label{eq:F(l)}
+  \begin{split}
+    F(l) = & \int\limits_{0}\limits^{\infty} d\tau\
+    \left( \frac{i}{2\pi\tau} \right)^{3/2}
+    \left( e^{-i[|E_{0}|\tau + l\delta(\tau)]} \right.
+    \exp\left\{-iU_{p}\tau
+    \left[1 - \left(\frac{\sin\frac{1}{2}\omega\tau}{\frac{1}{2}\omega\tau}\right)^{2}\right]
+    \right\} \\
+    & \left.
+    J_{l} \left( y(\tau) \frac{U_{p}}{\omega} \right) 
+    - J_{l} \left( \frac{U_{p}}{2\omega} \right)
+    \right).
+  \end{split}
 \end{eqnarray}
 %
 
@@ -585,10 +618,15 @@ the quadrature, the working precision and precision goal were tuned
 appropriately so the curves would remain comparable. This is
 consistent with Figure~\ref{fig:WP_convergence}, as the order of
 Bessel functions increases, a higher working precision is required in
-order to find a numerical solution to the quadrature.
+order to find a numerical solution to the quadrature. The symmetric
+behaviour followed by the Keldysh result with respect to the Bessel
+function order is to be expected given the symmetric shape of the
+Bessel factor $J_{l}(\frac{U_{p}}{2\omega})$. In contrast, the time
+integral $F(l)$ contains a subtraction of Bessel functions in its
+argument which accounts for the asymmetric behaviour depicted by the
+red dots.
 
-%As you can see the first 10 points (Lmin=-80 to -70) are smaller
-%compared to the others, so convergence can be expected.
+
 
 \begin{figure}
 \begin{subfigure}[b]{0.33\linewidth}
@@ -609,12 +647,15 @@ order to find a numerical solution to the quadrature.
 \begin{subfigure}[b]{0.33\linewidth}
   \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/He/l80n512WP50PG25MR35vsKeldysh.pdf}
 \end{subfigure}
-\caption{Numerical evaluation of the time integral $F(l)$ contained in
-  the transition amplitude~(\ref{eq:Mp_rew}) (red dots) in contrast
-  with its analogous Bessel term in the Keldysh amplitude for direct
-  transmission (blue dots) for zero-range He atom model as a function
-  of the Bessel function order $l$ for increasing values of
-  $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$.}
+\caption{Numerical evaluation of the time integral
+  $F(l)$~(\ref{eq:F(l)}) (red dots) in contrast with its analogous
+  Bessel term in the Keldysh amplitude~(\ref{eq:keldysh_amp_explicit})
+  for direct transmission (blue dots) for zero-range He atom model as
+  a function of the Bessel function order $l$ for increasing values of
+  $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$. The
+  Keldysh result (blue dots) is plotted on top of the result from
+  $F(l)$, i.e., the red symbols are covered up by the blue ones when
+  the calculations agree to graphing accuracy.}
   \label{fig:integral_keldysh}
 \end{figure}
 
@@ -803,13 +844,16 @@ become noticeable as the red curve begins to decline.
   \begin{subfigure}[b]{0.33\linewidth}
     \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/1b1/l80n512WP50PG25MR35vsKeldysh.pdf}
   \end{subfigure}
-  \caption{Numerical evaluation of the time integral $F(l)$ in the
-    transition amplitude~(\ref{eq:Mp_rew}) (red dots) in contrast with
-    its analogous Bessel term in the Keldysh amplitude for direct
-    transmission (blue dots) for the $1b_{1}$ \textsc{mo} of H$_{2}$O
-    as a function of the Bessel function order $l$ for increasing
-    values of $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots,
-      l_{\rm{max}}]$.}
+  \caption{Numerical evaluation of the time integral
+    $F(l)$~(\ref{eq:F(l)}) (red dots) in contrast with its analogous
+    Bessel term in the Keldysh
+    amplitude~(\ref{eq:keldysh_amp_explicit}) for direct transmission
+    (blue dots) for the $1b_{1}$ \textsc{mo} of H$_{2}$O as a function
+    of the Bessel function order $l$ for increasing values of
+    $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$. The
+    Keldysh result (blue dots) is plotted on top of the result from
+    $F(l)$, i.e., the red symbols are covered up by the blue ones when
+    the calculations agree to graphing accuracy.}
     \label{fig:1b1_vs_keldysh}
 \end{figure}
 
@@ -832,13 +876,16 @@ become noticeable as the red curve begins to decline.
   \begin{subfigure}[b]{0.33\linewidth}
     \includegraphics[width=\textwidth]{figures/ch_ATI_SFA/1b2/l80n512WP50PG25MR35vsKeldysh.pdf}
   \end{subfigure}
-  \caption{Numerical evaluation of the time integral $F(l)$ in the
-    transition amplitude~(\ref{eq:Mp_rew}) (red dots) in contrast with
-    its analogous Bessel term in the Keldysh amplitude for direct
-    transmission (blue dots) for the $1b_{2}$ \textsc{mo} of H$_{2}$O
-    as a function of the Bessel function order $l$ for increasing
-    values of $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots,
-      l_{\rm{max}}]$.}
+  \caption{Numerical evaluation of the time integral
+    $F(l)$~(\ref{eq:F(l)}) (red dots) in contrast with its analogous
+    Bessel term in the Keldysh
+    amplitude~(\ref{eq:keldysh_amp_explicit}) for direct transmission
+    (blue dots) for the $1b_{2}$ \textsc{mo} of H$_{2}$O as a function
+    of the Bessel function order $l$ for increasing values of
+    $l_{\rm{max}}$, $l=[ -l_{\rm{max}} , \dots, l_{\rm{max}}]$. The
+    Keldysh result (blue dots) is plotted on top of the result from
+    $F(l)$, i.e., the red symbols are covered up by the blue ones when
+    the calculations agree to graphing accuracy.}
     \label{fig:1b2_vs_keldysh}
 \end{figure}
 

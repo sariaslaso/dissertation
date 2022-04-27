@@ -271,13 +271,15 @@ $\mathbf{k}$~\cite{KopoldOptComm2000}.
 % ref from Principles...Lewenstein&LHuillier
 % it is needed here an explanation of what the saddle-point
 % approximation is and why it is justified to use it
-In the low-frequency limit and for high-intensity laser fields, the
-five-dimensional set of paths over which the transition
-amplitude~(\ref{eq:mp_final}) is evaluated can be reduced further by
-invoking the saddle-point approximation~\cite{,Lewenstein_1995} to
-calculate the integral over $\mathbf{p}$ as well as $t$ and $t'$. In
-this regime, the transition amplitude contains a rapidly oscillating
-factor, $\exp\ iS_{\mathbf{p}}(t, t', \mathbf{k})$, provided that the
+In the low-frequency limit, in which the time scale of one period of
+the electron motion is small compared to one laser period, and for
+high-intensity laser fields, the five-dimensional set of paths over
+which the transition amplitude~(\ref{eq:mp_final}) is evaluated can be
+reduced further by invoking the saddle-point
+approximation~\cite{,Lewenstein_1995} to calculate the integral over
+$\mathbf{p}$ as well as $t$ and $t'$. In this regime, the transition
+amplitude contains a rapidly oscillating factor,
+$\exp\ iS_{\mathbf{p}}(t, t', \mathbf{k})$, provided that the
 parameters $U_{p}$, $I_{p}$, and $p^{2}$ in the quasi-classical
 action~(\ref{eq:action_mpintegral}) are large enough. The major
 contributions to the integrals in~(\ref{eq:mp_final}) come from the
@@ -504,9 +506,9 @@ expressed as~\cite{phd_Kopold}
 Therefore, in order to calculate the saddle point contributions to the
 integral, one chooses the integration path such that
 $\mathrm{Im}\ s(z) = \mathrm{Im}\ s(z_{s})$. Along the direction of
-steepest descent for the surface $u(x,y) = u(x_{s},y_{s})$, defined by
-$-\nabla u|_{z_{s}} = - (\frac{\partial u}{\partial x}, \frac{\partial
-  u}{\partial y})|_{z_{s}}$, the Cauchy-Riemann equations justify that
+steepest descent for the surface $v(x,y) = v(x_{s},y_{s})$, defined by
+$-\nabla v|_{z_{s}} = - (\frac{\partial v}{\partial x}, \frac{\partial
+  v}{\partial y})|_{z_{s}}$, the Cauchy-Riemann equations justify that
 the tangents to the surface $v(x,y) = v(x_{s},y_{s})$ lie in the
 direction of steepest descent through $z_{s}$. In a contour
 $\mathcal{C}_{s}$ that goes through the saddle points of $s(z)$, the
@@ -644,11 +646,11 @@ when evaluating the exponential term in $M_{\mathbf{p}}$.
 \begin{figure}
   \centering
   \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/phase_contour12}
-  \caption{Phase contours of constant $\mathrm{Im}\ i\Phi(t)$ for the
-    saddle points $t_{01}(t_{03})$ (blue lines) and $t_{02}(t_{04})$
-    (red lines) corresponding to an electron energy of $2.27 U_{p}$
-    projected on the complex plane. The allowed integration contour
-    runs over the saddle points with positive imaginary parts,
+  \caption{Phase contours of $\mathrm{Im}\ i\Phi(t)$ corresponding to
+    the saddle points $t_{01}(t_{03})$ (blue lines) and
+    $t_{02}(t_{04})$ (red lines) for an electron energy of $2.27
+    U_{p}$ projected on the complex plane. The allowed integration
+    contour runs over the saddle points with positive imaginary parts,
     $t_{01}$ and $t_{02}$. The regions in a purple scale represent the
     real part of the exponent in Eq.~(\ref{eq:KFR_Mp}),
     $\mathrm{Re}\ i\Phi(t)$, in which dark/light regions stand for
@@ -731,10 +733,12 @@ The relevant quantum orbits, defined by the complex saddle points
 $(t'_{S}, t_{S}, \mathbf{k}_{S})$, are the solutions of the
 saddle-point equations~(\ref{eq:saddle_eqs}) which have their origin
 in the condition that the action of the system remains stationary
-along those points. For the linearly-polarized
-field~(\ref{eq:lp_field}), after some algebraic work on the
-saddle-point equations, one can solve for the rescattering time and
-ionization time as the numerical solutions of~\cite{KopoldOptComm2000}
+along those points. Given that the saddle-point
+equations~(\ref{eq:saddle_eqs}) are real, solutions come in complex
+conjugate pairs. For the linearly-polarized field~(\ref{eq:lp_field}),
+after some algebraic work on the saddle-point equations, one can solve
+for the rescattering time and ionization time as the numerical
+solutions of~\cite{KopoldOptComm2000}
 %
 \begin{eqnarray}
   \label{eq:return_t}
@@ -776,13 +780,17 @@ Figure~\ref{fig:orbit_pairs} (right).
 In Figure~\ref{fig:orbit_pairs}, a subset of these numerical solutions
 illustrates the described distribution for the release and return
 times corresponding to the first six quantum orbits, $i = 1, \dots,
-6$, for a fixed electron energy of $E_{p} = 6 U_{p}$.  The release
-times (right panel) illustrate how additional pairs of solutions
-become available for lower energies, with $t'_{i}$ extending further
-into the past. The electric field of the laser,
-Eq.~(\ref{eq:lp_field}), is depicted in the left panel with
-dash-dotted lines for the optical cycle $0 < \omega t < \omega T$
-along with the solutions for the return times.
+6$, for a fixed electron energy of $E_{p} = 6 U_{p}$. The left panel
+shows the roots of Eq.~(\ref{eq:return_t}) for the return times
+corresponding to three consecutive optical cycles. In addition, the
+electric field of the laser, Eq.~(\ref{eq:lp_field}), is depicted in
+the left panel with dash-dotted lines for the optical cycle $0 <
+\omega t < \omega T$. The right panel indicates the release times that
+are obtained as the roots of Eq.~(\ref{eq:release_t}) once the return
+times are calculated. The release times illustrate how additional
+pairs of solutions become available for lower energies, with $t'_{i}$
+extending further into the past. 
+
 
 % include physical picture indicating that there are two solutions for
 % each optical cycle, as it is mentioned in this paragraph
