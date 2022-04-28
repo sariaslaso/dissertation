@@ -86,7 +86,7 @@ pictures the processes taking place in laser-atom interactions, such
 as \textsc{ati} and \textsc{hhg}, in terms of electron trajectories in
 phase space. These quantum trajectories, as it is explained below,
 follow classical Newtonian dynamics, however, time must be defined in
-the complex plane to account for tunneling ionization. Consequently,
+the complex plane to account for tunnelling ionization. Consequently,
 they present non-zero imaginary components for the ionization time,
 rescattering time and momentum, which determine the probability of the
 process. Their physical content is reflected in the electron dynamics:
@@ -291,7 +291,7 @@ In the process of evaluating the transition amplitude, the phase of
 the integrand is expanded about the saddle-points along the path of
 steepest descent in the complex plane. As a result, a handful of
 relevant paths remains to be considered in order to explore the
-\textsc{ati} spectrum~\cite{KopoldOptComm2000}. Since the tunneling
+\textsc{ati} spectrum~\cite{KopoldOptComm2000}. Since the tunnelling
 process of an electron is involved in this analysis, these paths take
 place in the complex time domain.
 %
@@ -299,9 +299,10 @@ The condition
 \begin{eqnarray}
 \label{eq:S_stationary}
 \begin{split}
-\frac{\partial S}{\partial q_{i}} & = & 0
+\frac{\partial S}{\partial q_{i}} & = & 0,
 \end{split}
 \end{eqnarray}
+%
 where $q_{i}(i =1, \dots, 5)$ runs over the five variables $t$, $t'$
 and $\mathbf{k}$, leads to the saddle-point
 equations~\cite{Lewenstein_1995,KopoldOptComm2000}
@@ -324,7 +325,7 @@ quasiclassical action of the system, and define the quantum orbits
 which are the essential components in building the ionization spectrum
 through the saddle-point approximation. From a physical perspective,
 Eqs.~(\ref{eq:saddle_eqs}) ensure the energy conservation at the time
-of tunneling, elastic scattering of the electron into its final state
+of tunnelling, elastic scattering of the electron into its final state
 when it returns, and that in fact the electron returns to its parent
 ion, respectively. Since $|E_{0}| > 0$ in~(\ref{eq:saddle_eqs}), the
 condition of energy conservation at the time of ionization cannot be
@@ -456,14 +457,6 @@ spectrum.
   \label{fig:sp_direct}
 \end{figure}
 
-% - see Appendix B in Kopold dissertation where the Gaussian
-% approximation is justified
-% - explain what the method of steepest descend (or spa) consists of and
-% how the integral defining the Mp vals can be expressed as a Gaussian
-% as a result of this approximation
-% - express Mp in eq.5.6 as a contour integral in terms of s(z) and g(z)
-% as it is shown in appendix B of Kopold thesis
-% - look up method of steepest descent.pdf
 In a saddle-point evaluation of the integral~(\ref{eq:mp_final}), it
 is convenient to refer to the asymptotic evaluation of the expression
 %
@@ -645,7 +638,7 @@ when evaluating the exponential term in $M_{\mathbf{p}}$.
 % integration path
 \begin{figure}
   \centering
-  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/phase_contour12}
+  \includegraphics[width = 0.75\textwidth]{figures/ch_ATI_SPA/direct/contour12}
   \caption{Phase contours of $\mathrm{Im}\ i\Phi(t)$ corresponding to
     the saddle points $t_{01}(t_{03})$ (blue lines) and
     $t_{02}(t_{04})$ (red lines) for an electron energy of $2.27
@@ -735,10 +728,12 @@ saddle-point equations~(\ref{eq:saddle_eqs}) which have their origin
 in the condition that the action of the system remains stationary
 along those points. Given that the saddle-point
 equations~(\ref{eq:saddle_eqs}) are real, solutions come in complex
-conjugate pairs. For the linearly-polarized field~(\ref{eq:lp_field}),
-after some algebraic work on the saddle-point equations, one can solve
-for the rescattering time and ionization time as the numerical
-solutions of~\cite{KopoldOptComm2000}
+conjugate pairs. The existence of these solutions in pairs can be
+interpreted as a consequence of the invariance of the problem with
+respect to time reversal. For the linearly-polarized
+field~(\ref{eq:lp_field}), after some algebraic work on the
+saddle-point equations, one can solve for the rescattering time and
+ionization time as the numerical solutions of~\cite{KopoldOptComm2000}
 %
 \begin{eqnarray}
   \label{eq:return_t}
@@ -780,17 +775,18 @@ Figure~\ref{fig:orbit_pairs} (right).
 In Figure~\ref{fig:orbit_pairs}, a subset of these numerical solutions
 illustrates the described distribution for the release and return
 times corresponding to the first six quantum orbits, $i = 1, \dots,
-6$, for a fixed electron energy of $E_{p} = 6 U_{p}$. The left panel
-shows the roots of Eq.~(\ref{eq:return_t}) for the return times
-corresponding to three consecutive optical cycles. In addition, the
-electric field of the laser, Eq.~(\ref{eq:lp_field}), is depicted in
-the left panel with dash-dotted lines for the optical cycle $0 <
-\omega t < \omega T$. The right panel indicates the release times that
-are obtained as the roots of Eq.~(\ref{eq:release_t}) once the return
-times are calculated. The release times illustrate how additional
-pairs of solutions become available for lower energies, with $t'_{i}$
-extending further into the past. 
-
+6$, for a fixed electron energy of $E_{p} = 6 U_{p}$. It can be
+noticed that in both cases, i.e., return times and ionization times,
+the solutions come in pairs for each optical cycle of the laser
+field. The left panel shows the roots of Eq.~(\ref{eq:return_t}) for
+the return times corresponding to three consecutive optical cycles. In
+addition, the electric field of the laser, Eq.~(\ref{eq:lp_field}), is
+depicted in the left panel with dash-dotted lines for the optical
+cycle $0 < \omega t < \omega T$. The right panel indicates the release
+times that are obtained as the roots of Eq.~(\ref{eq:release_t}) once
+the return times are calculated. The release times illustrate how
+additional pairs of solutions become available for lower energies,
+with $t'_{i}$ extending further into the past.
 
 % include physical picture indicating that there are two solutions for
 % each optical cycle, as it is mentioned in this paragraph
@@ -842,8 +838,6 @@ spectrum, the ones with shorter travel time being qualitatively more
 relevant, as they make up for the strongest contributions to the
 ionization spectrum.
 
-
-
 The complex orbits for the ionization time, rescattering time and
 complex momentum, given by the saddle-point solutions of
 Eqs.~(\ref{eq:return_t}) and~(\ref{eq:release_t}), are shown in
@@ -867,7 +861,7 @@ and quantum momenta have very small imaginary parts before the cutoff,
 while their imaginary components become noticeable as the electron
 energies increase beyond the cutoff. In contrast, the imaginary parts
 of the ionization times are significant, indicating the origin of the
-electrons through tunneling ionization. For energies above the cutoff,
+electrons through tunnelling ionization. For energies above the cutoff,
 the real components of the complex paths remain approximately constant
 with increasing energy. As a result, a marked drop appears after the
 cutoff in the spectrum associated with a given pair of trajectories.
@@ -915,7 +909,7 @@ cutoff in the spectrum associated with a given pair of trajectories.
 
 % add algebra on the action for trajectories with rescattering and
 % break down into real and imaginary components (based on the electron
-% paths being complex to account for tunneling ionization), which is
+% paths being complex to account for tunnelling ionization), which is
 % later shown in Fig. 5.5
 It is illustrating to take into account the complex nature of the
 electron dynamics in order to visualize how the action of the system,
