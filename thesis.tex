@@ -12,7 +12,7 @@
 \usepackage{enumitem}
 \usepackage[bottom]{footmisc}
 \usepackage{scalerel}
-%\usepackage[toc,page]{appendix}
+\usepackage[toc,page]{appendix}
 % \usepackage{afterpage}
 
 \usepackage[width=.9\textwidth]{caption}
@@ -81,7 +81,8 @@
 
 \title{Strong Field Interactions with Atoms and Molecules}
 \author{Susana Arias Laso}
-\date{\today}
+\date{April 2022}
+%\date{\today}
 \hypersetup{
   pdftitle={Strong Field Interactions with Atoms and Molecules},
   pdfauthor={Susana Arias Laso}
@@ -97,7 +98,7 @@
 
 \abstractfile{abstract.tex}
 %\acknowledgementsfile{acknowledgements.tex}
-%\abbreviationsfile{abbreviations.tex}
+\abbreviationsfile{abbreviations.tex}
 
 \begin{document}
 
@@ -120,9 +121,10 @@
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
-\appendix
+%\appendix
+\begin{appendices}
 \include{appendix-a}
-
+\end{appendices}
 
 \end{document}
 
